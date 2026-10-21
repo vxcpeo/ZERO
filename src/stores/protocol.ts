@@ -8,7 +8,7 @@ import { defineStore } from "pinia";
 import { computed, ref, shallowRef } from "vue";
 import type { ContractTransactionResponse } from "ethers";
 
-import { ADDRESSES, REWARD_DECIMALS, BSC_BLOCK_TIME_SECONDS, DEFAULT_PARAMS, type ProtocolParams } from "@/config/chain";
+import { ADDRESSES, REWARD_DECIMALS, BLOCK_TIME_SECONDS, DEFAULT_PARAMS, type ProtocolParams } from "@/config/chain";
 import {
   artToken,
   erc20,
@@ -177,8 +177,8 @@ export const useProtocolStore = defineStore("protocol", () => {
       harvestFeeBps: Number(harvest),
       earlyWithdrawFeeBps: Number(early),
       emissionHalvingPeriod: Number(halving),
-      // BSC produces a block roughly every 3 seconds.
-      emissionHalvingDays: (Number(halving) * BSC_BLOCK_TIME_SECONDS) / 86_400,
+      // A block lands roughly every 3 seconds on the target chain.
+      emissionHalvingDays: (Number(halving) * BLOCK_TIME_SECONDS) / 86_400,
       tailEmissionBps: Number(tail),
     };
   }

@@ -1,8 +1,8 @@
 /**
  * Multi-wallet detection and connection.
  *
- * Deliberately dependency-free: BSC users overwhelmingly arrive with an injected provider
- * (MetaMask, Binance Wallet, OKX, Trust, BitKeep), so a small EIP-1193 layer covers the real
+ * Deliberately dependency-free: Solana users overwhelmingly arrive with an injected provider
+ * (MetaMask, Phantom, OKX, Trust, BitKeep), so a small EIP-1193 layer covers the real
  * audience without shipping a wallet-SDK bundle. WalletConnect-style QR flows can be layered on
  * later by implementing the same `WalletConnector` interface.
  */
@@ -36,11 +36,11 @@ export const WALLET_OPTIONS: WalletOption[] = [
     installUrl: "https://metamask.io/download/",
   },
   {
-    id: "binance",
-    name: "Binance Wallet",
-    icon: "🟡",
-    getProvider: () => window.BinanceChain ?? (window.ethereum?.isBinance ? window.ethereum : undefined),
-    installUrl: "https://www.binance.com/en/web3wallet",
+    id: "phantom",
+    name: "Phantom",
+    icon: "👻",
+    getProvider: () => window.phantom?.ethereum ?? (window.ethereum?.isPhantom ? window.ethereum : undefined),
+    installUrl: "https://phantom.app/download",
   },
   {
     id: "okx",
@@ -79,11 +79,11 @@ export const WALLET_OPTIONS: WalletOption[] = [
 ];
 
 /** Wallet a first-time visitor is most likely to have. */
-export const DEFAULT_WALLET_ID = "metamask";
+export const DEFAULT_WALLET_ID = "phantom";
 
 /** True when any injected provider exists. */
 export function hasInjectedProvider(): boolean {
-  return typeof window !== "undefined" && Boolean(window.ethereum || window.BinanceChain || window.okxwallet);
+  return typeof window !== "undefined" && Boolean(window.ethereum || window.phantom?.ethereum || window.okxwallet);
 }
 
 /** All wallets that are actually installed in this browser. */

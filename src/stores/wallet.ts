@@ -1,7 +1,7 @@
 /**
- * Wallet store: injected-provider connection, chain enforcement and BNB balance tracking.
+ * Wallet store: injected-provider connection, chain enforcement and SOL balance tracking.
  */
-import { BrowserProvider, JsonRpcProvider, formatEther, type Signer } from "ethers";
+import { BrowserProvider, JsonRpcProvider, formatUnits, type Signer } from "ethers";
 import { defineStore } from "pinia";
 import { computed, ref, shallowRef } from "vue";
 
@@ -21,10 +21,17 @@ const STORAGE_KEY = "zero-art.wallet";
 export const useWalletStore = defineStore("wallet", () => {
   const address = ref<string>("");
   const chainId = ref<number>(0);
-  const bnbBalance = ref<bigint>(0n);
+  const solBalance = ref<bigint>(0n);
   const connecting = ref(false);
   const error = ref<string>("");
-  const walletId = ref<string>(localStorage.getItem(STORAGE_KEY) ?? DEFAULT_WALLET_ID);
+  // A wallet id saved by an older build may no longer be offered; fall back to the default
+  // instead of failing every connect attempt with "Unknown wallet".
+  const storedWalletId = localStorage.getItem(STORAGE_KEY);
+  const walletId = ref<string>(
+    WALLET_OPTIONS.some((option) => option.id === storedWalletId)
+      ? (storedWalletId as string)
+      : DEFAULT_WALLET_ID,
+  );
 
   /** Read-only provider pointed at the target chain, used when no wallet is connected. */
   const readProvider = shallowRef<JsonRpcProvider | null>(null);
@@ -37,8 +44,10 @@ export const useWalletStore = defineStore("wallet", () => {
   const shortAddress = computed(() =>
     address.value ? `${address.value.slice(0, 6)}…${address.value.slice(-4)}` : "",
   );
-  const bnbBalanceFormatted = computed(() =>
-    bnbBalance.value ? Number(formatEther(bnbBalance.value)).toFixed(4) : "0",
+  const solBalanceFormatted = computed(() =>
+    solBalance.value
+      ? Number(formatUnits(solBalance.value, TARGET_CHAIN.nativeCurrency.decimals)).toFixed(4)
+      : "0",
   );
 
   /** Wallet options actually present in this browser. */
@@ -76,11 +85,11 @@ export const useWalletStore = defineStore("wallet", () => {
   async function refreshBalances(): Promise<void> {
     const provider = getReadProvider();
     if (!provider || !address.value) {
-      bnbBalance.value = 0n;
+      solBalance.value = 0n;
       return;
     }
     try {
-      bnbBalance.value = await provider.getBalance(address.value);
+      solBalance.value = await provider.getBalance(address.value);
     } catch {
       // A flaky RPC should not break the UI; keep the last known balance.
     }
@@ -152,7 +161,7 @@ export const useWalletStore = defineStore("wallet", () => {
     signer.value = null;
     browserProvider.value = null;
     chainId.value = 0;
-    bnbBalance.value = 0n;
+    solBalance.value = 0n;
   }
 
   /** Re-attach to a previously authorised wallet without prompting, if the wallet allows it. */
@@ -223,14 +232,14 @@ export const useWalletStore = defineStore("wallet", () => {
   return {
     address,
     chainId,
-    bnbBalance,
+    solBalance,
     connecting,
     error,
     walletId,
     isConnected,
     isWrongChain,
     shortAddress,
-    bnbBalanceFormatted,
+    solBalanceFormatted,
     availableWallets,
     selectedWallet,
     connect,

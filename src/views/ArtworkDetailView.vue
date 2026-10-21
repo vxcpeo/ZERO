@@ -177,7 +177,7 @@ const disabledReason = computed(() => {
   if (!wallet.isConnected) return "Connect your wallet to buy fractions of this artwork.";
   if (wallet.isWrongChain) return `Switch your wallet to ${TARGET_CHAIN.name} to buy fractions.`;
   if (!art.snapshot.active) {
-    return "Primary sales for this artwork are paused by governance. Existing fractions keep trading as BEP-20 tokens.";
+    return "Primary sales for this artwork are paused by governance. Existing fractions keep trading as SPL tokens.";
   }
   if (amountInvalid.value) return "Enter a plain number of shares, for example 250 or 12.5.";
   if (exceedsRemaining.value) {
@@ -204,9 +204,9 @@ const artistProceedsBps = computed(() => 10_000 - store.feeParams.platformFeeBps
 
 const lastTxBadge = computed(() => {
   const status = store.lastTx?.status;
-  if (status === "pending") return "po-tag-warn";
-  if (status === "error") return "po-tag-bad";
-  if (status === "success") return "po-tag-good";
+  if (status === "pending") return "ct-tag-warn";
+  if (status === "error") return "ct-tag-bad";
+  if (status === "success") return "ct-tag-good";
   return "";
 });
 
@@ -378,36 +378,36 @@ const addressRows = computed<AddressRow[]>(() => {
 </script>
 
 <template>
-  <div class="po-route">
+  <div class="ct-route">
     <!-- ── Loading / invalid id ─────────────────────────────────────────── -->
-    <section v-if="loading && (!artwork || staleArtwork)" class="po-plate" aria-label="Loading artwork record">
-      <div class="po-gutter">
-        <div class="po-slab">
-          <div class="po-skeleton po-gap-b2" style="width: 30%; height: 0.8em" />
-          <div class="po-skeleton po-gap-b2" style="width: 60%; height: 2em" />
-          <div class="po-skeleton po-gap-b3" style="width: 40%" />
-          <div class="po-grid po-grid-four">
-            <div v-for="n in 4" :key="n" class="po-skeleton" style="height: 3.4em" />
+    <section v-if="loading && (!artwork || staleArtwork)" class="ct-plate" aria-label="Loading artwork record">
+      <div class="ct-gutter">
+        <div class="ct-slab">
+          <div class="ct-skeleton ct-gap-b2" style="width: 30%; height: 0.8em" />
+          <div class="ct-skeleton ct-gap-b2" style="width: 60%; height: 2em" />
+          <div class="ct-skeleton ct-gap-b3" style="width: 40%" />
+          <div class="ct-grid ct-grid-four">
+            <div v-for="n in 4" :key="n" class="ct-skeleton" style="height: 3.4em" />
           </div>
         </div>
       </div>
     </section>
 
-    <section v-else-if="loadError" class="po-plate" aria-label="Artwork unavailable">
-      <div class="po-gutter">
-        <div class="po-slab">
-          <span class="po-tag po-tag-warn po-gap-b1">Unavailable</span>
+    <section v-else-if="loadError" class="ct-plate" aria-label="Artwork unavailable">
+      <div class="ct-gutter">
+        <div class="ct-slab">
+          <span class="ct-tag ct-tag-warn ct-gap-b1">Unavailable</span>
           <h2>We could not open that artwork</h2>
-          <p class="po-copy">{{ loadError }}</p>
-          <p class="po-copy po-quiet">
+          <p class="ct-copy">{{ loadError }}</p>
+          <p class="ct-copy ct-quiet">
             Artwork ids are assigned by the vault as
-            <span class="po-mono">registerArtwork</span> is called by governance, so an id that has
+            <span class="ct-mono">registerArtwork</span> is called by governance, so an id that has
             never been used simply has nothing behind it.
           </p>
-          <div class="po-inline po-row po-gap-t2">
-            <RouterLink to="/art" class="po-button po-button-primary">Back to the gallery</RouterLink>
-            <button v-if="artworkId >= 0" class="po-button" :disabled="store.loading" @click="load()">
-              <span v-if="store.loading" class="po-pulse" />
+          <div class="ct-inline ct-row ct-gap-t2">
+            <RouterLink to="/art" class="ct-btn ct-btn-primary">Back to the gallery</RouterLink>
+            <button v-if="artworkId >= 0" class="ct-btn" :disabled="store.loading" @click="load()">
+              <span v-if="store.loading" class="ct-pulse" />
               Try again
             </button>
           </div>
@@ -417,15 +417,15 @@ const addressRows = computed<AddressRow[]>(() => {
 
     <!-- ── Artwork ──────────────────────────────────────────────────────── -->
     <template v-else-if="artwork">
-      <section class="po-plate po-plaque" aria-label="Artwork record">
-        <div class="po-gutter">
-          <RouterLink to="/art" class="po-copy">← All artworks</RouterLink>
+      <section class="ct-plate ct-plaque" aria-label="Artwork record">
+        <div class="ct-gutter">
+          <RouterLink to="/art" class="ct-copy">← All artworks</RouterLink>
 
-          <div class="po-kicker po-gap-t2">
-            <span class="po-tag po-tag-accent">#{{ artwork.id }}</span>
-            <span v-if="artwork.snapshot.active" class="po-tag po-tag-good">active</span>
-            <span v-if="artwork.snapshot.settled" class="po-tag po-tag-warn">settled</span>
-            <span v-if="!artwork.snapshot.active && !artwork.snapshot.settled" class="po-tag">
+          <div class="ct-kicker ct-gap-t2">
+            <span class="ct-tag ct-tag-accent">#{{ artwork.id }}</span>
+            <span v-if="artwork.snapshot.active" class="ct-tag ct-tag-good">active</span>
+            <span v-if="artwork.snapshot.settled" class="ct-tag ct-tag-warn">settled</span>
+            <span v-if="!artwork.snapshot.active && !artwork.snapshot.settled" class="ct-tag">
               paused
             </span>
             <span>registered {{ timeAgo(artwork.createdAt) }}</span>
@@ -433,100 +433,100 @@ const addressRows = computed<AddressRow[]>(() => {
 
           <h1>{{ artwork.title || `Artwork #${artwork.id}` }}</h1>
 
-          <p class="po-standfirst">
+          <p class="ct-standfirst">
             {{ artwork.artist || "Unattributed" }} · appraised at
             <strong>${{ formatUnits(artwork.appraisedValueUSD, 0) }}</strong>, vaulted with
-            <span class="po-mono">{{ shortAddress(artwork.custodian) }}</span> as custodian and split
+            <span class="ct-mono">{{ shortAddress(artwork.custodian) }}</span> as custodian and split
             into {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }} ERC-20 fractions.
           </p>
 
-          <p class="po-copy po-quiet po-gap-b0">
+          <p class="ct-copy ct-quiet ct-gap-b0">
             Metadata pointer:
             <a
               v-if="metadataHref"
               :href="metadataHref"
               target="_blank"
               rel="noreferrer noopener"
-              class="po-mono"
+              class="ct-mono"
             >
               {{ artwork.metadataURI }}
             </a>
-            <span v-else class="po-mono">{{ artwork.metadataURI || "—" }}</span>
+            <span v-else class="ct-mono">{{ artwork.metadataURI || "—" }}</span>
           </p>
         </div>
       </section>
 
       <!-- ── Market stats ───────────────────────────────────────────────── -->
-      <section class="po-plate" aria-label="The curve, right now">
-        <div class="po-gutter">
-          <div class="po-plate-head po-line po-row">
+      <section class="ct-plate" aria-label="The curve, right now">
+        <div class="ct-gutter">
+          <div class="ct-plate-head ct-line ct-row">
             <div>
-              <h2 class="po-gap-b1">The curve, right now</h2>
-              <p class="po-gap-b0 po-copy">
-                One snapshot read from <span class="po-mono">artworkSnapshot</span>. Cost is convex: a
+              <h2 class="ct-gap-b1">The curve, right now</h2>
+              <p class="ct-gap-b0 ct-copy">
+                One snapshot read from <span class="ct-mono">artworkSnapshot</span>. Cost is convex: a
                 bigger block costs more per share than a small one.
               </p>
             </div>
-            <button class="po-button po-button-small" :disabled="store.loading" @click="load()">
-              <span v-if="store.loading" class="po-pulse" />
+            <button class="ct-btn ct-btn-small" :disabled="store.loading" @click="load()">
+              <span v-if="store.loading" class="ct-pulse" />
               Refresh
             </button>
           </div>
 
-          <div class="po-figures po-figures-five">
-            <div class="po-fact">
-              <div class="po-label">Shares sold</div>
-              <div class="po-figure">
+          <div class="ct-figures ct-figures-five">
+            <div class="ct-fact">
+              <div class="ct-label">Shares sold</div>
+              <div class="ct-figure">
                 {{ formatUnits(artwork.snapshot.sharesSold, SHARE_DECIMALS, { maxFractionDigits: 0 }) }}
               </div>
-              <div class="po-note">
+              <div class="ct-note">
                 of {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }}
               </div>
             </div>
-            <div class="po-fact">
-              <div class="po-label">Shares remaining</div>
-              <div class="po-figure">
+            <div class="ct-fact">
+              <div class="ct-label">Shares remaining</div>
+              <div class="ct-figure">
                 {{ formatUnits(artwork.snapshot.sharesRemaining, SHARE_DECIMALS, { maxFractionDigits: 0 }) }}
               </div>
-              <div class="po-note">still on the curve</div>
+              <div class="ct-note">still on the curve</div>
             </div>
-            <div class="po-fact">
-              <div class="po-label">Marginal price</div>
-              <div class="po-figure">
+            <div class="ct-fact">
+              <div class="ct-label">Marginal price</div>
+              <div class="ct-figure">
                 {{ formatUnits(artwork.snapshot.marginalPrice, artwork.paymentDecimals, { maxFractionDigits: 6 }) }}
               </div>
-              <div class="po-note">per share in {{ artwork.paymentSymbol }}</div>
+              <div class="ct-note">per share in {{ artwork.paymentSymbol }}</div>
             </div>
-            <div class="po-fact">
-              <div class="po-label">Next share costs</div>
-              <div class="po-figure">
+            <div class="ct-fact">
+              <div class="ct-label">Next share costs</div>
+              <div class="ct-figure">
                 {{ formatUnits(artwork.snapshot.nextShareCost, artwork.paymentDecimals, { maxFractionDigits: 6 }) }}
               </div>
-              <div class="po-note">{{ artwork.paymentSymbol }} for 1 share</div>
+              <div class="ct-note">{{ artwork.paymentSymbol }} for 1 share</div>
             </div>
-            <div class="po-fact">
-              <div class="po-label">Primary volume</div>
-              <div class="po-figure">
+            <div class="ct-fact">
+              <div class="ct-label">Primary volume</div>
+              <div class="ct-figure">
                 {{ formatUnits(artwork.snapshot.volume, artwork.paymentDecimals, { maxFractionDigits: 2 }) }}
               </div>
-              <div class="po-note">{{ artwork.paymentSymbol }} raised on the curve</div>
+              <div class="ct-note">{{ artwork.paymentSymbol }} raised on the curve</div>
             </div>
           </div>
 
-          <div class="po-slab po-gap-t2">
-            <div class="po-line po-copy po-gap-b1">
-              <span class="po-quiet">Sold through the curve</span>
-              <span class="po-num">
+          <div class="ct-slab ct-gap-t2">
+            <div class="ct-line ct-copy ct-gap-b1">
+              <span class="ct-quiet">Sold through the curve</span>
+              <span class="ct-num">
                 {{ (store.soldFraction(artwork.snapshot) * 100).toFixed(2) }}%
               </span>
             </div>
-            <div class="po-meter">
+            <div class="ct-meter">
               <div
-                class="po-meter-fill"
+                class="ct-meter-fill"
                 :style="{ width: `${store.soldFraction(artwork.snapshot) * 100}%` }"
               />
             </div>
-            <p class="po-micro po-quiet po-gap-b0 po-gap-t2">
+            <p class="ct-micro ct-quiet ct-gap-b0 ct-gap-t2">
               The curve opens at
               {{ formatUnits(artwork.basePrice, artwork.paymentDecimals, { maxFractionDigits: 6 }) }}
               {{ artwork.paymentSymbol }} per share and rises with every fill, so early buyers pay
@@ -537,112 +537,112 @@ const addressRows = computed<AddressRow[]>(() => {
       </section>
 
       <!-- ── Buy + fee split ────────────────────────────────────────────── -->
-      <section class="po-plate" aria-label="Buy fractions and fee split">
-        <div class="po-gutter">
-          <div class="po-grid po-split">
-            <div class="po-slab">
-              <div class="po-line po-gap-b2">
-                <h3 class="po-gap-b0">Buy fractions</h3>
-                <span class="po-micro po-quiet">{{ remainingLabel }} shares left</span>
+      <section class="ct-plate" aria-label="Buy fractions and fee split">
+        <div class="ct-gutter">
+          <div class="ct-grid ct-split">
+            <div class="ct-slab">
+              <div class="ct-line ct-gap-b2">
+                <h3 class="ct-gap-b0">Buy fractions</h3>
+                <span class="ct-micro ct-quiet">{{ remainingLabel }} shares left</span>
               </div>
 
-              <div class="po-field po-gap-b2">
-                <label class="po-field-label" for="share-amount">Shares to buy</label>
-                <div class="po-field-row">
+              <div class="ct-field ct-gap-b2">
+                <label class="ct-field-label" for="share-amount">Shares to buy</label>
+                <div class="ct-field-row">
                   <input
                     id="share-amount"
                     v-model="amountText"
-                    class="po-field-input"
+                    class="ct-field-input"
                     type="text"
                     inputmode="decimal"
                     placeholder="0"
                     autocomplete="off"
                   />
-                  <span class="po-field-suffix">shares</span>
+                  <span class="ct-field-suffix">shares</span>
                 </div>
               </div>
 
-              <div class="po-inline po-row po-gap-b2">
+              <div class="ct-inline ct-row ct-gap-b2">
                 <button
                   v-for="fill in quickFills"
                   :key="fill.label"
-                  class="po-button po-button-small"
+                  class="ct-btn ct-btn-small"
                   :disabled="!fill.available"
                   @click="setAmount(fill.value)"
                 >
                   {{ fill.label }}
                 </button>
               </div>
-              <p class="po-micro po-quiet po-gap-b2">
+              <p class="ct-micro ct-quiet ct-gap-b2">
                 25% and Max are floored to whole shares of what is still for sale. A fractional
                 amount can still be typed by hand.
               </p>
 
-              <div class="po-line po-gap-b2">
-                <span class="po-copy po-quiet">Cost on the curve</span>
-                <span class="po-num">
-                  <span v-if="quoting" class="po-pulse" />
+              <div class="ct-line ct-gap-b2">
+                <span class="ct-copy ct-quiet">Cost on the curve</span>
+                <span class="ct-num">
+                  <span v-if="quoting" class="ct-pulse" />
                   <template v-else-if="hasQuote">{{ fmt(quotedCost) }} {{ artwork.paymentSymbol }}</template>
                   <template v-else>—</template>
                 </span>
               </div>
 
-              <div class="po-field po-gap-b2">
-                <span class="po-field-label">Slippage tolerance</span>
-                <div class="po-inline">
+              <div class="ct-field ct-gap-b2">
+                <span class="ct-field-label">Slippage tolerance</span>
+                <div class="ct-inline">
                   <button
                     v-for="option in slippageOptions"
                     :key="option.bps"
-                    class="po-button po-button-small"
-                    :class="{ 'po-button-primary': slippageBps === option.bps }"
+                    class="ct-btn ct-btn-small"
+                    :class="{ 'ct-btn-primary': slippageBps === option.bps }"
                     @click="slippageBps = option.bps"
                   >
                     {{ option.label }}
                   </button>
                 </div>
-                <p class="po-micro po-quiet po-gap-b0">
-                  Sent as <span class="po-mono">maxCost</span>: the vault reverts if the cost moves
+                <p class="ct-micro ct-quiet ct-gap-b0">
+                  Sent as <span class="ct-mono">maxCost</span>: the vault reverts if the cost moves
                   above your quote by more than this.
                 </p>
               </div>
 
-              <div class="po-field po-gap-b2">
-                <label class="po-field-label" for="referrer">Referrer (optional)</label>
+              <div class="ct-field ct-gap-b2">
+                <label class="ct-field-label" for="referrer">Referrer (optional)</label>
                 <input
                   id="referrer"
                   v-model="referrer"
-                  class="po-field-input"
+                  class="ct-field-input"
                   type="text"
                   placeholder="0x…"
                   autocomplete="off"
                 />
-                <p class="po-micro po-quiet po-gap-b0">
+                <p class="ct-micro ct-quiet ct-gap-b0">
                   Whoever you name earns {{ formatBps(store.feeParams.referralBps) }} of the
                   platform fee as an on-chain rebate. Left blank, that slice stays with the treasury.
                   Your own address works too.
                 </p>
               </div>
 
-              <button class="po-button po-button-primary po-button-wide" :disabled="!canBuy" @click="handleBuy()">
-                <span v-if="store.submitting" class="po-pulse" />
+              <button class="ct-btn ct-btn-primary ct-btn-wide" :disabled="!canBuy" @click="handleBuy()">
+                <span v-if="store.submitting" class="ct-pulse" />
                 {{ buyLabel }}
               </button>
 
-              <p v-if="disabledReason" class="po-micro po-warn po-gap-t2 po-gap-b0">
+              <p v-if="disabledReason" class="ct-micro ct-warn ct-gap-t2 ct-gap-b0">
                 {{ disabledReason }}
               </p>
-              <p v-else class="po-micro po-quiet po-gap-t2 po-gap-b0">
-                Buying mints real BEP-20 shares to your wallet in the same transaction.
+              <p v-else class="ct-micro ct-quiet ct-gap-t2 ct-gap-b0">
+                Buying mints real SPL shares to your wallet in the same transaction.
               </p>
 
-              <div v-if="formError" class="po-callout po-callout-bad po-gap-t2">
-                <div class="po-fill">{{ formError }}</div>
+              <div v-if="formError" class="ct-callout ct-callout-bad ct-gap-t2">
+                <div class="ct-fill">{{ formError }}</div>
               </div>
-              <div v-if="formSuccess" class="po-callout po-callout-good po-gap-t2">
-                <div class="po-fill">{{ formSuccess }}</div>
+              <div v-if="formSuccess" class="ct-callout ct-callout-good ct-gap-t2">
+                <div class="ct-fill">{{ formSuccess }}</div>
               </div>
 
-              <div v-if="!wallet.isConnected || wallet.isWrongChain" class="po-gap-t2">
+              <div v-if="!wallet.isConnected || wallet.isWrongChain" class="ct-gap-t2">
                 <ConnectPrompt
                   compact
                   message="Connect your wallet to buy fractions of this artwork."
@@ -650,107 +650,107 @@ const addressRows = computed<AddressRow[]>(() => {
               </div>
 
               <template v-if="store.lastTx">
-                <div class="po-seam" />
-                <div class="po-line po-micro">
-                  <span class="po-quiet">{{ store.lastTx?.label }}</span>
-                  <span class="po-inline" style="gap: 8px">
-                    <span class="po-tag" :class="lastTxBadge">{{ store.lastTx?.status }}</span>
+                <div class="ct-seam" />
+                <div class="ct-line ct-micro">
+                  <span class="ct-quiet">{{ store.lastTx?.label }}</span>
+                  <span class="ct-inline" style="gap: 8px">
+                    <span class="ct-tag" :class="lastTxBadge">{{ store.lastTx?.status }}</span>
                     <a
                       v-if="store.lastTx?.explorerUrl"
                       :href="store.lastTx?.explorerUrl"
                       target="_blank"
                       rel="noreferrer noopener"
-                      class="po-mono"
+                      class="ct-mono"
                     >
                       {{ (store.lastTx?.hash ?? "").slice(0, 10) }}…
                     </a>
                   </span>
                 </div>
-                <p v-if="store.lastTx?.message" class="po-micro po-bad po-gap-b0 po-gap-t2">
+                <p v-if="store.lastTx?.message" class="ct-micro ct-bad ct-gap-b0 ct-gap-t2">
                   {{ store.lastTx?.message }}
                 </p>
               </template>
             </div>
 
             <!-- Fee breakdown -->
-            <div class="po-slab">
-              <h3 class="po-gap-b1">Where your money goes</h3>
-              <p class="po-copy po-gap-b2">
+            <div class="ct-slab">
+              <h3 class="ct-gap-b1">Where your money goes</h3>
+              <p class="ct-copy ct-gap-b2">
                 The exact split of the quote above, using the parameters published by
-                <span class="po-mono">ArtworkVault</span> and <span class="po-mono">FeeRouter</span> at
+                <span class="ct-mono">ArtworkVault</span> and <span class="ct-mono">FeeRouter</span> at
                 this moment.
               </p>
 
-              <p v-if="!hasQuote" class="po-copy po-quiet po-gap-b0">
+              <p v-if="!hasQuote" class="ct-copy ct-quiet ct-gap-b0">
                 Enter an amount of shares to see the split, including how much of your purchase
                 lands in the mining reward reserve.
               </p>
 
               <template v-else>
-                <div class="po-line po-copy">
+                <div class="ct-line ct-copy">
                   <span>Cost (convex curve total)</span>
-                  <strong class="po-num">{{ fmt(breakdown.cost) }} {{ artwork.paymentSymbol }}</strong>
+                  <strong class="ct-num">{{ fmt(breakdown.cost) }} {{ artwork.paymentSymbol }}</strong>
                 </div>
 
-                <div class="po-seam" />
+                <div class="ct-seam" />
 
-                <div class="po-line po-copy">
+                <div class="ct-line ct-copy">
                   <span>
                     Platform fee ({{ formatBps(store.feeParams.platformFeeBps) }} of cost)
                   </span>
-                  <span class="po-num">{{ fmt(breakdown.fee) }}</span>
+                  <span class="ct-num">{{ fmt(breakdown.fee) }}</span>
                 </div>
-                <div class="po-line po-copy po-split-line">
-                  <span class="po-muted">→ Mining reward reserve</span>
-                  <span class="po-num po-good">{{ fmt(breakdown.mining) }}</span>
+                <div class="ct-line ct-copy ct-split-line">
+                  <span class="ct-muted">→ Mining reward reserve</span>
+                  <span class="ct-num ct-good">{{ fmt(breakdown.mining) }}</span>
                 </div>
-                <div v-if="breakdown.hasReferrer" class="po-line po-copy po-split-line">
-                  <span class="po-muted">→ Referrer rebate</span>
-                  <span class="po-num">{{ fmt(breakdown.referral) }}</span>
+                <div v-if="breakdown.hasReferrer" class="ct-line ct-copy ct-split-line">
+                  <span class="ct-muted">→ Referrer rebate</span>
+                  <span class="ct-num">{{ fmt(breakdown.referral) }}</span>
                 </div>
-                <div class="po-line po-copy po-split-line">
-                  <span class="po-muted">
+                <div class="ct-line ct-copy ct-split-line">
+                  <span class="ct-muted">
                     → Treasury ({{ breakdown.hasReferrer ? "fee remainder" : "unclaimed referral slice + remainder" }})
                   </span>
-                  <span class="po-num">{{ fmt(breakdown.feeTreasury) }}</span>
+                  <span class="ct-num">{{ fmt(breakdown.feeTreasury) }}</span>
                 </div>
 
-                <div class="po-line po-copy po-gap-t2">
+                <div class="ct-line ct-copy ct-gap-t2">
                   <span>
                     Artist proceeds ({{ formatBps(artistProceedsBps) }} of cost)
                   </span>
-                  <span class="po-num">{{ fmt(breakdown.artistProceeds) }}</span>
+                  <span class="ct-num">{{ fmt(breakdown.artistProceeds) }}</span>
                 </div>
-                <div class="po-line po-copy po-split-line">
-                  <span class="po-muted">
+                <div class="ct-line ct-copy ct-split-line">
+                  <span class="ct-muted">
                     → Artist payout ({{ formatBps(store.feeParams.artistShareBps) }})
                   </span>
-                  <span class="po-num">{{ fmt(breakdown.artistPayout) }}</span>
+                  <span class="ct-num">{{ fmt(breakdown.artistPayout) }}</span>
                 </div>
-                <div class="po-line po-copy po-split-line">
-                  <span class="po-muted">→ Treasury (proceeds remainder)</span>
-                  <span class="po-num">{{ fmt(breakdown.proceedsTreasury) }}</span>
-                </div>
-
-                <div class="po-seam" />
-
-                <div class="po-line po-copy">
-                  <span class="po-quiet">Treasury total</span>
-                  <span class="po-num">{{ fmt(breakdown.treasury) }} {{ artwork.paymentSymbol }}</span>
+                <div class="ct-line ct-copy ct-split-line">
+                  <span class="ct-muted">→ Treasury (proceeds remainder)</span>
+                  <span class="ct-num">{{ fmt(breakdown.proceedsTreasury) }}</span>
                 </div>
 
-                <div class="po-callout po-callout-good po-gap-t2">
-                  <div class="po-fill">
+                <div class="ct-seam" />
+
+                <div class="ct-line ct-copy">
+                  <span class="ct-quiet">Treasury total</span>
+                  <span class="ct-num">{{ fmt(breakdown.treasury) }} {{ artwork.paymentSymbol }}</span>
+                </div>
+
+                <div class="ct-callout ct-callout-good ct-gap-t2">
+                  <div class="ct-fill">
                     This purchase commits
                     <strong>{{ fmt(breakdown.mining) }} {{ artwork.paymentSymbol }}</strong> of
                     mining reward budget — {{ formatBps(store.feeParams.miningShareBps) }} of the
-                    platform fee, routed through <span class="po-mono">FeeRouter.payTokenFee</span> into
-                    <span class="po-mono">MiningPool</span> and streamed to stakers block by block.
+                    platform fee, routed through <span class="ct-mono">FeeRouter.payTokenFee</span> into
+                    <span class="ct-mono">MiningPool</span> and streamed to stakers block by block.
                     Buying art is how this protocol pays its miners.
                   </div>
                 </div>
 
-                <p class="po-micro po-quiet po-gap-b0 po-gap-t2">
+                <p class="ct-micro ct-quiet ct-gap-b0 ct-gap-t2">
                   The artist's proceeds are paid from the vault; only the platform fee travels
                   through the router, which is why the mining contribution is a slice of the fee
                   rather than of the whole cost.
@@ -762,46 +762,46 @@ const addressRows = computed<AddressRow[]>(() => {
       </section>
 
       <!-- ── Position, settlement, contracts ────────────────────────────── -->
-      <section class="po-plate" aria-label="Position and settlement">
-        <div class="po-gutter">
-          <div class="po-grid po-split">
-            <div class="po-slab">
-              <h3 class="po-gap-b2">Your position</h3>
+      <section class="ct-plate" aria-label="Position and settlement">
+        <div class="ct-gutter">
+          <div class="ct-grid ct-split">
+            <div class="ct-slab">
+              <h3 class="ct-gap-b2">Your position</h3>
 
-              <p v-if="!wallet.isConnected" class="po-copy po-gap-b0">
+              <p v-if="!wallet.isConnected" class="ct-copy ct-gap-b0">
                 Connect a wallet to see how many fractions you hold in this artwork.
               </p>
 
               <template v-else>
-                <div class="po-line po-copy">
-                  <span class="po-quiet">Shares held</span>
-                  <span class="po-num">
+                <div class="ct-line ct-copy">
+                  <span class="ct-quiet">Shares held</span>
+                  <span class="ct-num">
                     {{ formatUnits(artwork.userShares, SHARE_DECIMALS, { maxFractionDigits: 4 }) }}
                   </span>
                 </div>
-                <div class="po-line po-copy">
-                  <span class="po-quiet">Share of the artwork</span>
-                  <span class="po-num">{{ holdingPercent }}%</span>
+                <div class="ct-line ct-copy">
+                  <span class="ct-quiet">Share of the artwork</span>
+                  <span class="ct-num">{{ holdingPercent }}%</span>
                 </div>
-                <div class="po-line po-copy">
-                  <span class="po-quiet">Value at the marginal price</span>
-                  <span class="po-num">
+                <div class="ct-line ct-copy">
+                  <span class="ct-quiet">Value at the marginal price</span>
+                  <span class="ct-num">
                     {{ formatUnits(holdingValue, artwork.paymentDecimals, { maxFractionDigits: 2 }) }}
                     {{ artwork.paymentSymbol }}
                   </span>
                 </div>
-                <div class="po-seam" />
-                <p class="po-micro po-quiet po-gap-b0">
+                <div class="ct-seam" />
+                <p class="ct-micro ct-quiet ct-gap-b0">
                   Read from the vault's own purchase ledger
-                  (<span class="po-mono">sharesOf</span>) — the same number the certificate redemption
+                  (<span class="ct-mono">sharesOf</span>) — the same number the certificate redemption
                   check uses. The curve prices each additional share at
                   {{ formatUnits(artwork.snapshot.marginalPrice, artwork.paymentDecimals, { maxFractionDigits: 6 }) }}
                   {{ artwork.paymentSymbol }}, so a larger block pushes the price up for everyone
                   after you.
                 </p>
 
-                <div v-if="holdsEverything" class="po-callout po-callout-good po-gap-t2">
-                  <div class="po-fill">
+                <div v-if="holdsEverything" class="ct-callout ct-callout-good ct-gap-t2">
+                  <div class="ct-fill">
                     You hold all
                     {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }} shares of this artwork —                     the whole piece, on-chain.
                   </div>
@@ -809,34 +809,34 @@ const addressRows = computed<AddressRow[]>(() => {
               </template>
             </div>
 
-            <div class="po-slab">
-              <div class="po-line po-gap-b2">
-                <h3 class="po-gap-b0">Settlement &amp; certificate</h3>
-                <span class="po-tag" :class="{ 'po-tag-warn': artwork.snapshot.settled }">
+            <div class="ct-slab">
+              <div class="ct-line ct-gap-b2">
+                <h3 class="ct-gap-b0">Settlement &amp; certificate</h3>
+                <span class="ct-tag" :class="{ 'ct-tag-warn': artwork.snapshot.settled }">
                   {{ artwork.snapshot.settled ? "settled" : "in custody" }}
                 </span>
               </div>
 
-              <p class="po-copy">
+              <p class="ct-copy">
                 Fractions trade while the physical piece stays with its custodian
-                (<span class="po-mono">{{ shortAddress(artwork.custodian) }}</span>). Delivery or a
+                (<span class="ct-mono">{{ shortAddress(artwork.custodian) }}</span>). Delivery or a
                 custody transfer is confirmed by the custodian — or by protocol governance — calling
-                <span class="po-mono">settleArtwork(id, deliveryProofURI)</span>. Settlement does not
+                <span class="ct-mono">settleArtwork(id, deliveryProofURI)</span>. Settlement does not
                 close primary sales; it unlocks redemption.
               </p>
-              <p class="po-copy">
+              <p class="ct-copy">
                 Once settled, a single wallet holding every one of the
                 {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }} shares can call
-                <span class="po-mono">redeemCertificate(id)</span> and receive the ERC-721 provenance
+                <span class="ct-mono">redeemCertificate(id)</span> and receive the ERC-721 provenance
                 certificate that the vault minted to the custodian at registration — the on-chain
                 claim on the physical artwork.
               </p>
 
-              <div class="po-callout po-callout-info">
-                <div class="po-fill">
+              <div class="ct-callout ct-callout-info">
+                <div class="ct-fill">
                   The certificate is an ERC-721 issued by the vault itself, so it has no separate
-                  contract: token <span class="po-mono">#{{ artwork.certificateId.toString() }}</span>
-                  at <span class="po-mono">{{ shortAddress(ADDRESSES.artworkVault) }}</span>.
+                  contract: token <span class="ct-mono">#{{ artwork.certificateId.toString() }}</span>
+                  at <span class="ct-mono">{{ shortAddress(ADDRESSES.artworkVault) }}</span>.
                   <template v-if="artwork.snapshot.settled">
                     This artwork is settled.
                   </template>
@@ -847,91 +847,91 @@ const addressRows = computed<AddressRow[]>(() => {
               </div>
 
               <template v-if="holdsEverything && artwork.snapshot.settled">
-                <button class="po-button po-button-good po-button-wide po-gap-t2" :disabled="!canRedeem" @click="handleRedeem()">
-                  <span v-if="store.submitting" class="po-pulse" />
+                <button class="ct-btn ct-btn-good ct-btn-wide ct-gap-t2" :disabled="!canRedeem" @click="handleRedeem()">
+                  <span v-if="store.submitting" class="ct-pulse" />
                   Redeem provenance certificate
                 </button>
-                <p v-if="!canRedeem && writeBlockedReason" class="po-micro po-warn po-gap-t2 po-gap-b0">
+                <p v-if="!canRedeem && writeBlockedReason" class="ct-micro ct-warn ct-gap-t2 ct-gap-b0">
                   {{ writeBlockedReason }}
                 </p>
               </template>
 
               <p
                 v-else-if="holdsEverything && !artwork.snapshot.settled"
-                class="po-micro po-quiet po-gap-b0 po-gap-t2"
+                class="ct-micro ct-quiet ct-gap-b0 ct-gap-t2"
               >
                 You already hold every share. Redemption opens as soon as the custodian settles the
                 artwork.
               </p>
 
-              <p v-else class="po-micro po-quiet po-gap-b0 po-gap-t2">
+              <p v-else class="ct-micro ct-quiet ct-gap-b0 ct-gap-t2">
                 Redemption needs 100% of the shares in one wallet. Every fraction you buy brings that
                 closer.
               </p>
 
-              <div v-if="redeemError" class="po-callout po-callout-bad po-gap-t2">
-                <div class="po-fill">{{ redeemError }}</div>
+              <div v-if="redeemError" class="ct-callout ct-callout-bad ct-gap-t2">
+                <div class="ct-fill">{{ redeemError }}</div>
               </div>
-              <div v-if="redeemSuccess" class="po-callout po-callout-good po-gap-t2">
-                <div class="po-fill">{{ redeemSuccess }}</div>
+              <div v-if="redeemSuccess" class="ct-callout ct-callout-good ct-gap-t2">
+                <div class="ct-fill">{{ redeemSuccess }}</div>
               </div>
 
               <template v-if="isCustodian && !artwork.snapshot.settled">
-                <div class="po-seam" />
-                <div class="po-field po-gap-b2">
-                  <label class="po-field-label" for="delivery-proof">
+                <div class="ct-seam" />
+                <div class="ct-field ct-gap-b2">
+                  <label class="ct-field-label" for="delivery-proof">
                     Delivery proof URI — you are the custodian
                   </label>
                   <input
                     id="delivery-proof"
                     v-model="deliveryProof"
-                    class="po-field-input"
+                    class="ct-field-input"
                     type="text"
                     placeholder="ipfs://…"
                     autocomplete="off"
                   />
                 </div>
-                <button class="po-button po-button-wide" :disabled="!canSettle" @click="handleSettle()">
-                  <span v-if="store.submitting" class="po-pulse" />
+                <button class="ct-btn ct-btn-wide" :disabled="!canSettle" @click="handleSettle()">
+                  <span v-if="store.submitting" class="ct-pulse" />
                   Settle artwork
                 </button>
-                <p v-if="!canSettle" class="po-micro po-warn po-gap-t2 po-gap-b0">
+                <p v-if="!canSettle" class="ct-micro ct-warn ct-gap-t2 ct-gap-b0">
                   {{ writeBlockedReason || "Add a delivery proof URI before settling." }}
                 </p>
-                <div v-if="settleError" class="po-callout po-callout-bad po-gap-t2">
-                  <div class="po-fill">{{ settleError }}</div>
+                <div v-if="settleError" class="ct-callout ct-callout-bad ct-gap-t2">
+                  <div class="ct-fill">{{ settleError }}</div>
                 </div>
-                <div v-if="settleSuccess" class="po-callout po-callout-good po-gap-t2">
-                  <div class="po-fill">{{ settleSuccess }}</div>
+                <div v-if="settleSuccess" class="ct-callout ct-callout-good ct-gap-t2">
+                  <div class="ct-fill">{{ settleSuccess }}</div>
                 </div>
               </template>
             </div>
           </div>
 
           <!-- Contracts -->
-          <div class="po-slab po-gap-t3">
-            <h3 class="po-gap-b2">Contracts and counterparties</h3>
-            <div class="po-stack po-stack-tight">
-              <div v-for="row in addressRows" :key="row.label" class="po-line po-copy po-row">
-                <span class="po-quiet">{{ row.label }}</span>
-                <span class="po-inline" style="gap: 8px">
+          <div class="ct-slab ct-gap-t3">
+            <h3 class="ct-gap-b2">Contracts and counterparties</h3>
+            <div class="ct-stack ct-stack-tight">
+              <div v-for="row in addressRows" :key="row.label" class="ct-line ct-copy ct-row">
+                <span class="ct-quiet">{{ row.label }}</span>
+                <span class="ct-inline" style="gap: 8px">
                   <a
                     v-if="addressHref(row.address)"
                     :href="addressHref(row.address)"
                     target="_blank"
                     rel="noreferrer noopener"
-                    class="po-mono po-micro"
+                    class="ct-mono ct-micro"
                   >
                     {{ shortAddress(row.address) }}
                   </a>
-                  <span v-else class="po-mono po-micro">{{ shortAddress(row.address) }}</span>
-                  <span class="po-micro po-quiet">{{ row.note }}</span>
+                  <span v-else class="ct-mono ct-micro">{{ shortAddress(row.address) }}</span>
+                  <span class="ct-micro ct-quiet">{{ row.note }}</span>
                 </span>
               </div>
             </div>
-            <p class="po-micro po-quiet po-gap-b0 po-gap-t2">
+            <p class="ct-micro ct-quiet ct-gap-b0 ct-gap-t2">
               Every artwork gets its own ERC-20 share token, deployed by the vault at registration.
-              Fractions are real BEP-20 tokens: they can be held or transferred like any other token
+              Fractions are real SPL tokens: they can be held or transferred like any other token
               while the sale is open.
             </p>
           </div>

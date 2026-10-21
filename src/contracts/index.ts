@@ -63,7 +63,7 @@ export function artworkVault(runner: Provider | Signer): Contract {
   return at(ADDRESSES.artworkVault, ABI.artworkVault, runner);
 }
 
-/** Any BEP-20, including the fee/reward asset and per-artwork share tokens. */
+/** Any SPL token, including the fee/reward asset and per-artwork share tokens. */
 export function erc20(address: string, runner: Provider | Signer): Contract {
   return at(address, ABI.erc20, runner);
 }
@@ -73,7 +73,7 @@ export function artworkShare(address: string, runner: Provider | Signer): Contra
   return at(address, ABI.artworkShare, runner);
 }
 
-/** The fee/reward asset (USDT on BSC, a mock on testnet). */
+/** The fee/reward asset (USDT on Solana, a mock on devnet). */
 export function feeToken(runner: Provider | Signer): Contract {
   return at(ADDRESSES.feeToken, ABI.erc20, runner);
 }

@@ -22,23 +22,23 @@ const showModal = ref(false);
 </script>
 
 <template>
-  <div v-if="!wallet.isConnected" class="po-slab" :class="{ 'po-slab-tight': compact }">
-    <div class="po-line" style="gap: 14px">
-      <div class="po-fill">
+  <div v-if="!wallet.isConnected" class="ct-slab" :class="{ 'ct-slab-tight': compact }">
+    <div class="ct-row">
+      <div class="ct-fill">
         <strong>Connect a wallet</strong>
-        <p class="po-copy po-gap-b0">
+        <p class="ct-copy ct-gap-b0">
           {{ message || `Read-only mode. Connect to sign transactions on ${TARGET_CHAIN.name}.` }}
         </p>
       </div>
-      <button class="po-button po-button-primary" @click="showModal = true">Connect</button>
+      <button class="ct-btn ct-btn-primary" @click="showModal = true">Connect</button>
     </div>
     <WalletModal v-if="showModal" @close="showModal = false" />
   </div>
 
-  <div v-else-if="wallet.isWrongChain" class="po-callout po-callout-caution">
-    <div class="po-fill">
+  <div v-else-if="wallet.isWrongChain" class="ct-callout ct-callout-caution">
+    <div class="ct-fill">
       Your wallet is on another network. Switch to {{ TARGET_CHAIN.name }} to continue.
     </div>
-    <button class="po-button po-button-small po-button-primary" @click="wallet.switchToTargetChain()">Switch</button>
+    <button class="ct-btn ct-btn-small ct-btn-primary" @click="wallet.switchToTargetChain()">Switch</button>
   </div>
 </template>

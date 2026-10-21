@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "meta": {
-    "projectName": "@tessella/website",
-    "title": "@tessella/website",
+    "projectName": "@fractio/website",
+    "title": "@fractio/website",
     "lang": "en"
   },
   "routes": [
@@ -407,7 +407,7 @@
       "count": 1
     },
     {
-      "value": "// The three legs always sum to `amount`; the treasury leg absorbs rounding dust. const [miningShare, referralShare, treasuryShare] = await router.previewSplit(amount, hasReferrer); // (amount, hasReferrer) // Approve the router for `amount` of `feeToken`, then: await router.payTokenFee(feeToken, amount, referrer); // (feeToken, amount, referrer) await router.payDefaultFee(amount, referrer); // (amount, referrer) await router.payNativeFee(referrer, { value }); // (referrer) payable, BNB",
+      "value": "// The three legs always sum to `amount`; the treasury leg absorbs rounding dust. const [miningShare, referralShare, treasuryShare] = await router.previewSplit(amount, hasReferrer); // (amount, hasReferrer) // Approve the router for `amount` of `feeToken`, then: await router.payTokenFee(feeToken, amount, referrer); // (feeToken, amount, referrer) await router.payDefaultFee(amount, referrer); // (amount, referrer) await router.payNativeFee(referrer, { value }); // (referrer) payable, SOL",
       "count": 1
     },
     {
@@ -807,7 +807,7 @@
       "count": 1
     },
     {
-      "value": "and the vault mints the shares straight into their wallet. That is the design difference worth understanding: a fraction is a real BEP-20 balance you custody yourself, so it can be staked in the protocol's own pools, used as collateral, or traded on any BSC venue that lists it — rather than a line in a custodial ledger that only the operator can move.",
+      "value": "and the vault mints the shares straight into their wallet. That is the design difference worth understanding: a fraction is a real SPL balance you custody yourself, so it can be staked in the protocol's own pools, used as collateral, or traded on any Solana venue that lists it — rather than a line in a custodial ledger that only the operator can move.",
       "count": 1
     },
     {
@@ -971,10 +971,6 @@
       "count": 1
     },
     {
-      "value": "Binance Wallet",
-      "count": 1
-    },
-    {
       "value": "Block an exit.",
       "count": 1
     },
@@ -988,18 +984,6 @@
     },
     {
       "value": "blocks. The window is capped by the budget itself in reward units (",
-      "count": 1
-    },
-    {
-      "value": "BNB",
-      "count": 2
-    },
-    {
-      "value": "BNB balance",
-      "count": 1
-    },
-    {
-      "value": "BNB Smart Chain liveness, RPC availability, gas spikes and reorganisations all apply; this UI reads through a public RPC and shows whatever it returns, including stale data if the endpoint lags. Any approval you grant to the vault, the router or a pool can be spent according to that contract's code, so approve the amount you need rather than an unlimited allowance where you can.",
       "count": 1
     },
     {
@@ -1039,7 +1023,7 @@
       "count": 1
     },
     {
-      "value": "Buying mints real BEP-20 shares to your wallet in the same transaction.",
+      "value": "Buying mints real SPL shares to your wallet in the same transaction.",
       "count": 1
     },
     {
@@ -1463,7 +1447,7 @@
       "count": 1
     },
     {
-      "value": "Every artwork gets its own ERC-20 share token, deployed by the vault at registration. Fractions are real BEP-20 tokens: they can be held or transferred like any other token while the sale is open.",
+      "value": "Every artwork gets its own ERC-20 share token, deployed by the vault at registration. Fractions are real SPL tokens: they can be held or transferred like any other token while the sale is open.",
       "count": 1
     },
     {
@@ -1489,6 +1473,10 @@
     {
       "value": "extending",
       "count": 1
+    },
+    {
+      "value": "F",
+      "count": 2
     },
     {
       "value": "Fee",
@@ -1531,7 +1519,7 @@
       "count": 1
     },
     {
-      "value": "fixed supply, 18 decimals, one BEP-20 per artwork",
+      "value": "fixed supply, 18 decimals, one SPL token per artwork",
       "count": 1
     },
     {
@@ -1552,6 +1540,22 @@
     },
     {
       "value": "Four steps, all enforced by code rather than by a treasury promise.",
+      "count": 1
+    },
+    {
+      "value": "Fractio",
+      "count": 2
+    },
+    {
+      "value": "Fractio vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
+      "count": 1
+    },
+    {
+      "value": "Fractio vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
+      "count": 1
+    },
+    {
+      "value": "Fractio. Open-source reference implementation.",
       "count": 1
     },
     {
@@ -1691,7 +1695,7 @@
       "count": 1
     },
     {
-      "value": "In the reference deployment's fee pool, rewards and principal are the same BEP-20 (",
+      "value": "In the reference deployment's fee pool, rewards and principal are the same SPL token (",
       "count": 1
     },
     {
@@ -2039,15 +2043,15 @@
       "count": 1
     },
     {
-      "value": "No BSC wallet detected. Install",
-      "count": 1
-    },
-    {
       "value": "No penalty applies — the loyalty lock has elapsed.",
       "count": 1
     },
     {
       "value": "No pools are registered on this deployment yet.",
+      "count": 1
+    },
+    {
+      "value": "No Solana wallet detected. Install",
       "count": 1
     },
     {
@@ -2251,6 +2255,10 @@
       "count": 1
     },
     {
+      "value": "Phantom",
+      "count": 1
+    },
+    {
       "value": "pins the behaviours described above, including the solvency invariant, but tests are not an audit. Reward accounting — accumulator precision, weight snapshotting, rounding — is exactly the kind of code where a subtle error is silent rather than loud.",
       "count": 1
     },
@@ -2435,7 +2443,7 @@
       "count": 1
     },
     {
-      "value": "referral rebate — a 6-decimal reward asset (the reference deployment's mock USDT; with an 18-decimal asset such as BSC USDT the integer unit counts scale by 10¹² while every token-denominated line below is unchanged), an idle reward schedule opened at the default",
+      "value": "referral rebate — a 6-decimal reward asset (the reference deployment's mock USDT; with an 18-decimal asset such as Solana USDT the integer unit counts scale by 10¹² while every token-denominated line below is unchanged), an idle reward schedule opened at the default",
       "count": 1
     },
     {
@@ -2767,6 +2775,18 @@
       "count": 1
     },
     {
+      "value": "SOL",
+      "count": 2
+    },
+    {
+      "value": "SOL balance",
+      "count": 1
+    },
+    {
+      "value": "Solana liveness, RPC availability, gas spikes and reorganisations all apply; this UI reads through a public RPC and shows whatever it returns, including stale data if the endpoint lags. Any approval you grant to the vault, the router or a pool can be spent according to that contract's code, so approve the amount you need rather than an unlimited allowance where you can.",
+      "count": 1
+    },
+    {
       "value": "Sold",
       "count": 1
     },
@@ -2795,7 +2815,7 @@
       "count": 1
     },
     {
-      "value": "Stake into a pool and you earn a pro-rata share of the fees Tessella collects — paid in",
+      "value": "Stake into a pool and you earn a pro-rata share of the fees Fractio collects — paid in",
       "count": 1
     },
     {
@@ -2863,7 +2883,7 @@
       "count": 1
     },
     {
-      "value": "swaps it through PancakeSwap V2 — an explicitly configured path, or the default",
+      "value": "swaps it through Jupiter — an explicitly configured path, or the default",
       "count": 1
     },
     {
@@ -2879,10 +2899,6 @@
       "count": 1
     },
     {
-      "value": "T",
-      "count": 2
-    },
-    {
       "value": "tailEmissionBps",
       "count": 1
     },
@@ -2892,22 +2908,6 @@
     },
     {
       "value": "Target chain:",
-      "count": 1
-    },
-    {
-      "value": "Tessella",
-      "count": 2
-    },
-    {
-      "value": "Tessella vaults physical artworks and sells fractional ownership of them on BNB Smart Chain. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated BEP-20 share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
-      "count": 1
-    },
-    {
-      "value": "Tessella vaults physical artworks on BNB Smart Chain and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
-      "count": 1
-    },
-    {
-      "value": "Tessella. Open-source reference implementation.",
       "count": 1
     },
     {
@@ -3023,7 +3023,7 @@
       "count": 1
     },
     {
-      "value": "The vault sells primary shares and never buys them back. There is no AMM, no order book, no market maker and no protocol redemption in this implementation. Exiting means finding another buyer on whatever venue lists the share token, or assembling 100% of the shares to redeem the physical piece. A real BEP-20 balance is not the same thing as a sellable one.",
+      "value": "The vault sells primary shares and never buys them back. There is no AMM, no order book, no market maker and no protocol redemption in this implementation. Exiting means finding another buyer on whatever venue lists the share token, or assembling 100% of the shares to redeem the physical piece. A real SPL balance is not the same thing as a sellable one.",
       "count": 1
     },
     {
@@ -3115,7 +3115,7 @@
       "count": 1
     },
     {
-      "value": "token → WBNB → rewardToken",
+      "value": "token → wSOL → rewardToken",
       "count": 1
     },
     {
@@ -3163,7 +3163,7 @@
       "count": 1
     },
     {
-      "value": "Transactions you sign from this page appear here with their BscScan links.",
+      "value": "Transactions you sign from this page appear here with their Solscan links.",
       "count": 1
     },
     {
@@ -3518,7 +3518,7 @@
     },
     {
       "name": "href",
-      "value": "https://www.binance.com/en/web3wallet",
+      "value": "https://phantom.app/download",
       "count": 1
     },
     {
@@ -3690,7 +3690,7 @@
     },
     {
       "kind": "attr",
-      "expr": "wallet.bnbBalanceFormatted",
+      "expr": "wallet.solBalanceFormatted",
       "count": 1
     },
     {
@@ -4670,11 +4670,6 @@
     },
     {
       "kind": "interpolation",
-      "expr": "wallet.bnbBalanceFormatted",
-      "count": 1
-    },
-    {
-      "kind": "interpolation",
       "expr": "wallet.error",
       "count": 1
     },
@@ -4682,6 +4677,11 @@
       "kind": "interpolation",
       "expr": "wallet.shortAddress",
       "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "wallet.solBalanceFormatted",
+      "count": 1
     },
     {
       "kind": "interpolation",
@@ -4860,7 +4860,7 @@
     },
     {
       "kind": "prop",
-      "expr": "wallet.bnbBalanceFormatted",
+      "expr": "wallet.solBalanceFormatted",
       "count": 1
     }
   ],
@@ -5034,7 +5034,7 @@
     },
     {
       "kind": "href",
-      "target": "https://www.binance.com/en/web3wallet",
+      "target": "https://phantom.app/download",
       "count": 1
     },
     {

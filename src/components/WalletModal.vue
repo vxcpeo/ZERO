@@ -32,50 +32,50 @@ async function pick(id: string): Promise<void> {
 </script>
 
 <template>
-  <div class="po-veil" @click.self="emit('close')">
+  <div class="ct-veil" @click.self="emit('close')">
     <div
       ref="dialog"
-      class="po-dialog"
+      class="ct-dialog"
       role="dialog"
-      aria-labelledby="po-wallet-title"
+      aria-labelledby="ct-wallet-title"
       tabindex="-1"
     >
-      <div class="po-line po-gap-b2">
-        <h3 id="po-wallet-title" class="po-gap-b0">Connect a wallet</h3>
-        <button class="po-button po-button-quiet po-button-small" @click="emit('close')">Close</button>
+      <div class="ct-band-head">
+        <h3 id="ct-wallet-title" class="ct-gap-b0">Connect a wallet</h3>
+        <button class="ct-btn ct-btn-quiet ct-btn-small" @click="emit('close')">Close</button>
       </div>
 
-      <p class="po-copy">
+      <p class="ct-copy">
         Your wallet signs the transactions. Nothing is custodial — the contracts hold the funds,
         not this website.
       </p>
 
-      <div class="po-stack po-stack-tight po-gap-t2">
+      <div class="ct-stack ct-stack-tight ct-gap-t2">
         <button
           v-for="option in wallets"
           :key="option.id"
-          class="po-wallet-choice"
+          class="ct-wallet-choice"
           :disabled="wallet.connecting"
           @click="pick(option.id)"
         >
-          <span class="po-wallet-glyph">{{ option.icon }}</span>
-          <span class="po-fill">{{ option.name }}</span>
-          <span v-if="wallet.walletId === option.id" class="po-tag po-tag-accent">Last used</span>
+          <span class="ct-wallet-glyph">{{ option.icon }}</span>
+          <span class="ct-fill">{{ option.name }}</span>
+          <span v-if="wallet.walletId === option.id" class="ct-tag ct-tag-accent">Last used</span>
         </button>
       </div>
 
-      <div v-if="noneInstalled" class="po-callout po-callout-caution po-gap-t2">
+      <div v-if="noneInstalled" class="ct-callout ct-callout-caution ct-gap-t2">
         <span>
-          No BSC wallet detected. Install
+          No Solana wallet detected. Install
           <a href="https://metamask.io/download/" target="_blank" rel="noreferrer noopener">MetaMask</a>
           or
-          <a href="https://www.binance.com/en/web3wallet" target="_blank" rel="noreferrer noopener"
-            >Binance Wallet</a
+          <a href="https://phantom.app/download" target="_blank" rel="noreferrer noopener"
+            >Phantom</a
           >, then reload this page.
         </span>
       </div>
 
-      <div v-if="wallet.error" class="po-callout po-callout-bad po-gap-t2">{{ wallet.error }}</div>
+      <div v-if="wallet.error" class="ct-callout ct-callout-bad ct-gap-t2">{{ wallet.error }}</div>
     </div>
   </div>
 </template>

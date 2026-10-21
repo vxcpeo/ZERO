@@ -1,9 +1,9 @@
 {
-  "name": "@tessella/website",
+  "name": "@fractio/website",
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Vue 3 front-end for the Tessella on BNB Smart Chain",
+  "description": "Vue 3 front-end for Fractio on Solana",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

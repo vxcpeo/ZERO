@@ -2,8 +2,7 @@
 import { onMounted, onUnmounted } from "vue";
 import { RouterLink } from "vue-router";
 
-import DockNav from "@/components/poster/DockNav.vue";
-import TearFooter from "@/components/poster/TearFooter.vue";
+import Colophon from "@/components/ledger/Colophon.vue";
 import ConnectBanner from "@/components/ConnectBanner.vue";
 import WalletButton from "@/components/WalletButton.vue";
 import { TARGET_CHAIN } from "@/config/chain";
@@ -13,7 +12,7 @@ import { useWalletStore } from "@/stores/wallet";
 const wallet = useWalletStore();
 const protocol = useProtocolStore();
 
-/** Poll interval for on-chain reads: one BSC block is ~3s, so 15s is 5 blocks. */
+/** Poll interval for on-chain reads: a block lands every ~3s, so 15s is 5 blocks. */
 const POLL_MS = 15_000;
 let timer: number | undefined;
 
@@ -30,6 +29,14 @@ onUnmounted(() => {
   if (timer !== undefined) window.clearInterval(timer);
 });
 
+/** The index line: the same four destinations, in the order the ledger reads them. */
+const links = [
+  { to: "/mine", label: "Mine" },
+  { to: "/art", label: "Artworks" },
+  { to: "/dashboard", label: "Dashboard" },
+  { to: "/docs", label: "How it works" },
+];
+
 /**
  * The wordmark anchor carries the real root path (so it is a working URL on any host and in the
  * browser's own link handling) while still routing client-side for a plain left click.
@@ -42,34 +49,41 @@ function follow(event: MouseEvent, navigate: () => unknown): void {
 </script>
 
 <template>
-  <div class="po-wall">
-    <div class="po-cover">
-      <div class="po-gutter po-cover-inner">
+  <div class="ct-shell">
+    <header class="ct-masthead ct-topbar">
+      <div class="ct-page ct-masthead-in">
         <RouterLink to="/" custom v-slot="{ navigate }">
-          <a class="po-mark" href="/" @click="follow($event, navigate)">
-            <span class="po-stamp" aria-hidden="true">T</span>
-            <span class="po-wordmark">Tessella</span>
+          <a class="ct-brand" href="/" @click="follow($event, navigate)">
+            <span class="ct-brand-mark" aria-hidden="true">
+              <span class="ct-stamp">F</span>
+            </span>
+            <span class="ct-wordmark">Fractio</span>
           </a>
         </RouterLink>
 
-        <div class="po-cover-tools">
-          <span class="po-tag po-tag-paper" :title="`Connected to ${TARGET_CHAIN.name}`">
+        <div class="ct-masthead-tools">
+          <span class="ct-tag ct-tag-paper" :title="`Connected to ${TARGET_CHAIN.name}`">
             {{ TARGET_CHAIN.shortName }}
           </span>
           <WalletButton />
         </div>
       </div>
-    </div>
+
+      <nav class="ct-index" aria-label="Protocol routes">
+        <div class="ct-page ct-index-in">
+          <RouterLink v-for="link in links" :key="link.to" :to="link.to" class="ct-index-link">
+            {{ link.label }}
+          </RouterLink>
+        </div>
+      </nav>
+    </header>
 
     <ConnectBanner />
 
-    <main class="po-stage">
-      <div class="po-run">
-        <RouterView />
-      </div>
+    <main class="ct-stage">
+      <RouterView />
     </main>
 
-    <DockNav />
-    <TearFooter />
+    <Colophon />
   </div>
 </template>

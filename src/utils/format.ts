@@ -5,7 +5,7 @@
  * app converts to `number` until it is about to be displayed, so 18-decimal token amounts
  * cannot silently lose precision.
  */
-import { BSC_BLOCK_TIME_SECONDS } from "@/config/chain";
+import { BLOCK_TIME_SECONDS } from "@/config/chain";
 
 /** Format a fixed-point amount for display with thousands separators. */
 export function formatUnits(
@@ -65,10 +65,10 @@ export function formatBps(bps: number | bigint, fractionDigits = 2): string {
   return `${(numeric / 100).toFixed(fractionDigits)}%`;
 }
 
-/** Human duration for a block count, using BSC's ~3s block time. */
+/** Human duration for a block count, using the chain's ~3s block cadence. */
 export function formatBlocks(blocks: number | bigint): string {
   const count = typeof blocks === "bigint" ? Number(blocks) : blocks;
-  const seconds = count * BSC_BLOCK_TIME_SECONDS;
+  const seconds = count * BLOCK_TIME_SECONDS;
   if (seconds < 60) return `${Math.round(seconds)}s`;
   const minutes = seconds / 60;
   if (minutes < 60) return `${Math.round(minutes)}m`;

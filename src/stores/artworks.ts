@@ -62,7 +62,7 @@ export interface ArtworkFeeParams {
   referralBps: number;
 }
 
-/** Single most recent transaction, so a page can link straight to BscScan. */
+/** Single most recent transaction, so a page can link straight to Solscan. */
 export interface ArtworkTxEntry {
   hash: string;
   label: string;

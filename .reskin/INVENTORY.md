@@ -1,6 +1,6 @@
-# Reskin inventory — @tessella/website
+# Reskin inventory — @fractio/website
 
-Generated: 2026-10-20T16:02:04.480Z
+Generated: 2026-10-21T17:03:46.943Z
 
 ## Project
 
@@ -15,12 +15,12 @@ Generated: 2026-10-20T16:02:04.480Z
 
 ## Original skeleton
 
-- Archetype: **marketing-stack** (editorial)
-- Traits: cards, hero, table, grid, tabs, modal, charts, sticky, ticker, gallery
+- Archetype: **gallery-scroll** (spatial)
+- Traits: table, grid, tabs, modal, charts, sticky, gallery
 - Max template depth: 10
-- Top-level tags: div, div, div, div, div, div, section, div, div, footer, article, nav, div, div, div, div, div, div
+- Top-level tags: div, div, div, div, div, div, section, div, div, nav, article, footer, div, div, div, div, div, div
 
-The replacement skeleton must not be `marketing-stack` and must not be in the same family (`editorial`).
+The replacement skeleton must not be `gallery-scroll` and must not be in the same family (`spatial`).
 
 ## Routes
 
@@ -33,14 +33,14 @@ The replacement skeleton must not be `marketing-stack` and must not be in the sa
 
 ## Palette (most used first)
 
-`#000000` (4) · `#ffffff` (4) · `#670de5` (2) · `#141415` (1) · `#1f1e20` (1) · `#2b2930` (1) · `#4a4652` (1) · `#5ce1a0` (1) · `#938f9d` (1) · `#9f45ff` (1)
+`#fff6f0` (6) · `#ffffff` (6) · `#ffe3d6` (4) · `#161616` (3) · `#d3c1b7` (3) · `#0e3d26` (2) · `#6b0010` (2) · `#1e6b47` (1) · `#3d3733` (1) · `#4a2500` (1)
 
 ## Content lock
 
 - Static visible text tokens: **1003**
 - Binding expressions: **406**
 - Event handlers: **43**
-- Contract hash: `4fb49879ad0949de208520b1b4f90876d6962c0e6f88f6f0c5276c63b67ca0bd`
+- Contract hash: `ebe0707becf28d063a0894f558fdb8f617fc98ed410a7bb4e9afe6a8ed466853`
 
 Everything in `.reskin/content-contract.json` is immutable: visible copy, placeholders, labels, routes, link targets, asset sources, bindings, handlers, API endpoints and i18n values. A reskin may move these tokens to new markup but may not rewrite, remove or hide them.
 

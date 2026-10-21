@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T16:02:04.480Z",
+  "generatedAt": "2026-10-21T17:03:46.943Z",
   "project": {
     "root": "E:/workspace/chuangye/solana/zero/website",
-    "name": "@tessella/website",
+    "name": "@fractio/website",
     "vueVersion": "^3.5.13",
     "nuxt": false,
     "dependencies": [
@@ -32,8 +32,8 @@
     "staticTextTokens": 1003,
     "bindingTokens": 406,
     "eventTokens": 43,
-    "classNames": 147,
-    "colors": 24
+    "classNames": 159,
+    "colors": 45
   },
   "routes": [
     {
@@ -63,13 +63,13 @@
   ],
   "unresolvedRoutes": [],
   "archetype": {
-    "id": "marketing-stack",
-    "family": "editorial",
+    "id": "gallery-scroll",
+    "family": "spatial",
     "traits": {
       "sidebar": false,
       "topbar": false,
-      "cards": true,
-      "hero": true,
+      "cards": false,
+      "hero": false,
       "table": true,
       "grid": true,
       "tabs": true,
@@ -79,77 +79,113 @@
       "orbital": false,
       "terminal": false,
       "bento": false,
-      "ticker": true,
+      "ticker": false,
       "gallery": true
     }
   },
   "palette": [
     {
-      "hex": "#000000",
-      "count": 4
+      "hex": "#fff6f0",
+      "count": 6
     },
     {
       "hex": "#ffffff",
+      "count": 6
+    },
+    {
+      "hex": "#ffe3d6",
       "count": 4
     },
     {
-      "hex": "#670de5",
+      "hex": "#161616",
+      "count": 3
+    },
+    {
+      "hex": "#d3c1b7",
+      "count": 3
+    },
+    {
+      "hex": "#0e3d26",
       "count": 2
     },
     {
-      "hex": "#141415",
+      "hex": "#6b0010",
+      "count": 2
+    },
+    {
+      "hex": "#1e6b47",
       "count": 1
     },
     {
-      "hex": "#1f1e20",
+      "hex": "#3d3733",
       "count": 1
     },
     {
-      "hex": "#2b2930",
+      "hex": "#4a2500",
       "count": 1
     },
     {
-      "hex": "#4a4652",
+      "hex": "#5c2e00",
       "count": 1
     },
     {
-      "hex": "#5ce1a0",
+      "hex": "#6e625c",
       "count": 1
     },
     {
-      "hex": "#938f9d",
+      "hex": "#8f4b00",
       "count": 1
     },
     {
-      "hex": "#9f45ff",
+      "hex": "#a80014",
       "count": 1
     },
     {
-      "hex": "#a0a1a6",
+      "hex": "#b00016",
       "count": 1
     },
     {
-      "hex": "#a97bff",
+      "hex": "#c40018",
       "count": 1
     },
     {
-      "hex": "#c9c7d4",
+      "hex": "#d9c9bf",
       "count": 1
     },
     {
-      "hex": "#cbb8ff",
+      "hex": "#d9f2e3",
       "count": 1
     },
     {
-      "hex": "#f2c94c",
+      "hex": "#dff3e6",
       "count": 1
     },
     {
-      "hex": "#f2f3f7",
+      "hex": "#e7d5ca",
       "count": 1
     },
     {
-      "hex": "#ff8a8a",
+      "hex": "#e9dcd4",
+      "count": 1
+    },
+    {
+      "hex": "#fdf1e6",
+      "count": 1
+    },
+    {
+      "hex": "#ff7a00",
+      "count": 1
+    },
+    {
+      "hex": "#ffd9d9",
+      "count": 1
+    },
+    {
+      "hex": "#ffdcdc",
+      "count": 1
+    },
+    {
+      "hex": "#fff0e6",
       "count": 1
     }
   ],
@@ -158,252 +194,254 @@
     "0n",
     ">",
     "?",
-    "ag-action",
-    "ag-action-block",
-    "ag-action-negative",
-    "ag-action-pair",
-    "ag-action-positive",
-    "ag-action-primary",
-    "ag-action-quiet",
-    "ag-action-small",
-    "ag-actions",
-    "ag-activity-row",
-    "ag-advanced",
-    "ag-align-right",
-    "ag-banner",
-    "ag-block",
-    "ag-block-tight",
-    "ag-bloom",
-    "ag-body",
-    "ag-catalogue",
-    "ag-chain-chip",
-    "ag-chain-list",
-    "ag-chapter",
-    "ag-chapter-head",
-    "ag-chip",
-    "ag-chip-accent",
-    "ag-chip-negative",
-    "ag-chip-positive",
-    "ag-chip-warning",
-    "ag-claim-chip",
-    "ag-claim-strip",
-    "ag-colophon",
-    "ag-colophon-brand",
-    "ag-colophon-chain",
-    "ag-colophon-grid",
-    "ag-colophon-links",
-    "ag-colophon-meta",
-    "ag-contents",
-    "ag-contents-link",
-    "ag-contents-list",
-    "ag-copy",
-    "ag-dialog",
-    "ag-docs-frame",
-    "ag-dossier",
-    "ag-dossier-head",
-    "ag-dossier-head-grid",
-    "ag-entry",
-    "ag-entry-pending",
-    "ag-field",
-    "ag-field-input",
-    "ag-field-label",
-    "ag-field-row",
-    "ag-field-suffix",
-    "ag-figure",
-    "ag-figures",
-    "ag-figures-five",
-    "ag-frame",
-    "ag-grid",
-    "ag-grid-pair",
-    "ag-grid-quad",
-    "ag-grow",
-    "ag-hidden",
-    "ag-index",
-    "ag-index-item",
-    "ag-index-link",
-    "ag-index-list",
-    "ag-kicker",
-    "ag-label",
-    "ag-ledger",
-    "ag-lockup",
-    "ag-loop",
-    "ag-lot",
-    "ag-lot-artist",
-    "ag-lot-figure",
-    "ag-lot-head",
-    "ag-lot-ledger",
-    "ag-lot-meta",
-    "ag-lot-meter",
-    "ag-lot-title",
-    "ag-main",
-    "ag-margin-rule",
-    "ag-masthead",
-    "ag-masthead-index",
-    "ag-masthead-row",
-    "ag-masthead-tools",
-    "ag-meter",
-    "ag-meter-fill",
-    "ag-micro",
-    "ag-mono",
-    "ag-monogram",
-    "ag-muted",
-    "ag-negative",
-    "ag-note",
-    "ag-note-caution",
-    "ag-note-info",
-    "ag-note-line",
-    "ag-note-negative",
-    "ag-note-positive",
-    "ag-numeric",
-    "ag-opening",
-    "ag-opening-copy",
-    "ag-opening-grid",
-    "ag-opening-margin",
-    "ag-plaque",
-    "ag-pool",
-    "ag-pool-entry",
-    "ag-pool-figure",
-    "ag-pool-head",
-    "ag-pool-list",
-    "ag-positive",
-    "ag-prologue",
-    "ag-pulse",
-    "ag-quiet",
-    "ag-register",
-    "ag-registry",
-    "ag-release",
-    "ag-row",
-    "ag-seam",
-    "ag-shell",
-    "ag-skeleton",
-    "ag-space-b0",
-    "ag-space-b1",
-    "ag-space-b2",
-    "ag-space-b3",
-    "ag-space-t2",
-    "ag-space-t3",
-    "ag-split-line",
-    "ag-spread",
-    "ag-stack",
-    "ag-stack-tight",
-    "ag-standfirst",
-    "ag-step",
-    "ag-step-copy",
-    "ag-step-tag",
-    "ag-unit",
-    "ag-veil",
-    "ag-wallet-choice",
-    "ag-wallet-dock",
-    "ag-wallet-figures",
-    "ag-wallet-glyph",
-    "ag-warning",
-    "ag-wordmark",
-    "ag-wrap",
     "lastTxBadge",
+    "po-action-pair",
+    "po-actions",
+    "po-activity",
+    "po-bad",
+    "po-billboard",
+    "po-billboard-grid",
+    "po-button",
+    "po-button-bad",
+    "po-button-good",
+    "po-button-primary",
+    "po-button-quiet",
+    "po-button-small",
+    "po-button-wide",
+    "po-callout",
+    "po-callout-bad",
+    "po-callout-caution",
+    "po-callout-good",
+    "po-callout-info",
+    "po-catalogue",
+    "po-chain",
+    "po-chain-list",
+    "po-claim",
+    "po-claim-strip",
+    "po-column",
+    "po-contents",
+    "po-contents-link",
+    "po-contents-list",
+    "po-copy",
+    "po-cover",
+    "po-cover-inner",
+    "po-cover-tools",
+    "po-dialog",
+    "po-dock",
+    "po-dock-dot",
+    "po-dock-item",
+    "po-dock-label",
+    "po-dock-link",
+    "po-dock-list",
+    "po-fact",
+    "po-fact-loading",
+    "po-field",
+    "po-field-input",
+    "po-field-label",
+    "po-field-row",
+    "po-field-suffix",
+    "po-figure",
+    "po-figures",
+    "po-figures-five",
+    "po-fill",
+    "po-gallery",
+    "po-gap-b0",
+    "po-gap-b1",
+    "po-gap-b2",
+    "po-gap-b3",
+    "po-gap-t2",
+    "po-gap-t3",
+    "po-good",
+    "po-grid",
+    "po-grid-four",
+    "po-gutter",
+    "po-halo",
+    "po-hidden",
+    "po-inline",
+    "po-intro",
+    "po-kicker",
+    "po-label",
+    "po-line",
+    "po-loop",
+    "po-lot",
+    "po-lot-artist",
+    "po-lot-cell",
+    "po-lot-head",
+    "po-lot-meta",
+    "po-lot-meter",
+    "po-lot-name",
+    "po-lot-rail",
+    "po-lot-spec",
+    "po-margin-rule",
+    "po-mark",
+    "po-meter",
+    "po-meter-fill",
+    "po-micro",
+    "po-mono",
+    "po-muted",
+    "po-note",
+    "po-num",
+    "po-overture",
+    "po-overture-copy",
+    "po-overture-grid",
+    "po-overture-margin",
+    "po-plaque",
+    "po-plate",
+    "po-plate--ink",
+    "po-plate--peach",
+    "po-plate-head",
+    "po-pool",
+    "po-pool-entry",
+    "po-pool-figure",
+    "po-pool-head",
+    "po-pool-list",
+    "po-pulse",
+    "po-quiet",
+    "po-record",
+    "po-registry",
+    "po-release",
+    "po-reveal",
+    "po-right",
+    "po-route",
+    "po-route-art",
+    "po-route-dashboard",
+    "po-route-docs",
+    "po-route-home",
+    "po-route-mine",
+    "po-row",
+    "po-run",
+    "po-seam",
+    "po-skeleton",
+    "po-slab",
+    "po-slab-tight",
+    "po-split",
+    "po-split-line",
+    "po-stack",
+    "po-stack-tight",
+    "po-stage",
+    "po-stamp",
+    "po-standfirst",
+    "po-step",
+    "po-step-copy",
+    "po-step-tag",
+    "po-strip",
+    "po-table",
+    "po-tag",
+    "po-tag-accent",
+    "po-tag-bad",
+    "po-tag-good",
+    "po-tag-paper",
+    "po-tag-warn",
+    "po-tally",
+    "po-tear",
+    "po-tear-brand",
+    "po-tear-chain",
+    "po-tear-grid",
+    "po-tear-links",
+    "po-tear-meta",
+    "po-unit",
+    "po-veil",
+    "po-wall",
+    "po-wallet",
+    "po-wallet-choice",
+    "po-wallet-figures",
+    "po-wallet-glyph",
+    "po-warn",
+    "po-wordmark",
     "statusClass[entry.status]",
     "withdrawFeeFor(pool.id)"
   ],
   "designSignals": {
     "frameworks": [],
     "cssVars": [
-      "--ag-accent",
-      "--ag-accent-2",
-      "--ag-accent-safe",
-      "--ag-bg",
-      "--ag-body",
-      "--ag-danger",
-      "--ag-display",
-      "--ag-display-tracking",
-      "--ag-display-weight",
-      "--ag-ease",
-      "--ag-ink",
-      "--ag-ink-soft",
-      "--ag-label-tracking",
-      "--ag-line",
-      "--ag-line-strong",
-      "--ag-measure",
-      "--ag-mono",
-      "--ag-muted",
-      "--ag-page",
-      "--ag-radius-lg",
-      "--ag-radius-md",
-      "--ag-radius-sm",
-      "--ag-shadow",
-      "--ag-space-1",
-      "--ag-space-2",
-      "--ag-space-3",
-      "--ag-space-4",
-      "--ag-space-5",
-      "--ag-space-6",
-      "--ag-success",
-      "--ag-surface",
-      "--ag-surface-alt",
-      "--ag-tempo",
-      "--ag-warning"
+      "--po-accent",
+      "--po-accent-2",
+      "--po-accent-safe",
+      "--po-bad",
+      "--po-body",
+      "--po-border",
+      "--po-display",
+      "--po-ease",
+      "--po-gap",
+      "--po-good",
+      "--po-gutter-x",
+      "--po-ink",
+      "--po-ink-2",
+      "--po-label-tracking",
+      "--po-line",
+      "--po-max",
+      "--po-mono",
+      "--po-muted",
+      "--po-paper",
+      "--po-paper-2",
+      "--po-shadow",
+      "--po-shadow-lg",
+      "--po-shadow-sm",
+      "--po-slab",
+      "--po-tempo",
+      "--po-tracking",
+      "--po-warn"
     ],
     "colorVars": [
       {
-        "name": "--ag-accent",
-        "value": "#670de5"
+        "name": "--po-accent",
+        "value": "#c40018"
       },
       {
-        "name": "--ag-accent-2",
-        "value": "#a97bff"
+        "name": "--po-accent-2",
+        "value": "#ff7a00"
       },
       {
-        "name": "--ag-accent-safe",
-        "value": "#9f45ff"
+        "name": "--po-accent-safe",
+        "value": "#a80014"
       },
       {
-        "name": "--ag-bg",
-        "value": "#000000"
+        "name": "--po-bad",
+        "value": "#b00016"
       },
       {
-        "name": "--ag-danger",
-        "value": "#ff8a8a"
+        "name": "--po-good",
+        "value": "#1e6b47"
       },
       {
-        "name": "--ag-ink",
-        "value": "#f2f3f7"
+        "name": "--po-ink",
+        "value": "#161616"
       },
       {
-        "name": "--ag-ink-soft",
-        "value": "#c9c7d4"
+        "name": "--po-ink-2",
+        "value": "#3d3733"
       },
       {
-        "name": "--ag-line",
-        "value": "#2b2930"
+        "name": "--po-line",
+        "value": "#e7d5ca"
       },
       {
-        "name": "--ag-line-strong",
-        "value": "#4a4652"
+        "name": "--po-muted",
+        "value": "#6e625c"
       },
       {
-        "name": "--ag-muted",
-        "value": "#a0a1a6"
+        "name": "--po-paper",
+        "value": "#fff6f0"
       },
       {
-        "name": "--ag-success",
-        "value": "#5ce1a0"
+        "name": "--po-paper-2",
+        "value": "#ffe3d6"
       },
       {
-        "name": "--ag-surface",
-        "value": "#141415"
+        "name": "--po-slab",
+        "value": "#ffffff"
       },
       {
-        "name": "--ag-surface-alt",
-        "value": "#1f1e20"
-      },
-      {
-        "name": "--ag-warning",
-        "value": "#f2c94c"
+        "name": "--po-warn",
+        "value": "#8f4b00"
       }
     ],
     "mediaQueries": [
-      "@media (max-width: 1080px)",
+      "@media (max-width: 1120px)",
       "@media (max-width: 620px)",
-      "@media (max-width: 860px)",
       "@media (max-width: 900px)",
+      "@media (min-width: 901px)",
+      "@media (prefers-reduced-motion: no-preference)",
       "@media (prefers-reduced-motion: reduce)"
     ],
     "darkMode": false
@@ -415,36 +453,36 @@
       "br": 2,
       "button": 37,
       "code": 147,
-      "colophonfooter": 1,
       "connectbanner": 1,
       "connectprompt": 4,
       "dd": 5,
-      "div": 434,
+      "div": 435,
       "dl": 1,
+      "docknav": 1,
       "dt": 5,
       "em": 10,
-      "figureentry": 12,
       "footer": 1,
       "h1": 6,
       "h2": 19,
       "h3": 44,
-      "hr": 1,
+      "hr": 2,
       "input": 7,
       "label": 7,
       "li": 39,
       "main": 1,
-      "nav": 2,
-      "p": 97,
+      "nav": 1,
+      "p": 96,
+      "posterfigure": 12,
       "pre": 5,
-      "routeindex": 1,
       "routerlink": 20,
       "routerview": 1,
       "section": 37,
-      "span": 214,
+      "span": 216,
       "strong": 51,
       "table": 7,
       "tbody": 7,
       "td": 79,
+      "tearfooter": 1,
       "template": 17,
       "th": 37,
       "thead": 7,
@@ -456,10 +494,10 @@
     },
     "depthHistogram": {
       "0": 18,
-      "1": 43,
-      "2": 66,
+      "1": 44,
+      "2": 65,
       "3": 93,
-      "4": 171,
+      "4": 173,
       "5": 220,
       "6": 292,
       "7": 363,
@@ -478,9 +516,9 @@
       "section",
       "div",
       "div",
-      "footer",
-      "article",
       "nav",
+      "article",
+      "footer",
       "div",
       "div",
       "div",
@@ -499,12 +537,12 @@
       "      div",
       "        span",
       "        walletbutton",
-      "    div",
-      "      routeindex",
       "  connectbanner",
       "  main",
-      "    routerview",
-      "  colophonfooter",
+      "    div",
+      "      routerview",
+      "  docknav",
+      "  tearfooter",
       "div",
       "  div",
       "    strong",
@@ -581,6 +619,18 @@
       "        a",
       "        a",
       "    div",
+      "nav",
+      "  ul",
+      "    li",
+      "      routerlink",
+      "        span",
+      "        span",
+      "article",
+      "  p",
+      "  p",
+      "  p",
+      "    span",
+      "  p",
       "footer",
       "  div",
       "    div",
@@ -596,26 +646,14 @@
       "      routerlink",
       "    div",
       "      span",
-      "      div",
-      "        a",
-      "          strong",
-      "          span",
-      "  div",
-      "    span",
-      "    span",
-      "article",
-      "  p",
-      "  p",
-      "  p",
-      "    span",
-      "  p"
+      "      div"
     ]
   },
   "contentContract": {
     "schemaVersion": 1,
     "meta": {
-      "projectName": "@tessella/website",
-      "title": "@tessella/website",
+      "projectName": "@fractio/website",
+      "title": "@fractio/website",
       "lang": "en"
     },
     "routes": [
@@ -1020,7 +1058,7 @@
         "count": 1
       },
       {
-        "value": "// The three legs always sum to `amount`; the treasury leg absorbs rounding dust. const [miningShare, referralShare, treasuryShare] = await router.previewSplit(amount, hasReferrer); // (amount, hasReferrer) // Approve the router for `amount` of `feeToken`, then: await router.payTokenFee(feeToken, amount, referrer); // (feeToken, amount, referrer) await router.payDefaultFee(amount, referrer); // (amount, referrer) await router.payNativeFee(referrer, { value }); // (referrer) payable, BNB",
+        "value": "// The three legs always sum to `amount`; the treasury leg absorbs rounding dust. const [miningShare, referralShare, treasuryShare] = await router.previewSplit(amount, hasReferrer); // (amount, hasReferrer) // Approve the router for `amount` of `feeToken`, then: await router.payTokenFee(feeToken, amount, referrer); // (feeToken, amount, referrer) await router.payDefaultFee(amount, referrer); // (amount, referrer) await router.payNativeFee(referrer, { value }); // (referrer) payable, SOL",
         "count": 1
       },
       {
@@ -1420,7 +1458,7 @@
         "count": 1
       },
       {
-        "value": "and the vault mints the shares straight into their wallet. That is the design difference worth understanding: a fraction is a real BEP-20 balance you custody yourself, so it can be staked in the protocol's own pools, used as collateral, or traded on any BSC venue that lists it — rather than a line in a custodial ledger that only the operator can move.",
+        "value": "and the vault mints the shares straight into their wallet. That is the design difference worth understanding: a fraction is a real SPL balance you custody yourself, so it can be staked in the protocol's own pools, used as collateral, or traded on any Solana venue that lists it — rather than a line in a custodial ledger that only the operator can move.",
         "count": 1
       },
       {
@@ -1584,10 +1622,6 @@
         "count": 1
       },
       {
-        "value": "Binance Wallet",
-        "count": 1
-      },
-      {
         "value": "Block an exit.",
         "count": 1
       },
@@ -1601,18 +1635,6 @@
       },
       {
         "value": "blocks. The window is capped by the budget itself in reward units (",
-        "count": 1
-      },
-      {
-        "value": "BNB",
-        "count": 2
-      },
-      {
-        "value": "BNB balance",
-        "count": 1
-      },
-      {
-        "value": "BNB Smart Chain liveness, RPC availability, gas spikes and reorganisations all apply; this UI reads through a public RPC and shows whatever it returns, including stale data if the endpoint lags. Any approval you grant to the vault, the router or a pool can be spent according to that contract's code, so approve the amount you need rather than an unlimited allowance where you can.",
         "count": 1
       },
       {
@@ -1652,7 +1674,7 @@
         "count": 1
       },
       {
-        "value": "Buying mints real BEP-20 shares to your wallet in the same transaction.",
+        "value": "Buying mints real SPL shares to your wallet in the same transaction.",
         "count": 1
       },
       {
@@ -2076,7 +2098,7 @@
         "count": 1
       },
       {
-        "value": "Every artwork gets its own ERC-20 share token, deployed by the vault at registration. Fractions are real BEP-20 tokens: they can be held or transferred like any other token while the sale is open.",
+        "value": "Every artwork gets its own ERC-20 share token, deployed by the vault at registration. Fractions are real SPL tokens: they can be held or transferred like any other token while the sale is open.",
         "count": 1
       },
       {
@@ -2102,6 +2124,10 @@
       {
         "value": "extending",
         "count": 1
+      },
+      {
+        "value": "F",
+        "count": 2
       },
       {
         "value": "Fee",
@@ -2144,7 +2170,7 @@
         "count": 1
       },
       {
-        "value": "fixed supply, 18 decimals, one BEP-20 per artwork",
+        "value": "fixed supply, 18 decimals, one SPL token per artwork",
         "count": 1
       },
       {
@@ -2165,6 +2191,22 @@
       },
       {
         "value": "Four steps, all enforced by code rather than by a treasury promise.",
+        "count": 1
+      },
+      {
+        "value": "Fractio",
+        "count": 2
+      },
+      {
+        "value": "Fractio vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
+        "count": 1
+      },
+      {
+        "value": "Fractio vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
+        "count": 1
+      },
+      {
+        "value": "Fractio. Open-source reference implementation.",
         "count": 1
       },
       {
@@ -2304,7 +2346,7 @@
         "count": 1
       },
       {
-        "value": "In the reference deployment's fee pool, rewards and principal are the same BEP-20 (",
+        "value": "In the reference deployment's fee pool, rewards and principal are the same SPL token (",
         "count": 1
       },
       {
@@ -2652,15 +2694,15 @@
         "count": 1
       },
       {
-        "value": "No BSC wallet detected. Install",
-        "count": 1
-      },
-      {
         "value": "No penalty applies — the loyalty lock has elapsed.",
         "count": 1
       },
       {
         "value": "No pools are registered on this deployment yet.",
+        "count": 1
+      },
+      {
+        "value": "No Solana wallet detected. Install",
         "count": 1
       },
       {
@@ -2864,6 +2906,10 @@
         "count": 1
       },
       {
+        "value": "Phantom",
+        "count": 1
+      },
+      {
         "value": "pins the behaviours described above, including the solvency invariant, but tests are not an audit. Reward accounting — accumulator precision, weight snapshotting, rounding — is exactly the kind of code where a subtle error is silent rather than loud.",
         "count": 1
       },
@@ -3048,7 +3094,7 @@
         "count": 1
       },
       {
-        "value": "referral rebate — a 6-decimal reward asset (the reference deployment's mock USDT; with an 18-decimal asset such as BSC USDT the integer unit counts scale by 10¹² while every token-denominated line below is unchanged), an idle reward schedule opened at the default",
+        "value": "referral rebate — a 6-decimal reward asset (the reference deployment's mock USDT; with an 18-decimal asset such as Solana USDT the integer unit counts scale by 10¹² while every token-denominated line below is unchanged), an idle reward schedule opened at the default",
         "count": 1
       },
       {
@@ -3380,6 +3426,18 @@
         "count": 1
       },
       {
+        "value": "SOL",
+        "count": 2
+      },
+      {
+        "value": "SOL balance",
+        "count": 1
+      },
+      {
+        "value": "Solana liveness, RPC availability, gas spikes and reorganisations all apply; this UI reads through a public RPC and shows whatever it returns, including stale data if the endpoint lags. Any approval you grant to the vault, the router or a pool can be spent according to that contract's code, so approve the amount you need rather than an unlimited allowance where you can.",
+        "count": 1
+      },
+      {
         "value": "Sold",
         "count": 1
       },
@@ -3408,7 +3466,7 @@
         "count": 1
       },
       {
-        "value": "Stake into a pool and you earn a pro-rata share of the fees Tessella collects — paid in",
+        "value": "Stake into a pool and you earn a pro-rata share of the fees Fractio collects — paid in",
         "count": 1
       },
       {
@@ -3476,7 +3534,7 @@
         "count": 1
       },
       {
-        "value": "swaps it through PancakeSwap V2 — an explicitly configured path, or the default",
+        "value": "swaps it through Jupiter — an explicitly configured path, or the default",
         "count": 1
       },
       {
@@ -3492,10 +3550,6 @@
         "count": 1
       },
       {
-        "value": "T",
-        "count": 2
-      },
-      {
         "value": "tailEmissionBps",
         "count": 1
       },
@@ -3505,22 +3559,6 @@
       },
       {
         "value": "Target chain:",
-        "count": 1
-      },
-      {
-        "value": "Tessella",
-        "count": 2
-      },
-      {
-        "value": "Tessella vaults physical artworks and sells fractional ownership of them on BNB Smart Chain. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated BEP-20 share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
-        "count": 1
-      },
-      {
-        "value": "Tessella vaults physical artworks on BNB Smart Chain and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
-        "count": 1
-      },
-      {
-        "value": "Tessella. Open-source reference implementation.",
         "count": 1
       },
       {
@@ -3636,7 +3674,7 @@
         "count": 1
       },
       {
-        "value": "The vault sells primary shares and never buys them back. There is no AMM, no order book, no market maker and no protocol redemption in this implementation. Exiting means finding another buyer on whatever venue lists the share token, or assembling 100% of the shares to redeem the physical piece. A real BEP-20 balance is not the same thing as a sellable one.",
+        "value": "The vault sells primary shares and never buys them back. There is no AMM, no order book, no market maker and no protocol redemption in this implementation. Exiting means finding another buyer on whatever venue lists the share token, or assembling 100% of the shares to redeem the physical piece. A real SPL balance is not the same thing as a sellable one.",
         "count": 1
       },
       {
@@ -3728,7 +3766,7 @@
         "count": 1
       },
       {
-        "value": "token → WBNB → rewardToken",
+        "value": "token → wSOL → rewardToken",
         "count": 1
       },
       {
@@ -3776,7 +3814,7 @@
         "count": 1
       },
       {
-        "value": "Transactions you sign from this page appear here with their BscScan links.",
+        "value": "Transactions you sign from this page appear here with their Solscan links.",
         "count": 1
       },
       {
@@ -4131,7 +4169,7 @@
       },
       {
         "name": "href",
-        "value": "https://www.binance.com/en/web3wallet",
+        "value": "https://phantom.app/download",
         "count": 1
       },
       {
@@ -4303,7 +4341,7 @@
       },
       {
         "kind": "attr",
-        "expr": "wallet.bnbBalanceFormatted",
+        "expr": "wallet.solBalanceFormatted",
         "count": 1
       },
       {
@@ -5283,11 +5321,6 @@
       },
       {
         "kind": "interpolation",
-        "expr": "wallet.bnbBalanceFormatted",
-        "count": 1
-      },
-      {
-        "kind": "interpolation",
         "expr": "wallet.error",
         "count": 1
       },
@@ -5295,6 +5328,11 @@
         "kind": "interpolation",
         "expr": "wallet.shortAddress",
         "count": 2
+      },
+      {
+        "kind": "interpolation",
+        "expr": "wallet.solBalanceFormatted",
+        "count": 1
       },
       {
         "kind": "interpolation",
@@ -5473,7 +5511,7 @@
       },
       {
         "kind": "prop",
-        "expr": "wallet.bnbBalanceFormatted",
+        "expr": "wallet.solBalanceFormatted",
         "count": 1
       }
     ],
@@ -5647,7 +5685,7 @@
       },
       {
         "kind": "href",
-        "target": "https://www.binance.com/en/web3wallet",
+        "target": "https://phantom.app/download",
         "count": 1
       },
       {
@@ -5693,5 +5731,5 @@
       "VITE_RPC_URL"
     ]
   },
-  "contentContractHash": "4fb49879ad0949de208520b1b4f90876d6962c0e6f88f6f0c5276c63b67ca0bd"
+  "contentContractHash": "ebe0707becf28d063a0894f558fdb8f617fc98ed410a7bb4e9afe6a8ed466853"
 }

@@ -8,7 +8,7 @@
 import { computed, reactive, ref } from "vue";
 
 import ConnectPrompt from "@/components/ConnectPrompt.vue";
-import PosterFigure from "@/components/poster/PosterFigure.vue";
+import LedgerFact from "@/components/ledger/LedgerFact.vue";
 import TxFeed from "@/components/TxFeed.vue";
 import { useProtocolStore } from "@/stores/protocol";
 import { useWalletStore } from "@/stores/wallet";
@@ -106,96 +106,98 @@ async function copyReferralCode(): Promise<void> {
 </script>
 
 <template>
-  <div class="po-route po-route-mine">
-    <!-- ── Billboard statement ──────────────────────────────────────────── -->
-    <section class="po-billboard" aria-label="Mining statement">
-      <div class="po-gutter">
-        <p class="po-kicker">
-          <span class="po-tag po-tag-good">Mining</span>
+  <div class="ct-route ct-route-mine">
+    <!-- ── Opening statement ────────────────────────────────────────────── -->
+    <section class="ct-billboard" aria-label="Mining statement">
+      <div>
+        <p class="ct-eyebrow">
+          <span class="ct-tag ct-tag-good">Mining</span>
           <span>Self-funded by real platform fees</span>
         </p>
-        <h1 class="po-gap-b1">Mine the protocol's fees</h1>
-        <p style="max-width: 68ch">
-          Stake into a pool and you earn a pro-rata share of the fees Tessella collects —
+        <h1>Mine the protocol's fees</h1>
+        <p class="ct-standfirst">
+          Stake into a pool and you earn a pro-rata share of the fees Fractio collects —
           paid in {{ protocol.rewardSymbol }}, the same asset the fees were charged in. The pool
           cannot mint rewards from nothing: it streams exactly the budget it has received, and
-          <span class="po-mono">rewardReleased ≤ rewardReserve</span> is enforced on-chain.
+          <span class="ct-mono">rewardReleased ≤ rewardReserve</span> is enforced on-chain.
         </p>
       </div>
     </section>
 
-    <div class="po-gutter">
+    <div>
       <ConnectPrompt
         message="Connect a wallet to stake, claim, or compound. You can explore the numbers below without one."
-        class="po-gap-b3"
+        class="ct-gap-b3"
       />
 
       <!-- ── Budget overview ────────────────────────────────────────────── -->
-      <section class="po-figures po-gap-b3" aria-label="Budget overview">
-        <PosterFigure
-          label="Unspent budget"
-          :value="
-            protocol.reserve
-              ? formatUnits(protocol.reserve.unspent, protocol.rewardDecimals, { maxFractionDigits: 2 })
-              : '—'
-          "
-          :unit="protocol.rewardSymbol"
-          sub="still to be streamed to stakers"
-          accent
-        />
-        <PosterFigure
-          label="Emission"
-          :value="protocol.emissionPerBlock > 0 ? protocol.emissionPerBlock.toFixed(4) : '0'"
-          :unit="`${protocol.rewardSymbol}/block`"
-          sub="re-priced on every fee deposit"
-        />
-        <PosterFigure
-          label="Your claimable"
-          :value="formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 4 })"
-          :unit="protocol.rewardSymbol"
-          sub="across all pools"
-        />
-        <PosterFigure
-          label="Harvest fee"
-          :value="formatBps(protocol.params.harvestFeeBps)"
-          sub="recycled into the reserve, not removed"
-        />
+      <section class="ct-band" aria-label="Budget overview">
+        <div class="ct-figures">
+          <LedgerFact
+            label="Unspent budget"
+            :value="
+              protocol.reserve
+                ? formatUnits(protocol.reserve.unspent, protocol.rewardDecimals, { maxFractionDigits: 2 })
+                : '—'
+            "
+            :unit="protocol.rewardSymbol"
+            sub="still to be streamed to stakers"
+            accent
+          />
+          <LedgerFact
+            label="Emission"
+            :value="protocol.emissionPerBlock > 0 ? protocol.emissionPerBlock.toFixed(4) : '0'"
+            :unit="`${protocol.rewardSymbol}/block`"
+            sub="re-priced on every fee deposit"
+          />
+          <LedgerFact
+            label="Your claimable"
+            :value="formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 4 })"
+            :unit="protocol.rewardSymbol"
+            sub="across all pools"
+          />
+          <LedgerFact
+            label="Harvest fee"
+            :value="formatBps(protocol.params.harvestFeeBps)"
+            sub="recycled into the reserve, not removed"
+          />
+        </div>
       </section>
 
-      <!-- ── Budget detail ──────────────────────────────────────────────── -->
-      <section v-if="protocol.reserve" class="po-plate" aria-label="Emission schedule">
-        <div class="po-slab">
-          <div class="po-line po-gap-b1">
+      <!-- ── Emission schedule ──────────────────────────────────────────── -->
+      <section v-if="protocol.reserve" class="ct-band" aria-label="Emission schedule">
+        <div class="ct-slab">
+          <div class="ct-row ct-gap-b1">
             <strong>Emission schedule</strong>
-            <span class="po-tag po-tag-accent">
+            <span class="ct-tag ct-tag-accent">
               {{ protocol.params.emissionHalvingDays.toFixed(0) }}-day halving period
             </span>
           </div>
-          <div class="po-meter po-gap-b2">
-            <div class="po-meter-fill" :style="{ width: `${protocol.emissionProgress * 100}%` }" />
+          <div class="ct-meter ct-gap-b2">
+            <div class="ct-meter-fill" :style="{ width: `${protocol.emissionProgress * 100}%` }" />
           </div>
-          <div class="po-grid-four">
+          <div class="ct-grid-four">
             <div>
-              <div class="po-label">Committed budget</div>
-              <div class="po-num">
+              <div class="ct-label">Committed budget</div>
+              <div class="ct-num">
                 {{ formatUnits(protocol.reserve.reserve, protocol.rewardDecimals, { maxFractionDigits: 2 }) }}
                 {{ protocol.rewardSymbol }}
               </div>
             </div>
             <div>
-              <div class="po-label">Released so far</div>
-              <div class="po-num">
+              <div class="ct-label">Released so far</div>
+              <div class="ct-num">
                 {{ formatUnits(protocol.reserve.released, protocol.rewardDecimals, { maxFractionDigits: 2 }) }}
                 {{ protocol.rewardSymbol }}
               </div>
             </div>
             <div>
-              <div class="po-label">Schedule ends at block</div>
-              <div class="po-num po-mono">{{ protocol.reserve.endBlock.toString() }}</div>
+              <div class="ct-label">Schedule ends at block</div>
+              <div class="ct-num ct-mono">{{ protocol.reserve.endBlock.toString() }}</div>
             </div>
             <div>
-              <div class="po-label">Recycled by claimers</div>
-              <div class="po-num">
+              <div class="ct-label">Recycled by claimers</div>
+              <div class="ct-num">
                 {{ formatUnits(protocol.recycledFees, protocol.rewardDecimals, { maxFractionDigits: 2 }) }}
                 {{ protocol.rewardSymbol }}
               </div>
@@ -205,79 +207,79 @@ async function copyReferralCode(): Promise<void> {
       </section>
 
       <!-- ── Pools ──────────────────────────────────────────────────────── -->
-      <section class="po-plate" aria-label="Mining pools">
-        <div class="po-line po-gap-b2">
-          <h2 class="po-gap-b0">Pools</h2>
-          <div class="po-inline" style="gap: 8px">
-            <button class="po-button po-button-small" :disabled="protocol.loading" @click="protocol.refresh()">
-              <span v-if="protocol.loading" class="po-pulse" />
+      <section class="ct-band" aria-label="Mining pools">
+        <div class="ct-band-head">
+          <h2 class="ct-gap-b0">Pools</h2>
+          <div class="ct-inline">
+            <button class="ct-btn ct-btn-small" :disabled="protocol.loading" @click="protocol.refresh()">
+              <span v-if="protocol.loading" class="ct-pulse" />
               Refresh
             </button>
-            <button class="po-button po-button-small po-button-quiet" @click="advancedOpen = !advancedOpen">
+            <button class="ct-btn ct-btn-small ct-btn-quiet" @click="advancedOpen = !advancedOpen">
               {{ advancedOpen ? "Hide" : "Show" }} advanced
             </button>
           </div>
         </div>
 
-        <div v-if="!protocol.pools.length" class="po-slab po-muted">
+        <div v-if="!protocol.pools.length" class="ct-slab ct-muted">
           No pools are registered on this deployment yet.
         </div>
 
-        <div v-else class="po-stack">
-          <article v-for="pool in protocol.pools" :key="pool.id" class="po-pool-entry">
-            <div class="po-line po-gap-b2">
+        <div v-else class="ct-stack">
+          <article v-for="pool in protocol.pools" :key="pool.id" class="ct-pool-entry">
+            <div class="ct-row ct-gap-b2">
               <div>
-                <h3 class="po-gap-b0">{{ pool.name }}</h3>
-                <span class="po-micro po-quiet po-mono">pool #{{ pool.id }} · {{ pool.stakeToken }}</span>
+                <h3 class="ct-gap-b0">{{ pool.name }}</h3>
+                <span class="ct-micro ct-quiet ct-mono">pool #{{ pool.id }} · {{ pool.stakeToken }}</span>
               </div>
-              <div class="po-inline" style="gap: 6px">
-                <span class="po-tag po-tag-accent">{{ pool.allocationPoints.toString() }} pts</span>
-                <span v-if="!pool.active" class="po-tag po-tag-warn">Inactive</span>
-                <span v-if="pool.locked" class="po-tag po-tag-warn">
+              <div class="ct-inline">
+                <span class="ct-tag ct-tag-accent">{{ pool.allocationPoints.toString() }} pts</span>
+                <span v-if="!pool.active" class="ct-tag ct-tag-warn">Inactive</span>
+                <span v-if="pool.locked" class="ct-tag ct-tag-warn">
                   Locked · {{ formatBlocks(pool.user.unlockTime - BigInt(protocol.currentBlock)) }}
                 </span>
-                <span v-else-if="Number(pool.lockDuration) > 0" class="po-tag">
+                <span v-else-if="Number(pool.lockDuration) > 0" class="ct-tag">
                   Lock {{ formatBlocks(pool.lockDuration) }}
                 </span>
               </div>
             </div>
 
-            <div class="po-grid-four po-gap-b2">
+            <div class="ct-grid-four ct-gap-b2">
               <div>
-                <div class="po-label">Total staked</div>
-                <div class="po-num">
+                <div class="ct-label">Total staked</div>
+                <div class="ct-num">
                   {{ formatUnits(pool.totalStaked, pool.decimals, { maxFractionDigits: 2 }) }}
                   {{ pool.symbol }}
                 </div>
               </div>
               <div>
-                <div class="po-label">Your stake</div>
-                <div class="po-num">
+                <div class="ct-label">Your stake</div>
+                <div class="ct-num">
                   {{ formatUnits(pool.user.amount, pool.decimals, { maxFractionDigits: 4 }) }}
                   {{ pool.symbol }}
                 </div>
-                <div class="po-note">{{ weightShare(pool.id) }}% of pool weight</div>
+                <div class="ct-note">{{ weightShare(pool.id) }}% of pool weight</div>
               </div>
               <div>
-                <div class="po-label">Your claimable</div>
-                <div class="po-num po-good">
+                <div class="ct-label">Your claimable</div>
+                <div class="ct-num ct-good">
                   {{ formatUnits(pool.pending, protocol.rewardDecimals, { maxFractionDigits: 6 }) }}
                   {{ protocol.rewardSymbol }}
                 </div>
               </div>
               <div>
-                <div class="po-label">Weight at last update</div>
-                <div class="po-num">
+                <div class="ct-label">Weight at last update</div>
+                <div class="ct-num">
                   {{ formatUnits(pool.totalWeight, 18, { maxFractionDigits: 2 }) }}
                 </div>
-                <div class="po-note">1e18-normalised across token decimals</div>
+                <div class="ct-note">1e18-normalised across token decimals</div>
               </div>
             </div>
 
             <!-- Claim row -->
-            <div v-if="wallet.isConnected && pool.pending > 0n" class="po-row po-gap-b2 po-claim-strip">
+            <div v-if="wallet.isConnected && pool.pending > 0n" class="ct-claim-strip">
               <button
-                class="po-button po-button-good po-button-small"
+                class="ct-btn ct-btn-good ct-btn-small"
                 :disabled="protocol.loading"
                 @click="protocol.harvest(pool.id)"
               >
@@ -286,44 +288,44 @@ async function copyReferralCode(): Promise<void> {
                 {{ protocol.rewardSymbol }}
               </button>
               <button
-                class="po-button po-button-small"
+                class="ct-btn ct-btn-small"
                 :disabled="protocol.loading"
                 title="Claim and stake the result in one transaction"
                 @click="protocol.harvestAndRestake(pool.id)"
               >
                 Claim &amp; compound
               </button>
-              <span class="po-micro po-quiet">
+              <span class="ct-micro ct-quiet">
                 {{ formatBps(protocol.params.harvestFeeBps) }} harvest fee is recycled into the reserve
               </span>
             </div>
 
             <!-- Stake / unstake -->
-            <div class="po-action-pair">
-              <div class="po-field">
-                <div class="po-line">
-                  <label class="po-field-label" :for="`amount-${pool.id}`">
+            <div class="ct-action-pair">
+              <div class="ct-field">
+                <div class="ct-row">
+                  <label class="ct-field-label" :for="`amount-${pool.id}`">
                     {{ formFor(pool.id).tab === "stake" ? "Amount to stake" : "Amount to unstake" }}
                   </label>
-                  <button class="po-button po-button-quiet po-button-small" @click="setMax(pool.id)">Max</button>
+                  <button class="ct-btn ct-btn-quiet ct-btn-small" @click="setMax(pool.id)">Max</button>
                 </div>
-                <div class="po-field-row">
+                <div class="ct-field-row">
                   <input
                     :id="`amount-${pool.id}`"
                     v-model="formFor(pool.id).amount"
-                    class="po-field-input"
+                    class="ct-field-input"
                     type="text"
                     inputmode="decimal"
                     placeholder="0.0"
                   />
-                  <span class="po-field-suffix">{{ pool.symbol }}</span>
+                  <span class="ct-field-suffix">{{ pool.symbol }}</span>
                 </div>
               </div>
 
-              <div class="po-stack po-stack-tight">
-                <div class="po-inline" style="gap: 8px">
+              <div class="ct-stack ct-stack-tight">
+                <div class="ct-inline">
                   <button
-                    class="po-button po-button-primary po-fill"
+                    class="ct-btn ct-btn-primary ct-fill"
                     :disabled="
                       !wallet.isConnected ||
                       wallet.isWrongChain ||
@@ -336,7 +338,7 @@ async function copyReferralCode(): Promise<void> {
                     Stake
                   </button>
                   <button
-                    class="po-button po-fill"
+                    class="ct-btn ct-fill"
                     :disabled="
                       !wallet.isConnected ||
                       wallet.isWrongChain ||
@@ -350,7 +352,7 @@ async function copyReferralCode(): Promise<void> {
                   </button>
                 </div>
                 <button
-                  class="po-button po-button-quiet po-button-small"
+                  class="ct-btn ct-btn-quiet ct-btn-small"
                   @click="formFor(pool.id).tab = formFor(pool.id).tab === 'stake' ? 'unstake' : 'stake'"
                 >
                   Switch to {{ formFor(pool.id).tab === "stake" ? "unstake" : "stake" }}
@@ -361,8 +363,8 @@ async function copyReferralCode(): Promise<void> {
             <!-- Cost preview -->
             <div
               v-if="formFor(pool.id).amount && (depositFeeFor(pool.id) > 0n || withdrawFeeFor(pool.id) > 0n)"
-              class="po-callout po-gap-t2"
-              :class="withdrawFeeFor(pool.id) > 0n ? 'po-callout-caution' : 'po-callout-info'"
+              class="ct-callout ct-gap-t2"
+              :class="withdrawFeeFor(pool.id) > 0n ? 'ct-callout-caution' : 'ct-callout-info'"
             >
               <div>
                 <template v-if="formFor(pool.id).tab === 'stake'">
@@ -387,35 +389,35 @@ async function copyReferralCode(): Promise<void> {
             </div>
 
             <!-- Advanced -->
-            <div v-if="advancedOpen" class="po-reveal">
-              <div class="po-split">
+            <div v-if="advancedOpen" class="ct-reveal">
+              <div class="ct-split-even">
                 <div>
-                  <div class="po-label">Accumulator (reward per 1e18 weight)</div>
-                  <div class="po-mono po-micro">{{ pool.accRewardPerShare.toString() }}</div>
+                  <div class="ct-label">Accumulator (reward per 1e18 weight)</div>
+                  <div class="ct-mono ct-micro">{{ pool.accRewardPerShare.toString() }}</div>
                 </div>
                 <div>
-                  <div class="po-label">Your reward debt</div>
-                  <div class="po-mono po-micro">{{ pool.user.rewardDebt.toString() }}</div>
+                  <div class="ct-label">Your reward debt</div>
+                  <div class="ct-mono ct-micro">{{ pool.user.rewardDebt.toString() }}</div>
                 </div>
                 <div>
-                  <div class="po-label">Total allocation points</div>
-                  <div class="po-num">{{ protocol.totalAllocationPoints.toString() }}</div>
+                  <div class="ct-label">Total allocation points</div>
+                  <div class="ct-num">{{ protocol.totalAllocationPoints.toString() }}</div>
                 </div>
                 <div>
-                  <div class="po-label">Last reward block</div>
-                  <div class="po-num po-mono">{{ pool.lastRewardBlock.toString() }}</div>
+                  <div class="ct-label">Last reward block</div>
+                  <div class="ct-num ct-mono">{{ pool.lastRewardBlock.toString() }}</div>
                 </div>
               </div>
 
-              <div class="po-seam" />
+              <hr class="ct-seam" />
 
-              <div class="po-line">
-                <span class="po-micro po-quiet">
+              <div class="ct-row">
+                <span class="ct-micro ct-quiet">
                   Emergency exit returns your principal and forfeits pending rewards. It never touches
                   the reward budget, so it always works.
                 </span>
                 <button
-                  class="po-button po-button-bad po-button-small"
+                  class="ct-btn ct-btn-bad ct-btn-small"
                   :disabled="!wallet.isConnected || pool.user.amount === 0n || protocol.loading"
                   @click="protocol.emergencyWithdraw(pool.id)"
                 >
@@ -428,32 +430,32 @@ async function copyReferralCode(): Promise<void> {
       </section>
 
       <!-- ── Referral + activity ────────────────────────────────────────── -->
-      <section class="po-plate" aria-label="Referral and activity">
-        <div class="po-split">
-          <div class="po-slab">
+      <section class="ct-band" aria-label="Referral and activity">
+        <div class="ct-split-even">
+          <div class="ct-slab">
             <h3>Referral</h3>
-            <p class="po-copy">
+            <p class="ct-copy">
               Fees paid on your behalf can route
               <strong>{{ formatBps(protocol.params.referralBps) }}</strong> to a referrer. Your
               referral code is your wallet address — share it and the router pays it on-chain in the
               same transaction as the fee.
             </p>
-            <div class="po-field">
-              <label class="po-field-label" for="referrer">Referrer address (optional)</label>
-              <div class="po-field-row">
+            <div class="ct-field">
+              <label class="ct-field-label" for="referrer">Referrer address (optional)</label>
+              <div class="ct-field-row">
                 <input
                   id="referrer"
                   v-model="referrer"
-                  class="po-field-input"
+                  class="ct-field-input"
                   type="text"
                   placeholder="0x…"
                   spellcheck="false"
                 />
               </div>
             </div>
-            <div v-if="wallet.isConnected" class="po-line po-gap-t2 po-copy">
-              <span class="po-quiet">Your referral code</span>
-              <button class="po-button po-button-small po-mono" :title="wallet.address" @click="copyReferralCode">
+            <div v-if="wallet.isConnected" class="ct-row ct-gap-t2 ct-copy">
+              <span class="ct-quiet">Your referral code</span>
+              <button class="ct-btn ct-btn-small ct-mono" :title="wallet.address" @click="copyReferralCode">
                 {{ copied ? "Copied" : `${wallet.shortAddress} · copy` }}
               </button>
             </div>
@@ -464,12 +466,12 @@ async function copyReferralCode(): Promise<void> {
       </section>
 
       <!-- ── Empty state hint ───────────────────────────────────────────── -->
-      <div v-if="wallet.isConnected && !hasPositions" class="po-callout po-callout-info po-gap-t3">
+      <div v-if="wallet.isConnected && !hasPositions" class="ct-callout ct-callout-info ct-gap-t3">
         <div>
           You have no positions yet. Staking {{ protocol.pools[0]?.symbol ?? "the fee asset" }} earns
           a share of every fee the protocol collects. Rewards only start flowing once the pool holds
           a fee budget — a fresh deployment with no fee revenue pays nothing, by design.
-          <span v-if="anyPending" class="po-hidden" />
+          <span v-if="anyPending" class="ct-hidden" />
         </div>
       </div>
     </div>

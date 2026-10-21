@@ -23,7 +23,7 @@ declare module "*.vue" {
   export default component;
 }
 
-/** EIP-1193 provider injected by BSC wallets. */
+/** EIP-1193 provider injected by browser wallets. */
 interface Eip1193Provider {
   request(args: { method: string; params?: unknown[] | object }): Promise<unknown>;
   /** Optional in EIP-1193, but every wallet this app targets implements them. */
@@ -33,7 +33,7 @@ interface Eip1193Provider {
   isOkxWallet?: boolean;
   isBitKeep?: boolean;
   isTrust?: boolean;
-  isBinance?: boolean;
+  isPhantom?: boolean;
   providers?: Eip1193Provider[];
 }
 
@@ -45,7 +45,7 @@ interface Eip1193EventProvider extends Eip1193Provider {
 
 interface Window {
   ethereum?: Eip1193Provider;
-  BinanceChain?: Eip1193Provider;
+  phantom?: { ethereum?: Eip1193Provider };
   okxwallet?: Eip1193Provider;
   bitkeep?: { ethereum?: Eip1193Provider };
   trustwallet?: Eip1193Provider;

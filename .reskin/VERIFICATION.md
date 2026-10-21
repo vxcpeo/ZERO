@@ -1,22 +1,22 @@
 # Reskin verification — PASS
 
-Generated: 2026-10-20T16:25:56.021Z
+Generated: 2026-10-21T17:25:13.094Z
 
-- Project: **@tessella/website**
-- URL: http://127.0.0.1:4321/
-- Original skeleton: `marketing-stack` (editorial)
-- New skeleton: `gallery-scroll` (spatial)
-- Accent: #670de5 -> #c40018 (133.68 ΔE; min 30)
-- Source contract: intact (`4fb49879ad09`)
+- Project: **@fractio/website**
+- URL: http://127.0.0.1:5391/
+- Original skeleton: `gallery-scroll` (spatial)
+- New skeleton: `topnav-marketing` (editorial)
+- Accent: #c40018 -> #40b3ff (121.67 ΔE; min 30)
+- Source contract: intact (`ebe0707becf2`)
 
 | Route | Result | DOM similarity | Landmark similarity | Axe serious | Screenshot |
 |---|---|---:|---:|---:|---|
-| `/` | PASS | 0.37 | 0.5 | 0 | [desktop](current/home-desktop.png) |
-| `/art` | PASS | 0.395 | 0.5 | 0 | [desktop](current/art-desktop.png) |
+| `/` | PASS | 0.366 | 0.5 | 0 | [desktop](current/home-desktop.png) |
+| `/art` | PASS | 0.369 | 0.5 | 0 | [desktop](current/art-desktop.png) |
 | `/art/:id` | PASS | — | — | — | — |
-| `/dashboard` | PASS | 0.407 | 0.5 | 0 | [desktop](current/dashboard-desktop.png) |
-| `/docs` | PASS | 0.28 | 0.6 | 0 | [desktop](current/docs-desktop.png) |
-| `/mine` | PASS | 0.364 | 0.5 | 0 | [desktop](current/mine-desktop.png) |
+| `/dashboard` | PASS | 0.427 | 0.5 | 0 | [desktop](current/dashboard-desktop.png) |
+| `/docs` | PASS | 0.315 | 0.5 | 0 | [desktop](current/docs-desktop.png) |
+| `/mine` | PASS | 0.424 | 0.5 | 0 | [desktop](current/mine-desktop.png) |
 
 ## Blocking issues
 
@@ -24,7 +24,7 @@ Generated: 2026-10-20T16:25:56.021Z
 
 ## Warnings
 
-- /: aria attribute added: aria-label=Live from the contract figures
+- None.
 
 ## Thresholds
 

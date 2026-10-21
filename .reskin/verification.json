@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-20T16:25:56.021Z",
+  "generatedAt": "2026-10-21T17:25:13.094Z",
   "project": {
     "root": "E:/workspace/chuangye/solana/zero/website",
-    "name": "@tessella/website",
-    "baseUrl": "http://127.0.0.1:4321/"
+    "name": "@fractio/website",
+    "baseUrl": "http://127.0.0.1:5391/"
   },
   "passed": true,
   "thresholds": {
@@ -20,32 +20,11 @@
       "passed": true,
       "issues": [],
       "warnings": [],
-      "hash": "4fb49879ad0949de208520b1b4f90876d6962c0e6f88f6f0c5276c63b67ca0bd"
+      "hash": "ebe0707becf28d063a0894f558fdb8f617fc98ed410a7bb4e9afe6a8ed466853"
     },
     "skeleton": {
       "passed": true,
       "original": {
-        "id": "marketing-stack",
-        "family": "editorial",
-        "traits": {
-          "sidebar": false,
-          "topbar": false,
-          "cards": true,
-          "hero": true,
-          "table": true,
-          "grid": true,
-          "tabs": true,
-          "modal": true,
-          "charts": true,
-          "sticky": true,
-          "orbital": false,
-          "terminal": false,
-          "bento": false,
-          "ticker": true,
-          "gallery": true
-        }
-      },
-      "current": {
         "id": "gallery-scroll",
         "family": "spatial",
         "traits": {
@@ -66,10 +45,31 @@
           "gallery": true
         }
       },
+      "current": {
+        "id": "topnav-marketing",
+        "family": "editorial",
+        "traits": {
+          "sidebar": false,
+          "topbar": true,
+          "cards": true,
+          "hero": true,
+          "table": true,
+          "grid": true,
+          "tabs": true,
+          "modal": true,
+          "charts": true,
+          "sticky": true,
+          "orbital": false,
+          "terminal": false,
+          "bento": false,
+          "ticker": false,
+          "gallery": true
+        }
+      },
       "accent": {
-        "original": "#670de5",
-        "current": "#c40018",
-        "deltaE": 133.68,
+        "original": "#c40018",
+        "current": "#40b3ff",
+        "deltaE": 121.67,
         "min": 30
       }
     },
@@ -79,11 +79,9 @@
         "passed": true,
         "skipped": false,
         "failures": [],
-        "warnings": [
-          "aria attribute added: aria-label=Live from the contract figures"
-        ],
+        "warnings": [],
         "structure": {
-          "fingerprintSimilarity": 0.37,
+          "fingerprintSimilarity": 0.366,
           "landmarkSimilarity": 0.5,
           "classOverlap": 0
         },
@@ -122,7 +120,7 @@
         "failures": [],
         "warnings": [],
         "structure": {
-          "fingerprintSimilarity": 0.395,
+          "fingerprintSimilarity": 0.369,
           "landmarkSimilarity": 0.5,
           "classOverlap": 0.017
         },
@@ -131,12 +129,12 @@
           "extra": [],
           "numeric": {
             "baseline": {
-              "tokens": 5,
-              "total": 5
+              "tokens": 6,
+              "total": 7
             },
             "current": {
-              "tokens": 5,
-              "total": 5
+              "tokens": 6,
+              "total": 7
             }
           }
         },
@@ -175,9 +173,9 @@
         "failures": [],
         "warnings": [],
         "structure": {
-          "fingerprintSimilarity": 0.407,
+          "fingerprintSimilarity": 0.427,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.018
+          "classOverlap": 0.017
         },
         "content": {
           "missing": [],
@@ -214,8 +212,8 @@
         "failures": [],
         "warnings": [],
         "structure": {
-          "fingerprintSimilarity": 0.28,
-          "landmarkSimilarity": 0.6,
+          "fingerprintSimilarity": 0.315,
+          "landmarkSimilarity": 0.5,
           "classOverlap": 0.013
         },
         "content": {
@@ -253,9 +251,9 @@
         "failures": [],
         "warnings": [],
         "structure": {
-          "fingerprintSimilarity": 0.364,
+          "fingerprintSimilarity": 0.424,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.016
+          "classOverlap": 0.015
         },
         "content": {
           "missing": [],
@@ -288,11 +286,9 @@
     ]
   },
   "failures": [],
-  "warnings": [
-    "/: aria attribute added: aria-label=Live from the contract figures"
-  ],
+  "warnings": [],
   "baseline": {
-    "generatedAt": "2026-10-20T16:04:23.559Z",
+    "generatedAt": "2026-10-21T17:07:26.555Z",
     "routes": [
       "/",
       "/art",

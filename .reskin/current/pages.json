@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "label": "current",
-  "generatedAt": "2026-10-20T16:25:22.493Z",
-  "baseUrl": "http://127.0.0.1:4321/",
+  "generatedAt": "2026-10-21T17:24:36.552Z",
+  "baseUrl": "http://127.0.0.1:5391/",
   "browser": {
     "executablePath": "C:\\Users\\Administrator\\AppData\\Local\\ms-playwright\\chromium-1247\\chrome-win64\\chrome.exe",
     "playwrightSource": "reskin-tools",
@@ -11,17 +11,17 @@
   "pages": {
     "/": {
       "route": "/",
-      "url": "http://127.0.0.1:4321/",
+      "url": "http://127.0.0.1:5391/",
       "status": 200,
       "desktop": {
         "meta": {
-          "title": "Tessella — own art, mine the fees",
+          "title": "Fractio — own art, mine the fees",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 2311,
+          "bodyTextLength": 2343,
           "scrollWidth": 1440,
           "clientWidth": 1440,
-          "focusableCount": 18
+          "focusableCount": 20
         },
         "words": [
           {
@@ -169,10 +169,6 @@
             "count": 2
           },
           {
-            "word": "BNB",
-            "count": 1
-          },
-          {
             "word": "bonding-curve",
             "count": 1
           },
@@ -197,15 +193,15 @@
             "count": 1
           },
           {
+            "word": "call",
+            "count": 1
+          },
+          {
             "word": "carries",
             "count": 1
           },
           {
             "word": "certificate",
-            "count": 1
-          },
-          {
-            "word": "Chain",
             "count": 1
           },
           {
@@ -251,6 +247,10 @@
           {
             "word": "contract",
             "count": 2
+          },
+          {
+            "word": "Contract",
+            "count": 1
           },
           {
             "word": "contracts",
@@ -321,6 +321,10 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "every",
             "count": 2
           },
@@ -335,6 +339,10 @@
           {
             "word": "extend",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -363,6 +371,10 @@
           {
             "word": "Four",
             "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "fractional",
@@ -693,6 +705,10 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
             "word": "removed",
             "count": 1
           },
@@ -702,6 +718,10 @@
           },
           {
             "word": "rest",
+            "count": 1
+          },
+          {
+            "word": "Retry",
             "count": 1
           },
           {
@@ -729,6 +749,10 @@
             "count": 1
           },
           {
+            "word": "RPC",
+            "count": 1
+          },
+          {
             "word": "runway",
             "count": 1
           },
@@ -753,11 +777,11 @@
             "count": 2
           },
           {
-            "word": "Smart",
+            "word": "so",
             "count": 1
           },
           {
-            "word": "so",
+            "word": "Solana",
             "count": 1
           },
           {
@@ -809,14 +833,6 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "than",
             "count": 2
           },
@@ -826,7 +842,7 @@
           },
           {
             "word": "the",
-            "count": 15
+            "count": 16
           },
           {
             "word": "The",
@@ -974,193 +990,182 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fact",
-          "po-fact-lead",
-          "po-figure",
-          "po-figures",
-          "po-gallery",
-          "po-gap-b1",
-          "po-gutter",
-          "po-kicker",
-          "po-label",
-          "po-loop",
-          "po-margin-rule",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-note",
-          "po-overture",
-          "po-overture-copy",
-          "po-overture-grid",
-          "po-overture-margin",
-          "po-plate",
-          "po-plate--ink",
-          "po-plate--peach",
-          "po-plate-head",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-home",
-          "po-run",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-step",
-          "po-step-copy",
-          "po-step-tag",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-paper",
-          "po-tally",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-unit",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark"
+          "ct-actions",
+          "ct-band",
+          "ct-band-head",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-eyebrow",
+          "ct-fact",
+          "ct-fact-lead",
+          "ct-figure",
+          "ct-figures",
+          "ct-gap-b1",
+          "ct-hero",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-label",
+          "ct-lede",
+          "ct-lede-margin",
+          "ct-loop",
+          "ct-marginal-rule",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-note",
+          "ct-page",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-home",
+          "ct-shell",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-step",
+          "ct-step-copy",
+          "ct-step-tag",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-unit",
+          "ct-wallet",
+          "ct-wordmark"
         ],
         "fingerprint": [
-          "a@12:0",
+          "a@10:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
-          "article@11:2",
-          "article@11:3",
-          "button@11:1",
+          "article@9:2",
+          "article@9:3",
+          "button@7:0",
           "button@9:0",
-          "div@10:1",
           "div@10:2",
-          "div@10:3",
-          "div@10:4+",
-          "div@11:2",
-          "div@11:3",
-          "div@12:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
-          "div@7:3",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
           "div@9:2",
+          "div@9:3",
           "footer@5:2",
-          "h1@11:0",
-          "h2@12:0",
-          "h3@13:0",
-          "hr@11:0",
-          "li@7:1",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@11:0",
+          "header@5:2",
+          "hr@9:0",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
+          "p@10:0",
+          "p@10:1",
           "p@11:0",
+          "p@11:1",
           "p@11:2",
-          "p@12:0",
-          "p@12:1",
-          "p@13:0",
-          "p@13:1",
-          "p@13:2",
-          "p@13:4+",
+          "p@11:4+",
           "p@8:0",
-          "section@8:1",
+          "p@9:0",
+          "p@9:2",
+          "section@7:2",
           "span@10:0",
+          "span@11:0",
           "span@12:0",
-          "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@14:0",
-          "ul@6:4+"
+          "strong@12:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 75,
+            "top": 0,
             "left": 0,
             "width": 1440,
-            "height": 2086
+            "height": 137
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 831,
-            "left": 496,
-            "width": 448,
-            "height": 55
+            "top": 90,
+            "left": 0,
+            "width": 1440,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 190,
+            "left": 0,
+            "width": 1440,
+            "height": 1687
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 2249,
+            "top": 1877,
             "left": 0,
             "width": 1440,
-            "height": 423
+            "height": 291
           }
         ],
         "colors": [
           {
-            "hex": "#fff6f0",
-            "count": 85
+            "hex": "#f2f3f8",
+            "count": 74
           },
           {
-            "hex": "#161616",
-            "count": 40
+            "hex": "#a3a1b5",
+            "count": 27
           },
           {
-            "hex": "#c40018",
-            "count": 11
+            "hex": "#8a8899",
+            "count": 22
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#7cc9ff",
+            "count": 8
           },
           {
-            "hex": "#6e625c",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 7
           },
           {
-            "hex": "#3d3733",
-            "count": 5
-          },
-          {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 3
-          },
-          {
-            "hex": "#ffffff",
+            "hex": "#001018",
             "count": 2
+          },
+          {
+            "hex": "#05060b",
+            "count": 1
           },
           {
             "hex": "#808080",
@@ -1168,7 +1173,7 @@
           }
         ],
         "contrast": [],
-        "contrastChecked": 70,
+        "contrastChecked": 74,
         "headings": [
           {
             "tag": "h1",
@@ -1200,7 +1205,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -1221,13 +1227,13 @@
       },
       "mobile": {
         "meta": {
-          "title": "Tessella — own art, mine the fees",
+          "title": "Fractio — own art, mine the fees",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 2311,
+          "bodyTextLength": 2343,
           "scrollWidth": 390,
           "clientWidth": 390,
-          "focusableCount": 18
+          "focusableCount": 20
         },
         "words": [
           {
@@ -1375,10 +1381,6 @@
             "count": 2
           },
           {
-            "word": "BNB",
-            "count": 1
-          },
-          {
             "word": "bonding-curve",
             "count": 1
           },
@@ -1403,15 +1405,15 @@
             "count": 1
           },
           {
+            "word": "call",
+            "count": 1
+          },
+          {
             "word": "carries",
             "count": 1
           },
           {
             "word": "certificate",
-            "count": 1
-          },
-          {
-            "word": "Chain",
             "count": 1
           },
           {
@@ -1457,6 +1459,10 @@
           {
             "word": "contract",
             "count": 2
+          },
+          {
+            "word": "Contract",
+            "count": 1
           },
           {
             "word": "contracts",
@@ -1527,6 +1533,10 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "every",
             "count": 2
           },
@@ -1541,6 +1551,10 @@
           {
             "word": "extend",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -1569,6 +1583,10 @@
           {
             "word": "Four",
             "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "fractional",
@@ -1899,6 +1917,10 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
             "word": "removed",
             "count": 1
           },
@@ -1908,6 +1930,10 @@
           },
           {
             "word": "rest",
+            "count": 1
+          },
+          {
+            "word": "Retry",
             "count": 1
           },
           {
@@ -1935,6 +1961,10 @@
             "count": 1
           },
           {
+            "word": "RPC",
+            "count": 1
+          },
+          {
             "word": "runway",
             "count": 1
           },
@@ -1959,11 +1989,11 @@
             "count": 2
           },
           {
-            "word": "Smart",
+            "word": "so",
             "count": 1
           },
           {
-            "word": "so",
+            "word": "Solana",
             "count": 1
           },
           {
@@ -2015,14 +2045,6 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "than",
             "count": 2
           },
@@ -2032,7 +2054,7 @@
           },
           {
             "word": "the",
-            "count": 15
+            "count": 16
           },
           {
             "word": "The",
@@ -2180,193 +2202,182 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fact",
-          "po-fact-lead",
-          "po-figure",
-          "po-figures",
-          "po-gallery",
-          "po-gap-b1",
-          "po-gutter",
-          "po-kicker",
-          "po-label",
-          "po-loop",
-          "po-margin-rule",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-note",
-          "po-overture",
-          "po-overture-copy",
-          "po-overture-grid",
-          "po-overture-margin",
-          "po-plate",
-          "po-plate--ink",
-          "po-plate--peach",
-          "po-plate-head",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-home",
-          "po-run",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-step",
-          "po-step-copy",
-          "po-step-tag",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-paper",
-          "po-tally",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-unit",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark"
+          "ct-actions",
+          "ct-band",
+          "ct-band-head",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-eyebrow",
+          "ct-fact",
+          "ct-fact-lead",
+          "ct-figure",
+          "ct-figures",
+          "ct-gap-b1",
+          "ct-hero",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-label",
+          "ct-lede",
+          "ct-lede-margin",
+          "ct-loop",
+          "ct-marginal-rule",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-note",
+          "ct-page",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-home",
+          "ct-shell",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-step",
+          "ct-step-copy",
+          "ct-step-tag",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-unit",
+          "ct-wallet",
+          "ct-wordmark"
         ],
         "fingerprint": [
-          "a@12:0",
+          "a@10:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
-          "article@11:2",
-          "article@11:3",
-          "button@11:1",
+          "article@9:2",
+          "article@9:3",
+          "button@7:0",
           "button@9:0",
-          "div@10:1",
           "div@10:2",
-          "div@10:3",
-          "div@10:4+",
-          "div@11:2",
-          "div@11:3",
-          "div@12:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
-          "div@7:3",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
           "div@9:2",
+          "div@9:3",
           "footer@5:2",
-          "h1@11:0",
-          "h2@12:0",
-          "h3@13:0",
-          "hr@11:0",
-          "li@7:1",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@11:0",
+          "header@5:2",
+          "hr@9:0",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
+          "p@10:0",
+          "p@10:1",
           "p@11:0",
+          "p@11:1",
           "p@11:2",
-          "p@12:0",
-          "p@12:1",
-          "p@13:0",
-          "p@13:1",
-          "p@13:2",
-          "p@13:4+",
+          "p@11:4+",
           "p@8:0",
-          "section@8:1",
+          "p@9:0",
+          "p@9:2",
+          "section@7:2",
           "span@10:0",
+          "span@11:0",
           "span@12:0",
-          "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@14:0",
-          "ul@6:4+"
+          "strong@12:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 120,
+            "top": 0,
             "left": 0,
             "width": 390,
-            "height": 2119
+            "height": 175
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 789,
-            "left": 14,
-            "width": 361,
-            "height": 48
+            "top": 128,
+            "left": 0,
+            "width": 390,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 228,
+            "left": 0,
+            "width": 390,
+            "height": 2398
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 2279,
+            "top": 2626,
             "left": 0,
             "width": 390,
-            "height": 825
+            "height": 788
           }
         ],
         "colors": [
           {
-            "hex": "#fff6f0",
-            "count": 85
+            "hex": "#f2f3f8",
+            "count": 74
           },
           {
-            "hex": "#161616",
-            "count": 40
+            "hex": "#a3a1b5",
+            "count": 27
           },
           {
-            "hex": "#c40018",
-            "count": 11
+            "hex": "#8a8899",
+            "count": 22
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#7cc9ff",
+            "count": 8
           },
           {
-            "hex": "#6e625c",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 7
           },
           {
-            "hex": "#3d3733",
-            "count": 5
-          },
-          {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 3
-          },
-          {
-            "hex": "#ffffff",
+            "hex": "#001018",
             "count": 2
+          },
+          {
+            "hex": "#05060b",
+            "count": 1
           },
           {
             "hex": "#808080",
@@ -2374,7 +2385,7 @@
           }
         ],
         "contrast": [],
-        "contrastChecked": 70,
+        "contrastChecked": 74,
         "headings": [
           {
             "tag": "h1",
@@ -2406,52 +2417,12 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
-          "offenders": [
-            {
-              "selector": "div.po-gutter > div.po-figures.po-gallery > article.po-fact",
-              "right": 707,
-              "width": 335
-            },
-            {
-              "selector": "div.po-figures.po-gallery > article.po-fact > p.po-label",
-              "right": 707,
-              "width": 335
-            },
-            {
-              "selector": "div.po-figures.po-gallery > article.po-fact > p.po-figure",
-              "right": 707,
-              "width": 335
-            },
-            {
-              "selector": "article.po-fact > p.po-figure > span.po-unit",
-              "right": 463,
-              "width": 62
-            },
-            {
-              "selector": "div.po-figures.po-gallery > article.po-fact > p.po-note",
-              "right": 707,
-              "width": 335
-            },
-            {
-              "selector": "div.po-gutter > div.po-figures.po-gallery > article.po-fact",
-              "right": 1060,
-              "width": 335
-            },
-            {
-              "selector": "div.po-figures.po-gallery > article.po-fact > p.po-label",
-              "right": 1060,
-              "width": 335
-            },
-            {
-              "selector": "div.po-figures.po-gallery > article.po-fact > p.po-figure",
-              "right": 1060,
-              "width": 335
-            }
-          ]
+          "offenders": []
         }
       },
       "mobileNav": {
@@ -2466,83 +2437,83 @@
         "samples": [
           {
             "tag": "a",
-            "text": "T TESSELLA",
+            "text": "F FRACTIO",
             "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(255, 246, 240) 0px 0px 0px 7px",
-            "borderColor": "rgb(255, 246, 240)",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(242, 243, 248)",
             "backgroundColor": "rgba(0, 0, 0, 0)"
           },
           {
             "tag": "button",
-            "text": "CONNECT WALLET",
+            "text": "Connect wallet",
             "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgba(255, 246, 240, 0.85) 4px 4px 0px 0px",
-            "borderColor": "rgb(22, 22, 22)",
-            "backgroundColor": "rgb(255, 246, 240)"
-          },
-          {
-            "tag": "a",
-            "text": "START MINING",
-            "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(22, 22, 22) 4px 4px 0px 0px",
-            "borderColor": "rgb(22, 22, 22)",
-            "backgroundColor": "rgb(196, 0, 24)"
-          },
-          {
-            "tag": "a",
-            "text": "BROWSE ARTWORKS",
-            "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(22, 22, 22) 4px 4px 0px 0px",
-            "borderColor": "rgb(22, 22, 22)",
-            "backgroundColor": "rgb(255, 255, 255)"
-          },
-          {
-            "tag": "a",
-            "text": "READ THE MECHANICS",
-            "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "rgba(64, 179, 255, 0.22) 0px 0px 26px 0px",
             "borderColor": "rgba(0, 0, 0, 0)",
-            "backgroundColor": "rgba(0, 0, 0, 0)"
-          },
-          {
-            "tag": "div",
-            "text": "Live from the contract figures",
-            "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(255, 246, 240) 0px 0px 0px 7px",
-            "borderColor": "rgb(22, 22, 22)",
-            "backgroundColor": "rgba(0, 0, 0, 0)"
+            "backgroundColor": "rgb(64, 179, 255)"
           },
           {
             "tag": "a",
             "text": "MINE",
             "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(255, 246, 240) 0px 0px 0px 7px",
-            "borderColor": "rgba(0, 0, 0, 0)",
-            "backgroundColor": "rgb(255, 246, 240)"
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(163, 161, 181) rgb(163, 161, 181) rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
           },
           {
             "tag": "a",
             "text": "ARTWORKS",
             "outlineStyle": "solid",
-            "outlineWidth": "3px",
-            "outlineColor": "rgb(22, 22, 22)",
-            "boxShadow": "rgb(255, 246, 240) 0px 0px 0px 7px",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(163, 161, 181) rgb(163, 161, 181) rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "a",
+            "text": "DASHBOARD",
+            "outlineStyle": "solid",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(163, 161, 181) rgb(163, 161, 181) rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "a",
+            "text": "HOW IT WORKS",
+            "outlineStyle": "solid",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(163, 161, 181) rgb(163, 161, 181) rgba(0, 0, 0, 0)",
+            "backgroundColor": "rgba(0, 0, 0, 0)"
+          },
+          {
+            "tag": "button",
+            "text": "Retry",
+            "outlineStyle": "solid",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "none",
+            "borderColor": "rgb(35, 36, 50)",
+            "backgroundColor": "rgba(255, 255, 255, 0.02)"
+          },
+          {
+            "tag": "a",
+            "text": "Start mining",
+            "outlineStyle": "solid",
+            "outlineWidth": "2px",
+            "outlineColor": "rgb(64, 179, 255)",
+            "boxShadow": "rgba(64, 179, 255, 0.22) 0px 0px 26px 0px",
             "borderColor": "rgba(0, 0, 0, 0)",
-            "backgroundColor": "rgb(255, 246, 240)"
+            "backgroundColor": "rgb(64, 179, 255)"
           }
         ],
         "visibleCount": 8,
@@ -2551,19 +2522,23 @@
     },
     "/art": {
       "route": "/art",
-      "url": "http://127.0.0.1:4321/art",
+      "url": "http://127.0.0.1:5391/art",
       "status": 200,
       "desktop": {
         "meta": {
           "title": "Artworks",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1441,
+          "bodyTextLength": 2091,
           "scrollWidth": 1440,
           "clientWidth": 1440,
-          "focusableCount": 17
+          "focusableCount": 21
         },
         "words": [
+          {
+            "word": "0",
+            "count": 1
+          },
           {
             "word": "0x5FC8d326",
             "count": 1
@@ -2582,7 +2557,7 @@
           },
           {
             "word": "1,000,000",
-            "count": 1
+            "count": 2
           },
           {
             "word": "20.00%",
@@ -2602,10 +2577,22 @@
           },
           {
             "word": "a",
-            "count": 7
+            "count": 10
+          },
+          {
+            "word": "action",
+            "count": 1
           },
           {
             "word": "advice",
+            "count": 1
+          },
+          {
+            "word": "again",
+            "count": 1
+          },
+          {
+            "word": "agreement",
             "count": 1
           },
           {
@@ -2614,15 +2601,27 @@
           },
           {
             "word": "an",
-            "count": 1
+            "count": 3
           },
           {
             "word": "and",
-            "count": 6
+            "count": 9
+          },
+          {
+            "word": "any",
+            "count": 1
+          },
+          {
+            "word": "appears",
+            "count": 1
+          },
+          {
+            "word": "appraisal",
+            "count": 1
           },
           {
             "word": "are",
-            "count": 1
+            "count": 4
           },
           {
             "word": "art",
@@ -2642,11 +2641,11 @@
           },
           {
             "word": "artworks",
-            "count": 1
+            "count": 2
           },
           {
             "word": "Artworks",
-            "count": 2
+            "count": 3
           },
           {
             "word": "ArtworkVault",
@@ -2657,7 +2656,15 @@
             "count": 1
           },
           {
+            "word": "at",
+            "count": 1
+          },
+          {
             "word": "backend",
+            "count": 1
+          },
+          {
+            "word": "be",
             "count": 1
           },
           {
@@ -2669,8 +2676,12 @@
             "count": 1
           },
           {
-            "word": "buy",
+            "word": "bonding-curve",
             "count": 1
+          },
+          {
+            "word": "buy",
+            "count": 2
           },
           {
             "word": "Buy",
@@ -2682,6 +2693,14 @@
           },
           {
             "word": "by",
+            "count": 2
+          },
+          {
+            "word": "call",
+            "count": 2
+          },
+          {
+            "word": "can",
             "count": 1
           },
           {
@@ -2690,10 +2709,14 @@
           },
           {
             "word": "certificate",
-            "count": 1
+            "count": 2
           },
           {
             "word": "charges",
+            "count": 1
+          },
+          {
+            "word": "Check",
             "count": 1
           },
           {
@@ -2701,20 +2724,32 @@
             "count": 4
           },
           {
+            "word": "Contract",
+            "count": 2
+          },
+          {
             "word": "contracts",
             "count": 1
           },
           {
             "word": "curve",
-            "count": 2
+            "count": 3
           },
           {
             "word": "custodian",
+            "count": 2
+          },
+          {
+            "word": "custody",
             "count": 1
           },
           {
             "word": "Dashboard",
             "count": 2
+          },
+          {
+            "word": "deliberately",
+            "count": 1
           },
           {
             "word": "Deployed",
@@ -2733,12 +2768,24 @@
             "count": 1
           },
           {
+            "word": "empty",
+            "count": 1
+          },
+          {
             "word": "engine",
             "count": 1
           },
           {
             "word": "ERC-20",
+            "count": 2
+          },
+          {
+            "word": "ERC-721",
             "count": 1
+          },
+          {
+            "word": "Error",
+            "count": 2
           },
           {
             "word": "Every",
@@ -2747,6 +2794,10 @@
           {
             "word": "exactly",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -2765,8 +2816,20 @@
             "count": 2
           },
           {
+            "word": "first",
+            "count": 1
+          },
+          {
             "word": "follow",
             "count": 1
+          },
+          {
+            "word": "for",
+            "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 3
           },
           {
             "word": "Fractional",
@@ -2774,7 +2837,7 @@
           },
           {
             "word": "fractions",
-            "count": 2
+            "count": 4
           },
           {
             "word": "from",
@@ -2789,8 +2852,16 @@
             "count": 1
           },
           {
+            "word": "genuine",
+            "count": 1
+          },
+          {
             "word": "goes",
             "count": 1
+          },
+          {
+            "word": "governance",
+            "count": 2
           },
           {
             "word": "Hardhat",
@@ -2802,7 +2873,7 @@
           },
           {
             "word": "here",
-            "count": 1
+            "count": 2
           },
           {
             "word": "holding",
@@ -2834,11 +2905,15 @@
           },
           {
             "word": "is",
-            "count": 4
+            "count": 8
           },
           {
             "word": "it",
-            "count": 2
+            "count": 3
+          },
+          {
+            "word": "itself",
+            "count": 1
           },
           {
             "word": "linear",
@@ -2857,6 +2932,10 @@
             "count": 2
           },
           {
+            "word": "mechanics",
+            "count": 1
+          },
+          {
             "word": "Mine",
             "count": 3
           },
@@ -2873,11 +2952,27 @@
             "count": 1
           },
           {
+            "word": "mints",
+            "count": 1
+          },
+          {
+            "word": "must",
+            "count": 1
+          },
+          {
             "word": "Navigate",
             "count": 1
           },
           {
             "word": "no",
+            "count": 1
+          },
+          {
+            "word": "No",
+            "count": 1
+          },
+          {
+            "word": "not",
             "count": 1
           },
           {
@@ -2897,7 +2992,19 @@
             "count": 1
           },
           {
+            "word": "on-chain",
+            "count": 1
+          },
+          {
+            "word": "Once",
+            "count": 1
+          },
+          {
             "word": "Open-source",
+            "count": 1
+          },
+          {
+            "word": "opens",
             "count": 1
           },
           {
@@ -2917,12 +3024,16 @@
             "count": 2
           },
           {
+            "word": "permissionless",
+            "count": 1
+          },
+          {
             "word": "physical",
             "count": 3
           },
           {
             "word": "piece",
-            "count": 1
+            "count": 2
           },
           {
             "word": "platform",
@@ -2933,8 +3044,12 @@
             "count": 1
           },
           {
+            "word": "plus",
+            "count": 1
+          },
+          {
             "word": "price",
-            "count": 2
+            "count": 3
           },
           {
             "word": "priced",
@@ -2949,8 +3064,12 @@
             "count": 1
           },
           {
-            "word": "provenance",
+            "word": "protocol",
             "count": 1
+          },
+          {
+            "word": "provenance",
+            "count": 2
           },
           {
             "word": "purchase",
@@ -2962,11 +3081,7 @@
           },
           {
             "word": "Read",
-            "count": 1
-          },
-          {
-            "word": "reading",
-            "count": 1
+            "count": 2
           },
           {
             "word": "real",
@@ -2989,8 +3104,24 @@
             "count": 1
           },
           {
+            "word": "registerArtwork",
+            "count": 1
+          },
+          {
+            "word": "registered",
+            "count": 3
+          },
+          {
+            "word": "Registration",
+            "count": 1
+          },
+          {
             "word": "registry",
             "count": 1
+          },
+          {
+            "word": "rejected",
+            "count": 2
           },
           {
             "word": "remainder",
@@ -2999,6 +3130,10 @@
           {
             "word": "reserve",
             "count": 2
+          },
+          {
+            "word": "Retry",
+            "count": 1
           },
           {
             "word": "revenue",
@@ -3018,6 +3153,22 @@
           },
           {
             "word": "routed",
+            "count": 1
+          },
+          {
+            "word": "RPC",
+            "count": 1
+          },
+          {
+            "word": "sale",
+            "count": 2
+          },
+          {
+            "word": "satisfied",
+            "count": 1
+          },
+          {
+            "word": "self-serve",
             "count": 1
           },
           {
@@ -3049,24 +3200,24 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 3
-          },
-          {
             "word": "that",
-            "count": 3
+            "count": 4
           },
           {
             "word": "the",
-            "count": 16
+            "count": 22
+          },
+          {
+            "word": "The",
+            "count": 1
+          },
+          {
+            "word": "then",
+            "count": 1
           },
           {
             "word": "through",
-            "count": 1
+            "count": 2
           },
           {
             "word": "to",
@@ -3081,8 +3232,12 @@
             "count": 1
           },
           {
-            "word": "vaulted",
+            "word": "vault's",
             "count": 1
+          },
+          {
+            "word": "vaulted",
+            "count": 2
           },
           {
             "word": "Vaulted",
@@ -3090,10 +3245,14 @@
           },
           {
             "word": "wallet",
-            "count": 3
+            "count": 4
           },
           {
             "word": "what",
+            "count": 1
+          },
+          {
+            "word": "which",
             "count": 1
           },
           {
@@ -3103,6 +3262,10 @@
           {
             "word": "works",
             "count": 3
+          },
+          {
+            "word": "yet",
+            "count": 1
           },
           {
             "word": "your",
@@ -3142,7 +3305,7 @@
           },
           {
             "href": "#/docs",
-            "count": 3
+            "count": 4
           },
           {
             "href": "#/mine",
@@ -3154,191 +3317,185 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-callout",
-          "po-callout-info",
-          "po-catalogue",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-grid-four",
-          "po-gutter",
-          "po-intro",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-plate",
-          "po-plate-head",
-          "po-pulse",
-          "po-quiet",
-          "po-registry",
-          "po-route",
-          "po-route-art",
-          "po-run",
-          "po-skeleton",
-          "po-slab",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-actions",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-bad",
+          "ct-callout-caution",
+          "ct-callout-info",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-empty",
+          "ct-eyebrow",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-t2",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-page",
+          "ct-quiet",
+          "ct-registry",
+          "ct-route",
+          "ct-route-art",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@11:0",
+          "a@10:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
+          "a@9:0",
           "a@9:2",
-          "button@12:1",
-          "button@14:0",
+          "button@10:0",
+          "button@11:0",
+          "button@7:0",
           "button@9:0",
           "div@10:2",
-          "div@10:4+",
-          "div@11:1",
           "div@11:2",
-          "div@11:4+",
-          "div@12:1",
-          "div@12:2",
-          "div@12:4+",
-          "div@13:0",
-          "div@13:2",
-          "div@14:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
+          "div@9:0",
           "div@9:1",
+          "div@9:2",
           "div@9:4+",
           "footer@5:2",
-          "h1@10:0",
-          "h2@13:0",
-          "li@7:1",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@9:0",
+          "header@5:2",
           "main@5:1",
-          "nav@5:1",
-          "p@10:0",
-          "p@10:2",
-          "p@13:1",
-          "p@15:0",
+          "nav@6:1",
+          "p@10:1",
+          "p@12:0",
           "p@8:0",
-          "section@8:1",
+          "p@9:0",
+          "p@9:1",
+          "p@9:2",
+          "section@7:2",
+          "section@7:4+",
           "span@10:0",
           "span@11:0",
-          "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@13:0",
-          "strong@15:0",
-          "ul@6:4+"
+          "strong@12:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 84,
+            "top": -59,
             "left": 0,
             "width": 1440,
-            "height": 1340
+            "height": 137
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 831,
-            "left": 496,
-            "width": 448,
-            "height": 55
+            "top": 31,
+            "left": 0,
+            "width": 1440,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 131,
+            "left": 0,
+            "width": 1440,
+            "height": 1525
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 1512,
+            "top": 1656,
             "left": 0,
             "width": 1440,
-            "height": 423
+            "height": 291
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 61
+            "hex": "#f2f3f8",
+            "count": 55
           },
           {
-            "hex": "#fff6f0",
-            "count": 46
+            "hex": "#a3a1b5",
+            "count": 29
           },
           {
-            "hex": "#ffe3d6",
-            "count": 16
-          },
-          {
-            "hex": "#d3c1b7",
-            "count": 10
-          },
-          {
-            "hex": "#c40018",
+            "hex": "#8a8899",
             "count": 7
           },
           {
-            "hex": "#3d3733",
-            "count": 6
-          },
-          {
-            "hex": "#ffffff",
-            "count": 6
-          },
-          {
-            "hex": "#ff7a00",
+            "hex": "#40b3ff",
             "count": 4
           },
           {
-            "hex": "#fdf1e6",
+            "hex": "#7cc9ff",
+            "count": 4
+          },
+          {
+            "hex": "#001018",
+            "count": 3
+          },
+          {
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 43,
+        "contrastChecked": 54,
         "headings": [
           {
             "tag": "h1",
@@ -3347,10 +3504,15 @@
           {
             "tag": "h2",
             "text": "On the vault shelf"
+          },
+          {
+            "tag": "h3",
+            "text": "No artworks are vaulted yet"
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -3374,12 +3536,16 @@
           "title": "Artworks",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1441,
+          "bodyTextLength": 2091,
           "scrollWidth": 390,
           "clientWidth": 390,
-          "focusableCount": 17
+          "focusableCount": 21
         },
         "words": [
+          {
+            "word": "0",
+            "count": 1
+          },
           {
             "word": "0x5FC8d326",
             "count": 1
@@ -3398,7 +3564,7 @@
           },
           {
             "word": "1,000,000",
-            "count": 1
+            "count": 2
           },
           {
             "word": "20.00%",
@@ -3418,10 +3584,22 @@
           },
           {
             "word": "a",
-            "count": 7
+            "count": 10
+          },
+          {
+            "word": "action",
+            "count": 1
           },
           {
             "word": "advice",
+            "count": 1
+          },
+          {
+            "word": "again",
+            "count": 1
+          },
+          {
+            "word": "agreement",
             "count": 1
           },
           {
@@ -3430,15 +3608,27 @@
           },
           {
             "word": "an",
-            "count": 1
+            "count": 3
           },
           {
             "word": "and",
-            "count": 6
+            "count": 9
+          },
+          {
+            "word": "any",
+            "count": 1
+          },
+          {
+            "word": "appears",
+            "count": 1
+          },
+          {
+            "word": "appraisal",
+            "count": 1
           },
           {
             "word": "are",
-            "count": 1
+            "count": 4
           },
           {
             "word": "art",
@@ -3458,11 +3648,11 @@
           },
           {
             "word": "artworks",
-            "count": 1
+            "count": 2
           },
           {
             "word": "Artworks",
-            "count": 2
+            "count": 3
           },
           {
             "word": "ArtworkVault",
@@ -3473,7 +3663,15 @@
             "count": 1
           },
           {
+            "word": "at",
+            "count": 1
+          },
+          {
             "word": "backend",
+            "count": 1
+          },
+          {
+            "word": "be",
             "count": 1
           },
           {
@@ -3485,8 +3683,12 @@
             "count": 1
           },
           {
-            "word": "buy",
+            "word": "bonding-curve",
             "count": 1
+          },
+          {
+            "word": "buy",
+            "count": 2
           },
           {
             "word": "Buy",
@@ -3498,6 +3700,14 @@
           },
           {
             "word": "by",
+            "count": 2
+          },
+          {
+            "word": "call",
+            "count": 2
+          },
+          {
+            "word": "can",
             "count": 1
           },
           {
@@ -3506,10 +3716,14 @@
           },
           {
             "word": "certificate",
-            "count": 1
+            "count": 2
           },
           {
             "word": "charges",
+            "count": 1
+          },
+          {
+            "word": "Check",
             "count": 1
           },
           {
@@ -3517,20 +3731,32 @@
             "count": 4
           },
           {
+            "word": "Contract",
+            "count": 2
+          },
+          {
             "word": "contracts",
             "count": 1
           },
           {
             "word": "curve",
-            "count": 2
+            "count": 3
           },
           {
             "word": "custodian",
+            "count": 2
+          },
+          {
+            "word": "custody",
             "count": 1
           },
           {
             "word": "Dashboard",
             "count": 2
+          },
+          {
+            "word": "deliberately",
+            "count": 1
           },
           {
             "word": "Deployed",
@@ -3549,12 +3775,24 @@
             "count": 1
           },
           {
+            "word": "empty",
+            "count": 1
+          },
+          {
             "word": "engine",
             "count": 1
           },
           {
             "word": "ERC-20",
+            "count": 2
+          },
+          {
+            "word": "ERC-721",
             "count": 1
+          },
+          {
+            "word": "Error",
+            "count": 2
           },
           {
             "word": "Every",
@@ -3563,6 +3801,10 @@
           {
             "word": "exactly",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -3581,8 +3823,20 @@
             "count": 2
           },
           {
+            "word": "first",
+            "count": 1
+          },
+          {
             "word": "follow",
             "count": 1
+          },
+          {
+            "word": "for",
+            "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 3
           },
           {
             "word": "Fractional",
@@ -3590,7 +3844,7 @@
           },
           {
             "word": "fractions",
-            "count": 2
+            "count": 4
           },
           {
             "word": "from",
@@ -3605,8 +3859,16 @@
             "count": 1
           },
           {
+            "word": "genuine",
+            "count": 1
+          },
+          {
             "word": "goes",
             "count": 1
+          },
+          {
+            "word": "governance",
+            "count": 2
           },
           {
             "word": "Hardhat",
@@ -3618,7 +3880,7 @@
           },
           {
             "word": "here",
-            "count": 1
+            "count": 2
           },
           {
             "word": "holding",
@@ -3650,11 +3912,15 @@
           },
           {
             "word": "is",
-            "count": 4
+            "count": 8
           },
           {
             "word": "it",
-            "count": 2
+            "count": 3
+          },
+          {
+            "word": "itself",
+            "count": 1
           },
           {
             "word": "linear",
@@ -3673,6 +3939,10 @@
             "count": 2
           },
           {
+            "word": "mechanics",
+            "count": 1
+          },
+          {
             "word": "Mine",
             "count": 3
           },
@@ -3689,11 +3959,27 @@
             "count": 1
           },
           {
+            "word": "mints",
+            "count": 1
+          },
+          {
+            "word": "must",
+            "count": 1
+          },
+          {
             "word": "Navigate",
             "count": 1
           },
           {
             "word": "no",
+            "count": 1
+          },
+          {
+            "word": "No",
+            "count": 1
+          },
+          {
+            "word": "not",
             "count": 1
           },
           {
@@ -3713,7 +3999,19 @@
             "count": 1
           },
           {
+            "word": "on-chain",
+            "count": 1
+          },
+          {
+            "word": "Once",
+            "count": 1
+          },
+          {
             "word": "Open-source",
+            "count": 1
+          },
+          {
+            "word": "opens",
             "count": 1
           },
           {
@@ -3733,12 +4031,16 @@
             "count": 2
           },
           {
+            "word": "permissionless",
+            "count": 1
+          },
+          {
             "word": "physical",
             "count": 3
           },
           {
             "word": "piece",
-            "count": 1
+            "count": 2
           },
           {
             "word": "platform",
@@ -3749,8 +4051,12 @@
             "count": 1
           },
           {
+            "word": "plus",
+            "count": 1
+          },
+          {
             "word": "price",
-            "count": 2
+            "count": 3
           },
           {
             "word": "priced",
@@ -3765,8 +4071,12 @@
             "count": 1
           },
           {
-            "word": "provenance",
+            "word": "protocol",
             "count": 1
+          },
+          {
+            "word": "provenance",
+            "count": 2
           },
           {
             "word": "purchase",
@@ -3778,11 +4088,7 @@
           },
           {
             "word": "Read",
-            "count": 1
-          },
-          {
-            "word": "reading",
-            "count": 1
+            "count": 2
           },
           {
             "word": "real",
@@ -3805,8 +4111,24 @@
             "count": 1
           },
           {
+            "word": "registerArtwork",
+            "count": 1
+          },
+          {
+            "word": "registered",
+            "count": 3
+          },
+          {
+            "word": "Registration",
+            "count": 1
+          },
+          {
             "word": "registry",
             "count": 1
+          },
+          {
+            "word": "rejected",
+            "count": 2
           },
           {
             "word": "remainder",
@@ -3815,6 +4137,10 @@
           {
             "word": "reserve",
             "count": 2
+          },
+          {
+            "word": "Retry",
+            "count": 1
           },
           {
             "word": "revenue",
@@ -3834,6 +4160,22 @@
           },
           {
             "word": "routed",
+            "count": 1
+          },
+          {
+            "word": "RPC",
+            "count": 1
+          },
+          {
+            "word": "sale",
+            "count": 2
+          },
+          {
+            "word": "satisfied",
+            "count": 1
+          },
+          {
+            "word": "self-serve",
             "count": 1
           },
           {
@@ -3865,24 +4207,24 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 3
-          },
-          {
             "word": "that",
-            "count": 3
+            "count": 4
           },
           {
             "word": "the",
-            "count": 16
+            "count": 22
+          },
+          {
+            "word": "The",
+            "count": 1
+          },
+          {
+            "word": "then",
+            "count": 1
           },
           {
             "word": "through",
-            "count": 1
+            "count": 2
           },
           {
             "word": "to",
@@ -3897,8 +4239,12 @@
             "count": 1
           },
           {
-            "word": "vaulted",
+            "word": "vault's",
             "count": 1
+          },
+          {
+            "word": "vaulted",
+            "count": 2
           },
           {
             "word": "Vaulted",
@@ -3906,10 +4252,14 @@
           },
           {
             "word": "wallet",
-            "count": 3
+            "count": 4
           },
           {
             "word": "what",
+            "count": 1
+          },
+          {
+            "word": "which",
             "count": 1
           },
           {
@@ -3919,6 +4269,10 @@
           {
             "word": "works",
             "count": 3
+          },
+          {
+            "word": "yet",
+            "count": 1
           },
           {
             "word": "your",
@@ -3958,7 +4312,7 @@
           },
           {
             "href": "#/docs",
-            "count": 3
+            "count": 4
           },
           {
             "href": "#/mine",
@@ -3970,191 +4324,185 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-callout",
-          "po-callout-info",
-          "po-catalogue",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-grid-four",
-          "po-gutter",
-          "po-intro",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-plate",
-          "po-plate-head",
-          "po-pulse",
-          "po-quiet",
-          "po-registry",
-          "po-route",
-          "po-route-art",
-          "po-run",
-          "po-skeleton",
-          "po-slab",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-actions",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-bad",
+          "ct-callout-caution",
+          "ct-callout-info",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-empty",
+          "ct-eyebrow",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-t2",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-page",
+          "ct-quiet",
+          "ct-registry",
+          "ct-route",
+          "ct-route-art",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@11:0",
+          "a@10:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
+          "a@9:0",
           "a@9:2",
-          "button@12:1",
-          "button@14:0",
+          "button@10:0",
+          "button@11:0",
+          "button@7:0",
           "button@9:0",
           "div@10:2",
-          "div@10:4+",
-          "div@11:1",
           "div@11:2",
-          "div@11:4+",
-          "div@12:1",
-          "div@12:2",
-          "div@12:4+",
-          "div@13:0",
-          "div@13:2",
-          "div@14:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
+          "div@9:0",
           "div@9:1",
+          "div@9:2",
           "div@9:4+",
           "footer@5:2",
-          "h1@10:0",
-          "h2@13:0",
-          "li@7:1",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@9:0",
+          "header@5:2",
           "main@5:1",
-          "nav@5:1",
-          "p@10:0",
-          "p@10:2",
-          "p@13:1",
-          "p@15:0",
+          "nav@6:1",
+          "p@10:1",
+          "p@12:0",
           "p@8:0",
-          "section@8:1",
+          "p@9:0",
+          "p@9:1",
+          "p@9:2",
+          "section@7:2",
+          "section@7:4+",
           "span@10:0",
           "span@11:0",
-          "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@13:0",
-          "strong@15:0",
-          "ul@6:4+"
+          "strong@12:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 120,
+            "top": -59,
             "left": 0,
             "width": 390,
-            "height": 1885
+            "height": 175
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 789,
-            "left": 14,
-            "width": 361,
-            "height": 48
+            "top": 69,
+            "left": 0,
+            "width": 390,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 169,
+            "left": 0,
+            "width": 390,
+            "height": 1758
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 2046,
+            "top": 1927,
             "left": 0,
             "width": 390,
-            "height": 825
+            "height": 788
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 61
+            "hex": "#f2f3f8",
+            "count": 55
           },
           {
-            "hex": "#fff6f0",
-            "count": 46
+            "hex": "#a3a1b5",
+            "count": 29
           },
           {
-            "hex": "#ffe3d6",
-            "count": 16
-          },
-          {
-            "hex": "#d3c1b7",
-            "count": 10
-          },
-          {
-            "hex": "#c40018",
+            "hex": "#8a8899",
             "count": 7
           },
           {
-            "hex": "#3d3733",
-            "count": 6
-          },
-          {
-            "hex": "#ffffff",
-            "count": 6
-          },
-          {
-            "hex": "#ff7a00",
+            "hex": "#40b3ff",
             "count": 4
           },
           {
-            "hex": "#fdf1e6",
+            "hex": "#7cc9ff",
+            "count": 4
+          },
+          {
+            "hex": "#001018",
+            "count": 3
+          },
+          {
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 43,
+        "contrastChecked": 54,
         "headings": [
           {
             "tag": "h1",
@@ -4163,10 +4511,15 @@
           {
             "tag": "h2",
             "text": "On the vault shelf"
+          },
+          {
+            "tag": "h3",
+            "text": "No artworks are vaulted yet"
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -4188,17 +4541,17 @@
     },
     "/dashboard": {
       "route": "/dashboard",
-      "url": "http://127.0.0.1:4321/dashboard",
+      "url": "http://127.0.0.1:5391/dashboard",
       "status": 200,
       "desktop": {
         "meta": {
           "title": "Dashboard",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1303,
+          "bodyTextLength": 1345,
           "scrollWidth": 1440,
           "clientWidth": 1440,
-          "focusableCount": 19
+          "focusableCount": 21
         },
         "words": [
           {
@@ -4282,12 +4635,12 @@
             "count": 2
           },
           {
-            "word": "BscScan",
-            "count": 1
-          },
-          {
             "word": "budget",
             "count": 2
+          },
+          {
+            "word": "call",
+            "count": 1
           },
           {
             "word": "can",
@@ -4300,6 +4653,10 @@
           {
             "word": "Connect",
             "count": 5
+          },
+          {
+            "word": "Contract",
+            "count": 1
           },
           {
             "word": "contracts",
@@ -4342,12 +4699,20 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "everyone's",
             "count": 1
           },
           {
             "word": "extends",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -4364,6 +4729,10 @@
           {
             "word": "fees",
             "count": 2
+          },
+          {
+            "word": "Fractio",
+            "count": 3
           },
           {
             "word": "Fractional",
@@ -4562,6 +4931,14 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
+            "word": "Retry",
+            "count": 1
+          },
+          {
             "word": "revenue",
             "count": 1
           },
@@ -4575,6 +4952,10 @@
           },
           {
             "word": "router",
+            "count": 1
+          },
+          {
+            "word": "RPC",
             "count": 1
           },
           {
@@ -4602,6 +4983,10 @@
             "count": 1
           },
           {
+            "word": "Solscan",
+            "count": 1
+          },
+          {
             "word": "splits",
             "count": 1
           },
@@ -4618,20 +5003,12 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 3
-          },
-          {
             "word": "that",
             "count": 1
           },
           {
             "word": "the",
-            "count": 4
+            "count": 5
           },
           {
             "word": "The",
@@ -4763,89 +5140,87 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-billboard",
-          "po-billboard-grid",
-          "po-button",
-          "po-button-primary",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-gutter",
-          "po-halo",
-          "po-inline",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-num",
-          "po-plate",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-dashboard",
-          "po-run",
-          "po-seam",
-          "po-slab",
-          "po-split",
-          "po-stack",
-          "po-stack-tight",
-          "po-stage",
-          "po-stamp",
-          "po-tag",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-b2",
+          "ct-gap-b3",
+          "ct-gap-t2",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-ledger",
+          "ct-ledger-key",
+          "ct-ledger-row",
+          "ct-ledger-val",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-page",
+          "ct-plate",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-dashboard",
+          "ct-row",
+          "ct-seam",
+          "ct-shell",
+          "ct-slab",
+          "ct-split-even",
+          "ct-stack",
+          "ct-stack-tight",
+          "ct-stage",
+          "ct-stamp",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@13:2",
+          "a@12:2",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
+          "button@10:0",
           "button@11:0",
-          "button@11:1",
-          "button@12:0",
+          "button@7:0",
           "button@9:0",
-          "div@10:0",
-          "div@10:1",
           "div@10:2",
+          "div@10:4+",
+          "div@11:1",
           "div@11:2",
+          "div@11:3",
           "div@11:4+",
-          "div@12:0",
-          "div@12:2",
           "div@12:3",
-          "div@12:4+",
-          "div@13:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
@@ -4853,101 +5228,109 @@
           "div@8:1",
           "div@8:2",
           "div@8:4+",
+          "div@9:0",
           "div@9:1",
           "div@9:2",
           "footer@5:2",
-          "h1@11:0",
-          "h2@10:0",
+          "h1@9:0",
+          "h2@9:0",
+          "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
-          "li@7:1",
+          "header@5:2",
+          "hr@11:0",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
           "p@11:0",
-          "p@12:0",
-          "p@13:1",
+          "p@12:1",
           "p@8:0",
-          "section@11:2",
+          "p@9:0",
+          "section@10:2",
+          "section@7:2",
           "section@8:1",
-          "section@9:1",
-          "section@9:2",
+          "section@8:2",
           "span@10:0",
-          "span@12:0",
+          "span@11:0",
           "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@12:0",
-          "ul@6:4+"
+          "strong@11:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": -25,
+            "top": -71,
             "left": 0,
             "width": 1440,
-            "height": 1620
+            "height": 137
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 831,
-            "left": 496,
-            "width": 448,
-            "height": 55
+            "top": 19,
+            "left": 0,
+            "width": 1440,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 119,
+            "left": 0,
+            "width": 1440,
+            "height": 1740
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 1683,
+            "top": 1859,
             "left": 0,
             "width": 1440,
-            "height": 423
+            "height": 291
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 47
+            "hex": "#f2f3f8",
+            "count": 75
           },
           {
-            "hex": "#fff6f0",
-            "count": 44
+            "hex": "#a3a1b5",
+            "count": 28
           },
           {
-            "hex": "#3d3733",
-            "count": 24
+            "hex": "#8a8899",
+            "count": 14
           },
           {
-            "hex": "#6e625c",
-            "count": 12
+            "hex": "#7cc9ff",
+            "count": 3
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#ffffff",
-            "count": 7
+            "hex": "#40b3ff",
+            "count": 2
           },
           {
-            "hex": "#c40018",
-            "count": 5
+            "hex": "#05060b",
+            "count": 1
           },
           {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
+            "hex": "#808080",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 60,
+        "contrastChecked": 64,
         "headings": [
           {
             "tag": "h1",
@@ -4971,7 +5354,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -4995,10 +5379,10 @@
           "title": "Dashboard",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1303,
+          "bodyTextLength": 1345,
           "scrollWidth": 390,
           "clientWidth": 390,
-          "focusableCount": 19
+          "focusableCount": 21
         },
         "words": [
           {
@@ -5082,12 +5466,12 @@
             "count": 2
           },
           {
-            "word": "BscScan",
-            "count": 1
-          },
-          {
             "word": "budget",
             "count": 2
+          },
+          {
+            "word": "call",
+            "count": 1
           },
           {
             "word": "can",
@@ -5100,6 +5484,10 @@
           {
             "word": "Connect",
             "count": 5
+          },
+          {
+            "word": "Contract",
+            "count": 1
           },
           {
             "word": "contracts",
@@ -5142,12 +5530,20 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "everyone's",
             "count": 1
           },
           {
             "word": "extends",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -5164,6 +5560,10 @@
           {
             "word": "fees",
             "count": 2
+          },
+          {
+            "word": "Fractio",
+            "count": 3
           },
           {
             "word": "Fractional",
@@ -5362,6 +5762,14 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
+            "word": "Retry",
+            "count": 1
+          },
+          {
             "word": "revenue",
             "count": 1
           },
@@ -5375,6 +5783,10 @@
           },
           {
             "word": "router",
+            "count": 1
+          },
+          {
+            "word": "RPC",
             "count": 1
           },
           {
@@ -5402,6 +5814,10 @@
             "count": 1
           },
           {
+            "word": "Solscan",
+            "count": 1
+          },
+          {
             "word": "splits",
             "count": 1
           },
@@ -5418,20 +5834,12 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 3
-          },
-          {
             "word": "that",
             "count": 1
           },
           {
             "word": "the",
-            "count": 4
+            "count": 5
           },
           {
             "word": "The",
@@ -5563,89 +5971,87 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-billboard",
-          "po-billboard-grid",
-          "po-button",
-          "po-button-primary",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-gutter",
-          "po-halo",
-          "po-inline",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-num",
-          "po-plate",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-dashboard",
-          "po-run",
-          "po-seam",
-          "po-slab",
-          "po-split",
-          "po-stack",
-          "po-stack-tight",
-          "po-stage",
-          "po-stamp",
-          "po-tag",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-b2",
+          "ct-gap-b3",
+          "ct-gap-t2",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-ledger",
+          "ct-ledger-key",
+          "ct-ledger-row",
+          "ct-ledger-val",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-page",
+          "ct-plate",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-dashboard",
+          "ct-row",
+          "ct-seam",
+          "ct-shell",
+          "ct-slab",
+          "ct-split-even",
+          "ct-stack",
+          "ct-stack-tight",
+          "ct-stage",
+          "ct-stamp",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@13:2",
+          "a@12:2",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
+          "button@10:0",
           "button@11:0",
-          "button@11:1",
-          "button@12:0",
+          "button@7:0",
           "button@9:0",
-          "div@10:0",
-          "div@10:1",
           "div@10:2",
+          "div@10:4+",
+          "div@11:1",
           "div@11:2",
+          "div@11:3",
           "div@11:4+",
-          "div@12:0",
-          "div@12:2",
           "div@12:3",
-          "div@12:4+",
-          "div@13:2",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
@@ -5653,101 +6059,109 @@
           "div@8:1",
           "div@8:2",
           "div@8:4+",
+          "div@9:0",
           "div@9:1",
           "div@9:2",
           "footer@5:2",
-          "h1@11:0",
-          "h2@10:0",
+          "h1@9:0",
+          "h2@9:0",
+          "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
-          "li@7:1",
+          "header@5:2",
+          "hr@11:0",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
           "p@11:0",
-          "p@12:0",
-          "p@13:1",
+          "p@12:1",
           "p@8:0",
-          "section@11:2",
+          "p@9:0",
+          "section@10:2",
+          "section@7:2",
           "section@8:1",
-          "section@9:1",
-          "section@9:2",
+          "section@8:2",
           "span@10:0",
-          "span@12:0",
+          "span@11:0",
           "span@13:0",
-          "span@14:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
-          "strong@12:0",
-          "ul@6:4+"
+          "strong@11:0",
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 120,
+            "top": 0,
             "left": 0,
             "width": 390,
-            "height": 1548
+            "height": 175
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 789,
-            "left": 14,
-            "width": 361,
-            "height": 48
+            "top": 128,
+            "left": 0,
+            "width": 390,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 228,
+            "left": 0,
+            "width": 390,
+            "height": 1993
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 1708,
+            "top": 2221,
             "left": 0,
             "width": 390,
-            "height": 825
+            "height": 788
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 47
+            "hex": "#f2f3f8",
+            "count": 75
           },
           {
-            "hex": "#fff6f0",
-            "count": 44
+            "hex": "#a3a1b5",
+            "count": 28
           },
           {
-            "hex": "#3d3733",
-            "count": 24
+            "hex": "#8a8899",
+            "count": 14
           },
           {
-            "hex": "#6e625c",
-            "count": 12
+            "hex": "#7cc9ff",
+            "count": 3
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#ffffff",
-            "count": 7
+            "hex": "#40b3ff",
+            "count": 2
           },
           {
-            "hex": "#c40018",
-            "count": 5
+            "hex": "#05060b",
+            "count": 1
           },
           {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
+            "hex": "#808080",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 60,
+        "contrastChecked": 64,
         "headings": [
           {
             "tag": "h1",
@@ -5771,7 +6185,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -5789,17 +6204,17 @@
     },
     "/docs": {
       "route": "/docs",
-      "url": "http://127.0.0.1:4321/docs",
+      "url": "http://127.0.0.1:5391/docs",
       "status": 200,
       "desktop": {
         "meta": {
           "title": "How it works",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 35457,
+          "bodyTextLength": 35475,
           "scrollWidth": 1440,
           "clientWidth": 1440,
-          "focusableCount": 28
+          "focusableCount": 30
         },
         "words": [
           {
@@ -6799,10 +7214,6 @@
             "count": 2
           },
           {
-            "word": "BEP-20",
-            "count": 7
-          },
-          {
             "word": "between",
             "count": 2
           },
@@ -6833,10 +7244,6 @@
           {
             "word": "blocks",
             "count": 11
-          },
-          {
-            "word": "BNB",
-            "count": 4
           },
           {
             "word": "bonding",
@@ -6885,10 +7292,6 @@
           {
             "word": "Browse",
             "count": 1
-          },
-          {
-            "word": "BSC",
-            "count": 2
           },
           {
             "word": "bucket",
@@ -6972,7 +7375,7 @@
           },
           {
             "word": "call",
-            "count": 10
+            "count": 11
           },
           {
             "word": "Call",
@@ -7056,7 +7459,7 @@
           },
           {
             "word": "Chain",
-            "count": 3
+            "count": 1
           },
           {
             "word": "change",
@@ -7292,7 +7695,7 @@
           },
           {
             "word": "Contract",
-            "count": 4
+            "count": 5
           },
           {
             "word": "contract-based",
@@ -7883,6 +8286,10 @@
             "count": 2
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "even",
             "count": 2
           },
@@ -7988,6 +8395,10 @@
           },
           {
             "word": "extraBlocks",
+            "count": 2
+          },
+          {
+            "word": "F",
             "count": 2
           },
           {
@@ -8177,6 +8588,10 @@
           {
             "word": "four",
             "count": 3
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "fraction",
@@ -8600,6 +9015,10 @@
           },
           {
             "word": "joins",
+            "count": 1
+          },
+          {
+            "word": "Jupiter",
             "count": 1
           },
           {
@@ -9419,10 +9838,6 @@
             "count": 1
           },
           {
-            "word": "PancakeSwap",
-            "count": 1
-          },
-          {
             "word": "parameter",
             "count": 2
           },
@@ -9939,10 +10354,6 @@
             "count": 7
           },
           {
-            "word": "Reading",
-            "count": 1
-          },
-          {
             "word": "reads",
             "count": 2
           },
@@ -10063,6 +10474,10 @@
             "count": 21
           },
           {
+            "word": "Refresh",
+            "count": 1
+          },
+          {
             "word": "refreshed",
             "count": 1
           },
@@ -10080,6 +10495,10 @@
           },
           {
             "word": "registry",
+            "count": 1
+          },
+          {
+            "word": "rejected",
             "count": 1
           },
           {
@@ -10173,6 +10592,10 @@
           {
             "word": "retroactively",
             "count": 2
+          },
+          {
+            "word": "Retry",
+            "count": 1
           },
           {
             "word": "retune",
@@ -10304,7 +10727,7 @@
           },
           {
             "word": "RPC",
-            "count": 4
+            "count": 5
           },
           {
             "word": "rule",
@@ -10600,7 +11023,7 @@
           },
           {
             "word": "Smart",
-            "count": 3
+            "count": 1
           },
           {
             "word": "smoothly",
@@ -10625,6 +11048,14 @@
           {
             "word": "so",
             "count": 43
+          },
+          {
+            "word": "SOL",
+            "count": 2
+          },
+          {
+            "word": "Solana",
+            "count": 4
           },
           {
             "word": "sold",
@@ -10673,6 +11104,10 @@
           {
             "word": "spikes",
             "count": 1
+          },
+          {
+            "word": "SPL",
+            "count": 7
           },
           {
             "word": "split",
@@ -10907,10 +11342,6 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
             "word": "tables",
             "count": 2
           },
@@ -10947,10 +11378,6 @@
             "count": 1
           },
           {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "test-suite",
             "count": 1
           },
@@ -10972,7 +11399,7 @@
           },
           {
             "word": "the",
-            "count": 339
+            "count": 340
           },
           {
             "word": "The",
@@ -11088,7 +11515,7 @@
           },
           {
             "word": "token",
-            "count": 26
+            "count": 29
           },
           {
             "word": "token-denominated",
@@ -11375,10 +11802,6 @@
             "count": 1
           },
           {
-            "word": "V2",
-            "count": 1
-          },
-          {
             "word": "valuation",
             "count": 1
           },
@@ -11496,10 +11919,6 @@
           },
           {
             "word": "ways",
-            "count": 1
-          },
-          {
-            "word": "WBNB",
             "count": 1
           },
           {
@@ -11687,6 +12106,10 @@
             "count": 3
           },
           {
+            "word": "wSOL",
+            "count": 1
+          },
+          {
             "word": "yet",
             "count": 2
           },
@@ -11864,114 +12287,111 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-callout",
-          "po-callout-caution",
-          "po-callout-good",
-          "po-callout-info",
-          "po-chain",
-          "po-chain-list",
-          "po-column",
-          "po-contents",
-          "po-contents-link",
-          "po-contents-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-figure",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-t2",
-          "po-gap-t3",
-          "po-good",
-          "po-grid",
-          "po-grid-four",
-          "po-gutter",
-          "po-intro",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-meter",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-note",
-          "po-num",
-          "po-plate",
-          "po-plate-head",
-          "po-quiet",
-          "po-record",
-          "po-route",
-          "po-route-docs",
-          "po-row",
-          "po-run",
-          "po-slab",
-          "po-slab-tight",
-          "po-split",
-          "po-stack",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-table",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-bad",
-          "po-tag-good",
-          "po-tag-paper",
-          "po-tag-warn",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-actions",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-callout-good",
+          "ct-callout-info",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-chapter",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-contents",
+          "ct-copy",
+          "ct-doc",
+          "ct-doc-body",
+          "ct-doc-grid",
+          "ct-doc-head",
+          "ct-doc-margin",
+          "ct-eyebrow",
+          "ct-figure",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-b2",
+          "ct-gap-t2",
+          "ct-gap-t3",
+          "ct-good",
+          "ct-grid",
+          "ct-grid-four",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-label",
+          "ct-line",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-meter",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-note",
+          "ct-num",
+          "ct-page",
+          "ct-plate-head",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-docs",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-slab-tight",
+          "ct-split",
+          "ct-stack",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-table",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-bad",
+          "ct-tag-good",
+          "ct-tag-paper",
+          "ct-tag-warn",
+          "ct-toc-link",
+          "ct-toc-list",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@11:0",
+          "a@10:0",
           "a@12:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
-          "button@12:0",
+          "button@11:0",
+          "button@7:0",
           "button@9:0",
+          "code@11:0",
           "code@12:0",
           "code@13:0",
           "code@14:0",
-          "code@15:0",
+          "div@10:1",
           "div@10:2",
-          "div@10:3",
-          "div@11:1",
+          "div@10:4+",
           "div@11:2",
+          "div@11:3",
           "div@11:4+",
-          "div@12:2",
-          "div@12:3",
-          "div@12:4+",
-          "div@13:0",
-          "div@13:1",
-          "div@15:0",
+          "div@12:0",
+          "div@12:1",
+          "div@14:0",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
@@ -11980,179 +12400,170 @@
           "div@8:2",
           "div@8:4+",
           "div@9:2",
-          "div@9:4+",
+          "div@9:3",
+          "em@11:0",
           "em@12:0",
           "em@13:0",
           "em@14:0",
-          "em@15:0",
           "footer@5:2",
-          "h1@10:0",
-          "h2@11:0",
-          "h2@13:0",
+          "h1@9:0",
+          "h2@10:0",
+          "h2@12:0",
+          "h3@10:0",
           "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
+          "header@5:2",
           "li@11:1",
+          "li@12:1",
+          "li@12:2",
+          "li@12:3",
+          "li@12:4+",
+          "li@13:0",
           "li@13:1",
           "li@13:2",
           "li@13:3",
           "li@13:4+",
-          "li@14:0",
-          "li@14:1",
-          "li@14:2",
-          "li@14:3",
-          "li@14:4+",
-          "li@7:1",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
           "p@10:0",
-          "p@11:0",
-          "p@11:1",
-          "p@11:2",
-          "p@11:3",
-          "p@11:4+",
-          "p@13:0",
-          "p@13:1",
-          "p@13:2",
-          "p@13:3",
-          "p@13:4+",
+          "p@10:1",
+          "p@10:2",
+          "p@10:3",
+          "p@10:4+",
+          "p@12:0",
+          "p@12:1",
+          "p@12:2",
+          "p@12:3",
+          "p@12:4+",
           "p@8:0",
-          "pre@12:0",
-          "section@10:1",
-          "section@10:2",
-          "section@10:4+",
-          "section@8:1",
+          "p@9:0",
+          "p@9:2",
+          "pre@11:0",
+          "section@7:1",
+          "section@9:1",
+          "section@9:2",
+          "section@9:4+",
           "span@10:0",
           "span@11:0",
+          "span@11:1",
+          "span@11:2",
+          "span@11:4+",
           "span@12:0",
-          "span@12:1",
-          "span@12:2",
-          "span@12:4+",
           "span@13:0",
           "span@14:0",
-          "span@15:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
+          "strong@11:0",
           "strong@12:0",
           "strong@13:0",
           "strong@14:0",
-          "strong@15:0",
-          "table@11:2",
-          "tbody@12:3",
-          "tbody@12:4+",
-          "td@14:0",
-          "td@14:1",
-          "td@14:2",
-          "th@14:0",
-          "thead@12:1",
-          "tr@13:3",
-          "tr@13:4+",
+          "strong@8:0",
+          "table@10:2",
+          "tbody@11:3",
+          "tbody@11:4+",
+          "td@13:0",
+          "td@13:1",
+          "td@13:2",
+          "th@13:0",
+          "thead@11:1",
+          "tr@12:3",
+          "tr@12:4+",
           "ul@10:4+",
-          "ul@12:3",
-          "ul@12:4+",
-          "ul@13:4+",
-          "ul@6:4+"
+          "ul@11:3",
+          "ul@11:4+",
+          "ul@12:4+"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": -820,
+            "top": -1410,
             "left": 0,
             "width": 1440,
-            "height": 17678
+            "height": 137
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 831,
-            "left": 496,
-            "width": 448,
-            "height": 55
+            "top": -1320,
+            "left": 0,
+            "width": 1440,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": -1220,
+            "left": 0,
+            "width": 1440,
+            "height": 19718
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 16946,
+            "top": 18498,
             "left": 0,
             "width": 1440,
-            "height": 423
+            "height": 291
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 416
+            "hex": "#f2f3f8",
+            "count": 483
           },
           {
-            "hex": "#3d3733",
-            "count": 245
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 138
-          },
-          {
-            "hex": "#fff6f0",
-            "count": 82
+            "hex": "#a3a1b5",
+            "count": 200
           },
           {
             "hex": "#ffffff",
-            "count": 56
+            "count": 138
           },
           {
-            "hex": "#6e625c",
-            "count": 41
+            "hex": "#8a8899",
+            "count": 58
           },
           {
-            "hex": "#c40018",
-            "count": 11
+            "hex": "#f2c94c",
+            "count": 12
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#7cc9ff",
+            "count": 9
           },
           {
-            "hex": "#4a2500",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 8
           },
           {
-            "hex": "#6b0010",
-            "count": 4
+            "hex": "#ff8a8a",
+            "count": 8
           },
           {
-            "hex": "#ffd9d9",
-            "count": 4
+            "hex": "#0d0e16",
+            "count": 5
           },
           {
-            "hex": "#fdf1e6",
+            "hex": "#5ce1a0",
             "count": 3
           },
           {
-            "hex": "#ff7a00",
-            "count": 3
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#0e3d26",
-            "count": 1
-          },
-          {
-            "hex": "#1e6b47",
-            "count": 1
-          },
-          {
-            "hex": "#d9f2e3",
-            "count": 1
-          },
-          {
-            "hex": "#dff3e6",
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 563,
+        "contrastChecked": 567,
         "headings": [
           {
             "tag": "h1",
@@ -12304,7 +12715,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -12328,10 +12740,10 @@
           "title": "How it works",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 35457,
+          "bodyTextLength": 35475,
           "scrollWidth": 390,
           "clientWidth": 390,
-          "focusableCount": 28
+          "focusableCount": 30
         },
         "words": [
           {
@@ -13331,10 +13743,6 @@
             "count": 2
           },
           {
-            "word": "BEP-20",
-            "count": 7
-          },
-          {
             "word": "between",
             "count": 2
           },
@@ -13365,10 +13773,6 @@
           {
             "word": "blocks",
             "count": 11
-          },
-          {
-            "word": "BNB",
-            "count": 4
           },
           {
             "word": "bonding",
@@ -13417,10 +13821,6 @@
           {
             "word": "Browse",
             "count": 1
-          },
-          {
-            "word": "BSC",
-            "count": 2
           },
           {
             "word": "bucket",
@@ -13504,7 +13904,7 @@
           },
           {
             "word": "call",
-            "count": 10
+            "count": 11
           },
           {
             "word": "Call",
@@ -13588,7 +13988,7 @@
           },
           {
             "word": "Chain",
-            "count": 3
+            "count": 1
           },
           {
             "word": "change",
@@ -13824,7 +14224,7 @@
           },
           {
             "word": "Contract",
-            "count": 4
+            "count": 5
           },
           {
             "word": "contract-based",
@@ -14415,6 +14815,10 @@
             "count": 2
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "even",
             "count": 2
           },
@@ -14520,6 +14924,10 @@
           },
           {
             "word": "extraBlocks",
+            "count": 2
+          },
+          {
+            "word": "F",
             "count": 2
           },
           {
@@ -14709,6 +15117,10 @@
           {
             "word": "four",
             "count": 3
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "fraction",
@@ -15132,6 +15544,10 @@
           },
           {
             "word": "joins",
+            "count": 1
+          },
+          {
+            "word": "Jupiter",
             "count": 1
           },
           {
@@ -15951,10 +16367,6 @@
             "count": 1
           },
           {
-            "word": "PancakeSwap",
-            "count": 1
-          },
-          {
             "word": "parameter",
             "count": 2
           },
@@ -16471,10 +16883,6 @@
             "count": 7
           },
           {
-            "word": "Reading",
-            "count": 1
-          },
-          {
             "word": "reads",
             "count": 2
           },
@@ -16595,6 +17003,10 @@
             "count": 21
           },
           {
+            "word": "Refresh",
+            "count": 1
+          },
+          {
             "word": "refreshed",
             "count": 1
           },
@@ -16612,6 +17024,10 @@
           },
           {
             "word": "registry",
+            "count": 1
+          },
+          {
+            "word": "rejected",
             "count": 1
           },
           {
@@ -16705,6 +17121,10 @@
           {
             "word": "retroactively",
             "count": 2
+          },
+          {
+            "word": "Retry",
+            "count": 1
           },
           {
             "word": "retune",
@@ -16836,7 +17256,7 @@
           },
           {
             "word": "RPC",
-            "count": 4
+            "count": 5
           },
           {
             "word": "rule",
@@ -17132,7 +17552,7 @@
           },
           {
             "word": "Smart",
-            "count": 3
+            "count": 1
           },
           {
             "word": "smoothly",
@@ -17157,6 +17577,14 @@
           {
             "word": "so",
             "count": 43
+          },
+          {
+            "word": "SOL",
+            "count": 2
+          },
+          {
+            "word": "Solana",
+            "count": 4
           },
           {
             "word": "sold",
@@ -17205,6 +17633,10 @@
           {
             "word": "spikes",
             "count": 1
+          },
+          {
+            "word": "SPL",
+            "count": 7
           },
           {
             "word": "split",
@@ -17439,10 +17871,6 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
             "word": "tables",
             "count": 2
           },
@@ -17479,10 +17907,6 @@
             "count": 1
           },
           {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "test-suite",
             "count": 1
           },
@@ -17504,7 +17928,7 @@
           },
           {
             "word": "the",
-            "count": 339
+            "count": 340
           },
           {
             "word": "The",
@@ -17620,7 +18044,7 @@
           },
           {
             "word": "token",
-            "count": 26
+            "count": 29
           },
           {
             "word": "token-denominated",
@@ -17907,10 +18331,6 @@
             "count": 1
           },
           {
-            "word": "V2",
-            "count": 1
-          },
-          {
             "word": "valuation",
             "count": 1
           },
@@ -18028,10 +18448,6 @@
           },
           {
             "word": "ways",
-            "count": 1
-          },
-          {
-            "word": "WBNB",
             "count": 1
           },
           {
@@ -18219,6 +18635,10 @@
             "count": 3
           },
           {
+            "word": "wSOL",
+            "count": 1
+          },
+          {
             "word": "yet",
             "count": 2
           },
@@ -18396,114 +18816,111 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-actions",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-callout",
-          "po-callout-caution",
-          "po-callout-good",
-          "po-callout-info",
-          "po-chain",
-          "po-chain-list",
-          "po-column",
-          "po-contents",
-          "po-contents-link",
-          "po-contents-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-figure",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-t2",
-          "po-gap-t3",
-          "po-good",
-          "po-grid",
-          "po-grid-four",
-          "po-gutter",
-          "po-intro",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-meter",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-note",
-          "po-num",
-          "po-plate",
-          "po-plate-head",
-          "po-quiet",
-          "po-record",
-          "po-route",
-          "po-route-docs",
-          "po-row",
-          "po-run",
-          "po-slab",
-          "po-slab-tight",
-          "po-split",
-          "po-stack",
-          "po-stage",
-          "po-stamp",
-          "po-standfirst",
-          "po-table",
-          "po-tag",
-          "po-tag-accent",
-          "po-tag-bad",
-          "po-tag-good",
-          "po-tag-paper",
-          "po-tag-warn",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-actions",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-callout-good",
+          "ct-callout-info",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-chapter",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-contents",
+          "ct-copy",
+          "ct-doc",
+          "ct-doc-body",
+          "ct-doc-grid",
+          "ct-doc-head",
+          "ct-doc-margin",
+          "ct-eyebrow",
+          "ct-figure",
+          "ct-gap-b0",
+          "ct-gap-b1",
+          "ct-gap-b2",
+          "ct-gap-t2",
+          "ct-gap-t3",
+          "ct-good",
+          "ct-grid",
+          "ct-grid-four",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-label",
+          "ct-line",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-meter",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-note",
+          "ct-num",
+          "ct-page",
+          "ct-plate-head",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-docs",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-slab-tight",
+          "ct-split",
+          "ct-stack",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-table",
+          "ct-tag",
+          "ct-tag-accent",
+          "ct-tag-bad",
+          "ct-tag-good",
+          "ct-tag-paper",
+          "ct-tag-warn",
+          "ct-toc-link",
+          "ct-toc-list",
+          "ct-topbar",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
-          "a@11:0",
+          "a@10:0",
           "a@12:0",
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
-          "button@12:0",
+          "button@11:0",
+          "button@7:0",
           "button@9:0",
+          "code@11:0",
           "code@12:0",
           "code@13:0",
           "code@14:0",
-          "code@15:0",
+          "div@10:1",
           "div@10:2",
-          "div@10:3",
-          "div@11:1",
+          "div@10:4+",
           "div@11:2",
+          "div@11:3",
           "div@11:4+",
-          "div@12:2",
-          "div@12:3",
-          "div@12:4+",
-          "div@13:0",
-          "div@13:1",
-          "div@15:0",
+          "div@12:0",
+          "div@12:1",
+          "div@14:0",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
@@ -18512,179 +18929,170 @@
           "div@8:2",
           "div@8:4+",
           "div@9:2",
-          "div@9:4+",
+          "div@9:3",
+          "em@11:0",
           "em@12:0",
           "em@13:0",
           "em@14:0",
-          "em@15:0",
           "footer@5:2",
-          "h1@10:0",
-          "h2@11:0",
-          "h2@13:0",
+          "h1@9:0",
+          "h2@10:0",
+          "h2@12:0",
+          "h3@10:0",
           "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
+          "header@5:2",
           "li@11:1",
+          "li@12:1",
+          "li@12:2",
+          "li@12:3",
+          "li@12:4+",
+          "li@13:0",
           "li@13:1",
           "li@13:2",
           "li@13:3",
           "li@13:4+",
-          "li@14:0",
-          "li@14:1",
-          "li@14:2",
-          "li@14:3",
-          "li@14:4+",
-          "li@7:1",
           "main@5:1",
-          "nav@5:1",
+          "nav@6:1",
           "p@10:0",
-          "p@11:0",
-          "p@11:1",
-          "p@11:2",
-          "p@11:3",
-          "p@11:4+",
-          "p@13:0",
-          "p@13:1",
-          "p@13:2",
-          "p@13:3",
-          "p@13:4+",
+          "p@10:1",
+          "p@10:2",
+          "p@10:3",
+          "p@10:4+",
+          "p@12:0",
+          "p@12:1",
+          "p@12:2",
+          "p@12:3",
+          "p@12:4+",
           "p@8:0",
-          "pre@12:0",
-          "section@10:1",
-          "section@10:2",
-          "section@10:4+",
-          "section@8:1",
+          "p@9:0",
+          "p@9:2",
+          "pre@11:0",
+          "section@7:1",
+          "section@9:1",
+          "section@9:2",
+          "section@9:4+",
           "span@10:0",
           "span@11:0",
+          "span@11:1",
+          "span@11:2",
+          "span@11:4+",
           "span@12:0",
-          "span@12:1",
-          "span@12:2",
-          "span@12:4+",
           "span@13:0",
           "span@14:0",
-          "span@15:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
+          "strong@11:0",
           "strong@12:0",
           "strong@13:0",
           "strong@14:0",
-          "strong@15:0",
-          "table@11:2",
-          "tbody@12:3",
-          "tbody@12:4+",
-          "td@14:0",
-          "td@14:1",
-          "td@14:2",
-          "th@14:0",
-          "thead@12:1",
-          "tr@13:3",
-          "tr@13:4+",
+          "strong@8:0",
+          "table@10:2",
+          "tbody@11:3",
+          "tbody@11:4+",
+          "td@13:0",
+          "td@13:1",
+          "td@13:2",
+          "th@13:0",
+          "thead@11:1",
+          "tr@12:3",
+          "tr@12:4+",
           "ul@10:4+",
-          "ul@12:3",
-          "ul@12:4+",
-          "ul@13:4+",
-          "ul@6:4+"
+          "ul@11:3",
+          "ul@11:4+",
+          "ul@12:4+"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 120,
+            "top": 0,
             "left": 0,
             "width": 390,
-            "height": 24815
+            "height": 175
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 789,
-            "left": 14,
-            "width": 361,
-            "height": 48
+            "top": 128,
+            "left": 0,
+            "width": 390,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 228,
+            "left": 0,
+            "width": 390,
+            "height": 32670
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 24975,
+            "top": 32898,
             "left": 0,
             "width": 390,
-            "height": 825
+            "height": 788
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 416
+            "hex": "#f2f3f8",
+            "count": 483
           },
           {
-            "hex": "#3d3733",
-            "count": 245
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 138
-          },
-          {
-            "hex": "#fff6f0",
-            "count": 81
+            "hex": "#a3a1b5",
+            "count": 200
           },
           {
             "hex": "#ffffff",
-            "count": 51
+            "count": 138
           },
           {
-            "hex": "#6e625c",
-            "count": 41
+            "hex": "#8a8899",
+            "count": 58
           },
           {
-            "hex": "#c40018",
-            "count": 11
+            "hex": "#f2c94c",
+            "count": 12
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#7cc9ff",
+            "count": 9
           },
           {
-            "hex": "#4a2500",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 8
           },
           {
-            "hex": "#6b0010",
-            "count": 4
+            "hex": "#ff8a8a",
+            "count": 8
           },
           {
-            "hex": "#ffd9d9",
-            "count": 4
+            "hex": "#0d0e16",
+            "count": 5
           },
           {
-            "hex": "#fdf1e6",
+            "hex": "#5ce1a0",
             "count": 3
           },
           {
-            "hex": "#ff7a00",
-            "count": 3
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#0e3d26",
-            "count": 1
-          },
-          {
-            "hex": "#1e6b47",
-            "count": 1
-          },
-          {
-            "hex": "#d9f2e3",
-            "count": 1
-          },
-          {
-            "hex": "#dff3e6",
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 563,
+        "contrastChecked": 567,
         "headings": [
           {
             "tag": "h1",
@@ -18836,50 +19244,51 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
           "offenders": [
             {
-              "selector": "section#fees > table.po-table > thead",
-              "right": 638,
-              "width": 620
+              "selector": "section#fees > table.ct-table > thead",
+              "right": 669,
+              "width": 651
             },
             {
-              "selector": "table.po-table > thead > tr",
-              "right": 638,
-              "width": 620
-            },
-            {
-              "selector": "thead > tr > th",
-              "right": 481,
-              "width": 100
+              "selector": "table.ct-table > thead > tr",
+              "right": 669,
+              "width": 651
             },
             {
               "selector": "thead > tr > th",
-              "right": 638,
-              "width": 157
+              "right": 398,
+              "width": 68
             },
             {
-              "selector": "section#fees > table.po-table > tbody",
-              "right": 1289,
-              "width": 1271
+              "selector": "thead > tr > th",
+              "right": 471,
+              "width": 73
             },
             {
-              "selector": "table.po-table > tbody > tr",
-              "right": 1289,
-              "width": 1271
+              "selector": "thead > tr > th",
+              "right": 545,
+              "width": 73
             },
             {
-              "selector": "tbody > tr > td.po-copy",
-              "right": 538,
-              "width": 298
+              "selector": "thead > tr > th",
+              "right": 669,
+              "width": 125
             },
             {
-              "selector": "tbody > tr > td.po-num",
-              "right": 610,
-              "width": 72
+              "selector": "section#fees > table.ct-table > tbody",
+              "right": 669,
+              "width": 651
+            },
+            {
+              "selector": "table.ct-table > tbody > tr",
+              "right": 669,
+              "width": 651
             }
           ]
         }
@@ -18895,17 +19304,17 @@
     },
     "/mine": {
       "route": "/mine",
-      "url": "http://127.0.0.1:4321/mine",
+      "url": "http://127.0.0.1:5391/mine",
       "status": 200,
       "desktop": {
         "meta": {
           "title": "Mine fees",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1573,
+          "bodyTextLength": 1614,
           "scrollWidth": 1440,
           "clientWidth": 1440,
-          "focusableCount": 17
+          "focusableCount": 19
         },
         "words": [
           {
@@ -19021,15 +19430,15 @@
             "count": 1
           },
           {
-            "word": "BscScan",
-            "count": 1
-          },
-          {
             "word": "budget",
             "count": 2
           },
           {
             "word": "by",
+            "count": 1
+          },
+          {
+            "word": "call",
             "count": 1
           },
           {
@@ -19073,6 +19482,10 @@
             "count": 4
           },
           {
+            "word": "Contract",
+            "count": 1
+          },
+          {
             "word": "contracts",
             "count": 1
           },
@@ -19109,6 +19522,10 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "every",
             "count": 1
           },
@@ -19119,6 +19536,10 @@
           {
             "word": "explore",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -19139,6 +19560,10 @@
           {
             "word": "Fees",
             "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "Fractional",
@@ -19377,11 +19802,19 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
             "word": "removed",
             "count": 1
           },
           {
             "word": "reserve",
+            "count": 1
+          },
+          {
+            "word": "Retry",
             "count": 1
           },
           {
@@ -19413,6 +19846,10 @@
             "count": 1
           },
           {
+            "word": "RPC",
+            "count": 1
+          },
+          {
             "word": "same",
             "count": 2
           },
@@ -19430,6 +19867,10 @@
           },
           {
             "word": "sign",
+            "count": 1
+          },
+          {
+            "word": "Solscan",
             "count": 1
           },
           {
@@ -19457,20 +19898,12 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "that",
             "count": 1
           },
           {
             "word": "the",
-            "count": 11
+            "count": 12
           },
           {
             "word": "The",
@@ -19619,209 +20052,202 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-billboard",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fact",
-          "po-fact-lead",
-          "po-field",
-          "po-field-input",
-          "po-field-label",
-          "po-field-row",
-          "po-figure",
-          "po-figures",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-gutter",
-          "po-inline",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-note",
-          "po-plate",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-mine",
-          "po-run",
-          "po-slab",
-          "po-split",
-          "po-stage",
-          "po-stamp",
-          "po-tag",
-          "po-tag-good",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-unit",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-eyebrow",
+          "ct-fact",
+          "ct-fact-lead",
+          "ct-field",
+          "ct-field-input",
+          "ct-field-label",
+          "ct-field-row",
+          "ct-figure",
+          "ct-figures",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b3",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-note",
+          "ct-page",
+          "ct-plate",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-mine",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-split-even",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-good",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-unit",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
           "article@10:3",
+          "button@10:0",
           "button@11:0",
-          "button@12:0",
-          "button@12:1",
+          "button@7:0",
           "button@9:0",
-          "div@10:0",
           "div@10:2",
+          "div@10:3",
+          "div@11:1",
           "div@11:2",
-          "div@11:3",
-          "div@12:2",
-          "div@13:1",
+          "div@12:1",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
-          "div@9:1",
-          "div@9:3",
+          "div@9:0",
+          "div@9:2",
+          "div@9:4+",
           "footer@5:2",
-          "h1@10:0",
-          "h2@11:0",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
-          "input@14:0",
-          "label@13:0",
-          "li@7:1",
+          "header@5:2",
+          "input@13:0",
+          "label@12:0",
           "main@5:1",
-          "nav@5:1",
-          "p@10:1",
-          "p@10:2",
+          "nav@6:1",
           "p@11:0",
           "p@11:1",
-          "p@12:0",
-          "p@12:1",
           "p@8:0",
-          "section@11:2",
+          "p@9:1",
+          "p@9:2",
+          "section@10:2",
+          "section@7:1",
           "section@8:1",
-          "section@9:1",
-          "section@9:2",
-          "section@9:4+",
+          "section@8:2",
           "span@10:0",
-          "span@11:0",
           "span@12:0",
-          "span@13:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
+          "strong@11:0",
           "strong@12:0",
-          "strong@13:0",
-          "ul@6:4+"
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 84,
+            "top": -4,
             "left": 0,
             "width": 1440,
-            "height": 1350
+            "height": 137
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 831,
-            "left": 496,
-            "width": 448,
-            "height": 55
+            "top": 86,
+            "left": 0,
+            "width": 1440,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 186,
+            "left": 0,
+            "width": 1440,
+            "height": 1534
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 1522,
+            "top": 1720,
             "left": 0,
             "width": 1440,
-            "height": 423
+            "height": 291
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 52
+            "hex": "#f2f3f8",
+            "count": 66
           },
           {
-            "hex": "#fff6f0",
-            "count": 47
+            "hex": "#a3a1b5",
+            "count": 21
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#8a8899",
+            "count": 20
           },
           {
-            "hex": "#3d3733",
-            "count": 7
+            "hex": "#7cc9ff",
+            "count": 4
           },
           {
-            "hex": "#6e625c",
-            "count": 7
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#c40018",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 2
           },
           {
-            "hex": "#ffffff",
-            "count": 6
+            "hex": "#5ce1a0",
+            "count": 2
           },
           {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 3
-          },
-          {
-            "hex": "#0e3d26",
-            "count": 1
-          },
-          {
-            "hex": "#d9f2e3",
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 56,
+        "contrastChecked": 60,
         "headings": [
           {
             "tag": "h1",
@@ -19841,7 +20267,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,
@@ -19865,10 +20292,10 @@
           "title": "Mine fees",
           "lang": "en",
           "h1Count": 1,
-          "bodyTextLength": 1573,
+          "bodyTextLength": 1614,
           "scrollWidth": 390,
           "clientWidth": 390,
-          "focusableCount": 17
+          "focusableCount": 19
         },
         "words": [
           {
@@ -19984,15 +20411,15 @@
             "count": 1
           },
           {
-            "word": "BscScan",
-            "count": 1
-          },
-          {
             "word": "budget",
             "count": 2
           },
           {
             "word": "by",
+            "count": 1
+          },
+          {
+            "word": "call",
             "count": 1
           },
           {
@@ -20036,6 +20463,10 @@
             "count": 4
           },
           {
+            "word": "Contract",
+            "count": 1
+          },
+          {
             "word": "contracts",
             "count": 1
           },
@@ -20072,6 +20503,10 @@
             "count": 1
           },
           {
+            "word": "Error",
+            "count": 1
+          },
+          {
             "word": "every",
             "count": 1
           },
@@ -20082,6 +20517,10 @@
           {
             "word": "explore",
             "count": 1
+          },
+          {
+            "word": "F",
+            "count": 2
           },
           {
             "word": "fee",
@@ -20102,6 +20541,10 @@
           {
             "word": "Fees",
             "count": 1
+          },
+          {
+            "word": "Fractio",
+            "count": 4
           },
           {
             "word": "Fractional",
@@ -20340,11 +20783,19 @@
             "count": 1
           },
           {
+            "word": "rejected",
+            "count": 1
+          },
+          {
             "word": "removed",
             "count": 1
           },
           {
             "word": "reserve",
+            "count": 1
+          },
+          {
+            "word": "Retry",
             "count": 1
           },
           {
@@ -20376,6 +20827,10 @@
             "count": 1
           },
           {
+            "word": "RPC",
+            "count": 1
+          },
+          {
             "word": "same",
             "count": 2
           },
@@ -20393,6 +20848,10 @@
           },
           {
             "word": "sign",
+            "count": 1
+          },
+          {
+            "word": "Solscan",
             "count": 1
           },
           {
@@ -20420,20 +20879,12 @@
             "count": 1
           },
           {
-            "word": "T",
-            "count": 2
-          },
-          {
-            "word": "Tessella",
-            "count": 4
-          },
-          {
             "word": "that",
             "count": 1
           },
           {
             "word": "the",
-            "count": 11
+            "count": 12
           },
           {
             "word": "The",
@@ -20582,209 +21033,202 @@
         "imageIssues": [],
         "interactiveIssues": [],
         "classTokens": [
-          "po-billboard",
-          "po-button",
-          "po-button-primary",
-          "po-button-quiet",
-          "po-button-small",
-          "po-chain",
-          "po-chain-list",
-          "po-copy",
-          "po-cover",
-          "po-cover-inner",
-          "po-cover-tools",
-          "po-dock",
-          "po-dock-dot",
-          "po-dock-item",
-          "po-dock-label",
-          "po-dock-link",
-          "po-dock-list",
-          "po-fact",
-          "po-fact-lead",
-          "po-field",
-          "po-field-input",
-          "po-field-label",
-          "po-field-row",
-          "po-figure",
-          "po-figures",
-          "po-fill",
-          "po-gap-b0",
-          "po-gap-b1",
-          "po-gap-b2",
-          "po-gap-b3",
-          "po-gutter",
-          "po-inline",
-          "po-kicker",
-          "po-label",
-          "po-line",
-          "po-mark",
-          "po-micro",
-          "po-mono",
-          "po-muted",
-          "po-note",
-          "po-plate",
-          "po-pulse",
-          "po-quiet",
-          "po-route",
-          "po-route-mine",
-          "po-run",
-          "po-slab",
-          "po-split",
-          "po-stage",
-          "po-stamp",
-          "po-tag",
-          "po-tag-good",
-          "po-tag-paper",
-          "po-tear",
-          "po-tear-brand",
-          "po-tear-chain",
-          "po-tear-grid",
-          "po-tear-links",
-          "po-tear-meta",
-          "po-unit",
-          "po-wall",
-          "po-wallet",
-          "po-wordmark",
+          "ct-band",
+          "ct-band-head",
+          "ct-billboard",
+          "ct-brand",
+          "ct-brand-mark",
+          "ct-btn",
+          "ct-btn-primary",
+          "ct-btn-quiet",
+          "ct-btn-small",
+          "ct-callout",
+          "ct-callout-caution",
+          "ct-chain",
+          "ct-chain-list",
+          "ct-colophon",
+          "ct-colophon-brand",
+          "ct-colophon-grid",
+          "ct-colophon-links",
+          "ct-colophon-meta",
+          "ct-copy",
+          "ct-eyebrow",
+          "ct-fact",
+          "ct-fact-lead",
+          "ct-field",
+          "ct-field-input",
+          "ct-field-label",
+          "ct-field-row",
+          "ct-figure",
+          "ct-figures",
+          "ct-fill",
+          "ct-gap-b0",
+          "ct-gap-b3",
+          "ct-index",
+          "ct-index-in",
+          "ct-index-link",
+          "ct-inline",
+          "ct-label",
+          "ct-masthead",
+          "ct-masthead-in",
+          "ct-masthead-tools",
+          "ct-micro",
+          "ct-mono",
+          "ct-muted",
+          "ct-note",
+          "ct-page",
+          "ct-plate",
+          "ct-quiet",
+          "ct-route",
+          "ct-route-mine",
+          "ct-row",
+          "ct-shell",
+          "ct-slab",
+          "ct-split-even",
+          "ct-stage",
+          "ct-stamp",
+          "ct-standfirst",
+          "ct-strip",
+          "ct-tag",
+          "ct-tag-good",
+          "ct-tag-paper",
+          "ct-topbar",
+          "ct-unit",
+          "ct-wallet",
+          "ct-wordmark",
           "router-link-active",
           "router-link-exact-active"
         ],
         "fingerprint": [
           "a@7:2",
           "a@8:0",
-          "a@8:2",
           "a@9:2",
           "article@10:3",
+          "button@10:0",
           "button@11:0",
-          "button@12:0",
-          "button@12:1",
+          "button@7:0",
           "button@9:0",
-          "div@10:0",
           "div@10:2",
+          "div@10:3",
+          "div@11:1",
           "div@11:2",
-          "div@11:3",
-          "div@12:2",
-          "div@13:1",
+          "div@12:1",
           "div@3:1",
           "div@4:4+",
           "div@5:1",
-          "div@6:1",
           "div@6:2",
           "div@6:3",
           "div@7:2",
           "div@7:4+",
           "div@8:1",
           "div@8:2",
+          "div@8:3",
           "div@8:4+",
-          "div@9:1",
-          "div@9:3",
+          "div@9:0",
+          "div@9:2",
+          "div@9:4+",
           "footer@5:2",
-          "h1@10:0",
-          "h2@11:0",
+          "h1@9:0",
+          "h2@10:0",
+          "h3@11:0",
           "h3@12:0",
-          "h3@13:0",
-          "input@14:0",
-          "label@13:0",
-          "li@7:1",
+          "header@5:2",
+          "input@13:0",
+          "label@12:0",
           "main@5:1",
-          "nav@5:1",
-          "p@10:1",
-          "p@10:2",
+          "nav@6:1",
           "p@11:0",
           "p@11:1",
-          "p@12:0",
-          "p@12:1",
           "p@8:0",
-          "section@11:2",
+          "p@9:1",
+          "p@9:2",
+          "section@10:2",
+          "section@7:1",
           "section@8:1",
-          "section@9:1",
-          "section@9:2",
-          "section@9:4+",
+          "section@8:2",
           "span@10:0",
-          "span@11:0",
           "span@12:0",
-          "span@13:0",
           "span@7:0",
+          "span@7:1",
           "span@8:0",
+          "span@8:1",
           "span@9:0",
+          "span@9:1",
           "strong@10:0",
+          "strong@11:0",
           "strong@12:0",
-          "strong@13:0",
-          "ul@6:4+"
+          "strong@8:0"
         ],
         "landmarks": [
           {
-            "tag": "main",
+            "tag": "header",
             "role": "",
-            "top": 120,
+            "top": 0,
             "left": 0,
             "width": 390,
-            "height": 1652
+            "height": 175
           },
           {
             "tag": "nav",
             "role": "",
-            "top": 789,
-            "left": 14,
-            "width": 361,
-            "height": 48
+            "top": 128,
+            "left": 0,
+            "width": 390,
+            "height": 46
+          },
+          {
+            "tag": "main",
+            "role": "",
+            "top": 228,
+            "left": 0,
+            "width": 390,
+            "height": 1868
           },
           {
             "tag": "footer",
             "role": "",
-            "top": 1812,
+            "top": 2096,
             "left": 0,
             "width": 390,
-            "height": 825
+            "height": 788
           }
         ],
         "colors": [
           {
-            "hex": "#161616",
-            "count": 52
+            "hex": "#f2f3f8",
+            "count": 66
           },
           {
-            "hex": "#fff6f0",
-            "count": 47
+            "hex": "#a3a1b5",
+            "count": 21
           },
           {
-            "hex": "#d3c1b7",
-            "count": 10
+            "hex": "#8a8899",
+            "count": 20
           },
           {
-            "hex": "#3d3733",
-            "count": 7
+            "hex": "#7cc9ff",
+            "count": 4
           },
           {
-            "hex": "#6e625c",
-            "count": 7
+            "hex": "#001018",
+            "count": 2
           },
           {
-            "hex": "#c40018",
-            "count": 6
+            "hex": "#40b3ff",
+            "count": 2
           },
           {
-            "hex": "#ffffff",
-            "count": 6
+            "hex": "#5ce1a0",
+            "count": 2
           },
           {
-            "hex": "#ff7a00",
-            "count": 5
-          },
-          {
-            "hex": "#ffe3d6",
-            "count": 3
-          },
-          {
-            "hex": "#0e3d26",
-            "count": 1
-          },
-          {
-            "hex": "#d9f2e3",
+            "hex": "#05060b",
             "count": 1
           }
         ],
         "contrast": [],
-        "contrastChecked": 56,
+        "contrastChecked": 60,
         "headings": [
           {
             "tag": "h1",
@@ -20804,7 +21248,8 @@
           }
         ],
         "navTargets": [
-          ""
+          "",
+          "/"
         ],
         "overflow": {
           "documentOverflow": false,

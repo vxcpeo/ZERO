@@ -1,7 +1,7 @@
 /**
  * Transaction and allowance helpers.
  *
- * Every write path goes through here so the UI gets consistent error messages, BscScan links and
+ * Every write path goes through here so the UI gets consistent error messages, Solscan links and
  * "infinite approval" handling instead of each component re-implementing it.
  */
 import { MaxUint256, type Contract, type ContractTransactionReceipt, type Signer } from "ethers";
@@ -31,12 +31,12 @@ export interface TxResult {
   explorerUrl: string;
 }
 
-/** BscScan (or testnet equivalent) link for a transaction hash. */
+/** Solscan (or devnet equivalent) link for a transaction hash. */
 export function explorerTxUrl(hash: string): string {
   return TARGET_CHAIN.explorer ? `${TARGET_CHAIN.explorer}/tx/${hash}` : "";
 }
 
-/** BscScan (or testnet equivalent) link for an address. */
+/** Solscan (or devnet equivalent) link for an address. */
 export function explorerAddressUrl(address: string): string {
   return TARGET_CHAIN.explorer ? `${TARGET_CHAIN.explorer}/address/${address}` : "";
 }
@@ -121,7 +121,7 @@ export function describeError(error: unknown): string {
     String(error);
 
   const text = String(raw);
-  if (/insufficient funds/i.test(text)) return "Not enough BNB to cover gas.";
+  if (/insufficient funds/i.test(text)) return "Not enough SOL to cover gas.";
   if (/nonce/i.test(text)) return "Wallet nonce is out of sync — reset the account in your wallet.";
   if (/network|chain/i.test(text) && /wrong/i.test(text)) {
     return `Wrong network. Switch to ${TARGET_CHAIN.name}.`;
