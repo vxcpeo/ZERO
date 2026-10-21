@@ -1,0 +1,14 @@
+﻿import path from "node:path";
+import { provisionBrowser } from "file:///C:/Users/Administrator/.dsh/skills/reskin/scripts/lib/browser.mjs";
+const root = process.cwd();
+const provision = await provisionBrowser(root, path.join(root, ".reskin"));
+const { chromium } = provision.playwright;
+const browser = await chromium.launch({ headless: true, executablePath: provision.executablePath, args: ["--no-sandbox"] });
+const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+await page.goto("http://127.0.0.1:4321/docs", { waitUntil: "domcontentloaded" });
+await page.waitForTimeout(800);
+console.log("before", await page.evaluate(() => ({ y: scrollY, top: Math.round(document.getElementById("fees").getBoundingClientRect().top) })));
+await page.locator(".po-contents-link", { hasText: "Fee schedule" }).first().click();
+await page.waitForTimeout(3000);
+console.log("after", await page.evaluate(() => ({ y: scrollY, top: Math.round(document.getElementById("fees").getBoundingClientRect().top), hash: location.hash, stickyTop: Math.round(document.querySelector(".po-contents").getBoundingClientRect().top) })));
+await browser.close();

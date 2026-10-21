@@ -1,0 +1,5082 @@
+{
+  "schemaVersion": 1,
+  "meta": {
+    "projectName": "@tessella/website",
+    "title": "@tessella/website",
+    "lang": "en"
+  },
+  "routes": [
+    "/",
+    "/art",
+    "/art/:id",
+    "/dashboard",
+    "/docs",
+    "/mine"
+  ],
+  "visibleText": [
+    {
+      "value": "_creditReserve",
+      "count": 1
+    },
+    {
+      "value": "_normalize",
+      "count": 1
+    },
+    {
+      "value": "_payReward",
+      "count": 1
+    },
+    {
+      "value": "_previewEmission",
+      "count": 2
+    },
+    {
+      "value": "_updatePool",
+      "count": 1
+    },
+    {
+      "value": "-block period, and a staker holding 25% of the pool's reward weight for the whole schedule. Where a live value above carries a",
+      "count": 1
+    },
+    {
+      "value": "-day default period) in proportion to stake weight. Rewards are paid in",
+      "count": 1
+    },
+    {
+      "value": "-day halving period",
+      "count": 1
+    },
+    {
+      "value": "-decimal rewards",
+      "count": 1
+    },
+    {
+      "value": "— a",
+      "count": 1
+    },
+    {
+      "value": "— an integer that floors to zero whenever an update releases fewer reward units than there are whole tokens staked. For a 6-decimal reward asset such as the mock USDT in the reference deployment that happens constantly at realistic position sizes, and because the loss is silent the symptom is not an error but position values that simply never grow. The contract's own note records the observed failure: a 33 USDT position accruing",
+      "count": 1
+    },
+    {
+      "value": "— supply, curve price and your own holding, with no backend in between.",
+      "count": 1
+    },
+    {
+      "value": "— the Solidity is the only authoritative description of what these contracts do, and where it disagrees with any page, the Solidity wins.",
+      "count": 1
+    },
+    {
+      "value": "— the values the UI falls back to when a read has not succeeded yet.",
+      "count": 1
+    },
+    {
+      "value": ", and both the router's accepted fee assets and its reward asset are excluded from",
+      "count": 1
+    },
+    {
+      "value": ", and the precision argument documented on",
+      "count": 1
+    },
+    {
+      "value": ", and the remainder is divided between the artwork's",
+      "count": 1
+    },
+    {
+      "value": ", and the remainder reaches the treasury alongside the artist's proceeds.",
+      "count": 1
+    },
+    {
+      "value": ", artist share ≤",
+      "count": 1
+    },
+    {
+      "value": ", at",
+      "count": 1
+    },
+    {
+      "value": ", capped at the unspent amount.",
+      "count": 1
+    },
+    {
+      "value": ", ceiling",
+      "count": 2
+    },
+    {
+      "value": ", curve slope ≤",
+      "count": 1
+    },
+    {
+      "value": ", end block",
+      "count": 1
+    },
+    {
+      "value": ", inside the immutable ceilings of",
+      "count": 1
+    },
+    {
+      "value": ", not",
+      "count": 1
+    },
+    {
+      "value": ", or",
+      "count": 1
+    },
+    {
+      "value": ", or read the numbers on this page, which come from exactly those calls.",
+      "count": 1
+    },
+    {
+      "value": ", or set the",
+      "count": 1
+    },
+    {
+      "value": ", plus the protocol-wide state they depend on.",
+      "count": 1
+    },
+    {
+      "value": ", routed through",
+      "count": 1
+    },
+    {
+      "value": ", so a larger block pushes the price up for everyone after you.",
+      "count": 1
+    },
+    {
+      "value": ", so a purchase costs the integral of that line across the fill range it covers. At the live slope of",
+      "count": 1
+    },
+    {
+      "value": ", so the budget is never exceeded no matter how the rate moves.",
+      "count": 1
+    },
+    {
+      "value": ", so the pool can never pay out more than it received.",
+      "count": 1
+    },
+    {
+      "value": ", so they lift the payout rate for the rest of the current window instead of lengthening it. The tokens never leave the pool either way.",
+      "count": 1
+    },
+    {
+      "value": ", the accumulator, the pending sync — always in the protocol's favour. Expect a quote to sit at or a hair below an exact pro-rata figure, never above it.",
+      "count": 1
+    },
+    {
+      "value": ", the emission maths in",
+      "count": 1
+    },
+    {
+      "value": ", the fee ceilings, the share supply or the",
+      "count": 1
+    },
+    {
+      "value": ", the fee getters,",
+      "count": 1
+    },
+    {
+      "value": ", the same asset the fees were charged in.",
+      "count": 1
+    },
+    {
+      "value": ", the same asset the fees were charged in. The pool cannot mint rewards from nothing: it streams exactly the budget it has received, and",
+      "count": 1
+    },
+    {
+      "value": ", then inside a pool by reward",
+      "count": 1
+    },
+    {
+      "value": ", then reload this page.",
+      "count": 1
+    },
+    {
+      "value": ", then set the",
+      "count": 1
+    },
+    {
+      "value": ", vaulted with",
+      "count": 1
+    },
+    {
+      "value": ", which batches",
+      "count": 1
+    },
+    {
+      "value": ", which is deliberately not a self-serve action: governance must first be satisfied that a custody agreement and an appraisal are genuine. Registration then mints",
+      "count": 1
+    },
+    {
+      "value": ", which makes the fee asset itself the reward asset: rewards are",
+      "count": 1
+    },
+    {
+      "value": ", which splits it",
+      "count": 1
+    },
+    {
+      "value": ", which takes",
+      "count": 1
+    },
+    {
+      "value": ", with a fee-funded mining engine that pays stakers the platform's own revenue.",
+      "count": 1
+    },
+    {
+      "value": ", with which custodian, against an appraisal it supplies itself:",
+      "count": 1
+    },
+    {
+      "value": "; that constant is not read by this UI, so treat it as documented rather than live).",
+      "count": 1
+    },
+    {
+      "value": "; the marginal price of the next whole share is",
+      "count": 1
+    },
+    {
+      "value": "; the pool credits",
+      "count": 1
+    },
+    {
+      "value": ": 200 – 10,512,000 blocks and a non-zero tail up to 100%.",
+      "count": 1
+    },
+    {
+      "value": ": a missing or non-standard",
+      "count": 1
+    },
+    {
+      "value": ": constants such as",
+      "count": 1
+    },
+    {
+      "value": ": ownership transfers in two steps, so a mistyped new owner does not orphan the contract. None of them is upgradeable — there is no proxy, no admin slot and no initializer anywhere in the codebase — so a rule change means a new deployment, not a silent patch.",
+      "count": 1
+    },
+    {
+      "value": ": platform fee ≤",
+      "count": 1
+    },
+    {
+      "value": ": the vault reverts if the cost moves above your quote by more than this.",
+      "count": 1
+    },
+    {
+      "value": ". At the live tail of",
+      "count": 1
+    },
+    {
+      "value": ". Contract-level invariant:",
+      "count": 1
+    },
+    {
+      "value": ". Cost is convex: a bigger block costs more per share than a small one.",
+      "count": 1
+    },
+    {
+      "value": ". Every read below will fail until then.",
+      "count": 1
+    },
+    {
+      "value": ". Every release is capped by the unspent reserve, so the pool can only ever pay out fees it actually received. Live: released",
+      "count": 1
+    },
+    {
+      "value": ". Existing positions keep withdrawing, harvesting and emergency-exiting.",
+      "count": 1
+    },
+    {
+      "value": ". In the reference deployment the router and the pool are wired to each other for fee intake, while",
+      "count": 1
+    },
+    {
+      "value": ". It cannot simply credit its own balance: the pool also holds staked principal and recycled fees, so",
+      "count": 1
+    },
+    {
+      "value": ". Note the two properties of the formula above that a \"halving\" label hides, both of which are visible in",
+      "count": 1
+    },
+    {
+      "value": ". Settlement does not close primary sales; it unlocks redemption.",
+      "count": 1
+    },
+    {
+      "value": ". That also means",
+      "count": 1
+    },
+    {
+      "value": ". That does not affect the fee-funded stream while the reward asset stays the fee token — which is what the reference deployment ships — but it does affect those tokens' supply, and it is the reason section 2 tells you to check",
+      "count": 1
+    },
+    {
+      "value": ". The router splits it on-chain and pushes the mining share straight into the reward budget, so paying a fee directly extends everyone's mining runway.",
+      "count": 1
+    },
+    {
+      "value": ". The staked column is a raw token amount in the stake token's own decimals; the weight column is the same stake normalised to 1e18, which is why the two columns do not look alike for a 6-decimal token.",
+      "count": 1
+    },
+    {
+      "value": ". The vault keeps none of it. Live value:",
+      "count": 1
+    },
+    {
+      "value": ". Those are quoted from the contract source, so treat them as documented values and confirm them on-chain if a decision depends on them.",
+      "count": 1
+    },
+    {
+      "value": ". Use",
+      "count": 1
+    },
+    {
+      "value": ".env.local",
+      "count": 1
+    },
+    {
+      "value": "· appraised at",
+      "count": 1
+    },
+    {
+      "value": "· halving period",
+      "count": 1
+    },
+    {
+      "value": "(150,000,000 units at 6 decimals)",
+      "count": 1
+    },
+    {
+      "value": "(5%) protection. This swap is the only place where the credited budget can end up smaller than the nominal slice, which is why the next step measures rather than trusts.",
+      "count": 1
+    },
+    {
+      "value": "(chain id",
+      "count": 1
+    },
+    {
+      "value": "(default",
+      "count": 1
+    },
+    {
+      "value": "(floored) and forwards it in the artwork's",
+      "count": 1
+    },
+    {
+      "value": "(IPFS or Arweave) — the contract stores the pointer, it cannot verify the contents.",
+      "count": 1
+    },
+    {
+      "value": "(mining ≤ 90%, referral ≤ 50%, and the two together ≤ 100%),",
+      "count": 1
+    },
+    {
+      "value": ") — the same number the certificate redemption check uses. The curve prices each additional share at",
+      "count": 1
+    },
+    {
+      "value": ") and suspend sales per artwork.",
+      "count": 1
+    },
+    {
+      "value": ") charged in",
+      "count": 1
+    },
+    {
+      "value": ") restores one unit of resolution per stake unit. That is also why",
+      "count": 1
+    },
+    {
+      "value": ") with a floor of 1 unit per block, so a budget smaller than the period length is spread over fewer blocks instead of flooring to zero and emitting nothing at all.",
+      "count": 1
+    },
+    {
+      "value": "), explorer",
+      "count": 1
+    },
+    {
+      "value": "). Delivery or a custody transfer is confirmed by the custodian — or by protocol governance — calling",
+      "count": 1
+    },
+    {
+      "value": "). Wait for the lock to end to pay nothing.",
+      "count": 1
+    },
+    {
+      "value": "// Quote before approving anything. shareAmount is 18-decimal share units (1e18 = one share). const cost = await vault.quoteBuy(artworkId, shareAmount); // (artworkId, shareAmount) // maxCost is a hard ceiling; the call reverts (FeeTooHigh) rather than filling above it. await vault.buyShares(artworkId, shareAmount, maxCost, referrer); // (artworkId, shareAmount, maxCost, referrer) // Market state in one round-trip: const snap = await vault.artworkSnapshot(artworkId); // → sharesSold, sharesRemaining, marginalPrice, nextShareCost, volume, active, settled",
+      "count": 1
+    },
+    {
+      "value": "// The three legs always sum to `amount`; the treasury leg absorbs rounding dust. const [miningShare, referralShare, treasuryShare] = await router.previewSplit(amount, hasReferrer); // (amount, hasReferrer) // Approve the router for `amount` of `feeToken`, then: await router.payTokenFee(feeToken, amount, referrer); // (feeToken, amount, referrer) await router.payDefaultFee(amount, referrer); // (amount, referrer) await router.payNativeFee(referrer, { value }); // (referrer) payable, BNB",
+      "count": 1
+    },
+    {
+      "value": "// Views (no gas, no wallet) const pending = await pool.pendingRewardOf(poolId, account); // (poolId, account) const all = await pool.pendingRewardAll(account); // every pool in one call const stats = await pool.reserveStats(); // reserve, released, unspent, // endBlock, perBlockScaled, halvingPeriod // Writes (approve the stake token to the pool first) await pool.deposit(poolId, amount, referrer); // (poolId, amount, referrer) await pool.harvest(poolId); // (poolId) await pool.harvestAndRestake(poolId); // (poolId) — stakeToken == rewardAsset only await pool.withdraw(poolId, amount); // (poolId, amount) await pool.emergencyWithdraw(poolId); // (poolId) — forfeits pending rewards // Anyone may poke every pool to equalise accumulators before comparing rates await pool.pokeAllPools(); // () const releasedPerPool = await pool.pokeAllPoolsDetailed(); // () — per-pool released by this call // Custodial / contract-based miners await pool.depositFor(poolId, amount, beneficiary, referrer); // (poolId, amount, beneficiary, referrer)",
+      "count": 1
+    },
+    {
+      "value": "/block",
+      "count": 2
+    },
+    {
+      "value": "/day",
+      "count": 1
+    },
+    {
+      "value": "% of pool weight",
+      "count": 1
+    },
+    {
+      "value": "% used,",
+      "count": 1
+    },
+    {
+      "value": "← All artworks",
+      "count": 1
+    },
+    {
+      "value": "→ Artist payout (",
+      "count": 1
+    },
+    {
+      "value": "→ Mining reward reserve",
+      "count": 1
+    },
+    {
+      "value": "→ Referrer rebate",
+      "count": 1
+    },
+    {
+      "value": "→ the referrer, paid in the same transaction;",
+      "count": 1
+    },
+    {
+      "value": "→ the reward budget;",
+      "count": 1
+    },
+    {
+      "value": "→ the treasury. The treasury leg is a remainder rather than a third parameter, so the three legs add up to exactly the fee and rounding dust can never be stranded in the router. Live split:",
+      "count": 1
+    },
+    {
+      "value": "→ Treasury (",
+      "count": 1
+    },
+    {
+      "value": "→ Treasury (proceeds remainder)",
+      "count": 1
+    },
+    {
+      "value": "≈ 3.571429",
+      "count": 1
+    },
+    {
+      "value": "$ART",
+      "count": 1
+    },
+    {
+      "value": "$ART balance",
+      "count": 2
+    },
+    {
+      "value": "1 · What this protocol is",
+      "count": 1
+    },
+    {
+      "value": "1 ERC-721",
+      "count": 1
+    },
+    {
+      "value": "1_000_000e18",
+      "count": 1
+    },
+    {
+      "value": "1,209,600 blocks ≈ 42.0 days at 3s",
+      "count": 1
+    },
+    {
+      "value": "1.875000",
+      "count": 1
+    },
+    {
+      "value": "10 · Integrator quickstart",
+      "count": 1
+    },
+    {
+      "value": "10,000 × 300 / 10,000",
+      "count": 1
+    },
+    {
+      "value": "10,000 × 300 / 10,000 deposit fee",
+      "count": 1
+    },
+    {
+      "value": "10,000.000000",
+      "count": 1
+    },
+    {
+      "value": "124 units/block at 6 decimals = 0.000124",
+      "count": 1
+    },
+    {
+      "value": "150 / 42",
+      "count": 1
+    },
+    {
+      "value": "150 × 0.25",
+      "count": 1
+    },
+    {
+      "value": "150,000,000 / 1,209,600",
+      "count": 1
+    },
+    {
+      "value": "150.000000",
+      "count": 3
+    },
+    {
+      "value": "1e18 × 10**rewardDecimals",
+      "count": 1
+    },
+    {
+      "value": "1e18-normalised across token decimals",
+      "count": 1
+    },
+    {
+      "value": "2 · The fee-funded mining loop",
+      "count": 1
+    },
+    {
+      "value": "2 units",
+      "count": 1
+    },
+    {
+      "value": "2,755",
+      "count": 1
+    },
+    {
+      "value": "25% and Max are floored to whole shares of what is still for sale. A fractional amount can still be typed by hand.",
+      "count": 1
+    },
+    {
+      "value": "25% of totalWeight",
+      "count": 1
+    },
+    {
+      "value": "3 · Emission schedule",
+      "count": 1
+    },
+    {
+      "value": "300 × 2,000 / 10,000",
+      "count": 1
+    },
+    {
+      "value": "300 × 5,000 / 10,000",
+      "count": 1
+    },
+    {
+      "value": "300 − 150 − 0",
+      "count": 1
+    },
+    {
+      "value": "300 − 150 − 60",
+      "count": 1
+    },
+    {
+      "value": "300.000000",
+      "count": 1
+    },
+    {
+      "value": "300.000000 charged, 9,700.000000 credited as principal and weight",
+      "count": 1
+    },
+    {
+      "value": "33e18",
+      "count": 1
+    },
+    {
+      "value": "33e6",
+      "count": 1
+    },
+    {
+      "value": "35.625000",
+      "count": 1
+    },
+    {
+      "value": "37.5 × 500 / 10,000",
+      "count": 1
+    },
+    {
+      "value": "37.5 − 1.875",
+      "count": 1
+    },
+    {
+      "value": "37.500000",
+      "count": 1
+    },
+    {
+      "value": "4 · Stake weight normalisation and the precision trap",
+      "count": 1
+    },
+    {
+      "value": "5 · Fee schedule",
+      "count": 1
+    },
+    {
+      "value": "6 · Worked example",
+      "count": 1
+    },
+    {
+      "value": "60.000000",
+      "count": 1
+    },
+    {
+      "value": "7 · Governance and trust boundaries",
+      "count": 1
+    },
+    {
+      "value": "8 · Risks, stated plainly",
+      "count": 1
+    },
+    {
+      "value": "85%",
+      "count": 1
+    },
+    {
+      "value": "9 · Contract reference",
+      "count": 1
+    },
+    {
+      "value": "90.000000",
+      "count": 1
+    },
+    {
+      "value": "A custodian holds the piece. The ERC-721 certificate is a provenance record, not the artwork, and the contract cannot enforce delivery, insurance, storage conditions or authenticity. Redemption needs the artwork to be marked settled (the custodian or governance can do that) and one wallet to hold 100% of the shares. Everything after that — shipping, title, disputes — is a legal process the code does not referee.",
+      "count": 1
+    },
+    {
+      "value": "A fee deposit does not pay out immediately. It is added to the reserve and released block by block, so a small fee produces a slow stream rather than a one-block spike. The schedule is re-priced on every deposit, and the shaper is",
+      "count": 1
+    },
+    {
+      "value": "A fresh budget opens a window",
+      "count": 1
+    },
+    {
+      "value": "A live schedule gets a tail",
+      "count": 1
+    },
+    {
+      "value": "A note on the deposit fee: it is charged in the",
+      "count": 1
+    },
+    {
+      "value": "A pool with no stake banks nothing. When",
+      "count": 1
+    },
+    {
+      "value": "A primary purchase charges",
+      "count": 1
+    },
+    {
+      "value": "A primary purchase charges a platform fee",
+      "count": 1
+    },
+    {
+      "value": "A quote is a view at one block. A",
+      "count": 1
+    },
+    {
+      "value": "A round-number walkthrough so every line can be checked with a calculator and against the tables above. Assumptions: the documented default parameters in",
+      "count": 1
+    },
+    {
+      "value": "ABI",
+      "count": 1
+    },
+    {
+      "value": "ACC_PRECISION",
+      "count": 3
+    },
+    {
+      "value": "accepts the artwork's custodian",
+      "count": 1
+    },
+    {
+      "value": "accRewardPerShare",
+      "count": 1
+    },
+    {
+      "value": "Accumulator (reward per 1e18 weight)",
+      "count": 1
+    },
+    {
+      "value": "active",
+      "count": 2
+    },
+    {
+      "value": "Activity",
+      "count": 1
+    },
+    {
+      "value": "Add and retune pools with",
+      "count": 1
+    },
+    {
+      "value": "addPool(stakeToken, allocationPoints, lockDuration, name)",
+      "count": 1
+    },
+    {
+      "value": "Address",
+      "count": 1
+    },
+    {
+      "value": "address and the vault's treasury (85% artist / 15% treasury at the deployed",
+      "count": 1
+    },
+    {
+      "value": "addresses in",
+      "count": 1
+    },
+    {
+      "value": "addresses.",
+      "count": 1
+    },
+    {
+      "value": "advanced",
+      "count": 1
+    },
+    {
+      "value": "advances",
+      "count": 1
+    },
+    {
+      "value": "All four core contracts are",
+      "count": 1
+    },
+    {
+      "value": "allocation points in total",
+      "count": 1
+    },
+    {
+      "value": "allocationPoints",
+      "count": 1
+    },
+    {
+      "value": "Also absent by design: no staking subsidy from a treasury, no pre-committed emission schedule, no inflation paid to stakers in the reference deployment. If nobody buys art, no fees arrive and nothing is mined. That is the whole funding model.",
+      "count": 1
+    },
+    {
+      "value": "amount",
+      "count": 3
+    },
+    {
+      "value": "and",
+      "count": 11
+    },
+    {
+      "value": "and forwarded to the protocol treasury. The fee that funds",
+      "count": 1
+    },
+    {
+      "value": "and generates",
+      "count": 1
+    },
+    {
+      "value": "and lowers the rate, and recycled harvest fees raise it within the current window. The schedule is re-priced on every deposit, so the realised stream is the integral of all of that, not the single-window figure.",
+      "count": 1
+    },
+    {
+      "value": "and reads that touch the chain will fail. Deploy the contracts, run",
+      "count": 1
+    },
+    {
+      "value": "and receive the ERC-721 provenance certificate that the vault minted to the custodian at registration — the on-chain claim on the physical artwork.",
+      "count": 1
+    },
+    {
+      "value": "and run",
+      "count": 1
+    },
+    {
+      "value": "and streamed to stakers block by block. Buying art is how this protocol pays its miners.",
+      "count": 1
+    },
+    {
+      "value": "and the emission schedule is re-priced (section 3). From then on every pool update releases a slice of the reserve into its accumulator, and each staker's share follows their reward weight (section 4). Emission that has already been released is not retroactively claimable:",
+      "count": 1
+    },
+    {
+      "value": "and the vault mints the shares straight into their wallet. That is the design difference worth understanding: a fraction is a real BEP-20 balance you custody yourself, so it can be staked in the protocol's own pools, used as collateral, or traded on any BSC venue that lists it — rather than a line in a custodial ledger that only the operator can move.",
+      "count": 1
+    },
+    {
+      "value": "Any further fee deposit extends",
+      "count": 1
+    },
+    {
+      "value": "Anyone can send a fee through",
+      "count": 1
+    },
+    {
+      "value": "Appraised value",
+      "count": 1
+    },
+    {
+      "value": "appraisedValueUSD",
+      "count": 1
+    },
+    {
+      "value": "approaches — the release is mildly back-loaded within a period rather than flat.",
+      "count": 1
+    },
+    {
+      "value": "Approvals.",
+      "count": 1
+    },
+    {
+      "value": "are",
+      "count": 1
+    },
+    {
+      "value": "are in the artwork's",
+      "count": 1
+    },
+    {
+      "value": "Argument order is not uniform.",
+      "count": 1
+    },
+    {
+      "value": "Arithmetic",
+      "count": 1
+    },
+    {
+      "value": "ART",
+      "count": 2
+    },
+    {
+      "value": "Art is vaulted and split",
+      "count": 1
+    },
+    {
+      "value": "Artist proceeds (",
+      "count": 1
+    },
+    {
+      "value": "artistPayout",
+      "count": 1
+    },
+    {
+      "value": "artistShareBps",
+      "count": 1
+    },
+    {
+      "value": "artistShareBps = 8_500",
+      "count": 1
+    },
+    {
+      "value": "Artwork ids are assigned by the vault as",
+      "count": 1
+    },
+    {
+      "value": "artworks",
+      "count": 1
+    },
+    {
+      "value": "Artworks",
+      "count": 1
+    },
+    {
+      "value": "ArtworkShare",
+      "count": 1
+    },
+    {
+      "value": "artworkSnapshot",
+      "count": 1
+    },
+    {
+      "value": "ArtworkVault",
+      "count": 2
+    },
+    {
+      "value": "ArtworkVault.artistShareBps, from the contract source",
+      "count": 1
+    },
+    {
+      "value": "ArtworkVault.buyShares()",
+      "count": 1
+    },
+    {
+      "value": "as a reward budget. The pool streams it to stakers over a halving schedule (",
+      "count": 1
+    },
+    {
+      "value": "as custodian and split into",
+      "count": 1
+    },
+    {
+      "value": "at",
+      "count": 1
+    },
+    {
+      "value": "at most",
+      "count": 1
+    },
+    {
+      "value": "at this moment.",
+      "count": 1
+    },
+    {
+      "value": "back into rewardReserve",
+      "count": 1
+    },
+    {
+      "value": "Back to the gallery",
+      "count": 1
+    },
+    {
+      "value": "badge, substitute it: the arithmetic is identical.",
+      "count": 1
+    },
+    {
+      "value": "balanceOf(this)",
+      "count": 1
+    },
+    {
+      "value": "base units). Buyers call",
+      "count": 1
+    },
+    {
+      "value": "basePrice",
+      "count": 2
+    },
+    {
+      "value": "basePrice × (1 + curveSlopeBps × sold / (10,000 × 1,000,000))",
+      "count": 1
+    },
+    {
+      "value": "before assuming the deposit fee passes through the three-way split that purchase fees do.",
+      "count": 1
+    },
+    {
+      "value": "before assuming which configuration you are in.",
+      "count": 1
+    },
+    {
+      "value": "before drawing conclusions.",
+      "count": 1
+    },
+    {
+      "value": "before trusting the \"self-funded\" label.",
+      "count": 1
+    },
+    {
+      "value": "Binance Wallet",
+      "count": 1
+    },
+    {
+      "value": "Block an exit.",
+      "count": 1
+    },
+    {
+      "value": "block.number",
+      "count": 1
+    },
+    {
+      "value": "blocks — live",
+      "count": 1
+    },
+    {
+      "value": "blocks. The window is capped by the budget itself in reward units (",
+      "count": 1
+    },
+    {
+      "value": "BNB",
+      "count": 2
+    },
+    {
+      "value": "BNB balance",
+      "count": 1
+    },
+    {
+      "value": "BNB Smart Chain liveness, RPC availability, gas spikes and reorganisations all apply; this UI reads through a public RPC and shows whatever it returns, including stale data if the endpoint lags. Any approval you grant to the vault, the router or a pool can be spent according to that contract's code, so approve the amount you need rather than an unlimited allowance where you can.",
+      "count": 1
+    },
+    {
+      "value": "both left it unset; the UI then shows a \"not configured\" state instead of a zero address.",
+      "count": 1
+    },
+    {
+      "value": "bpsOf",
+      "count": 1
+    },
+    {
+      "value": "Browse artworks",
+      "count": 2
+    },
+    {
+      "value": "Budget released",
+      "count": 1
+    },
+    {
+      "value": "Budget released to stakers",
+      "count": 1
+    },
+    {
+      "value": "Buy and quote artwork fractions",
+      "count": 1
+    },
+    {
+      "value": "Buy fractions",
+      "count": 1
+    },
+    {
+      "value": "Buy the art. Fund the mining.",
+      "count": 1
+    },
+    {
+      "value": "Buying art is what pays the miners.",
+      "count": 1
+    },
+    {
+      "value": "Buying mints real BEP-20 shares to your wallet in the same transaction.",
+      "count": 1
+    },
+    {
+      "value": "buyShares",
+      "count": 1
+    },
+    {
+      "value": "buyShares(artworkId, shareAmount, maxCost, referrer)",
+      "count": 2
+    },
+    {
+      "value": "by calling",
+      "count": 1
+    },
+    {
+      "value": "by the protocol store and refreshed every 15 seconds. Nothing here is cached, indexed or projected — if this page disagrees with another view, the later read is the correct one.",
+      "count": 1
+    },
+    {
+      "value": "CannotRecoverStakeToken",
+      "count": 1
+    },
+    {
+      "value": "caps every pool update at",
+      "count": 1
+    },
+    {
+      "value": "caps every release at the unspent reserve, and once",
+      "count": 1
+    },
+    {
+      "value": "Ceiling",
+      "count": 1
+    },
+    {
+      "value": "Ceilings, ranges and behaviour",
+      "count": 1
+    },
+    {
+      "value": "Chain",
+      "count": 1
+    },
+    {
+      "value": "Change",
+      "count": 1
+    },
+    {
+      "value": "changed",
+      "count": 5
+    },
+    {
+      "value": "Charged on",
+      "count": 1
+    },
+    {
+      "value": "Check again",
+      "count": 1
+    },
+    {
+      "value": "Claim",
+      "count": 2
+    },
+    {
+      "value": "Claim & compound",
+      "count": 1
+    },
+    {
+      "value": "Claim all",
+      "count": 1
+    },
+    {
+      "value": "Claim any time, or use",
+      "count": 1
+    },
+    {
+      "value": "Claim, or compound",
+      "count": 1
+    },
+    {
+      "value": "Claimable",
+      "count": 3
+    },
+    {
+      "value": "Claimable rewards",
+      "count": 1
+    },
+    {
+      "value": "claimed by stakers, net of the harvest fee",
+      "count": 1
+    },
+    {
+      "value": "Close",
+      "count": 1
+    },
+    {
+      "value": "Code",
+      "count": 1
+    },
+    {
+      "value": "collectFromPool",
+      "count": 1
+    },
+    {
+      "value": "come from",
+      "count": 2
+    },
+    {
+      "value": "come from the Solidity in",
+      "count": 1
+    },
+    {
+      "value": "committed and not yet paid out (",
+      "count": 1
+    },
+    {
+      "value": "Committed budget",
+      "count": 1
+    },
+    {
+      "value": "Compound",
+      "count": 1
+    },
+    {
+      "value": "computes",
+      "count": 1
+    },
+    {
+      "value": "Configuration facts worth knowing",
+      "count": 1
+    },
+    {
+      "value": "Connect",
+      "count": 1
+    },
+    {
+      "value": "Connect a wallet",
+      "count": 2
+    },
+    {
+      "value": "Connect a wallet to continue.",
+      "count": 1
+    },
+    {
+      "value": "Connect a wallet to see how many fractions you hold in this artwork.",
+      "count": 1
+    },
+    {
+      "value": "Connect a wallet to see your positions.",
+      "count": 1
+    },
+    {
+      "value": "Connect a wallet to stake, claim, or compound. You can explore the numbers below without one.",
+      "count": 1
+    },
+    {
+      "value": "Connect wallet",
+      "count": 1
+    },
+    {
+      "value": "Connect your wallet to buy fractions of this artwork.",
+      "count": 1
+    },
+    {
+      "value": "Connect your wallet to buy fractions, follow your holding and redeem the provenance certificate.",
+      "count": 1
+    },
+    {
+      "value": "Connected as",
+      "count": 1
+    },
+    {
+      "value": "constant. Those are compile-time, not governance.",
+      "count": 1
+    },
+    {
+      "value": "Contract",
+      "count": 3
+    },
+    {
+      "value": "Contract addresses are not configured.",
+      "count": 1
+    },
+    {
+      "value": "Contracts",
+      "count": 1
+    },
+    {
+      "value": "Contracts and counterparties",
+      "count": 1
+    },
+    {
+      "value": "contracts, not these. The unit test-suite in",
+      "count": 1
+    },
+    {
+      "value": "contracts/",
+      "count": 1
+    },
+    {
+      "value": "contracts/contracts/core/",
+      "count": 2
+    },
+    {
+      "value": "contracts/scripts/deploy.js",
+      "count": 2
+    },
+    {
+      "value": "contracts/scripts/export-abi.js",
+      "count": 1
+    },
+    {
+      "value": "contracts/test/",
+      "count": 1
+    },
+    {
+      "value": "cost",
+      "count": 1
+    },
+    {
+      "value": "Cost (convex curve total)",
+      "count": 1
+    },
+    {
+      "value": "Cost on the curve",
+      "count": 1
+    },
+    {
+      "value": "costs a",
+      "count": 1
+    },
+    {
+      "value": "cumulative",
+      "count": 1
+    },
+    {
+      "value": "Curve slope",
+      "count": 1
+    },
+    {
+      "value": "Custody",
+      "count": 1
+    },
+    {
+      "value": "Dashboard",
+      "count": 2
+    },
+    {
+      "value": "days at 3 seconds per block), documented default",
+      "count": 1
+    },
+    {
+      "value": "decides where deposit and early-withdraw fees land.",
+      "count": 1
+    },
+    {
+      "value": "decides whether rewards are transferred or minted, and",
+      "count": 1
+    },
+    {
+      "value": "decimals — paid to miners as-is.",
+      "count": 1
+    },
+    {
+      "value": "decimals()",
+      "count": 2
+    },
+    {
+      "value": "decimals), so its issuer's risks — freezes, blacklists, de-pegging, redemption gates — apply to your mined balance exactly as much as to your deposit. Staking a different asset such as $ART in the fraction pool adds that asset's own price and liquidity risk on top of your principal. The protocol cannot hedge or substitute either one.",
+      "count": 1
+    },
+    {
+      "value": "Default",
+      "count": 3
+    },
+    {
+      "value": "DEFAULT_PARAMS",
+      "count": 1
+    },
+    {
+      "value": "Delivery proof URI — you are the custodian",
+      "count": 1
+    },
+    {
+      "value": "Deploy with",
+      "count": 1
+    },
+    {
+      "value": "Deployed contracts",
+      "count": 1
+    },
+    {
+      "value": "deployments/<network>.json",
+      "count": 1
+    },
+    {
+      "value": "Deposit fee",
+      "count": 1
+    },
+    {
+      "value": "deposit fee (",
+      "count": 1
+    },
+    {
+      "value": "deposit(poolId, amount, referrer)",
+      "count": 1
+    },
+    {
+      "value": "Do not compare",
+      "count": 1
+    },
+    {
+      "value": "documented default",
+      "count": 1
+    },
+    {
+      "value": "Documented defaults",
+      "count": 1
+    },
+    {
+      "value": "does not, and understates incumbents.",
+      "count": 1
+    },
+    {
+      "value": "Drain fees through the router: only the pool may call",
+      "count": 1
+    },
+    {
+      "value": "Each artwork is a physical piece held by a custodian and split into exactly",
+      "count": 1
+    },
+    {
+      "value": "Each artwork's share token has a fixed supply of",
+      "count": 1
+    },
+    {
+      "value": "Early-withdraw penalty",
+      "count": 1
+    },
+    {
+      "value": "earns a share of every fee the protocol collects. Rewards only start flowing once the pool holds a fee budget — a fresh deployment with no fee revenue pays nothing, by design.",
+      "count": 1
+    },
+    {
+      "value": "Emergency exit",
+      "count": 1
+    },
+    {
+      "value": "Emergency exit returns your principal and forfeits pending rewards. It never touches the reward budget, so it always works.",
+      "count": 1
+    },
+    {
+      "value": "emergencyWithdraw(poolId)",
+      "count": 1
+    },
+    {
+      "value": "Emission",
+      "count": 2
+    },
+    {
+      "value": "emission × 1e18 / totalWeight = emission / (whole tokens staked)",
+      "count": 1
+    },
+    {
+      "value": "Emission rate",
+      "count": 2
+    },
+    {
+      "value": "Emission schedule",
+      "count": 1
+    },
+    {
+      "value": "Emission shaping and pricing bounds",
+      "count": 1
+    },
+    {
+      "value": "emissionEndBlock",
+      "count": 4
+    },
+    {
+      "value": "emissionHalvingPeriod",
+      "count": 1
+    },
+    {
+      "value": "emissionHalvingPeriod()",
+      "count": 1
+    },
+    {
+      "value": "end block",
+      "count": 1
+    },
+    {
+      "value": "Enter an amount of shares to see the split, including how much of your purchase lands in the mining reward reserve.",
+      "count": 1
+    },
+    {
+      "value": "Entry cost of the position itself",
+      "count": 1
+    },
+    {
+      "value": "Entry price",
+      "count": 1
+    },
+    {
+      "value": "ERC-20 fractions plus an ERC-721 provenance certificate for the custodian, and opens the bonding-curve sale.",
+      "count": 1
+    },
+    {
+      "value": "ERC-20 fractions.",
+      "count": 1
+    },
+    {
+      "value": "ERC-20 fractions. Shares are priced on a linear bonding curve, so the price rises as the artwork sells and each purchase carries a platform fee that funds the mining reward reserve.",
+      "count": 1
+    },
+    {
+      "value": "ever committed,",
+      "count": 1
+    },
+    {
+      "value": "Every address above is a plain, non-upgradeable deployment: there is no proxy behind them, so a redeployment produces new addresses rather than mutating these.",
+      "count": 1
+    },
+    {
+      "value": "Every artwork gets its own ERC-20 share token, deployed by the vault at registration. Fractions are real BEP-20 tokens: they can be held or transferred like any other token while the sale is open.",
+      "count": 1
+    },
+    {
+      "value": "Every primary purchase charges a platform fee of",
+      "count": 1
+    },
+    {
+      "value": "Every purchase pays a fee",
+      "count": 1
+    },
+    {
+      "value": "Every unit paid to stakers was first collected as a platform fee. Once the reserve is spent and no new fees arrive, nothing more accrues —",
+      "count": 1
+    },
+    {
+      "value": "Everything above describes mechanics. This section describes what can go wrong with them. If you only read one part of this page, read this one.",
+      "count": 1
+    },
+    {
+      "value": "Everything floors —",
+      "count": 1
+    },
+    {
+      "value": "extending",
+      "count": 1
+    },
+    {
+      "value": "Fee",
+      "count": 1
+    },
+    {
+      "value": "Fee amount",
+      "count": 1
+    },
+    {
+      "value": "Fee-funded mining · fractional art",
+      "count": 1
+    },
+    {
+      "value": "FeeRouter",
+      "count": 6
+    },
+    {
+      "value": "FeeRouter splits it three ways",
+      "count": 1
+    },
+    {
+      "value": "FeeRouter.payTokenFee",
+      "count": 1
+    },
+    {
+      "value": "FeeRouter.payTokenFee(paymentToken, platformFee, referrer)",
+      "count": 1
+    },
+    {
+      "value": "Fees paid on your behalf can route",
+      "count": 1
+    },
+    {
+      "value": "FeeTooHigh",
+      "count": 1
+    },
+    {
+      "value": "First:",
+      "count": 1
+    },
+    {
+      "value": "fixed supply, 18 decimals, one BEP-20 per artwork",
+      "count": 1
+    },
+    {
+      "value": "for 1 share",
+      "count": 1
+    },
+    {
+      "value": "for a wallet's whole portfolio. The view recomputes the accrual with the pool's",
+      "count": 1
+    },
+    {
+      "value": "for reward maths and",
+      "count": 1
+    },
+    {
+      "value": "for the fee token and for the pool's reward asset, so the reserve stakers are mining cannot be confiscated or re-routed by an owner call.",
+      "count": 1
+    },
+    {
+      "value": "Four steps, all enforced by code rather than by a treasury promise.",
+      "count": 1
+    },
+    {
+      "value": "Fractional art is illiquid",
+      "count": 1
+    },
+    {
+      "value": "Fractional ownership of vaulted physical artworks on",
+      "count": 1
+    },
+    {
+      "value": "Fractional ownership of vaulted physical artworks, and a mining engine that is paid only from the fees the protocol really collects. This page is the reference: the exact fee flow, the emission arithmetic, the precision constraint that shapes the reward accumulator, what governance can and cannot touch, and the risks — including the ones that are easy to leave out of a landing page.",
+      "count": 1
+    },
+    {
+      "value": "Fractions trade while the physical piece stays with its custodian (",
+      "count": 1
+    },
+    {
+      "value": "fresh budget (current rate is 0): period = min(emissionHalvingPeriod, unspent) emissionEndBlock = block.number + period rate = max(1, unspent / period) // reward units per block extending a live schedule (current rate > 0): extraBlocks = received * 10_000 / (currentRate * tailEmissionBps) emissionEndBlock += extraBlocks read live at any block: rewardPerBlockScaled() = (rewardReserve / (emissionEndBlock - block.number)) * ACC_PRECISION pool slice = rate * blocks * allocationPoints / totalAllocationPoints hard cap = rewardReserve - rewardReleased",
+      "count": 1
+    },
+    {
+      "value": "Fresh window length",
+      "count": 1
+    },
+    {
+      "value": "from a single RPC provider.",
+      "count": 1
+    },
+    {
+      "value": "given",
+      "count": 2
+    },
+    {
+      "value": "Gotchas that cost real transactions",
+      "count": 1
+    },
+    {
+      "value": "Governance",
+      "count": 1
+    },
+    {
+      "value": "Governance can",
+      "count": 1
+    },
+    {
+      "value": "Governance cannot",
+      "count": 1
+    },
+    {
+      "value": "Governance chooses which artworks exist, at what",
+      "count": 1
+    },
+    {
+      "value": "Governance registers a physical artwork with a custodian and an appraisal. The vault mints one million ERC-20 fractions and an ERC-721 provenance certificate, then opens a bonding-curve sale. Prices rise as the artwork sells, so early buyers pay less.",
+      "count": 1
+    },
+    {
+      "value": "gross",
+      "count": 1
+    },
+    {
+      "value": "gross on a 10,000",
+      "count": 1
+    },
+    {
+      "value": "Hard bound",
+      "count": 2
+    },
+    {
+      "value": "harvest",
+      "count": 2
+    },
+    {
+      "value": "Harvest fee",
+      "count": 1
+    },
+    {
+      "value": "harvest fee is recycled into the reserve",
+      "count": 1
+    },
+    {
+      "value": "harvest fee is recycled into the reserve rather than removed — claimers extend everyone's runway.",
+      "count": 1
+    },
+    {
+      "value": "Harvest fee, recycled",
+      "count": 1
+    },
+    {
+      "value": "harvestAndRestake",
+      "count": 2
+    },
+    {
+      "value": "How it works",
+      "count": 1
+    },
+    {
+      "value": "How the split works",
+      "count": 1
+    },
+    {
+      "value": "How these addresses get here",
+      "count": 1
+    },
+    {
+      "value": "How this protocol actually works.",
+      "count": 1
+    },
+    {
+      "value": "How to verify every number on this page",
+      "count": 1
+    },
+    {
+      "value": "If a schedule is already running, the new budget does not reset the rate. The end block is pushed out by",
+      "count": 1
+    },
+    {
+      "value": "If no more art sells, that is the entire yield.",
+      "count": 1
+    },
+    {
+      "value": "If the fee token is already the reward asset, it is transferred directly; otherwise",
+      "count": 1
+    },
+    {
+      "value": "in",
+      "count": 2
+    },
+    {
+      "value": "In the reference deployment",
+      "count": 1
+    },
+    {
+      "value": "in the reference deployment, so the protocol's own $MINE token is deployed but not used as the reward asset. Verify against",
+      "count": 1
+    },
+    {
+      "value": "In the reference deployment's fee pool, rewards and principal are the same BEP-20 (",
+      "count": 1
+    },
+    {
+      "value": "Inactive",
+      "count": 1
+    },
+    {
+      "value": "inside",
+      "count": 1
+    },
+    {
+      "value": "Integrator checklist",
+      "count": 1
+    },
+    {
+      "value": "interchangeable in integrations; see the checklist below.",
+      "count": 1
+    },
+    {
+      "value": "into",
+      "count": 1
+    },
+    {
+      "value": "is always 18-decimal share units, and",
+      "count": 1
+    },
+    {
+      "value": "is an explicit constructor argument rather than something probed from",
+      "count": 1
+    },
+    {
+      "value": "is called by governance, so an id that has never been used simply has nothing behind it.",
+      "count": 1
+    },
+    {
+      "value": "is constructed with",
+      "count": 1
+    },
+    {
+      "value": "is enforced on-chain.",
+      "count": 1
+    },
+    {
+      "value": "is immutable, so getting it wrong is not a parameter change — it is a redeployment.",
+      "count": 1
+    },
+    {
+      "value": "is in the stake token's smallest units,",
+      "count": 1
+    },
+    {
+      "value": "is not whitelisted reverts with",
+      "count": 1
+    },
+    {
+      "value": "is recorded but the sale price does not derive from it, so a stale or optimistic appraisal has no on-chain enforcement. Fee parameters are bounded, but the bounds still allow fees to triple from today's defaults, and the residual trust edges in section 7 apply.",
+      "count": 1
+    },
+    {
+      "value": "is stamped per deposit, so raising it cannot retroactively charge an existing position until that position stakes again.",
+      "count": 1
+    },
+    {
+      "value": "is the check the UI uses before it tries to read.",
+      "count": 1
+    },
+    {
+      "value": "is the deploy-time treasury address — so read",
+      "count": 1
+    },
+    {
+      "value": "is the lifetime budget and",
+      "count": 1
+    },
+    {
+      "value": "is the protocol's own ERC-20 (hard cap 100,000,000) and the stake token of the reference deployment's second pool. Each artwork instead gets its own",
+      "count": 1
+    },
+    {
+      "value": "IS_CONFIGURED",
+      "count": 1
+    },
+    {
+      "value": "It stays with the custodian until settlement.",
+      "count": 1
+    },
+    {
+      "value": "Last reward block",
+      "count": 1
+    },
+    {
+      "value": "Last used",
+      "count": 1
+    },
+    {
+      "value": "lastRewardBlock",
+      "count": 1
+    },
+    {
+      "value": "leads with the artwork id and has four arguments. Both are easy to transpose and neither will complain about a plausible-looking wrong order.",
+      "count": 1
+    },
+    {
+      "value": "leads with the pool id;",
+      "count": 1
+    },
+    {
+      "value": "lets each address be overridden per environment with a",
+      "count": 1
+    },
+    {
+      "value": "Lifetime mined",
+      "count": 2
+    },
+    {
+      "value": "Liquidity",
+      "count": 1
+    },
+    {
+      "value": "Live",
+      "count": 3
+    },
+    {
+      "value": "Live columns",
+      "count": 1
+    },
+    {
+      "value": "Live from the contract",
+      "count": 1
+    },
+    {
+      "value": "Live now:",
+      "count": 1
+    },
+    {
+      "value": "Live protocol state",
+      "count": 1
+    },
+    {
+      "value": "Load more",
+      "count": 1
+    },
+    {
+      "value": "Lock",
+      "count": 3
+    },
+    {
+      "value": "lockDuration",
+      "count": 1
+    },
+    {
+      "value": "Locked",
+      "count": 1
+    },
+    {
+      "value": "Locked ·",
+      "count": 1
+    },
+    {
+      "value": "loyalty lock, so unstaking now costs",
+      "count": 1
+    },
+    {
+      "value": "Marginal price",
+      "count": 2
+    },
+    {
+      "value": "Mark an artwork settled:",
+      "count": 1
+    },
+    {
+      "value": "marker means it differs from the documented default in",
+      "count": 1
+    },
+    {
+      "value": "Max",
+      "count": 1
+    },
+    {
+      "value": "MAX_DEPOSIT_FEE_BPS",
+      "count": 1
+    },
+    {
+      "value": "maxCost",
+      "count": 2
+    },
+    {
+      "value": "maxSwapSlippageBps = 500",
+      "count": 1
+    },
+    {
+      "value": "Metadata pointer:",
+      "count": 1
+    },
+    {
+      "value": "metadataURI",
+      "count": 1
+    },
+    {
+      "value": "MetaMask",
+      "count": 1
+    },
+    {
+      "value": "min(1,209,600 blocks, 150,000,000 units)",
+      "count": 1
+    },
+    {
+      "value": "min(measured delta, 150)",
+      "count": 1
+    },
+    {
+      "value": "min(period, unspent)",
+      "count": 1
+    },
+    {
+      "value": "Mine fees",
+      "count": 3
+    },
+    {
+      "value": "Mine the fees",
+      "count": 1
+    },
+    {
+      "value": "Mine the protocol's fees",
+      "count": 1
+    },
+    {
+      "value": "Miners",
+      "count": 2
+    },
+    {
+      "value": "Mining",
+      "count": 1
+    },
+    {
+      "value": "mining has no funding source other than fees that were actually collected.",
+      "count": 1
+    },
+    {
+      "value": "Mining is fee revenue, not a promise",
+      "count": 1
+    },
+    {
+      "value": "Mining pools",
+      "count": 1
+    },
+    {
+      "value": "mining rewards is the platform fee on artwork purchases, which the router splits into the reserve.",
+      "count": 1
+    },
+    {
+      "value": "Mining share",
+      "count": 1
+    },
+    {
+      "value": "mining share and a",
+      "count": 1
+    },
+    {
+      "value": "mining,",
+      "count": 1
+    },
+    {
+      "value": "miningPart = amount × miningShareBps / 10,000",
+      "count": 1
+    },
+    {
+      "value": "MiningPool",
+      "count": 5
+    },
+    {
+      "value": "MiningPool verifies what it received",
+      "count": 1
+    },
+    {
+      "value": "MiningPool.miningToken()",
+      "count": 1
+    },
+    {
+      "value": "miningToken = address(0)",
+      "count": 2
+    },
+    {
+      "value": "miningToken()",
+      "count": 4
+    },
+    {
+      "value": "Mint rewards from nothing in the reference deployment: the pool pays the fee asset out of its own balance and every release is charged against",
+      "count": 1
+    },
+    {
+      "value": "minted to the custodian at registration",
+      "count": 1
+    },
+    {
+      "value": "mints it instead. The reserve still caps the accounting 1:1 against budget that was already funded, but the \"it cannot pay out what it never received\" property then belongs to the accounting, not to the token supply. Read",
+      "count": 1
+    },
+    {
+      "value": "more than the first one — the curve is convex, but at default settings it is shallow, which is exactly why the risks section talks about exit liquidity rather than about the curve.",
+      "count": 1
+    },
+    {
+      "value": "more than the first one at the live slope. That is small, but it is a one-way ratchet with nothing on the other side — the price you could exit at is whatever a future buyer will pay, and that can be below your entry.",
+      "count": 1
+    },
+    {
+      "value": "Multiplying the denominator by the reward asset's decimals (",
+      "count": 1
+    },
+    {
+      "value": "must fail loudly at deploy time instead of silently miscalibrating the accumulator.",
+      "count": 1
+    },
+    {
+      "value": "Navigate",
+      "count": 1
+    },
+    {
+      "value": "needs no new approval because nothing leaves the pool, and it reverts with",
+      "count": 1
+    },
+    {
+      "value": "Net proceeds to the artist",
+      "count": 1
+    },
+    {
+      "value": "Net to your wallet",
+      "count": 1
+    },
+    {
+      "value": "Never re-derive pending rewards off-chain. Call",
+      "count": 1
+    },
+    {
+      "value": "never reads or touches the reward budget and never advances the accumulator, so it works even when the reserve is empty or deposits are paused: it returns the full staked amount, charges no withdrawal penalty, and forfeits pending rewards.",
+      "count": 1
+    },
+    {
+      "value": "Next share costs",
+      "count": 2
+    },
+    {
+      "value": "No artworks are vaulted yet",
+      "count": 1
+    },
+    {
+      "value": "No BSC wallet detected. Install",
+      "count": 1
+    },
+    {
+      "value": "No penalty applies — the loyalty lock has elapsed.",
+      "count": 1
+    },
+    {
+      "value": "No pools are registered on this deployment yet.",
+      "count": 1
+    },
+    {
+      "value": "Nominal emission rate",
+      "count": 1
+    },
+    {
+      "value": "not",
+      "count": 1
+    },
+    {
+      "value": "not configured",
+      "count": 1
+    },
+    {
+      "value": "Not read by this UI:",
+      "count": 1
+    },
+    {
+      "value": "NotAccepted",
+      "count": 1
+    },
+    {
+      "value": "Notes",
+      "count": 2
+    },
+    {
+      "value": "Nothing here is investment advice. Fractional art is illiquid and carries real risk.",
+      "count": 1
+    },
+    {
+      "value": "notifyFeeDeposit(amount, floatBefore)",
+      "count": 1
+    },
+    {
+      "value": "npm run export:abi",
+      "count": 2
+    },
+    {
+      "value": "of",
+      "count": 5
+    },
+    {
+      "value": "of cost)",
+      "count": 2
+    },
+    {
+      "value": "of it has been released.",
+      "count": 1
+    },
+    {
+      "value": "of mining reward budget —",
+      "count": 1
+    },
+    {
+      "value": "of that fee goes into the mining reward reserve, an optional referrer earns",
+      "count": 1
+    },
+    {
+      "value": "of the cost. The fee goes to",
+      "count": 1
+    },
+    {
+      "value": "of the fee",
+      "count": 1
+    },
+    {
+      "value": "of the platform fee as an on-chain rebate. Left blank, that slice stays with the treasury. Your own address works too.",
+      "count": 1
+    },
+    {
+      "value": "of the platform fee, routed through",
+      "count": 1
+    },
+    {
+      "value": "on every refresh — no backend, no cached numbers.",
+      "count": 1
+    },
+    {
+      "value": "on the pool, and on the router",
+      "count": 1
+    },
+    {
+      "value": "On the vault shelf",
+      "count": 1
+    },
+    {
+      "value": "On this page",
+      "count": 1
+    },
+    {
+      "value": "Once a piece is registered it appears here and the sale itself is permissionless — any wallet can buy fractions at the curve price.",
+      "count": 1
+    },
+    {
+      "value": "Once settled, a single wallet holding every one of the",
+      "count": 1
+    },
+    {
+      "value": "One configuration caveat, stated plainly.",
+      "count": 1
+    },
+    {
+      "value": "One snapshot read from",
+      "count": 1
+    },
+    {
+      "value": "Open dashboard",
+      "count": 1
+    },
+    {
+      "value": "open your dashboard",
+      "count": 1
+    },
+    {
+      "value": "or",
+      "count": 2
+    },
+    {
+      "value": "out of the pool's balance, so the reserve is a hard cap at the token level. The contract also supports a distinct emission token, in which case",
+      "count": 1
+    },
+    {
+      "value": "Own a share of the art. Mine the fees it earns.",
+      "count": 1
+    },
+    {
+      "value": "Ownable2Step",
+      "count": 1
+    },
+    {
+      "value": "Parameter",
+      "count": 2
+    },
+    {
+      "value": "Parameters move, and appraisals are trusted input",
+      "count": 1
+    },
+    {
+      "value": "passes",
+      "count": 1
+    },
+    {
+      "value": "Pause new deposits with",
+      "count": 1
+    },
+    {
+      "value": "paused",
+      "count": 2
+    },
+    {
+      "value": "Pay a platform fee",
+      "count": 1
+    },
+    {
+      "value": "Pay and preview a fee",
+      "count": 1
+    },
+    {
+      "value": "Pay fee through the router",
+      "count": 1
+    },
+    {
+      "value": "paymentToken",
+      "count": 3
+    },
+    {
+      "value": "pays; dividing live emission by live",
+      "count": 1
+    },
+    {
+      "value": "pendingRewardAll(account)",
+      "count": 1
+    },
+    {
+      "value": "pendingRewardOf",
+      "count": 1
+    },
+    {
+      "value": "pendingRewardOf(poolId, account)",
+      "count": 1
+    },
+    {
+      "value": "per artwork and only the vault can mint or burn it.",
+      "count": 1
+    },
+    {
+      "value": "per block,",
+      "count": 1
+    },
+    {
+      "value": "per block, re-priced on every fee deposit",
+      "count": 1
+    },
+    {
+      "value": "per share and rises with every fill, so early buyers pay less for the same artwork.",
+      "count": 1
+    },
+    {
+      "value": "per share in",
+      "count": 1
+    },
+    {
+      "value": "pins the behaviours described above, including the solvency invariant, but tests are not an audit. Reward accounting — accumulator precision, weight snapshotting, rounding — is exactly the kind of code where a subtle error is silent rather than loud.",
+      "count": 1
+    },
+    {
+      "value": "Platform fee",
+      "count": 1
+    },
+    {
+      "value": "Platform fee (",
+      "count": 1
+    },
+    {
+      "value": "platform fee, a",
+      "count": 1
+    },
+    {
+      "value": "platformFee = cost × platformFeeBps / 10,000",
+      "count": 1
+    },
+    {
+      "value": "Points",
+      "count": 1
+    },
+    {
+      "value": "Pool",
+      "count": 2
+    },
+    {
+      "value": "pool #",
+      "count": 1
+    },
+    {
+      "value": "Pool weight share",
+      "count": 1
+    },
+    {
+      "value": "poolCount()",
+      "count": 1
+    },
+    {
+      "value": "poolDecimals(poolId)",
+      "count": 1
+    },
+    {
+      "value": "poolInfo()",
+      "count": 1
+    },
+    {
+      "value": "Pools",
+      "count": 2
+    },
+    {
+      "value": "Pools and the two denominators",
+      "count": 1
+    },
+    {
+      "value": "position — 0.375% — and it is not a yield, it is a share of one fee. Read the three qualifications:",
+      "count": 1
+    },
+    {
+      "value": "Positions",
+      "count": 1
+    },
+    {
+      "value": "Practical consequence: do not model this schedule off-chain and expect to match. Call",
+      "count": 1
+    },
+    {
+      "value": "prices elapsed emission against the weight snapshot taken at the last accumulator update, so a position that did not exist then earns none of it — it shares only in what is released after it joins.",
+      "count": 1
+    },
+    {
+      "value": "Pricing is on-chain and transparent. Every artwork prices on a linear bonding curve anchored at",
+      "count": 1
+    },
+    {
+      "value": "Primary volume",
+      "count": 1
+    },
+    {
+      "value": "Protocol",
+      "count": 1
+    },
+    {
+      "value": "Protocol reference · chain",
+      "count": 1
+    },
+    {
+      "value": "Provenance",
+      "count": 1
+    },
+    {
+      "value": "pts",
+      "count": 2
+    },
+    {
+      "value": "Purchase cost",
+      "count": 1
+    },
+    {
+      "value": "raised on the curve",
+      "count": 1
+    },
+    {
+      "value": "rather than clamping. The live column is the value published on-chain right now; a",
+      "count": 1
+    },
+    {
+      "value": "Read directly from",
+      "count": 1
+    },
+    {
+      "value": "Read from the contracts on",
+      "count": 1
+    },
+    {
+      "value": "Read from the vault's own purchase ledger (",
+      "count": 1
+    },
+    {
+      "value": "Read live from",
+      "count": 1
+    },
+    {
+      "value": "Read the mechanics",
+      "count": 2
+    },
+    {
+      "value": "Read the pool before assuming a reward asset.",
+      "count": 1
+    },
+    {
+      "value": "Read the risks first",
+      "count": 1
+    },
+    {
+      "value": "received × 10,000 / (rate × tailEmissionBps)",
+      "count": 1
+    },
+    {
+      "value": "received = min(balanceNow − floatBefore, amount)",
+      "count": 1
+    },
+    {
+      "value": "recoverToken",
+      "count": 2
+    },
+    {
+      "value": "Recycled by claimers",
+      "count": 1
+    },
+    {
+      "value": "Recycled harvest fees",
+      "count": 1
+    },
+    {
+      "value": "Recycled harvest fees raise",
+      "count": 1
+    },
+    {
+      "value": "recycledFees()",
+      "count": 1
+    },
+    {
+      "value": "Redeem provenance certificate",
+      "count": 1
+    },
+    {
+      "value": "redeemCertificate",
+      "count": 1
+    },
+    {
+      "value": "redeemCertificate(id)",
+      "count": 1
+    },
+    {
+      "value": "Redemption needs 100% of the shares in one wallet. Every fraction you buy brings that closer.",
+      "count": 1
+    },
+    {
+      "value": "Referral",
+      "count": 1
+    },
+    {
+      "value": "referral rebate — a 6-decimal reward asset (the reference deployment's mock USDT; with an 18-decimal asset such as BSC USDT the integer unit counts scale by 10¹² while every token-denominated line below is unchanged), an idle reward schedule opened at the default",
+      "count": 1
+    },
+    {
+      "value": "Referral rebate (with a referrer)",
+      "count": 1
+    },
+    {
+      "value": "referral,",
+      "count": 1
+    },
+    {
+      "value": "referralPart = referrer == 0 ? 0 : amount × referralBps / 10,000",
+      "count": 1
+    },
+    {
+      "value": "Referrer (optional)",
+      "count": 2
+    },
+    {
+      "value": "Referrer address (optional)",
+      "count": 1
+    },
+    {
+      "value": "Refresh",
+      "count": 5
+    },
+    {
+      "value": "Register artworks, price them inside bounds (",
+      "count": 1
+    },
+    {
+      "value": "registerArtwork",
+      "count": 2
+    },
+    {
+      "value": "registered",
+      "count": 1
+    },
+    {
+      "value": "Released",
+      "count": 1
+    },
+    {
+      "value": "released ≤ reserve",
+      "count": 1
+    },
+    {
+      "value": "Released so far",
+      "count": 1
+    },
+    {
+      "value": "released to stakers",
+      "count": 1
+    },
+    {
+      "value": "released,",
+      "count": 1
+    },
+    {
+      "value": "remainder, so the legs always sum exactly",
+      "count": 1
+    },
+    {
+      "value": "requires an approval to the router",
+      "count": 1
+    },
+    {
+      "value": "rescueToken",
+      "count": 1
+    },
+    {
+      "value": "reserve divided by the blocks remaining, so inside a window the nominal rate drifts up as",
+      "count": 1
+    },
+    {
+      "value": "reserveStats()",
+      "count": 3
+    },
+    {
+      "value": "Reshape emission with",
+      "count": 1
+    },
+    {
+      "value": "Result",
+      "count": 1
+    },
+    {
+      "value": "Retry",
+      "count": 1
+    },
+    {
+      "value": "returned to the reserve instead of being taken out",
+      "count": 1
+    },
+    {
+      "value": "returns 0 as well. Nothing in the contracts creates a floor, a minimum rate or a buy-back, and this page deliberately publishes no APY because any such number would be an assumption about future art sales. Live:",
+      "count": 1
+    },
+    {
+      "value": "reverts only for the fee asset and the pool's reward asset — it is not a blanket guarantee that \"user funds are unreachable\". A pool whose stake token is something else (the reference deployment registers $ART as its second pool) is not covered by that check, so an owner call could move that token out of the pool contract, staked balances included. Pool selection is therefore a trust decision, and governance should be a multisig or a timelock, not an EOA.",
+      "count": 1
+    },
+    {
+      "value": "reverts with",
+      "count": 1
+    },
+    {
+      "value": "Reward accounting is a MasterChef-style accumulator:",
+      "count": 1
+    },
+    {
+      "value": "Reward asset",
+      "count": 1
+    },
+    {
+      "value": "Reward asset: the fee token,",
+      "count": 1
+    },
+    {
+      "value": "Reward reserve credit",
+      "count": 1
+    },
+    {
+      "value": "rewardDecimals",
+      "count": 1
+    },
+    {
+      "value": "rewardPerBlockScaled",
+      "count": 1
+    },
+    {
+      "value": "rewardPerBlockScaled()",
+      "count": 2
+    },
+    {
+      "value": "rewardReleased ≤ rewardReserve",
+      "count": 2
+    },
+    {
+      "value": "rewardReserve",
+      "count": 3
+    },
+    {
+      "value": "rewardReserve − rewardReleased",
+      "count": 1
+    },
+    {
+      "value": "Rewards are split between pools by",
+      "count": 1
+    },
+    {
+      "value": "Rewire the plumbing:",
+      "count": 1
+    },
+    {
+      "value": "route — with",
+      "count": 1
+    },
+    {
+      "value": "RPC:",
+      "count": 1
+    },
+    {
+      "value": "Schedule",
+      "count": 1
+    },
+    {
+      "value": "Schedule ends at block",
+      "count": 1
+    },
+    {
+      "value": "Second: $ART and $MINE have owner-controlled minting via",
+      "count": 1
+    },
+    {
+      "value": "Self-funded by real platform fees",
+      "count": 1
+    },
+    {
+      "value": "Sent as",
+      "count": 1
+    },
+    {
+      "value": "setAcceptedFeeToken",
+      "count": 1
+    },
+    {
+      "value": "setDepositsPaused(true)",
+      "count": 1
+    },
+    {
+      "value": "setEmissionParams(halvingPeriod, tailBps)",
+      "count": 1
+    },
+    {
+      "value": "setFeeParams(depositFeeBps, harvestFeeBps, earlyWithdrawFeeBps)",
+      "count": 1
+    },
+    {
+      "value": "setFeeRouter",
+      "count": 1
+    },
+    {
+      "value": "setMaxSwapSlippageBps",
+      "count": 1
+    },
+    {
+      "value": "setMinter",
+      "count": 1
+    },
+    {
+      "value": "setPool(poolId, allocationPoints, lockDuration, active)",
+      "count": 1
+    },
+    {
+      "value": "setPricing",
+      "count": 1
+    },
+    {
+      "value": "setSplit",
+      "count": 1
+    },
+    {
+      "value": "setSwapPath",
+      "count": 1
+    },
+    {
+      "value": "setSwapRouter",
+      "count": 1
+    },
+    {
+      "value": "Settle artwork",
+      "count": 1
+    },
+    {
+      "value": "settleArtwork",
+      "count": 1
+    },
+    {
+      "value": "settleArtwork(id, deliveryProofURI)",
+      "count": 1
+    },
+    {
+      "value": "settled",
+      "count": 2
+    },
+    {
+      "value": "Settlement & certificate",
+      "count": 1
+    },
+    {
+      "value": "setTreasury",
+      "count": 1
+    },
+    {
+      "value": "Share of points",
+      "count": 1
+    },
+    {
+      "value": "Share of the artwork",
+      "count": 1
+    },
+    {
+      "value": "shareAmount",
+      "count": 1
+    },
+    {
+      "value": "shares",
+      "count": 2
+    },
+    {
+      "value": "shares (18 decimals, so",
+      "count": 1
+    },
+    {
+      "value": "shares can call",
+      "count": 1
+    },
+    {
+      "value": "Shares held",
+      "count": 1
+    },
+    {
+      "value": "shares left",
+      "count": 1
+    },
+    {
+      "value": "shares of this artwork — the whole piece, on-chain.",
+      "count": 1
+    },
+    {
+      "value": "Shares per artwork",
+      "count": 1
+    },
+    {
+      "value": "Shares remaining",
+      "count": 1
+    },
+    {
+      "value": "Shares sold",
+      "count": 1
+    },
+    {
+      "value": "Shares to buy",
+      "count": 1
+    },
+    {
+      "value": "SHARES_PER_ARTWORK",
+      "count": 1
+    },
+    {
+      "value": "sharesOf",
+      "count": 1
+    },
+    {
+      "value": "Showing",
+      "count": 1
+    },
+    {
+      "value": "Slippage tolerance",
+      "count": 1
+    },
+    {
+      "value": "Smart contracts can be buggy",
+      "count": 1
+    },
+    {
+      "value": "snapshot specifically so it agrees with what",
+      "count": 1
+    },
+    {
+      "value": "Sold",
+      "count": 1
+    },
+    {
+      "value": "Sold through the curve",
+      "count": 1
+    },
+    {
+      "value": "src/config/chain.ts",
+      "count": 5
+    },
+    {
+      "value": "src/stores/protocol.ts",
+      "count": 1
+    },
+    {
+      "value": "stake",
+      "count": 1
+    },
+    {
+      "value": "Stake",
+      "count": 1
+    },
+    {
+      "value": "Stake into a pool",
+      "count": 1
+    },
+    {
+      "value": "Stake into a pool and you earn a pro-rata share of the fees Tessella collects — paid in",
+      "count": 1
+    },
+    {
+      "value": "Stake token → pool for staking, fee token → router for fee payment, payment token → vault for a purchase.",
+      "count": 1
+    },
+    {
+      "value": "Staked",
+      "count": 1
+    },
+    {
+      "value": "Stakers mine that budget",
+      "count": 1
+    },
+    {
+      "value": "Stakers mine that fee",
+      "count": 1
+    },
+    {
+      "value": "Stakes are converted to a 1e18 scale before they touch the accumulator, so allocation points stay comparable across pools whose stake tokens have different decimals, and reward weight is decimals-independent. A 6-decimal USDT stake of 33 tokens carries a weight of",
+      "count": 1
+    },
+    {
+      "value": "Staking",
+      "count": 1
+    },
+    {
+      "value": "Start mining",
+      "count": 1
+    },
+    {
+      "value": "Step",
+      "count": 1
+    },
+    {
+      "value": "Step 1",
+      "count": 2
+    },
+    {
+      "value": "Step 2",
+      "count": 2
+    },
+    {
+      "value": "Step 3",
+      "count": 2
+    },
+    {
+      "value": "Step 4",
+      "count": 2
+    },
+    {
+      "value": "Step 5",
+      "count": 1
+    },
+    {
+      "value": "still on the curve",
+      "count": 1
+    },
+    {
+      "value": "still unspent.",
+      "count": 1
+    },
+    {
+      "value": "stores reward per 1e18 units of stake weight. Two scaling decisions make that safe for tokens that are not 18-decimal, and one of them is a bug class worth documenting for anyone forking this code.",
+      "count": 1
+    },
+    {
+      "value": "swaps it through PancakeSwap V2 — an explicitly configured path, or the default",
+      "count": 1
+    },
+    {
+      "value": "Switch",
+      "count": 2
+    },
+    {
+      "value": "Switch network",
+      "count": 1
+    },
+    {
+      "value": "Switch to",
+      "count": 1
+    },
+    {
+      "value": "T",
+      "count": 2
+    },
+    {
+      "value": "tailEmissionBps",
+      "count": 1
+    },
+    {
+      "value": "tailEmissionBps()",
+      "count": 1
+    },
+    {
+      "value": "Target chain:",
+      "count": 1
+    },
+    {
+      "value": "Tessella",
+      "count": 2
+    },
+    {
+      "value": "Tessella vaults physical artworks and sells fractional ownership of them on BNB Smart Chain. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated BEP-20 share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
+      "count": 1
+    },
+    {
+      "value": "Tessella vaults physical artworks on BNB Smart Chain and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
+      "count": 1
+    },
+    {
+      "value": "Tessella. Open-source reference implementation.",
+      "count": 1
+    },
+    {
+      "value": "That is 37.5",
+      "count": 1
+    },
+    {
+      "value": "that is twice the runway a flat payout of the same budget would need, so each deposit extends the stream and lowers the effective rate a little. Successive deposits therefore decay the rate smoothly and asymptotically instead of creating a cliff when a window closes.",
+      "count": 1
+    },
+    {
+      "value": "that lands a block or two later pays a slightly different amount, and other people's deposits move the denominator in between. Treat quotes as indications, not as signed amounts.",
+      "count": 1
+    },
+    {
+      "value": "The 25% assumes you keep 25% of the weight.",
+      "count": 1
+    },
+    {
+      "value": "The 42 days assume nothing else happens.",
+      "count": 1
+    },
+    {
+      "value": "The accumulator stores reward-per-1e18-weight, so the obvious denominator is a flat 1e18. With that choice an update credits",
+      "count": 1
+    },
+    {
+      "value": "The artist's proceeds are paid from the vault; only the platform fee travels through the router, which is why the mining contribution is a slice of the fee rather than of the whole cost.",
+      "count": 1
+    },
+    {
+      "value": "The artwork is physical and off-chain",
+      "count": 1
+    },
+    {
+      "value": "The calls an integrator needs, in their real argument order. Amounts are integer smallest units everywhere — never floats — and every write needs an ERC-20 approval to the contract that pulls the tokens.",
+      "count": 1
+    },
+    {
+      "value": "The certificate is an ERC-721 issued by the vault itself, so it has no separate contract: token",
+      "count": 1
+    },
+    {
+      "value": "The credited amount is added to",
+      "count": 1
+    },
+    {
+      "value": "The curve only moves the ask up",
+      "count": 1
+    },
+    {
+      "value": "The curve opens at",
+      "count": 1
+    },
+    {
+      "value": "The curve, right now",
+      "count": 1
+    },
+    {
+      "value": "The exact split of the quote above, using the parameters published by",
+      "count": 1
+    },
+    {
+      "value": "the final share of a completely sold-out artwork costs",
+      "count": 1
+    },
+    {
+      "value": "The four core contracts this dApp talks to, with the addresses the bundle actually resolves at build time. A blank address means the deployment manifest and",
+      "count": 1
+    },
+    {
+      "value": "The gross purchase price is split by code: the platform fee goes to",
+      "count": 1
+    },
+    {
+      "value": "The invariant:",
+      "count": 1
+    },
+    {
+      "value": "The loop",
+      "count": 1
+    },
+    {
+      "value": "The mining share lands in",
+      "count": 1
+    },
+    {
+      "value": "The mining slice is normalised into the reward asset",
+      "count": 1
+    },
+    {
+      "value": "the owner, after which a wallet holding 100% of the shares can pull the provenance certificate with",
+      "count": 1
+    },
+    {
+      "value": "The rate is the",
+      "count": 1
+    },
+    {
+      "value": "The router rejects tokens that were never accepted, so a purchase in an artwork whose",
+      "count": 1
+    },
+    {
+      "value": "The router snapshots the pool's balance before it moves anything and calls",
+      "count": 1
+    },
+    {
+      "value": "The three-way split of a purchase fee",
+      "count": 1
+    },
+    {
+      "value": "The unspent cap is what keeps that from overshooting:",
+      "count": 1
+    },
+    {
+      "value": "The vault sells primary shares and never buys them back. There is no AMM, no order book, no market maker and no protocol redemption in this implementation. Exiting means finding another buyer on whatever venue lists the share token, or assembling 100% of the shares to redeem the physical piece. A real BEP-20 balance is not the same thing as a sellable one.",
+      "count": 1
+    },
+    {
+      "value": "the vault's artwork list, per-artwork share tokens,",
+      "count": 1
+    },
+    {
+      "value": "The vault's registry is empty. Artworks are registered on-chain by protocol governance through",
+      "count": 1
+    },
+    {
+      "value": "their",
+      "count": 1
+    },
+    {
+      "value": "then exports the ABIs into",
+      "count": 1
+    },
+    {
+      "value": "There is no other funding source, no subsidy and no floor. The pool's income statement is the fee revenue in the tables above;",
+      "count": 1
+    },
+    {
+      "value": "This artwork is settled.",
+      "count": 1
+    },
+    {
+      "value": "This build has no complete deployment configured, so every live figure below falls back to the documented default in",
+      "count": 1
+    },
+    {
+      "value": "This is a reference implementation written for study. No third-party audit of this codebase is included in the repository; the published audit of the project this one takes inspiration from covers",
+      "count": 1
+    },
+    {
+      "value": "This is the core mechanic, and it is worth spelling out step by step because the whole economic claim of the protocol rests on it:",
+      "count": 1
+    },
+    {
+      "value": "This page documents a reference implementation of a fee-funded fractional-art protocol. It is not investment advice, not a solicitation, and not a valuation of any artwork or token. Read",
+      "count": 1
+    },
+    {
+      "value": "This purchase commits",
+      "count": 1
+    },
+    {
+      "value": "Three fees are charged to users of the mining engine, and each has a hard ceiling that governance cannot exceed — the setter reverts with",
+      "count": 1
+    },
+    {
+      "value": "to a referrer. Your referral code is your wallet address — share it and the router pays it on-chain in the same transaction as the fee.",
+      "count": 1
+    },
+    {
+      "value": "to continue.",
+      "count": 1
+    },
+    {
+      "value": "to fold rewards straight back into your position. A",
+      "count": 1
+    },
+    {
+      "value": "to keep a field unchanged. A new",
+      "count": 1
+    },
+    {
+      "value": "To mining",
+      "count": 1
+    },
+    {
+      "value": "to mining,",
+      "count": 1
+    },
+    {
+      "value": "To referrer",
+      "count": 1
+    },
+    {
+      "value": "to see positions and claimable rewards.",
+      "count": 1
+    },
+    {
+      "value": "to the referrer and the rest to the treasury.",
+      "count": 1
+    },
+    {
+      "value": "To treasury",
+      "count": 1
+    },
+    {
+      "value": "token → WBNB → rewardToken",
+      "count": 1
+    },
+    {
+      "value": "token on the amount the pool actually receives, and the pool forwards it to its configured",
+      "count": 1
+    },
+    {
+      "value": "token, mintable and burnable only by the vault. Staking $ART mines fees; it does not make you an owner of any artwork.",
+      "count": 1
+    },
+    {
+      "value": "tokens)",
+      "count": 1
+    },
+    {
+      "value": "Total allocation points",
+      "count": 1
+    },
+    {
+      "value": "Total fee",
+      "count": 1
+    },
+    {
+      "value": "Total staked",
+      "count": 3
+    },
+    {
+      "value": "Total weight (1e18)",
+      "count": 1
+    },
+    {
+      "value": "totalMiners()",
+      "count": 1
+    },
+    {
+      "value": "totalRewardsClaimed()",
+      "count": 1
+    },
+    {
+      "value": "totalWeight",
+      "count": 1
+    },
+    {
+      "value": "totalWeight == 0",
+      "count": 1
+    },
+    {
+      "value": "Transactions you sign from this page appear here with their BscScan links.",
+      "count": 1
+    },
+    {
+      "value": "transferred",
+      "count": 1
+    },
+    {
+      "value": "treasury — and when no referrer is supplied the referral leg is never created, so it falls through to the treasury automatically. There is no separate \"unclaimed rebate\" bucket.",
+      "count": 1
+    },
+    {
+      "value": "Treasury leg with no referrer",
+      "count": 1
+    },
+    {
+      "value": "Treasury remainder",
+      "count": 1
+    },
+    {
+      "value": "Treasury total",
+      "count": 1
+    },
+    {
+      "value": "treasury()",
+      "count": 5
+    },
+    {
+      "value": "treasuryPart = amount − miningPart − referralPart",
+      "count": 1
+    },
+    {
+      "value": "Try again",
+      "count": 1
+    },
+    {
+      "value": "Tune the three mining fees with",
+      "count": 1
+    },
+    {
+      "value": "Two different tokens are easy to conflate.",
+      "count": 1
+    },
+    {
+      "value": "Two residual trust edges, stated rather than glossed over.",
+      "count": 1
+    },
+    {
+      "value": "type(uint256).max",
+      "count": 1
+    },
+    {
+      "value": "Unauthorized",
+      "count": 1
+    },
+    {
+      "value": "Unavailable",
+      "count": 1
+    },
+    {
+      "value": "Units differ per call.",
+      "count": 1
+    },
+    {
+      "value": "units.",
+      "count": 1
+    },
+    {
+      "value": "unless the pool's stake token is its reward asset.",
+      "count": 1
+    },
+    {
+      "value": "Unlocked",
+      "count": 1
+    },
+    {
+      "value": "Unspent budget",
+      "count": 1
+    },
+    {
+      "value": "Unspent mining budget",
+      "count": 2
+    },
+    {
+      "value": "unspent.",
+      "count": 1
+    },
+    {
+      "value": "Unstake",
+      "count": 1
+    },
+    {
+      "value": "updated",
+      "count": 1
+    },
+    {
+      "value": "Upgrade the contracts or alter already-minted shares: supply is fixed at",
+      "count": 1
+    },
+    {
+      "value": "Value at the marginal price",
+      "count": 1
+    },
+    {
+      "value": "variable, and",
+      "count": 1
+    },
+    {
+      "value": "Vaulted physical art ·",
+      "count": 1
+    },
+    {
+      "value": "VITE_*",
+      "count": 3
+    },
+    {
+      "value": "Wallet balance",
+      "count": 1
+    },
+    {
+      "value": "wallets that have staked at least once",
+      "count": 1
+    },
+    {
+      "value": "Wallets, RPC and approvals",
+      "count": 1
+    },
+    {
+      "value": "was constructed with",
+      "count": 1
+    },
+    {
+      "value": "We could not open that artwork",
+      "count": 1
+    },
+    {
+      "value": "website/.env.local",
+      "count": 1
+    },
+    {
+      "value": "website/src/contracts/abis/",
+      "count": 1
+    },
+    {
+      "value": "website/src/contracts/addresses.ts",
+      "count": 1
+    },
+    {
+      "value": "weight",
+      "count": 3
+    },
+    {
+      "value": "weight = amount * 10**(18 - stakeDecimals) // stakeDecimals < 18 = amount / 10**(stakeDecimals - 18) // stakeDecimals > 18 ACC_PRECISION = 1e18 * 10**rewardDecimals // immutable, set in the constructor acc += emission * ACC_PRECISION / totalWeight // accumulator update accrued = weight * acc / ACC_PRECISION // a user's entitlement pendingRewardOf(poolId, account) recomputes the accrual so it matches what harvest pays",
+      "count": 1
+    },
+    {
+      "value": "Weight at last update",
+      "count": 1
+    },
+    {
+      "value": "Weight is a share of a pool, so other people staking dilutes your slice even though the budget itself does not change. Rewards follow weight at each accumulator update, not at deposit time.",
+      "count": 1
+    },
+    {
+      "value": "weightAtUpdate",
+      "count": 1
+    },
+    {
+      "value": "weightOf(poolId, account)",
+      "count": 1
+    },
+    {
+      "value": "What it does",
+      "count": 1
+    },
+    {
+      "value": "When the schedule is idle or exhausted, a deposit starts a window of",
+      "count": 1
+    },
+    {
+      "value": "when you need to convert back.",
+      "count": 1
+    },
+    {
+      "value": "Where it goes",
+      "count": 1
+    },
+    {
+      "value": "where it should have accrued",
+      "count": 1
+    },
+    {
+      "value": "Where your money goes",
+      "count": 1
+    },
+    {
+      "value": "Whitelisted fee assets only.",
+      "count": 1
+    },
+    {
+      "value": "Whoever you name earns",
+      "count": 1
+    },
+    {
+      "value": "Whole pool, per day",
+      "count": 1
+    },
+    {
+      "value": "Why the denominator carries the reward decimals.",
+      "count": 1
+    },
+    {
+      "value": "Why weight is normalised.",
+      "count": 1
+    },
+    {
+      "value": "with",
+      "count": 1
+    },
+    {
+      "value": "with the deployed addresses, the parameters captured at deploy time and the pool list.",
+      "count": 1
+    },
+    {
+      "value": "Withdraw the reward asset.",
+      "count": 1
+    },
+    {
+      "value": "without",
+      "count": 1
+    },
+    {
+      "value": "without releasing anything, so the window keeps ticking while no rewards accrue.",
+      "count": 1
+    },
+    {
+      "value": "would hand other people's deposits to the reward reserve. Only the router may call this function, and it can only ever increase the reserve.",
+      "count": 1
+    },
+    {
+      "value": "writes",
+      "count": 1
+    },
+    {
+      "value": "Wrong network",
+      "count": 1
+    },
+    {
+      "value": "Yield",
+      "count": 1
+    },
+    {
+      "value": "You already hold every share. Redemption opens as soon as the custodian settles the artwork.",
+      "count": 1
+    },
+    {
+      "value": "You are paid in a stablecoin, with stablecoin risk",
+      "count": 1
+    },
+    {
+      "value": "You are still inside the",
+      "count": 1
+    },
+    {
+      "value": "You have no mining positions yet.",
+      "count": 1
+    },
+    {
+      "value": "You have no positions yet. Staking",
+      "count": 1
+    },
+    {
+      "value": "You hold all",
+      "count": 1
+    },
+    {
+      "value": "your",
+      "count": 1
+    },
+    {
+      "value": "Your claimable",
+      "count": 2
+    },
+    {
+      "value": "Your cost is the integral of the curve across the range you fill, so the more of an artwork that is already sold, the more you pay per share: the final share of a fully sold artwork costs",
+      "count": 1
+    },
+    {
+      "value": "Your holding",
+      "count": 1
+    },
+    {
+      "value": "Your position",
+      "count": 1
+    },
+    {
+      "value": "Your position at a glance",
+      "count": 1
+    },
+    {
+      "value": "Your positions on",
+      "count": 1
+    },
+    {
+      "value": "Your referral code",
+      "count": 1
+    },
+    {
+      "value": "Your reward debt",
+      "count": 1
+    },
+    {
+      "value": "Your reward weight",
+      "count": 1
+    },
+    {
+      "value": "Your share of the budget",
+      "count": 1
+    },
+    {
+      "value": "Your stake",
+      "count": 1
+    },
+    {
+      "value": "Your wallet is on a different network. This deployment lives on",
+      "count": 1
+    },
+    {
+      "value": "Your wallet is on another network. Switch to",
+      "count": 1
+    },
+    {
+      "value": "Your wallet signs the transactions. Nothing is custodial — the contracts hold the funds, not this website.",
+      "count": 1
+    }
+  ],
+  "hiddenText": [],
+  "attributes": [
+    {
+      "name": "href",
+      "value": "/",
+      "count": 1
+    },
+    {
+      "name": "href",
+      "value": "#risks",
+      "count": 1
+    },
+    {
+      "name": "href",
+      "value": "https://metamask.io/download/",
+      "count": 1
+    },
+    {
+      "name": "href",
+      "value": "https://www.binance.com/en/web3wallet",
+      "count": 1
+    },
+    {
+      "name": "placeholder",
+      "value": "0",
+      "count": 1
+    },
+    {
+      "name": "placeholder",
+      "value": "0.0",
+      "count": 2
+    },
+    {
+      "name": "placeholder",
+      "value": "0x…",
+      "count": 3
+    },
+    {
+      "name": "placeholder",
+      "value": "ipfs://…",
+      "count": 1
+    },
+    {
+      "name": "title",
+      "value": "Claim and stake the result in one transaction",
+      "count": 1
+    },
+    {
+      "name": "to",
+      "value": "/",
+      "count": 1
+    },
+    {
+      "name": "to",
+      "value": "/art",
+      "count": 5
+    },
+    {
+      "name": "to",
+      "value": "/dashboard",
+      "count": 3
+    },
+    {
+      "name": "to",
+      "value": "/docs",
+      "count": 4
+    },
+    {
+      "name": "to",
+      "value": "/mine",
+      "count": 5
+    }
+  ],
+  "bindings": [
+    {
+      "kind": "attr",
+      "expr": "`/art/${art.id}`",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "`#${item.id}`",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "`${budget}`",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "`${explorerLink(row.address)}`",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "`Connected to ${TARGET_CHAIN.name}`",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "addressHref(row.address)",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "entry.explorerUrl || explorerAddressUrl(wallet.address)",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "explorerAddressUrl(address)",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "explorerAddressUrl(item.address)",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "formatBps(protocol.params.harvestFeeBps)",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "formatUnits(protocol.artTokenBalance, 18, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "formatUnits(protocol.feeTokenBalance, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "lifetimeMined",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "link.to",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "metadataHref",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "perBlock",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "protocol.emissionPerBlock > 0 ? protocol.emissionPerBlock.toFixed(4) : '0'",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "protocol.reserve ? formatUnits(protocol.reserve.unspent, protocol.rewardDecimals, { maxFractionDigits: 2 }) : '—'",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "protocol.totalMiners.toString()",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "store.lastTx?.explorerUrl",
+      "count": 1
+    },
+    {
+      "kind": "attr",
+      "expr": "wallet.address",
+      "count": 2
+    },
+    {
+      "kind": "attr",
+      "expr": "wallet.bnbBalanceFormatted",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "(protocol.emissionProgress * 100).toFixed(1)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "(store.lastTx?.hash ?? \"\").slice(0, 10)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "(store.soldFraction(art.snapshot) * 100).toFixed(2)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "(store.soldFraction(artwork.snapshot) * 100).toFixed(2)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "address.slice(0, 10)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "advancedOpen ? \"Hide\" : \"Show\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "art.artist || \"Unattributed\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "art.paymentSymbol",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "art.title || `Artwork #${art.id}`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.artist || \"Unattributed\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.certificateId.toString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.id",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.metadataURI",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.metadataURI || \"—\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.paymentSymbol",
+      "count": 10
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.snapshot.settled ? \"settled\" : \"in custody\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "artwork.title || `Artwork #${artwork.id}`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "breakdown.hasReferrer ? \"fee remainder\" : \"unclaimed referral slice + remainder\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "buyLabel",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "compactNumber(protocol.unspentBudget)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "copied ? \"Copied\" : `${wallet.shortAddress} · copy`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "curveFullSupplyPremium",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "DEFAULT_PARAMS.emissionHalvingPeriod.toLocaleString(\"en-US\")",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "disabledReason",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "entry.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "entry.message",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "entry.status",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fill.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.artistPayout)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.artistProceeds)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.cost)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.fee)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.feeTreasury)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.mining)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.proceedsTreasury)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.referral)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(breakdown.treasury)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "fmt(quotedCost)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBlocks(pool.lockDuration)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBlocks(pool.user.unlockTime - BigInt(protocol.currentBlock))",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBlocks(protocol.params.emissionHalvingPeriod)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(1_000)",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(10_000)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(2_000)",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(3_000)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(artistProceedsBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(DEFAULT_PARAMS.curveSlopeBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(DEFAULT_PARAMS.miningShareBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(DEFAULT_PARAMS.platformFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(DEFAULT_PARAMS.referralBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.curveSlopeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.depositFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.earlyWithdrawFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.harvestFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.miningShareBps)",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.platformFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.referralBps)",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(protocol.params.tailEmissionBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(store.feeParams.artistShareBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(store.feeParams.miningShareBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(store.feeParams.platformFeeBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(store.feeParams.referralBps)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatBps(treasuryBps)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(art.appraisedValueUSD, 0)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(art.snapshot.marginalPrice, art.paymentDecimals, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(art.snapshot.nextShareCost, art.paymentDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(art.userShares, SHARE_DECIMALS, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.appraisedValueUSD, 0)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.basePrice, artwork.paymentDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.snapshot.marginalPrice, artwork.paymentDecimals, { maxFractionDigits: 6 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.snapshot.nextShareCost, artwork.paymentDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.snapshot.sharesRemaining, SHARE_DECIMALS, { maxFractionDigits: 0 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.snapshot.sharesSold, SHARE_DECIMALS, { maxFractionDigits: 0 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.snapshot.volume, artwork.paymentDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(artwork.userShares, SHARE_DECIMALS, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(depositFeeFor(pool.id), pool.decimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(holdingValue, artwork.paymentDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.pending, protocol.rewardDecimals, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.pending, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.totalStaked, pool.decimals, { maxFractionDigits: 2 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.totalWeight, 18, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.user.amount, pool.decimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(pool.user.amount, pool.decimals, { maxFractionDigits: 4 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.artTokenBalance, 18, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.feeTokenBalance, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.recycledFees, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.reserve.released, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.reserve.reserve, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(splitPreview.amount, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(splitPreview.mining, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(splitPreview.referral, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(splitPreview.treasury, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formatUnits(withdrawFeeFor(pool.id), pool.decimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formError",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formFor(pool.id).amount",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formFor(pool.id).tab === \"stake\" ? \"Amount to stake\" : \"Amount to unstake\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formFor(pool.id).tab === \"stake\" ? \"unstake\" : \"stake\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "formSuccess",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "holdingPercent",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "item.address.slice(0, 10)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "item.label",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "label",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "link.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "loadError",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "message || `Read-only mode. Connect to sign transactions on ${TARGET_CHAIN.name}.`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "money(protocol.recycledFees)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "money(protocol.totalRewardsClaimed)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "money(unspent)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "new Date(protocol.lastUpdated).toLocaleTimeString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "Number(pool.lockDuration) === 0 ? \"None\" : `${pool.lockDuration} blocks`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "Number(protocol.totalPending) / 10 ** protocol.rewardDecimals < 1 ? \"<1\" : (Number(protocol.totalPending) / 10 ** protocol.rewardDecimals).toFixed(2)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "option.icon",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "option.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "option.name",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.accRewardPerShare.toString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.allocationPoints.toString()",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.id",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.lastRewardBlock.toString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.name",
+      "count": 4
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.shareOfWeight.toFixed(3)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.stakeToken",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.symbol",
+      "count": 10
+    },
+    {
+      "kind": "interpolation",
+      "expr": "pool.user.rewardDebt.toString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "progressPercent",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.emissionPerBlock.toFixed(4)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.emissionPerBlock.toFixed(6)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.lastError",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.loading ? \"Reading…\" : \"Refresh\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.params.emissionHalvingDays.toFixed(0)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.params.emissionHalvingDays.toFixed(1)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.pools.length",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.pools[0]?.symbol ?? \"the fee asset\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.reserve.endBlock.toString()",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.rewardDecimals",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.rewardSymbol",
+      "count": 39
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.totalAllocationPoints.toString()",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "protocol.totalMiners.toLocaleString(\"en-US\")",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "redeemError",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "redeemSuccess",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "remainingLabel",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "reward(released)",
+      "count": 4
+    },
+    {
+      "kind": "interpolation",
+      "expr": "reward(reserved)",
+      "count": 4
+    },
+    {
+      "kind": "interpolation",
+      "expr": "reward(unspent)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.abi",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.address",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.bound",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.ceiling",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.charged",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.contract",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.destination",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.documented",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.fee",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.id",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.live",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.name",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.note",
+      "count": 3
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.parameter",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.points",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.pointsShare",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.role",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.staked",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "row.weight",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "scheduleEnd ?? \"—\"",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "scheduleLabel",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "settleError",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "settleSuccess",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "shortAddress(ADDRESSES.artworkVault)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "shortAddress(artwork.custodian)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "shortAddress(row.address)",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "shortHash(entry.hash)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "showFeePanel ? \"Hide\" : \"Open\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "soldShares(art)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "splitPreview.referral === 0n ? \"no referrer — falls to treasury\" : formatBps(protocol.params.referralBps) + \" of the fee\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "stat.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "stat.unit",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "stat.value",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.artworks.length",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.error",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.lastTx?.label",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.lastTx?.message",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.lastTx?.status",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.loading && store.total === 0 ? \"reading the registry…\" : `${store.total} registered`",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "store.total",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "sub",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "TARGET_CHAIN.chainId",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "TARGET_CHAIN.explorer || \"none configured\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "TARGET_CHAIN.name",
+      "count": 6
+    },
+    {
+      "kind": "interpolation",
+      "expr": "TARGET_CHAIN.shortName",
+      "count": 4
+    },
+    {
+      "kind": "interpolation",
+      "expr": "timeAgo(art.createdAt)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "timeAgo(artwork.createdAt)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "unit",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "uriPreview(art.metadataURI)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "value",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "wallet.bnbBalanceFormatted",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "wallet.error",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "wallet.shortAddress",
+      "count": 2
+    },
+    {
+      "kind": "interpolation",
+      "expr": "weightShare(pool.id)",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "WHOLE_SHARES_PER_ARTWORK.toLocaleString(\"en-US\")",
+      "count": 10
+    },
+    {
+      "kind": "interpolation",
+      "expr": "writeBlockedReason",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "writeBlockedReason || \"Add a delivery proof URI before settling.\"",
+      "count": 1
+    },
+    {
+      "kind": "interpolation",
+      "expr": "year",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "`/art/${art.id}`",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "`#${item.id}`",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "`${explorerLink(row.address)}`",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "addressHref(row.address)",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "entry.explorerUrl || explorerAddressUrl(wallet.address)",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "explorerAddressUrl(address)",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "explorerAddressUrl(item.address)",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "link.to",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "metadataHref",
+      "count": 1
+    },
+    {
+      "kind": "link",
+      "expr": "store.lastTx?.explorerUrl",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "amountText",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "deliveryProof",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "feeAmount",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "feeReferrer",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "formFor(pool.id).amount",
+      "count": 1
+    },
+    {
+      "kind": "model",
+      "expr": "referrer",
+      "count": 2
+    },
+    {
+      "kind": "prop",
+      "expr": "`${budget}`",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "`${protocol.rewardSymbol} balance`",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "`${protocol.rewardSymbol}/block`",
+      "count": 2
+    },
+    {
+      "kind": "prop",
+      "expr": "formatBps(protocol.params.harvestFeeBps)",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "formatUnits(protocol.artTokenBalance, 18, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "formatUnits(protocol.feeTokenBalance, protocol.rewardDecimals, { maxFractionDigits: 2 })",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 4 })",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "formatUnits(protocol.totalPending, protocol.rewardDecimals, { maxFractionDigits: 6 })",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "lifetimeMined",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "perBlock",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "protocol.emissionPerBlock > 0 ? protocol.emissionPerBlock.toFixed(4) : '0'",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "protocol.reserve ? formatUnits(protocol.reserve.unspent, protocol.rewardDecimals, { maxFractionDigits: 2 }) : '—'",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "protocol.rewardSymbol",
+      "count": 6
+    },
+    {
+      "kind": "prop",
+      "expr": "protocol.totalMiners.toString()",
+      "count": 1
+    },
+    {
+      "kind": "prop",
+      "expr": "wallet.bnbBalanceFormatted",
+      "count": 1
+    }
+  ],
+  "events": [
+    {
+      "event": "click",
+      "handler": "advancedOpen = !advancedOpen",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "claimAll",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "copyReferralCode",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "emit('close')",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "follow($event, navigate)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "formFor(pool.id).tab = formFor(pool.id).tab === 'stake' ? 'unstake' : 'stake'",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "handleBuy()",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "handleRedeem()",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "handleSettle()",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "jumpTo('risks')",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "jumpTo(item.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "load()",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "payFee",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "pick(option.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "protocol.emergencyWithdraw(pool.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "protocol.harvest(pool.id)",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "protocol.harvestAndRestake(pool.id)",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "protocol.refresh()",
+      "count": 5
+    },
+    {
+      "event": "click",
+      "handler": "setAmount(fill.value)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "setMax(pool.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "showFeePanel = !showFeePanel",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "showModal = true",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "slippageBps = option.bps",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "stake(pool.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "store.loadMore()",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "store.refresh()",
+      "count": 2
+    },
+    {
+      "event": "click",
+      "handler": "unstake(pool.id)",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "wallet.disconnect()",
+      "count": 1
+    },
+    {
+      "event": "click",
+      "handler": "wallet.switchToTargetChain()",
+      "count": 3
+    },
+    {
+      "event": "close",
+      "handler": "showModal = false",
+      "count": 2
+    }
+  ],
+  "links": [
+    {
+      "kind": "href",
+      "target": "/",
+      "count": 1
+    },
+    {
+      "kind": "href",
+      "target": "#risks",
+      "count": 1
+    },
+    {
+      "kind": "href",
+      "target": "https://metamask.io/download/",
+      "count": 1
+    },
+    {
+      "kind": "href",
+      "target": "https://www.binance.com/en/web3wallet",
+      "count": 1
+    },
+    {
+      "kind": "to",
+      "target": "/",
+      "count": 1
+    },
+    {
+      "kind": "to",
+      "target": "/art",
+      "count": 5
+    },
+    {
+      "kind": "to",
+      "target": "/dashboard",
+      "count": 3
+    },
+    {
+      "kind": "to",
+      "target": "/docs",
+      "count": 4
+    },
+    {
+      "kind": "to",
+      "target": "/mine",
+      "count": 5
+    }
+  ],
+  "assets": [],
+  "forms": [
+    {
+      "tag": "input",
+      "name": "",
+      "type": "text",
+      "count": 7
+    }
+  ],
+  "i18n": [],
+  "i18nKeys": [],
+  "i18nFiles": [],
+  "api": [],
+  "env": [
+    "VITE_RPC_URL"
+  ]
+}

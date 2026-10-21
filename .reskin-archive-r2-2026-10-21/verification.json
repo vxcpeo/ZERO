@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-19T19:07:28.158Z",
+  "project": {
+    "root": "E:/workspace/chuangye/solana/zero/website",
+    "name": "@tessella/website",
+    "baseUrl": "http://127.0.0.1:4321/"
+  },
+  "passed": true,
+  "thresholds": {
+    "maxStructureSimilarity": 0.5,
+    "maxLandmarkSimilarity": 0.68,
+    "maxClassOverlap": 0.1,
+    "minAccentDistance": 30,
+    "maxContrastFailures": 0,
+    "maxAxeSerious": 0
+  },
+  "gates": {
+    "sourceContract": {
+      "passed": true,
+      "issues": [],
+      "warnings": [],
+      "hash": "4fb49879ad0949de208520b1b4f90876d6962c0e6f88f6f0c5276c63b67ca0bd"
+    },
+    "skeleton": {
+      "passed": true,
+      "original": {
+        "id": "orbital",
+        "family": "spatial",
+        "traits": {
+          "sidebar": true,
+          "topbar": false,
+          "cards": true,
+          "hero": true,
+          "table": true,
+          "grid": true,
+          "tabs": true,
+          "modal": true,
+          "charts": true,
+          "sticky": true,
+          "orbital": true,
+          "terminal": false,
+          "bento": false,
+          "ticker": true,
+          "gallery": true
+        }
+      },
+      "current": {
+        "id": "marketing-stack",
+        "family": "editorial",
+        "traits": {
+          "sidebar": false,
+          "topbar": false,
+          "cards": true,
+          "hero": true,
+          "table": true,
+          "grid": true,
+          "tabs": true,
+          "modal": true,
+          "charts": true,
+          "sticky": true,
+          "orbital": false,
+          "terminal": false,
+          "bento": false,
+          "ticker": true,
+          "gallery": true
+        }
+      },
+      "accent": {
+        "original": "#e6006f",
+        "current": "#670de5",
+        "deltaE": 94.44,
+        "min": 30
+      }
+    },
+    "pages": [
+      {
+        "route": "/",
+        "passed": true,
+        "skipped": false,
+        "failures": [],
+        "warnings": [
+          "aria attribute changed/removed: aria-label=Footer",
+          "aria attribute added: aria-label=Live from the contract",
+          "aria attribute added: aria-label=Opening statement",
+          "aria attribute added: aria-label=The loop"
+        ],
+        "structure": {
+          "fingerprintSimilarity": 0.452,
+          "landmarkSimilarity": 0.6,
+          "classOverlap": 0
+        },
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {
+            "baseline": {
+              "tokens": 10,
+              "total": 12
+            },
+            "current": {
+              "tokens": 10,
+              "total": 12
+            }
+          }
+        },
+        "usability": {
+          "passed": true,
+          "failures": [],
+          "warnings": [],
+          "axe": {
+            "serious": [],
+            "moderate": []
+          }
+        },
+        "screenshots": {
+          "desktop": "current/home-desktop.png",
+          "mobile": "current/home-mobile.png"
+        }
+      },
+      {
+        "route": "/art",
+        "passed": true,
+        "skipped": false,
+        "failures": [],
+        "warnings": [
+          "aria attribute changed/removed: aria-label=Footer",
+          "aria attribute added: aria-label=Artwork registry",
+          "aria attribute added: aria-label=Collection statement"
+        ],
+        "structure": {
+          "fingerprintSimilarity": 0.463,
+          "landmarkSimilarity": 0.6,
+          "classOverlap": 0.018
+        },
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {
+            "baseline": {
+              "tokens": 5,
+              "total": 5
+            },
+            "current": {
+              "tokens": 5,
+              "total": 5
+            }
+          }
+        },
+        "usability": {
+          "passed": true,
+          "failures": [],
+          "warnings": [],
+          "axe": {
+            "serious": [],
+            "moderate": []
+          }
+        },
+        "screenshots": {
+          "desktop": "current/art-desktop.png",
+          "mobile": "current/art-mobile.png"
+        }
+      },
+      {
+        "route": "/art/:id",
+        "passed": true,
+        "skipped": true,
+        "failures": [],
+        "warnings": [],
+        "structure": {},
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {}
+        },
+        "screenshots": {}
+      },
+      {
+        "route": "/dashboard",
+        "passed": true,
+        "skipped": false,
+        "failures": [],
+        "warnings": [
+          "aria attribute changed/removed: aria-label=Footer",
+          "aria attribute added: aria-label=Activity log",
+          "aria attribute added: aria-label=Dashboard summary",
+          "aria attribute added: aria-label=Pay a platform fee",
+          "aria attribute added: aria-label=Protocol state",
+          "aria attribute added: aria-label=Your positions"
+        ],
+        "structure": {
+          "fingerprintSimilarity": 0.32,
+          "landmarkSimilarity": 0.6,
+          "classOverlap": 0.019
+        },
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {
+            "baseline": {
+              "tokens": 5,
+              "total": 7
+            },
+            "current": {
+              "tokens": 5,
+              "total": 7
+            }
+          }
+        },
+        "usability": {
+          "passed": true,
+          "failures": [],
+          "warnings": [],
+          "axe": {
+            "serious": [],
+            "moderate": []
+          }
+        },
+        "screenshots": {
+          "desktop": "current/dashboard-desktop.png",
+          "mobile": "current/dashboard-mobile.png"
+        }
+      },
+      {
+        "route": "/docs",
+        "passed": true,
+        "skipped": false,
+        "failures": [],
+        "warnings": [
+          "aria attribute changed/removed: aria-label=Footer",
+          "aria attribute added: aria-label=Contract reference",
+          "aria attribute added: aria-label=Emission schedule",
+          "aria attribute added: aria-label=Fee schedule",
+          "aria attribute added: aria-label=Governance and trust boundaries",
+          "aria attribute added: aria-label=How to verify every number on this page",
+          "aria attribute added: aria-label=Integrator quickstart",
+          "aria attribute added: aria-label=Live protocol state",
+          "aria attribute added: aria-label=Protocol reference",
+          "aria attribute added: aria-label=Risks, stated plainly",
+          "aria attribute added: aria-label=Stake weight normalisation and the precision trap",
+          "aria attribute added: aria-label=The fee-funded mining loop",
+          "aria attribute added: aria-label=What this protocol is",
+          "aria attribute added: aria-label=Worked example"
+        ],
+        "structure": {
+          "fingerprintSimilarity": 0.283,
+          "landmarkSimilarity": 0.571,
+          "classOverlap": 0.014
+        },
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {
+            "baseline": {
+              "tokens": 73,
+              "total": 214
+            },
+            "current": {
+              "tokens": 73,
+              "total": 214
+            }
+          }
+        },
+        "usability": {
+          "passed": true,
+          "failures": [],
+          "warnings": [],
+          "axe": {
+            "serious": [],
+            "moderate": []
+          }
+        },
+        "screenshots": {
+          "desktop": "current/docs-desktop.png",
+          "mobile": "current/docs-mobile.png"
+        }
+      },
+      {
+        "route": "/mine",
+        "passed": true,
+        "skipped": false,
+        "failures": [],
+        "warnings": [
+          "aria attribute changed/removed: aria-label=Footer",
+          "aria attribute added: aria-label=Activity log",
+          "aria attribute added: aria-label=Budget overview",
+          "aria attribute added: aria-label=Mining pools",
+          "aria attribute added: aria-label=Mining statement",
+          "aria attribute added: aria-label=Referral and activity"
+        ],
+        "structure": {
+          "fingerprintSimilarity": 0.333,
+          "landmarkSimilarity": 0.6,
+          "classOverlap": 0.017
+        },
+        "content": {
+          "missing": [],
+          "extra": [],
+          "numeric": {
+            "baseline": {
+              "tokens": 4,
+              "total": 5
+            },
+            "current": {
+              "tokens": 4,
+              "total": 5
+            }
+          }
+        },
+        "usability": {
+          "passed": true,
+          "failures": [],
+          "warnings": [],
+          "axe": {
+            "serious": [],
+            "moderate": []
+          }
+        },
+        "screenshots": {
+          "desktop": "current/mine-desktop.png",
+          "mobile": "current/mine-mobile.png"
+        }
+      }
+    ]
+  },
+  "failures": [],
+  "warnings": [
+    "/: aria attribute changed/removed: aria-label=Footer",
+    "/: aria attribute added: aria-label=Live from the contract",
+    "/: aria attribute added: aria-label=Opening statement",
+    "/: aria attribute added: aria-label=The loop",
+    "/art: aria attribute changed/removed: aria-label=Footer",
+    "/art: aria attribute added: aria-label=Artwork registry",
+    "/art: aria attribute added: aria-label=Collection statement",
+    "/dashboard: aria attribute changed/removed: aria-label=Footer",
+    "/dashboard: aria attribute added: aria-label=Activity log",
+    "/dashboard: aria attribute added: aria-label=Dashboard summary",
+    "/dashboard: aria attribute added: aria-label=Pay a platform fee",
+    "/dashboard: aria attribute added: aria-label=Protocol state",
+    "/dashboard: aria attribute added: aria-label=Your positions",
+    "/docs: aria attribute changed/removed: aria-label=Footer",
+    "/docs: aria attribute added: aria-label=Contract reference",
+    "/docs: aria attribute added: aria-label=Emission schedule",
+    "/docs: aria attribute added: aria-label=Fee schedule",
+    "/docs: aria attribute added: aria-label=Governance and trust boundaries",
+    "/docs: aria attribute added: aria-label=How to verify every number on this page",
+    "/docs: aria attribute added: aria-label=Integrator quickstart",
+    "/docs: aria attribute added: aria-label=Live protocol state",
+    "/docs: aria attribute added: aria-label=Protocol reference",
+    "/docs: aria attribute added: aria-label=Risks, stated plainly",
+    "/docs: aria attribute added: aria-label=Stake weight normalisation and the precision trap",
+    "/docs: aria attribute added: aria-label=The fee-funded mining loop",
+    "/docs: aria attribute added: aria-label=What this protocol is",
+    "/docs: aria attribute added: aria-label=Worked example",
+    "/mine: aria attribute changed/removed: aria-label=Footer",
+    "/mine: aria attribute added: aria-label=Activity log",
+    "/mine: aria attribute added: aria-label=Budget overview",
+    "/mine: aria attribute added: aria-label=Mining pools",
+    "/mine: aria attribute added: aria-label=Mining statement",
+    "/mine: aria attribute added: aria-label=Referral and activity"
+  ],
+  "baseline": {
+    "generatedAt": "2026-10-19T18:50:50.866Z",
+    "routes": [
+      "/",
+      "/art",
+      "/art/:id",
+      "/dashboard",
+      "/docs",
+      "/mine"
+    ]
+  }
+}
