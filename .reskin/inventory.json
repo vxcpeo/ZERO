@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T17:03:46.943Z",
+  "generatedAt": "2026-11-09T16:47:29.066Z",
   "project": {
     "root": "E:/workspace/chuangye/solana/zero/website",
-    "name": "@fractio/website",
+    "name": "@cimela/website",
     "vueVersion": "^3.5.13",
     "nuxt": false,
     "dependencies": [
@@ -26,14 +26,14 @@
     "frameworks": []
   },
   "stats": {
-    "filesScanned": 27,
-    "vueFiles": 15,
+    "filesScanned": 26,
+    "vueFiles": 14,
     "routes": 6,
     "staticTextTokens": 1003,
     "bindingTokens": 406,
     "eventTokens": 43,
-    "classNames": 159,
-    "colors": 45
+    "classNames": 161,
+    "colors": 55
   },
   "routes": [
     {
@@ -63,13 +63,13 @@
   ],
   "unresolvedRoutes": [],
   "archetype": {
-    "id": "gallery-scroll",
-    "family": "spatial",
+    "id": "topnav-marketing",
+    "family": "editorial",
     "traits": {
       "sidebar": false,
-      "topbar": false,
-      "cards": false,
-      "hero": false,
+      "topbar": true,
+      "cards": true,
+      "hero": true,
       "table": true,
       "grid": true,
       "tabs": true,
@@ -85,107 +85,79 @@
   },
   "palette": [
     {
-      "hex": "#fff6f0",
-      "count": 6
+      "hex": "#40b3ff",
+      "count": 12
     },
     {
       "hex": "#ffffff",
-      "count": 6
+      "count": 8
     },
     {
-      "hex": "#ffe3d6",
+      "hex": "#001018",
       "count": 4
     },
     {
-      "hex": "#161616",
+      "hex": "#05060b",
+      "count": 4
+    },
+    {
+      "hex": "#0d0e16",
       "count": 3
     },
     {
-      "hex": "#d3c1b7",
+      "hex": "#12131d",
       "count": 3
     },
     {
-      "hex": "#0e3d26",
+      "hex": "#5ce1a0",
+      "count": 3
+    },
+    {
+      "hex": "#a78bfa",
+      "count": 3
+    },
+    {
+      "hex": "#ff8a8a",
+      "count": 3
+    },
+    {
+      "hex": "#a3a1b5",
       "count": 2
     },
     {
-      "hex": "#6b0010",
+      "hex": "#f2c94c",
       "count": 2
     },
     {
-      "hex": "#1e6b47",
+      "hex": "#000000",
       "count": 1
     },
     {
-      "hex": "#3d3733",
+      "hex": "#030408",
       "count": 1
     },
     {
-      "hex": "#4a2500",
+      "hex": "#080a12",
       "count": 1
     },
     {
-      "hex": "#5c2e00",
+      "hex": "#171824",
       "count": 1
     },
     {
-      "hex": "#6e625c",
+      "hex": "#232432",
       "count": 1
     },
     {
-      "hex": "#8f4b00",
+      "hex": "#7cc9ff",
       "count": 1
     },
     {
-      "hex": "#a80014",
+      "hex": "#8a8899",
       "count": 1
     },
     {
-      "hex": "#b00016",
-      "count": 1
-    },
-    {
-      "hex": "#c40018",
-      "count": 1
-    },
-    {
-      "hex": "#d9c9bf",
-      "count": 1
-    },
-    {
-      "hex": "#d9f2e3",
-      "count": 1
-    },
-    {
-      "hex": "#dff3e6",
-      "count": 1
-    },
-    {
-      "hex": "#e7d5ca",
-      "count": 1
-    },
-    {
-      "hex": "#e9dcd4",
-      "count": 1
-    },
-    {
-      "hex": "#fdf1e6",
-      "count": 1
-    },
-    {
-      "hex": "#ff7a00",
-      "count": 1
-    },
-    {
-      "hex": "#ffd9d9",
-      "count": 1
-    },
-    {
-      "hex": "#ffdcdc",
-      "count": 1
-    },
-    {
-      "hex": "#fff0e6",
+      "hex": "#f2f3f8",
       "count": 1
     }
   ],
@@ -194,253 +166,275 @@
     "0n",
     ">",
     "?",
+    "ct-action-pair",
+    "ct-actions",
+    "ct-activity",
+    "ct-bad",
+    "ct-band",
+    "ct-band-head",
+    "ct-billboard",
+    "ct-brand",
+    "ct-brand-mark",
+    "ct-btn",
+    "ct-btn-bad",
+    "ct-btn-good",
+    "ct-btn-primary",
+    "ct-btn-quiet",
+    "ct-btn-small",
+    "ct-btn-wide",
+    "ct-callout",
+    "ct-callout-bad",
+    "ct-callout-caution",
+    "ct-callout-good",
+    "ct-callout-info",
+    "ct-chain",
+    "ct-chain-list",
+    "ct-chapter",
+    "ct-claim",
+    "ct-claim-strip",
+    "ct-colophon",
+    "ct-colophon-brand",
+    "ct-colophon-grid",
+    "ct-colophon-links",
+    "ct-colophon-meta",
+    "ct-contents",
+    "ct-copy",
+    "ct-dialog",
+    "ct-doc",
+    "ct-doc-body",
+    "ct-doc-grid",
+    "ct-doc-head",
+    "ct-doc-margin",
+    "ct-empty",
+    "ct-eyebrow",
+    "ct-fact",
+    "ct-fact-loading",
+    "ct-field",
+    "ct-field-input",
+    "ct-field-label",
+    "ct-field-row",
+    "ct-field-stack",
+    "ct-field-suffix",
+    "ct-figure",
+    "ct-figures",
+    "ct-figures-five",
+    "ct-fill",
+    "ct-gap-b0",
+    "ct-gap-b1",
+    "ct-gap-b2",
+    "ct-gap-b3",
+    "ct-gap-t2",
+    "ct-gap-t3",
+    "ct-good",
+    "ct-grid",
+    "ct-grid-four",
+    "ct-gutter",
+    "ct-hero",
+    "ct-hidden",
+    "ct-index",
+    "ct-index-in",
+    "ct-index-link",
+    "ct-inline",
+    "ct-kicker",
+    "ct-label",
+    "ct-lede",
+    "ct-lede-margin",
+    "ct-ledger",
+    "ct-ledger-key",
+    "ct-ledger-row",
+    "ct-ledger-val",
+    "ct-line",
+    "ct-loop",
+    "ct-lot",
+    "ct-lot-artist",
+    "ct-lot-cell",
+    "ct-lot-head",
+    "ct-lot-list",
+    "ct-lot-meta",
+    "ct-lot-meter",
+    "ct-lot-name",
+    "ct-lot-spec",
+    "ct-marginal-rule",
+    "ct-masthead",
+    "ct-masthead-in",
+    "ct-masthead-tools",
+    "ct-meter",
+    "ct-meter-fill",
+    "ct-micro",
+    "ct-mono",
+    "ct-muted",
+    "ct-note",
+    "ct-num",
+    "ct-page",
+    "ct-plaque",
+    "ct-plate",
+    "ct-plate-head",
+    "ct-pool",
+    "ct-pool-entry",
+    "ct-pool-figure",
+    "ct-pool-head",
+    "ct-pool-list",
+    "ct-pulse",
+    "ct-quiet",
+    "ct-registry",
+    "ct-reveal",
+    "ct-right",
+    "ct-route",
+    "ct-route-art",
+    "ct-route-dashboard",
+    "ct-route-docs",
+    "ct-route-home",
+    "ct-route-mine",
+    "ct-row",
+    "ct-scroll",
+    "ct-seam",
+    "ct-shell",
+    "ct-skeleton",
+    "ct-slab",
+    "ct-slab-tight",
+    "ct-split",
+    "ct-split-even",
+    "ct-split-line",
+    "ct-stack",
+    "ct-stack-tight",
+    "ct-stage",
+    "ct-stamp",
+    "ct-standfirst",
+    "ct-step",
+    "ct-step-copy",
+    "ct-step-tag",
+    "ct-strip",
+    "ct-table",
+    "ct-tag",
+    "ct-tag-accent",
+    "ct-tag-bad",
+    "ct-tag-good",
+    "ct-tag-paper",
+    "ct-tag-warn",
+    "ct-toc-link",
+    "ct-toc-list",
+    "ct-topbar",
+    "ct-unit",
+    "ct-veil",
+    "ct-wallet",
+    "ct-wallet-choice",
+    "ct-wallet-glyph",
+    "ct-warn",
+    "ct-wordmark",
     "lastTxBadge",
-    "po-action-pair",
-    "po-actions",
-    "po-activity",
-    "po-bad",
-    "po-billboard",
-    "po-billboard-grid",
-    "po-button",
-    "po-button-bad",
-    "po-button-good",
-    "po-button-primary",
-    "po-button-quiet",
-    "po-button-small",
-    "po-button-wide",
-    "po-callout",
-    "po-callout-bad",
-    "po-callout-caution",
-    "po-callout-good",
-    "po-callout-info",
-    "po-catalogue",
-    "po-chain",
-    "po-chain-list",
-    "po-claim",
-    "po-claim-strip",
-    "po-column",
-    "po-contents",
-    "po-contents-link",
-    "po-contents-list",
-    "po-copy",
-    "po-cover",
-    "po-cover-inner",
-    "po-cover-tools",
-    "po-dialog",
-    "po-dock",
-    "po-dock-dot",
-    "po-dock-item",
-    "po-dock-label",
-    "po-dock-link",
-    "po-dock-list",
-    "po-fact",
-    "po-fact-loading",
-    "po-field",
-    "po-field-input",
-    "po-field-label",
-    "po-field-row",
-    "po-field-suffix",
-    "po-figure",
-    "po-figures",
-    "po-figures-five",
-    "po-fill",
-    "po-gallery",
-    "po-gap-b0",
-    "po-gap-b1",
-    "po-gap-b2",
-    "po-gap-b3",
-    "po-gap-t2",
-    "po-gap-t3",
-    "po-good",
-    "po-grid",
-    "po-grid-four",
-    "po-gutter",
-    "po-halo",
-    "po-hidden",
-    "po-inline",
-    "po-intro",
-    "po-kicker",
-    "po-label",
-    "po-line",
-    "po-loop",
-    "po-lot",
-    "po-lot-artist",
-    "po-lot-cell",
-    "po-lot-head",
-    "po-lot-meta",
-    "po-lot-meter",
-    "po-lot-name",
-    "po-lot-rail",
-    "po-lot-spec",
-    "po-margin-rule",
-    "po-mark",
-    "po-meter",
-    "po-meter-fill",
-    "po-micro",
-    "po-mono",
-    "po-muted",
-    "po-note",
-    "po-num",
-    "po-overture",
-    "po-overture-copy",
-    "po-overture-grid",
-    "po-overture-margin",
-    "po-plaque",
-    "po-plate",
-    "po-plate--ink",
-    "po-plate--peach",
-    "po-plate-head",
-    "po-pool",
-    "po-pool-entry",
-    "po-pool-figure",
-    "po-pool-head",
-    "po-pool-list",
-    "po-pulse",
-    "po-quiet",
-    "po-record",
-    "po-registry",
-    "po-release",
-    "po-reveal",
-    "po-right",
-    "po-route",
-    "po-route-art",
-    "po-route-dashboard",
-    "po-route-docs",
-    "po-route-home",
-    "po-route-mine",
-    "po-row",
-    "po-run",
-    "po-seam",
-    "po-skeleton",
-    "po-slab",
-    "po-slab-tight",
-    "po-split",
-    "po-split-line",
-    "po-stack",
-    "po-stack-tight",
-    "po-stage",
-    "po-stamp",
-    "po-standfirst",
-    "po-step",
-    "po-step-copy",
-    "po-step-tag",
-    "po-strip",
-    "po-table",
-    "po-tag",
-    "po-tag-accent",
-    "po-tag-bad",
-    "po-tag-good",
-    "po-tag-paper",
-    "po-tag-warn",
-    "po-tally",
-    "po-tear",
-    "po-tear-brand",
-    "po-tear-chain",
-    "po-tear-grid",
-    "po-tear-links",
-    "po-tear-meta",
-    "po-unit",
-    "po-veil",
-    "po-wall",
-    "po-wallet",
-    "po-wallet-choice",
-    "po-wallet-figures",
-    "po-wallet-glyph",
-    "po-warn",
-    "po-wordmark",
     "statusClass[entry.status]",
     "withdrawFeeFor(pool.id)"
   ],
   "designSignals": {
     "frameworks": [],
     "cssVars": [
-      "--po-accent",
-      "--po-accent-2",
-      "--po-accent-safe",
-      "--po-bad",
-      "--po-body",
-      "--po-border",
-      "--po-display",
-      "--po-ease",
-      "--po-gap",
-      "--po-good",
-      "--po-gutter-x",
-      "--po-ink",
-      "--po-ink-2",
-      "--po-label-tracking",
-      "--po-line",
-      "--po-max",
-      "--po-mono",
-      "--po-muted",
-      "--po-paper",
-      "--po-paper-2",
-      "--po-shadow",
-      "--po-shadow-lg",
-      "--po-shadow-sm",
-      "--po-slab",
-      "--po-tempo",
-      "--po-tracking",
-      "--po-warn"
+      "--ct-accent",
+      "--ct-accent-glow",
+      "--ct-accent-hi",
+      "--ct-accent-soft",
+      "--ct-bad",
+      "--ct-bg",
+      "--ct-bg-2",
+      "--ct-body",
+      "--ct-dim",
+      "--ct-display",
+      "--ct-display-tracking",
+      "--ct-display-weight",
+      "--ct-ease",
+      "--ct-good",
+      "--ct-gutter",
+      "--ct-ink",
+      "--ct-label-tracking",
+      "--ct-line",
+      "--ct-line-soft",
+      "--ct-max",
+      "--ct-mono",
+      "--ct-motion",
+      "--ct-muted",
+      "--ct-panel",
+      "--ct-panel-2",
+      "--ct-radius",
+      "--ct-radius-sm",
+      "--ct-shadow",
+      "--ct-space-1",
+      "--ct-space-2",
+      "--ct-space-3",
+      "--ct-space-4",
+      "--ct-space-5",
+      "--ct-space-6",
+      "--ct-violet",
+      "--ct-warn"
     ],
     "colorVars": [
       {
-        "name": "--po-accent",
-        "value": "#c40018"
+        "name": "--ct-accent",
+        "value": "#40b3ff"
       },
       {
-        "name": "--po-accent-2",
-        "value": "#ff7a00"
+        "name": "--ct-accent-glow",
+        "value": "#40b3ff"
       },
       {
-        "name": "--po-accent-safe",
-        "value": "#a80014"
+        "name": "--ct-accent-hi",
+        "value": "#7cc9ff"
       },
       {
-        "name": "--po-bad",
-        "value": "#b00016"
+        "name": "--ct-bad",
+        "value": "#ff8a8a"
       },
       {
-        "name": "--po-good",
-        "value": "#1e6b47"
+        "name": "--ct-bg",
+        "value": "#05060b"
       },
       {
-        "name": "--po-ink",
-        "value": "#161616"
+        "name": "--ct-bg-2",
+        "value": "#080a12"
       },
       {
-        "name": "--po-ink-2",
-        "value": "#3d3733"
+        "name": "--ct-dim",
+        "value": "#8a8899"
       },
       {
-        "name": "--po-line",
-        "value": "#e7d5ca"
+        "name": "--ct-good",
+        "value": "#5ce1a0"
       },
       {
-        "name": "--po-muted",
-        "value": "#6e625c"
+        "name": "--ct-ink",
+        "value": "#f2f3f8"
       },
       {
-        "name": "--po-paper",
-        "value": "#fff6f0"
+        "name": "--ct-line",
+        "value": "#232432"
       },
       {
-        "name": "--po-paper-2",
-        "value": "#ffe3d6"
+        "name": "--ct-line-soft",
+        "value": "#171824"
       },
       {
-        "name": "--po-slab",
-        "value": "#ffffff"
+        "name": "--ct-muted",
+        "value": "#a3a1b5"
       },
       {
-        "name": "--po-warn",
-        "value": "#8f4b00"
+        "name": "--ct-panel",
+        "value": "#0d0e16"
+      },
+      {
+        "name": "--ct-panel-2",
+        "value": "#12131d"
+      },
+      {
+        "name": "--ct-violet",
+        "value": "#a78bfa"
+      },
+      {
+        "name": "--ct-warn",
+        "value": "#f2c94c"
       }
     ],
     "mediaQueries": [
-      "@media (max-width: 1120px)",
+      "@media (max-width: 1024px)",
       "@media (max-width: 620px)",
       "@media (max-width: 900px)",
-      "@media (min-width: 901px)",
       "@media (prefers-reduced-motion: no-preference)",
       "@media (prefers-reduced-motion: reduce)"
     ],
@@ -453,59 +447,58 @@
       "br": 2,
       "button": 37,
       "code": 147,
+      "colophon": 1,
       "connectbanner": 1,
       "connectprompt": 4,
       "dd": 5,
-      "div": 435,
+      "div": 425,
       "dl": 1,
-      "docknav": 1,
       "dt": 5,
       "em": 10,
       "footer": 1,
       "h1": 6,
       "h2": 19,
       "h3": 44,
-      "hr": 2,
+      "header": 1,
+      "hr": 5,
       "input": 7,
       "label": 7,
-      "li": 39,
+      "ledgerfact": 12,
+      "li": 38,
       "main": 1,
       "nav": 1,
-      "p": 96,
-      "posterfigure": 12,
+      "p": 97,
       "pre": 5,
       "routerlink": 20,
       "routerview": 1,
       "section": 37,
-      "span": 216,
+      "span": 223,
       "strong": 51,
       "table": 7,
       "tbody": 7,
       "td": 79,
-      "tearfooter": 1,
       "template": 17,
       "th": 37,
       "thead": 7,
       "tr": 28,
       "txfeed": 3,
-      "ul": 10,
+      "ul": 9,
       "walletbutton": 1,
       "walletmodal": 2
     },
     "depthHistogram": {
-      "0": 18,
-      "1": 44,
-      "2": 65,
-      "3": 93,
-      "4": 173,
-      "5": 220,
-      "6": 292,
-      "7": 363,
-      "8": 134,
-      "9": 24,
-      "10": 5
+      "0": 17,
+      "1": 42,
+      "2": 77,
+      "3": 113,
+      "4": 195,
+      "5": 205,
+      "6": 274,
+      "7": 366,
+      "8": 132,
+      "9": 9
     },
-    "maxDepth": 10,
+    "maxDepth": 9,
     "topLevelTags": [
       "div",
       "div",
@@ -516,9 +509,8 @@
       "section",
       "div",
       "div",
-      "nav",
-      "article",
       "footer",
+      "article",
       "div",
       "div",
       "div",
@@ -528,21 +520,23 @@
     ],
     "skeletonSample": [
       "div",
-      "  div",
+      "  header",
       "    div",
       "      routerlink",
       "        a",
       "          span",
+      "            span",
       "          span",
       "      div",
       "        span",
       "        walletbutton",
+      "    nav",
+      "      div",
+      "        routerlink",
       "  connectbanner",
       "  main",
-      "    div",
-      "      routerview",
-      "  docknav",
-      "  tearfooter",
+      "    routerview",
+      "  colophon",
       "div",
       "  div",
       "    strong",
@@ -582,13 +576,16 @@
       "        span",
       "      span",
       "  template",
+      "    hr",
       "    div",
-      "    div",
-      "      span",
-      "      span",
-      "    div",
-      "      span",
-      "      span",
+      "      div",
+      "        span",
+      "        span",
+      "        span",
+      "      div",
+      "        span",
+      "        span",
+      "        span",
       "div",
       "  div",
       "    span",
@@ -619,23 +616,12 @@
       "        a",
       "        a",
       "    div",
-      "nav",
-      "  ul",
-      "    li",
-      "      routerlink",
-      "        span",
-      "        span",
-      "article",
-      "  p",
-      "  p",
-      "  p",
-      "    span",
-      "  p",
       "footer",
       "  div",
       "    div",
       "      div",
       "        span",
+      "          span",
       "        span",
       "      p",
       "    div",
@@ -646,14 +632,20 @@
       "      routerlink",
       "    div",
       "      span",
-      "      div"
+      "      div",
+      "        a",
+      "          strong",
+      "          span",
+      "  div",
+      "    span",
+      "    span"
     ]
   },
   "contentContract": {
     "schemaVersion": 1,
     "meta": {
-      "projectName": "@fractio/website",
-      "title": "@fractio/website",
+      "projectName": "@cimela/website",
+      "title": "@cimela/website",
       "lang": "en"
     },
     "routes": [
@@ -1694,6 +1686,10 @@
         "count": 1
       },
       {
+        "value": "C",
+        "count": 2
+      },
+      {
         "value": "CannotRecoverStakeToken",
         "count": 1
       },
@@ -1731,6 +1727,22 @@
       },
       {
         "value": "Check again",
+        "count": 1
+      },
+      {
+        "value": "Cimela",
+        "count": 2
+      },
+      {
+        "value": "Cimela vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
+        "count": 1
+      },
+      {
+        "value": "Cimela vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
+        "count": 1
+      },
+      {
+        "value": "Cimela. Open-source reference implementation.",
         "count": 1
       },
       {
@@ -2126,10 +2138,6 @@
         "count": 1
       },
       {
-        "value": "F",
-        "count": 2
-      },
-      {
         "value": "Fee",
         "count": 1
       },
@@ -2191,22 +2199,6 @@
       },
       {
         "value": "Four steps, all enforced by code rather than by a treasury promise.",
-        "count": 1
-      },
-      {
-        "value": "Fractio",
-        "count": 2
-      },
-      {
-        "value": "Fractio vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
-        "count": 1
-      },
-      {
-        "value": "Fractio vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
-        "count": 1
-      },
-      {
-        "value": "Fractio. Open-source reference implementation.",
         "count": 1
       },
       {
@@ -3466,7 +3458,7 @@
         "count": 1
       },
       {
-        "value": "Stake into a pool and you earn a pro-rata share of the fees Fractio collects — paid in",
+        "value": "Stake into a pool and you earn a pro-rata share of the fees Cimela collects — paid in",
         "count": 1
       },
       {
@@ -5731,5 +5723,5 @@
       "VITE_RPC_URL"
     ]
   },
-  "contentContractHash": "ebe0707becf28d063a0894f558fdb8f617fc98ed410a7bb4e9afe6a8ed466853"
+  "contentContractHash": "fd3681cef91aaf4c5c35c8c6dc2f45c47746cb37fcc2e62346f4631573dbc941"
 }

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 /**
- * DocsView — the long-form technical reference for Fractio.
+ * DocsView — the long-form technical reference for Cimela.
  *
  * Every figure in a "live" column is read off Solana by `useProtocolStore()`; anything the
  * store does not expose is labelled with where it does come from (the Solidity in
@@ -307,18 +307,18 @@ function jumpTo(id: string): void {
 </script>
 
 <template>
-  <div class="ct-route ct-route-docs ct-doc">
+  <div class="pt-route pt-route-docs pt-doc">
     <!-- ── Prologue ─────────────────────────────────────────────────────── -->
-    <section class="ct-doc-head" aria-label="Protocol reference">
-      <div>
-        <p class="ct-eyebrow">
-          <span class="ct-tag ct-tag-accent">{{ TARGET_CHAIN.shortName }}</span>
+    <section class="pt-scene pt-scene--open" aria-label="Protocol reference">
+      <div class="pt-spread pt-prologue">
+        <p class="pt-kicker">
+          <span class="pt-tag pt-tag--accent">{{ TARGET_CHAIN.shortName }}</span>
           <span>Protocol reference · chain {{ TARGET_CHAIN.chainId }}</span>
         </p>
 
         <h1>How this protocol actually works.</h1>
 
-        <p class="ct-standfirst">
+        <p class="pt-standfirst">
           Fractional ownership of vaulted physical artworks, and a mining engine that is paid only
           from the fees the protocol really collects. This page is the reference: the exact fee
           flow, the emission arithmetic, the precision constraint that shapes the reward
@@ -326,13 +326,13 @@ function jumpTo(id: string): void {
           that are easy to leave out of a landing page.
         </p>
 
-        <div class="ct-actions">
-          <RouterLink to="/mine" class="ct-btn ct-btn-primary">Mine fees</RouterLink>
-          <RouterLink to="/art" class="ct-btn">Browse artworks</RouterLink>
-          <a class="ct-btn ct-btn-quiet" href="#risks" @click.prevent="jumpTo('risks')">Read the risks first</a>
+        <div class="pt-actions">
+          <RouterLink to="/mine" class="pt-btn pt-btn--accent">Mine fees</RouterLink>
+          <RouterLink to="/art" class="pt-btn">Browse artworks</RouterLink>
+          <a class="pt-btn pt-btn--quiet" href="#risks" @click.prevent="jumpTo('risks')">Read the risks first</a>
         </div>
 
-        <div v-if="!configured" class="ct-callout ct-callout-caution ct-gap-t3">
+        <div v-if="!configured" class="pt-callout pt-callout--caution pt-gap-t3">
           <span>
             This build has no complete deployment configured, so every live figure below falls back
             to the documented default in <code>src/config/chain.ts</code> and reads that touch the
@@ -343,16 +343,16 @@ function jumpTo(id: string): void {
       </div>
     </section>
 
-    <!-- ── Body: numbered ledger chapters beside the contents rail ──────── -->
-    <div class="ct-doc-grid">
-      <div class="ct-doc-margin">
-        <div class="ct-contents" role="group" aria-label="On this page">
-          <span class="ct-label">On this page</span>
-          <ul class="ct-toc-list">
+    <!-- ── Contents: a horizontal chapter rail above the chapter sequence ── -->
+    <section class="pt-scene pt-scene--wash" aria-label="Contents">
+      <div class="pt-spread">
+        <div class="pt-contents" role="group" aria-label="On this page">
+          <span class="pt-label">On this page</span>
+          <ul class="pt-contents-rail">
             <li v-for="item in toc" :key="item.id">
               <a
                 :href="`#${item.id}`"
-                class="ct-toc-link"
+                class="pt-contents-link"
                 @click.prevent="jumpTo(item.id)"
               >
                 {{ item.label }}
@@ -361,106 +361,108 @@ function jumpTo(id: string): void {
           </ul>
         </div>
       </div>
+    </section>
 
-      <div class="ct-doc-body">
+    <div class="pt-doc-body">
           <!-- ── Live state ──────────────────────────────────────────────── -->
-          <section id="live" class="ct-chapter" aria-label="Live protocol state" style="scroll-margin-top: 80px; padding-top: 0">
-            <div class="ct-plate-head ct-line ct-row">
+          <section id="live" class="pt-chapter" aria-label="Live protocol state" style="scroll-margin-top: 80px; padding-top: 0">
+            <div class="pt-sheet-head pt-row">
               <div>
-                <h2 class="ct-gap-b1">Live protocol state</h2>
-                <p class="ct-gap-b0 ct-copy">
+                <h2 class="pt-gap-b1">Live protocol state</h2>
+                <p class="pt-gap-b0 pt-copy">
                   Read from the contracts on {{ TARGET_CHAIN.name }} by the protocol store and
                   refreshed every 15 seconds. Nothing here is cached, indexed or projected — if this
                   page disagrees with another view, the later read is the correct one.
                 </p>
               </div>
-              <button class="ct-btn ct-btn-small" :disabled="protocol.loading" @click="protocol.refresh()">
+              <button class="pt-btn pt-btn--small" :disabled="protocol.loading" @click="protocol.refresh()">
                 {{ protocol.loading ? "Reading…" : "Refresh" }}
               </button>
             </div>
 
-            <div class="ct-grid ct-grid-four">
-              <div class="ct-slab">
-                <div class="ct-label">Unspent mining budget</div>
-                <div class="ct-figure">{{ money(unspent) }}</div>
-                <div class="ct-note">
+            <div class="pt-grid-2 pt-grid-4">
+              <div class="pt-sheet">
+                <div class="pt-label">Unspent mining budget</div>
+                <div class="pt-figure-value">{{ money(unspent) }}</div>
+                <div class="pt-note">
                   {{ protocol.rewardSymbol }} committed and not yet paid out
                   ({{ compactNumber(protocol.unspentBudget) }} tokens)
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Emission rate</div>
-                <div class="ct-figure">{{ protocol.emissionPerBlock.toFixed(6) }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet">
+                <div class="pt-label">Emission rate</div>
+                <div class="pt-figure-value">{{ protocol.emissionPerBlock.toFixed(6) }}</div>
+                <div class="pt-note">
                   {{ protocol.rewardSymbol }} per block, re-priced on every fee deposit
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Budget released</div>
-                <div class="ct-figure">{{ progressPercent }}%</div>
-                <div class="ct-meter ct-gap-t2">
+              <div class="pt-sheet">
+                <div class="pt-label">Budget released</div>
+                <div class="pt-figure-value">{{ progressPercent }}%</div>
+                <div class="pt-meter pt-gap-t2">
                   <div
-                    class="ct-meter-fill"
+                    class="pt-meter-fill"
                     :style="{ width: `${protocol.emissionProgress * 100}%` }"
                   />
                 </div>
-                <div class="ct-note ct-gap-t2">
+                <div class="pt-note pt-gap-t2">
                   {{ reward(released) }} of {{ reward(reserved) }} released to stakers
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Lifetime mined</div>
-                <div class="ct-figure">{{ money(protocol.totalRewardsClaimed) }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet">
+                <div class="pt-label">Lifetime mined</div>
+                <div class="pt-figure-value">{{ money(protocol.totalRewardsClaimed) }}</div>
+                <div class="pt-note">
                   {{ protocol.rewardSymbol }} claimed by stakers, net of the harvest fee
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Recycled harvest fees</div>
-                <div class="ct-figure">{{ money(protocol.recycledFees) }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet">
+                <div class="pt-label">Recycled harvest fees</div>
+                <div class="pt-figure-value">{{ money(protocol.recycledFees) }}</div>
+                <div class="pt-note">
                   {{ protocol.rewardSymbol }} returned to the reserve instead of being taken out
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Miners</div>
-                <div class="ct-figure">{{ protocol.totalMiners.toLocaleString("en-US") }}</div>
-                <div class="ct-note">wallets that have staked at least once</div>
+              <div class="pt-sheet">
+                <div class="pt-label">Miners</div>
+                <div class="pt-figure-value">{{ protocol.totalMiners.toLocaleString("en-US") }}</div>
+                <div class="pt-note">wallets that have staked at least once</div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Schedule</div>
-                <div class="ct-figure ct-copy">{{ scheduleLabel }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet">
+                <div class="pt-label">Schedule</div>
+                <div class="pt-figure-value pt-copy">{{ scheduleLabel }}</div>
+                <div class="pt-note">
                   end block {{ scheduleEnd ?? "—" }} · halving period
                   {{ formatBlocks(protocol.params.emissionHalvingPeriod) }} ·
                   {{ protocol.rewardDecimals }}-decimal rewards
                 </div>
               </div>
 
-              <div class="ct-slab">
-                <div class="ct-label">Pools</div>
-                <div class="ct-figure">{{ protocol.pools.length }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet">
+                <div class="pt-label">Pools</div>
+                <div class="pt-figure-value">{{ protocol.pools.length }}</div>
+                <div class="pt-note">
                   {{ protocol.totalAllocationPoints.toString() }} allocation points in total
                 </div>
               </div>
             </div>
 
-            <div v-if="poolRows.length" class="ct-slab ct-gap-t2">
-              <h3 class="ct-gap-b1">Pools and the two denominators</h3>
-              <p class="ct-copy">
+            <div v-if="poolRows.length" class="pt-sheet pt-gap-t2">
+              <h3 class="pt-gap-b1">Pools and the two denominators</h3>
+              <p class="pt-copy">
                 Rewards are split between pools by <code>allocationPoints</code>, then inside a pool
                 by reward <code>weight</code>. The staked column is a raw token amount in the stake
                 token's own decimals; the weight column is the same stake normalised to 1e18, which
                 is why the two columns do not look alike for a 6-decimal token.
               </p>
-              <table class="ct-table">
+              <div class="pt-table-frame">
+              <table class="pt-table">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -473,24 +475,25 @@ function jumpTo(id: string): void {
                 </thead>
                 <tbody>
                   <tr v-for="row in poolRows" :key="row.id">
-                    <td class="ct-num">{{ row.id }}</td>
+                    <td class="pt-num">{{ row.id }}</td>
                     <td>{{ row.name }}</td>
-                    <td class="ct-num">{{ row.points }}</td>
-                    <td class="ct-num">{{ row.pointsShare }}</td>
-                    <td class="ct-num">{{ row.staked }}</td>
-                    <td class="ct-num ct-mono">{{ row.weight }}</td>
+                    <td class="pt-num">{{ row.points }}</td>
+                    <td class="pt-num">{{ row.pointsShare }}</td>
+                    <td class="pt-num">{{ row.staked }}</td>
+                    <td class="pt-num pt-mono">{{ row.weight }}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
+            </div>
           </section>
 
           <!-- ── 1 · What this is ────────────────────────────────────────── -->
-          <section id="overview" class="ct-chapter" aria-label="What this protocol is" style="scroll-margin-top: 80px">
+          <section id="overview" class="pt-chapter" aria-label="What this protocol is" style="scroll-margin-top: 80px">
             <h2>1 · What this protocol is</h2>
 
             <p>
-              Fractio vaults physical artworks and sells fractional ownership of them on
+              Cimela vaults physical artworks and sells fractional ownership of them on
               Solana. Governance registers an artwork with a custodian, an artist payout
               address and an appraisal; registration deploys a dedicated SPL share token for that
               artwork and mints an ERC-721 provenance certificate to the custodian. The custody
@@ -502,7 +505,7 @@ function jumpTo(id: string): void {
             <p>
               Each artwork's share token has a fixed supply of
               {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }} shares (18 decimals, so
-              <span class="ct-mono">1_000_000e18</span> base units). Buyers call
+              <span class="pt-mono">1_000_000e18</span> base units). Buyers call
               <code>buyShares(artworkId, shareAmount, maxCost, referrer)</code> and the vault mints
               the shares straight into their wallet. That is the design difference worth
               understanding: a fraction is a real SPL balance you custody yourself, so it can be
@@ -514,10 +517,10 @@ function jumpTo(id: string): void {
             <p>
               Pricing is on-chain and transparent. Every artwork prices on a linear bonding curve
               anchored at <code>basePrice</code>; the marginal price of the next whole share is
-              <span class="ct-mono">basePrice × (1 + curveSlopeBps × sold / (10,000 × 1,000,000))</span>,
+              <span class="pt-mono">basePrice × (1 + curveSlopeBps × sold / (10,000 × 1,000,000))</span>,
               so a purchase costs the integral of that line across the fill range it covers. At the
               live slope of {{ formatBps(protocol.params.curveSlopeBps) }} the final share of a
-              completely sold-out artwork costs <span class="ct-muted">at most</span>
+              completely sold-out artwork costs <span class="pt-quiet">at most</span>
               {{ curveFullSupplyPremium }} more than the first one — the curve is convex, but at
               default settings it is shallow, which is exactly why the risks section talks about
               exit liquidity rather than about the curve.
@@ -531,7 +534,7 @@ function jumpTo(id: string): void {
               UI, so treat it as documented rather than live).
             </p>
 
-            <div class="ct-callout ct-callout-info">
+            <div class="pt-callout pt-callout--info">
               <span>
                 Two different tokens are easy to conflate. <strong>$ART</strong> is the protocol's
                 own ERC-20 (hard cap 100,000,000) and the stake token of the reference deployment's
@@ -541,37 +544,37 @@ function jumpTo(id: string): void {
               </span>
             </div>
 
-            <div class="ct-grid ct-grid-four ct-gap-t3">
-              <div class="ct-slab ct-slab-tight">
-                <div class="ct-label">Shares per artwork</div>
-                <div class="ct-figure">
+            <div class="pt-grid-2 pt-grid-4 pt-gap-t3">
+              <div class="pt-sheet pt-sheet--tight">
+                <div class="pt-label">Shares per artwork</div>
+                <div class="pt-figure-value">
                   {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }}
                 </div>
-                <div class="ct-note">fixed supply, 18 decimals, one SPL token per artwork</div>
+                <div class="pt-note">fixed supply, 18 decimals, one SPL token per artwork</div>
               </div>
-              <div class="ct-slab ct-slab-tight">
-                <div class="ct-label">Provenance</div>
-                <div class="ct-figure ct-copy">1 ERC-721</div>
-                <div class="ct-note">minted to the custodian at registration</div>
+              <div class="pt-sheet pt-sheet--tight">
+                <div class="pt-label">Provenance</div>
+                <div class="pt-figure-value pt-copy">1 ERC-721</div>
+                <div class="pt-note">minted to the custodian at registration</div>
               </div>
-              <div class="ct-slab ct-slab-tight">
-                <div class="ct-label">Curve slope</div>
-                <div class="ct-figure">{{ formatBps(protocol.params.curveSlopeBps) }}</div>
-                <div class="ct-note">
+              <div class="pt-sheet pt-sheet--tight">
+                <div class="pt-label">Curve slope</div>
+                <div class="pt-figure-value">{{ formatBps(protocol.params.curveSlopeBps) }}</div>
+                <div class="pt-note">
                   documented default {{ formatBps(DEFAULT_PARAMS.curveSlopeBps) }}, ceiling
                   {{ formatBps(2_000) }}
                 </div>
               </div>
-              <div class="ct-slab ct-slab-tight">
-                <div class="ct-label">Net proceeds to the artist</div>
-                <div class="ct-figure">85%</div>
-                <div class="ct-note">ArtworkVault.artistShareBps, from the contract source</div>
+              <div class="pt-sheet pt-sheet--tight">
+                <div class="pt-label">Net proceeds to the artist</div>
+                <div class="pt-figure-value">85%</div>
+                <div class="pt-note">ArtworkVault.artistShareBps, from the contract source</div>
               </div>
             </div>
           </section>
 
           <!-- ── 2 · The mining loop ─────────────────────────────────────── -->
-          <section id="loop" class="ct-chapter" aria-label="The fee-funded mining loop" style="scroll-margin-top: 80px">
+          <section id="loop" class="pt-chapter" aria-label="The fee-funded mining loop" style="scroll-margin-top: 80px">
             <h2>2 · The fee-funded mining loop</h2>
 
             <p>
@@ -580,13 +583,13 @@ function jumpTo(id: string): void {
               than fees that were actually collected.</strong>
             </p>
 
-            <div class="ct-stack">
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-accent ct-gap-b1">Step 1</span>
+            <div class="pt-grid-2">
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--accent pt-gap-b1">Step 1</span>
                 <h3>A primary purchase charges a platform fee</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   <code>ArtworkVault.buyShares()</code> computes
-                  <span class="ct-mono">platformFee = cost × platformFeeBps / 10,000</span> (floored)
+                  <span class="pt-mono">platformFee = cost × platformFeeBps / 10,000</span> (floored)
                   and forwards it in the artwork's <code>paymentToken</code> by calling
                   <code>FeeRouter.payTokenFee(paymentToken, platformFee, referrer)</code>. The vault
                   keeps none of it. Live value:
@@ -596,15 +599,15 @@ function jumpTo(id: string): void {
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-accent ct-gap-b1">Step 2</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--accent pt-gap-b1">Step 2</span>
                 <h3>FeeRouter splits it three ways</h3>
-                <p class="ct-copy ct-gap-b0">
-                  <span class="ct-mono">miningPart = amount × miningShareBps / 10,000</span> →
+                <p class="pt-copy pt-gap-b0">
+                  <span class="pt-mono">miningPart = amount × miningShareBps / 10,000</span> →
                   the reward budget;
-                  <span class="ct-mono">referralPart = referrer == 0 ? 0 : amount × referralBps / 10,000</span>
+                  <span class="pt-mono">referralPart = referrer == 0 ? 0 : amount × referralBps / 10,000</span>
                   → the referrer, paid in the same transaction;
-                  <span class="ct-mono">treasuryPart = amount − miningPart − referralPart</span> →
+                  <span class="pt-mono">treasuryPart = amount − miningPart − referralPart</span> →
                   the treasury. The treasury leg is a remainder rather than a third parameter, so
                   the three legs add up to exactly the fee and rounding dust can never be
                   stranded in the router. Live split:
@@ -616,26 +619,26 @@ function jumpTo(id: string): void {
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-accent ct-gap-b1">Step 3</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--accent pt-gap-b1">Step 3</span>
                 <h3>The mining slice is normalised into the reward asset</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   If the fee token is already the reward asset, it is transferred directly;
                   otherwise <code>FeeRouter</code> swaps it through Jupiter — an explicitly
-                  configured path, or the default <span class="ct-mono">token → wSOL → rewardToken</span>
+                  configured path, or the default <span class="pt-mono">token → wSOL → rewardToken</span>
                   route — with <code>maxSwapSlippageBps = 500</code> (5%) protection. This swap is
                   the only place where the credited budget can end up smaller than the nominal
                   slice, which is why the next step measures rather than trusts.
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-accent ct-gap-b1">Step 4</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--accent pt-gap-b1">Step 4</span>
                 <h3>MiningPool verifies what it received</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   The router snapshots the pool's balance before it moves anything and calls
                   <code>notifyFeeDeposit(amount, floatBefore)</code>; the pool credits
-                  <span class="ct-mono">received = min(balanceNow − floatBefore, amount)</span>. It
+                  <span class="pt-mono">received = min(balanceNow − floatBefore, amount)</span>. It
                   cannot simply credit its own balance: the pool also holds staked principal and
                   recycled fees, so <code>balanceOf(this)</code> would hand other people's deposits
                   to the reward reserve. Only the router may call this function, and it can only
@@ -643,10 +646,10 @@ function jumpTo(id: string): void {
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-accent ct-gap-b1">Step 5</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--accent pt-gap-b1">Step 5</span>
                 <h3>Stakers mine that budget</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   The credited amount is added to <code>rewardReserve</code> and the emission
                   schedule is re-priced (section 3). From then on every pool update releases a slice
                   of the reserve into its accumulator, and each staker's share follows their reward
@@ -658,21 +661,21 @@ function jumpTo(id: string): void {
               </div>
             </div>
 
-            <div class="ct-callout ct-callout-good ct-gap-t3">
+            <div class="pt-callout pt-callout--good pt-gap-t3">
               <span>
                 <strong>The invariant:</strong>
-                <span class="ct-mono">rewardReleased ≤ rewardReserve</span>. Every release is capped by
+                <span class="pt-mono">rewardReleased ≤ rewardReserve</span>. Every release is capped by
                 the unspent reserve, so the pool can only ever pay out fees it actually received.
                 Live: released {{ reward(released) }} of {{ reward(reserved) }} —
                 {{ progressPercent }}% used, {{ reward(unspent) }} still unspent.
               </span>
             </div>
 
-            <div class="ct-callout ct-callout-caution ct-gap-t2">
+            <div class="pt-callout pt-callout--caution pt-gap-t2">
               <span>
                 <strong>One configuration caveat, stated plainly.</strong> In the reference
                 deployment <code>MiningPool</code> is constructed with
-                <span class="ct-mono">miningToken = address(0)</span>, which makes the fee asset itself
+                <span class="pt-mono">miningToken = address(0)</span>, which makes the fee asset itself
                 the reward asset: rewards are <em>transferred</em> out of the pool's balance, so the
                 reserve is a hard cap at the token level. The contract also supports a distinct
                 emission token, in which case <code>_payReward</code> mints it instead. The reserve
@@ -683,7 +686,7 @@ function jumpTo(id: string): void {
               </span>
             </div>
 
-            <div class="ct-callout ct-callout-info ct-gap-t2">
+            <div class="pt-callout pt-callout--info pt-gap-t2">
               <span>
                 Also absent by design: no staking subsidy from a treasury, no pre-committed emission
                 schedule, no inflation paid to stakers in the reference deployment. If nobody buys
@@ -693,7 +696,7 @@ function jumpTo(id: string): void {
           </section>
 
           <!-- ── 3 · Emission schedule ───────────────────────────────────── -->
-          <section id="emission" class="ct-chapter" aria-label="Emission schedule" style="scroll-margin-top: 80px">
+          <section id="emission" class="pt-chapter" aria-label="Emission schedule" style="scroll-margin-top: 80px">
             <h2>3 · Emission schedule</h2>
 
             <p>
@@ -703,8 +706,8 @@ function jumpTo(id: string): void {
               <code>tailEmissionBps</code>.
             </p>
 
-            <div class="ct-slab">
-              <pre class="ct-mono ct-gap-b0" style="line-height: 1.6; overflow-x: auto">fresh budget (current rate is 0):
+            <div class="pt-sheet">
+              <pre class="pt-mono pt-gap-b0" style="line-height: 1.6; overflow-x: auto">fresh budget (current rate is 0):
   period           = min(emissionHalvingPeriod, unspent)
   emissionEndBlock = block.number + period
   rate             = max(1, unspent / period)           // reward units per block
@@ -719,10 +722,10 @@ read live at any block:
   hard cap               = rewardReserve - rewardReleased</pre>
             </div>
 
-            <div class="ct-grid ct-split ct-gap-t3">
-              <div class="ct-slab">
+            <div class="pt-grid-2 pt-split pt-gap-t3">
+              <div class="pt-sheet">
                 <h3>A fresh budget opens a window</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   When the schedule is idle or exhausted, a deposit starts a window of
                   <code>emissionHalvingPeriod</code> blocks — live
                   {{ formatBlocks(protocol.params.emissionHalvingPeriod) }}
@@ -730,18 +733,18 @@ read live at any block:
                   documented default
                   {{ DEFAULT_PARAMS.emissionHalvingPeriod.toLocaleString("en-US") }} blocks. The
                   window is capped by the budget itself in reward units
-                  (<span class="ct-mono">min(period, unspent)</span>) with a floor of 1 unit per block,
+                  (<span class="pt-mono">min(period, unspent)</span>) with a floor of 1 unit per block,
                   so a budget smaller than the period length is spread over fewer blocks instead of
                   flooring to zero and emitting nothing at all.
                 </p>
               </div>
 
-              <div class="ct-slab">
+              <div class="pt-sheet">
                 <h3>A live schedule gets a tail</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   If a schedule is already running, the new budget does not reset the rate. The end
                   block is pushed out by
-                  <span class="ct-mono">received × 10,000 / (rate × tailEmissionBps)</span>. At the live
+                  <span class="pt-mono">received × 10,000 / (rate × tailEmissionBps)</span>. At the live
                   tail of {{ formatBps(protocol.params.tailEmissionBps) }} that is twice the runway a
                   flat payout of the same budget would need, so each deposit extends the stream and
                   lowers the effective rate a little. Successive deposits therefore decay the rate
@@ -750,27 +753,27 @@ read live at any block:
               </div>
             </div>
 
-            <p class="ct-gap-t3">
+            <p class="pt-gap-t3">
               Live now: <strong>{{ protocol.emissionPerBlock.toFixed(6) }}</strong>
               {{ protocol.rewardSymbol }} per block, {{ scheduleLabel }}, end block
               {{ scheduleEnd ?? "—" }}. Note the two properties of the formula above that a "halving"
               label hides, both of which are visible in <code>reserveStats()</code>:
             </p>
 
-            <div class="ct-slab">
-              <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                <li class="ct-gap-b1">
+            <div class="pt-sheet">
+              <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                <li class="pt-gap-b1">
                   The rate is the <em>cumulative</em> reserve divided by the blocks remaining, so
                   inside a window the nominal rate drifts up as <code>emissionEndBlock</code>
                   approaches — the release is mildly back-loaded within a period rather than flat.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   The unspent cap is what keeps that from overshooting:
                   <code>_previewEmission</code> caps every pool update at
-                  <span class="ct-mono">rewardReserve − rewardReleased</span>, so the budget is never
+                  <span class="pt-mono">rewardReserve − rewardReleased</span>, so the budget is never
                   exceeded no matter how the rate moves.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   A pool with no stake banks nothing. When <code>totalWeight == 0</code>,
                   <code>_updatePool</code> advances <code>lastRewardBlock</code> without releasing
                   anything, so the window keeps ticking while no rewards accrue.
@@ -784,7 +787,7 @@ read live at any block:
               </ul>
             </div>
 
-            <p class="ct-copy ct-gap-t3 ct-gap-b0">
+            <p class="pt-copy pt-gap-t3 pt-gap-b0">
               Practical consequence: do not model this schedule off-chain and expect to match. Call
               <code>reserveStats()</code> and <code>rewardPerBlockScaled()</code>, or read the numbers
               on this page, which come from exactly those calls.
@@ -792,7 +795,7 @@ read live at any block:
           </section>
 
           <!-- ── 4 · Weight precision ────────────────────────────────────── -->
-          <section id="precision" class="ct-chapter" aria-label="Stake weight normalisation and the precision trap" style="scroll-margin-top: 80px">
+          <section id="precision" class="pt-chapter" aria-label="Stake weight normalisation and the precision trap" style="scroll-margin-top: 80px">
             <h2>4 · Stake weight normalisation and the precision trap</h2>
 
             <p>
@@ -802,8 +805,8 @@ read live at any block:
               is a bug class worth documenting for anyone forking this code.
             </p>
 
-            <div class="ct-slab">
-              <pre class="ct-mono ct-gap-b0" style="line-height: 1.6; overflow-x: auto">weight        = amount * 10**(18 - stakeDecimals)        // stakeDecimals &lt; 18
+            <div class="pt-sheet">
+              <pre class="pt-mono pt-gap-b0" style="line-height: 1.6; overflow-x: auto">weight        = amount * 10**(18 - stakeDecimals)        // stakeDecimals &lt; 18
               = amount / 10**(stakeDecimals - 18)        // stakeDecimals &gt; 18
 ACC_PRECISION = 1e18 * 10**rewardDecimals                // immutable, set in the constructor
 
@@ -812,12 +815,12 @@ accrued   = weight * acc / ACC_PRECISION                 // a user's entitlement
 pendingRewardOf(poolId, account) recomputes the accrual so it matches what harvest pays</pre>
             </div>
 
-            <p class="ct-gap-t3">
+            <p class="pt-gap-t3">
               <strong>Why weight is normalised.</strong> Stakes are converted to a 1e18 scale before
               they touch the accumulator, so allocation points stay comparable across pools whose
               stake tokens have different decimals, and reward weight is decimals-independent. A
               6-decimal USDT stake of 33 tokens carries a weight of
-              <span class="ct-mono">33e18</span>, not <span class="ct-mono">33e6</span>. That also means
+              <span class="pt-mono">33e18</span>, not <span class="pt-mono">33e6</span>. That also means
               <code>amount</code> and <code>weight</code> are <em>not</em> interchangeable in
               integrations; see the checklist below.
             </p>
@@ -826,7 +829,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               <strong>Why the denominator carries the reward decimals.</strong> The accumulator
               stores reward-per-1e18-weight, so the obvious denominator is a flat 1e18. With that
               choice an update credits
-              <span class="ct-mono">emission × 1e18 / totalWeight = emission / (whole tokens staked)</span>
+              <span class="pt-mono">emission × 1e18 / totalWeight = emission / (whole tokens staked)</span>
               — an integer that floors to zero whenever an update releases fewer reward units than
               there are whole tokens staked. For a 6-decimal reward asset such as the mock USDT in
               the reference deployment that happens constantly at realistic position sizes, and
@@ -837,7 +840,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
 
             <p>
               Multiplying the denominator by the reward asset's decimals
-              (<span class="ct-mono">1e18 × 10**rewardDecimals</span>) restores one unit of resolution
+              (<span class="pt-mono">1e18 × 10**rewardDecimals</span>) restores one unit of resolution
               per stake unit. That is also why <code>rewardDecimals</code> is an explicit constructor
               argument rather than something probed from <code>decimals()</code>: a missing or
               non-standard <code>decimals()</code> must fail loudly at deploy time instead of
@@ -845,10 +848,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               getting it wrong is not a parameter change — it is a redeployment.
             </p>
 
-            <div class="ct-slab ct-gap-t3">
-              <h3 class="ct-gap-b1">Integrator checklist</h3>
-              <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                <li class="ct-gap-b1">
+            <div class="pt-sheet pt-gap-t3">
+              <h3 class="pt-gap-b1">Integrator checklist</h3>
+              <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                <li class="pt-gap-b1">
                   Never re-derive pending rewards off-chain. Call
                   <code>pendingRewardOf(poolId, account)</code>, or
                   <code>pendingRewardAll(account)</code> for a wallet's whole portfolio. The view
@@ -856,12 +859,12 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                   specifically so it agrees with what <code>harvest</code> pays; dividing live
                   emission by live <code>totalWeight</code> does not, and understates incumbents.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   Do not compare <code>amount</code> with <code>weight</code>. Use
                   <code>weightOf(poolId, account)</code> for reward maths and
                   <code>poolDecimals(poolId)</code> when you need to convert back.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   Everything floors — <code>bpsOf</code>, the accumulator, the pending sync — always
                   in the protocol's favour. Expect a quote to sit at or a hair below an exact
                   pro-rata figure, never above it.
@@ -876,18 +879,19 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
           </section>
 
           <!-- ── 5 · Fee schedule ────────────────────────────────────────── -->
-          <section id="fees" class="ct-chapter" aria-label="Fee schedule" style="scroll-margin-top: 80px">
+          <section id="fees" class="pt-chapter" aria-label="Fee schedule" style="scroll-margin-top: 80px">
             <h2>5 · Fee schedule</h2>
 
             <p>
               Three fees are charged to users of the mining engine, and each has a hard ceiling that
               governance cannot exceed — the setter reverts with <code>FeeTooHigh</code> rather than
               clamping. The live column is the value published on-chain right now; a
-              <span class="ct-tag ct-tag-warn">changed</span> marker means it differs from the
+              <span class="pt-tag pt-tag--warn">changed</span> marker means it differs from the
               documented default in <code>src/config/chain.ts</code>.
             </p>
 
-            <table class="ct-table">
+            <div class="pt-table-frame">
+              <table class="pt-table">
               <thead>
                 <tr>
                   <th>Fee</th>
@@ -902,21 +906,22 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 <tr v-for="row in feeRows" :key="row.fee">
                   <td>
                     <strong>{{ row.fee }}</strong>
-                    <div class="ct-micro ct-quiet ct-mono">{{ row.contract }}</div>
+                    <div class="pt-note pt-quiet pt-mono">{{ row.contract }}</div>
                   </td>
-                  <td class="ct-copy">{{ row.charged }}</td>
-                  <td class="ct-num">
+                  <td class="pt-copy">{{ row.charged }}</td>
+                  <td class="pt-num">
                     {{ row.live }}
-                    <span v-if="row.diverges" class="ct-tag ct-tag-warn">changed</span>
+                    <span v-if="row.diverges" class="pt-tag pt-tag--warn">changed</span>
                   </td>
-                  <td class="ct-num ct-quiet">{{ row.documented }}</td>
-                  <td class="ct-num">{{ row.ceiling }}</td>
-                  <td class="ct-copy">{{ row.destination }}</td>
+                  <td class="pt-num pt-quiet">{{ row.documented }}</td>
+                  <td class="pt-num">{{ row.ceiling }}</td>
+                  <td class="pt-copy">{{ row.destination }}</td>
                 </tr>
               </tbody>
             </table>
+            </div>
 
-            <p class="ct-copy ct-gap-t2">
+            <p class="pt-copy pt-gap-t2">
               A note on the deposit fee: it is charged in the <em>stake</em> token on the amount the
               pool actually receives, and the pool forwards it to its configured
               <code>treasury()</code>. In the reference deployment the router and the pool are wired
@@ -925,8 +930,9 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               passes through the three-way split that purchase fees do.
             </p>
 
-            <h3 class="ct-gap-t3">The three-way split of a purchase fee</h3>
-            <table class="ct-table">
+            <h3 class="pt-gap-t3">The three-way split of a purchase fee</h3>
+            <div class="pt-table-frame">
+              <table class="pt-table">
               <thead>
                 <tr>
                   <th>Parameter</th>
@@ -940,20 +946,22 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               <tbody>
                 <tr v-for="row in splitRows" :key="row.parameter">
                   <td><strong>{{ row.parameter }}</strong></td>
-                  <td class="ct-micro ct-mono">{{ row.contract }}</td>
-                  <td class="ct-num">
+                  <td class="pt-note pt-mono">{{ row.contract }}</td>
+                  <td class="pt-num">
                     {{ row.live }}
-                    <span v-if="row.diverges" class="ct-tag ct-tag-warn">changed</span>
+                    <span v-if="row.diverges" class="pt-tag pt-tag--warn">changed</span>
                   </td>
-                  <td class="ct-num ct-quiet">{{ row.documented }}</td>
-                  <td class="ct-num">{{ row.bound }}</td>
-                  <td class="ct-copy">{{ row.note }}</td>
+                  <td class="pt-num pt-quiet">{{ row.documented }}</td>
+                  <td class="pt-num">{{ row.bound }}</td>
+                  <td class="pt-copy">{{ row.note }}</td>
                 </tr>
               </tbody>
             </table>
+            </div>
 
-            <h3 class="ct-gap-t3">Emission shaping and pricing bounds</h3>
-            <table class="ct-table">
+            <h3 class="pt-gap-t3">Emission shaping and pricing bounds</h3>
+            <div class="pt-table-frame">
+              <table class="pt-table">
               <thead>
                 <tr>
                   <th>Parameter</th>
@@ -967,21 +975,22 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               <tbody>
                 <tr v-for="row in shapeRows" :key="row.parameter">
                   <td><strong>{{ row.parameter }}</strong></td>
-                  <td class="ct-micro ct-mono">{{ row.contract }}</td>
-                  <td class="ct-num">
+                  <td class="pt-note pt-mono">{{ row.contract }}</td>
+                  <td class="pt-num">
                     {{ row.live }}
-                    <span v-if="row.diverges" class="ct-tag ct-tag-warn">changed</span>
+                    <span v-if="row.diverges" class="pt-tag pt-tag--warn">changed</span>
                   </td>
-                  <td class="ct-num ct-quiet">{{ row.documented }}</td>
-                  <td class="ct-num">{{ row.bound }}</td>
-                  <td class="ct-copy">{{ row.note }}</td>
+                  <td class="pt-num pt-quiet">{{ row.documented }}</td>
+                  <td class="pt-num">{{ row.bound }}</td>
+                  <td class="pt-copy">{{ row.note }}</td>
                 </tr>
               </tbody>
             </table>
+            </div>
           </section>
 
           <!-- ── 6 · Worked example ──────────────────────────────────────── -->
-          <section id="example" class="ct-chapter" aria-label="Worked example" style="scroll-margin-top: 80px">
+          <section id="example" class="pt-chapter" aria-label="Worked example" style="scroll-margin-top: 80px">
             <h2>6 · Worked example</h2>
 
             <p>
@@ -996,11 +1005,12 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               unchanged), an idle reward schedule opened at the default
               {{ DEFAULT_PARAMS.emissionHalvingPeriod.toLocaleString("en-US") }}-block period, and a
               staker holding 25% of the pool's reward weight for the whole schedule. Where a live
-              value above carries a <span class="ct-tag ct-tag-warn">changed</span> badge,
+              value above carries a <span class="pt-tag pt-tag--warn">changed</span> badge,
               substitute it: the arithmetic is identical.
             </p>
 
-            <table class="ct-table">
+            <div class="pt-table-frame">
+              <table class="pt-table">
               <thead>
                 <tr>
                   <th>Step</th>
@@ -1011,108 +1021,109 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               <tbody>
                 <tr>
                   <td>Purchase cost</td>
-                  <td class="ct-copy">given</td>
-                  <td class="ct-num">10,000.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy">given</td>
+                  <td class="pt-num">10,000.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Platform fee</td>
-                  <td class="ct-copy ct-mono">10,000 × 300 / 10,000</td>
-                  <td class="ct-num">300.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy pt-mono">10,000 × 300 / 10,000</td>
+                  <td class="pt-num">300.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Mining share</td>
-                  <td class="ct-copy ct-mono">300 × 5,000 / 10,000</td>
-                  <td class="ct-num">150.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy pt-mono">300 × 5,000 / 10,000</td>
+                  <td class="pt-num">150.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Referral rebate (with a referrer)</td>
-                  <td class="ct-copy ct-mono">300 × 2,000 / 10,000</td>
-                  <td class="ct-num">60.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy pt-mono">300 × 2,000 / 10,000</td>
+                  <td class="pt-num">60.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Treasury remainder</td>
-                  <td class="ct-copy ct-mono">300 − 150 − 60</td>
-                  <td class="ct-num">90.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy pt-mono">300 − 150 − 60</td>
+                  <td class="pt-num">90.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Treasury leg with no referrer</td>
-                  <td class="ct-copy ct-mono">300 − 150 − 0</td>
-                  <td class="ct-num">150.000000 {{ protocol.rewardSymbol }}</td>
+                  <td class="pt-copy pt-mono">300 − 150 − 0</td>
+                  <td class="pt-num">150.000000 {{ protocol.rewardSymbol }}</td>
                 </tr>
                 <tr>
                   <td>Reward reserve credit</td>
-                  <td class="ct-copy ct-mono">min(measured delta, 150)</td>
-                  <td class="ct-num">
+                  <td class="pt-copy pt-mono">min(measured delta, 150)</td>
+                  <td class="pt-num">
                     150.000000 {{ protocol.rewardSymbol }}
-                    <span class="ct-quiet">(150,000,000 units at 6 decimals)</span>
+                    <span class="pt-quiet">(150,000,000 units at 6 decimals)</span>
                   </td>
                 </tr>
                 <tr>
                   <td>Fresh window length</td>
-                  <td class="ct-copy ct-mono">min(1,209,600 blocks, 150,000,000 units)</td>
-                  <td class="ct-num">1,209,600 blocks ≈ 42.0 days at 3s</td>
+                  <td class="pt-copy pt-mono">min(1,209,600 blocks, 150,000,000 units)</td>
+                  <td class="pt-num">1,209,600 blocks ≈ 42.0 days at 3s</td>
                 </tr>
                 <tr>
                   <td>Nominal emission rate</td>
-                  <td class="ct-copy ct-mono">150,000,000 / 1,209,600</td>
-                  <td class="ct-num">
+                  <td class="pt-copy pt-mono">150,000,000 / 1,209,600</td>
+                  <td class="pt-num">
                     124 units/block at 6 decimals = 0.000124 {{ protocol.rewardSymbol }}/block
                   </td>
                 </tr>
                 <tr>
                   <td>Whole pool, per day</td>
-                  <td class="ct-copy ct-mono">150 / 42</td>
-                  <td class="ct-num">≈ 3.571429 {{ protocol.rewardSymbol }}/day</td>
+                  <td class="pt-copy pt-mono">150 / 42</td>
+                  <td class="pt-num">≈ 3.571429 {{ protocol.rewardSymbol }}/day</td>
                 </tr>
                 <tr>
                   <td>Your reward weight</td>
-                  <td class="ct-copy">given</td>
-                  <td class="ct-num">25% of totalWeight</td>
+                  <td class="pt-copy">given</td>
+                  <td class="pt-num">25% of totalWeight</td>
                 </tr>
                 <tr>
                   <td>Your share of the budget</td>
-                  <td class="ct-copy ct-mono">150 × 0.25</td>
-                  <td class="ct-num">37.500000 {{ protocol.rewardSymbol }} gross</td>
+                  <td class="pt-copy pt-mono">150 × 0.25</td>
+                  <td class="pt-num">37.500000 {{ protocol.rewardSymbol }} gross</td>
                 </tr>
                 <tr>
                   <td>Harvest fee, recycled</td>
-                  <td class="ct-copy ct-mono">37.5 × 500 / 10,000</td>
-                  <td class="ct-num">
+                  <td class="pt-copy pt-mono">37.5 × 500 / 10,000</td>
+                  <td class="pt-num">
                     1.875000 {{ protocol.rewardSymbol }} back into rewardReserve
                   </td>
                 </tr>
                 <tr>
                   <td>Net to your wallet</td>
-                  <td class="ct-copy ct-mono">37.5 − 1.875</td>
-                  <td class="ct-num ct-good">
+                  <td class="pt-copy pt-mono">37.5 − 1.875</td>
+                  <td class="pt-num pt-good">
                     35.625000 {{ protocol.rewardSymbol }}
                   </td>
                 </tr>
                 <tr>
                   <td>Entry cost of the position itself</td>
-                  <td class="ct-copy ct-mono">10,000 × 300 / 10,000 deposit fee</td>
-                  <td class="ct-num">
+                  <td class="pt-copy pt-mono">10,000 × 300 / 10,000 deposit fee</td>
+                  <td class="pt-num">
                     300.000000 charged, 9,700.000000 credited as principal and weight
                   </td>
                 </tr>
               </tbody>
             </table>
+            </div>
 
-            <p class="ct-copy ct-gap-t3">
+            <p class="pt-copy pt-gap-t3">
               That is 37.5 {{ protocol.rewardSymbol }} gross on a 10,000
               {{ protocol.rewardSymbol }} position — 0.375% — and it is not a yield, it is a share of
               one fee. Read the three qualifications:
             </p>
 
-            <div class="ct-slab">
-              <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                <li class="ct-gap-b1">
+            <div class="pt-sheet">
+              <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                <li class="pt-gap-b1">
                   <strong>The 42 days assume nothing else happens.</strong> Any further fee deposit
                   extends <code>emissionEndBlock</code> and lowers the rate, and recycled harvest fees
                   raise it within the current window. The schedule is re-priced on every deposit, so
                   the realised stream is the integral of all of that, not the single-window figure.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>The 25% assumes you keep 25% of the weight.</strong> Weight is a share of a
                   pool, so other people staking dilutes your slice even though the budget itself does
                   not change. Rewards follow weight at each accumulator update, not at deposit time.
@@ -1128,7 +1139,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
           </section>
 
           <!-- ── 7 · Governance ─────────────────────────────────────────── -->
-          <section id="governance" class="ct-chapter" aria-label="Governance and trust boundaries" style="scroll-margin-top: 80px">
+          <section id="governance" class="pt-chapter" aria-label="Governance and trust boundaries" style="scroll-margin-top: 80px">
             <h2>7 · Governance and trust boundaries</h2>
 
             <p>
@@ -1138,40 +1149,40 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               rule change means a new deployment, not a silent patch.
             </p>
 
-            <div class="ct-grid ct-split">
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-good ct-gap-b1">Governance can</span>
-                <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                  <li class="ct-gap-b1">
+            <div class="pt-grid-2 pt-split">
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--good pt-gap-b1">Governance can</span>
+                <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                  <li class="pt-gap-b1">
                     Tune the three mining fees with
                     <code>setFeeParams(depositFeeBps, harvestFeeBps, earlyWithdrawFeeBps)</code>,
                     inside the immutable ceilings of {{ formatBps(1_000) }},
                     {{ formatBps(2_000) }} and {{ formatBps(3_000) }}.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Reshape emission with <code>setEmissionParams(halvingPeriod, tailBps)</code>:
                     200 – 10,512,000 blocks and a non-zero tail up to 100%.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Add and retune pools with <code>addPool(stakeToken, allocationPoints,
                     lockDuration, name)</code> and <code>setPool(poolId, allocationPoints,
                     lockDuration, active)</code>, which takes
-                    <span class="ct-mono">type(uint256).max</span> to keep a field unchanged. A new
+                    <span class="pt-mono">type(uint256).max</span> to keep a field unchanged. A new
                     <code>lockDuration</code> is stamped per deposit, so raising it cannot
                     retroactively charge an existing position until that position stakes again.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Pause new deposits with <code>setDepositsPaused(true)</code>. Existing positions
                     keep withdrawing, harvesting and emergency-exiting.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Rewire the plumbing: <code>setFeeRouter</code> and <code>setTreasury</code> on the
                     pool, and on the router <code>setSplit</code> (mining ≤ 90%, referral ≤ 50%, and
                     the two together ≤ 100%), <code>setAcceptedFeeToken</code>,
                     <code>setSwapPath</code>, <code>setSwapRouter</code> and
                     <code>setMaxSwapSlippageBps</code>.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Register artworks, price them inside bounds
                     (<code>setPricing</code>: platform fee ≤ {{ formatBps(1_000) }}, artist share ≤
                     {{ formatBps(10_000) }}, curve slope ≤ {{ formatBps(2_000) }}) and suspend sales
@@ -1185,32 +1196,32 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </ul>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-bad ct-gap-b1">Governance cannot</span>
-                <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                  <li class="ct-gap-b1">
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--bad pt-gap-b1">Governance cannot</span>
+                <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                  <li class="pt-gap-b1">
                     Withdraw the reward asset. <code>recoverToken</code> reverts with
                     <code>CannotRecoverStakeToken</code> for the fee token and for the pool's reward
                     asset, so the reserve stakers are mining cannot be confiscated or re-routed by
                     an owner call.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Mint rewards from nothing in the reference deployment: the pool pays the fee
                     asset out of its own balance and every release is charged against
                     <code>rewardReserve</code>, capped at the unspent amount.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Drain fees through the router: only the pool may call
                     <code>collectFromPool</code>, and both the router's accepted fee assets and its
                     reward asset are excluded from <code>rescueToken</code>.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Block an exit. <code>emergencyWithdraw(poolId)</code> never reads or touches the
                     reward budget and never advances the accumulator, so it works even when the
                     reserve is empty or deposits are paused: it returns the full staked amount,
                     charges no withdrawal penalty, and forfeits pending rewards.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Upgrade the contracts or alter already-minted shares: supply is fixed at
                     {{ WHOLE_SHARES_PER_ARTWORK.toLocaleString("en-US") }} per artwork and only the
                     vault can mint or burn it.
@@ -1223,7 +1234,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               </div>
             </div>
 
-            <div class="ct-callout ct-callout-caution ct-gap-t3">
+            <div class="pt-callout pt-callout--caution pt-gap-t3">
               <span>
                 <strong>Two residual trust edges, stated rather than glossed over.</strong>
                 <br />
@@ -1244,7 +1255,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
           </section>
 
           <!-- ── 8 · Risks ──────────────────────────────────────────────── -->
-          <section id="risks" class="ct-chapter" aria-label="Risks, stated plainly" style="scroll-margin-top: 80px">
+          <section id="risks" class="pt-chapter" aria-label="Risks, stated plainly" style="scroll-margin-top: 80px">
             <h2>8 · Risks, stated plainly</h2>
 
             <p>
@@ -1252,11 +1263,11 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               them. If you only read one part of this page, read this one.
             </p>
 
-            <div class="ct-grid ct-split">
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-bad ct-gap-b1">Liquidity</span>
+            <div class="pt-grid-2 pt-split">
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--bad pt-gap-b1">Liquidity</span>
                 <h3>Fractional art is illiquid</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   The vault sells primary shares and never buys them back. There is no AMM, no order
                   book, no market maker and no protocol redemption in this implementation. Exiting
                   means finding another buyer on whatever venue lists the share token, or assembling
@@ -1265,10 +1276,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-warn ct-gap-b1">Entry price</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--warn pt-gap-b1">Entry price</span>
                 <h3>The curve only moves the ask up</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   Your cost is the integral of the curve across the range you fill, so the more of an
                   artwork that is already sold, the more you pay per share: the final share of a
                   fully sold artwork costs {{ curveFullSupplyPremium }} more than the first one at the
@@ -1278,10 +1289,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-bad ct-gap-b1">Yield</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--bad pt-gap-b1">Yield</span>
                 <h3>Mining is fee revenue, not a promise</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   Every unit paid to stakers was first collected as a platform fee. Once the reserve
                   is spent and no new fees arrive, nothing more accrues —
                   <code>_previewEmission</code> caps every release at the unspent reserve, and once
@@ -1294,10 +1305,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-warn ct-gap-b1">Reward asset</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--warn pt-gap-b1">Reward asset</span>
                 <h3>You are paid in a stablecoin, with stablecoin risk</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   In the reference deployment's fee pool, rewards and principal are the same SPL token
                   ({{ protocol.rewardSymbol }}, {{ protocol.rewardDecimals }} decimals), so its
                   issuer's risks — freezes, blacklists, de-pegging, redemption gates — apply to your
@@ -1307,10 +1318,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-warn ct-gap-b1">Custody</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--warn pt-gap-b1">Custody</span>
                 <h3>The artwork is physical and off-chain</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   A custodian holds the piece. The ERC-721 certificate is a provenance record, not
                   the artwork, and the contract cannot enforce delivery, insurance, storage
                   conditions or authenticity. Redemption needs the artwork to be marked settled (the
@@ -1320,10 +1331,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-warn ct-gap-b1">Governance</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--warn pt-gap-b1">Governance</span>
                 <h3>Parameters move, and appraisals are trusted input</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   Governance chooses which artworks exist, at what <code>basePrice</code>, with which
                   custodian, against an appraisal it supplies itself:
                   <code>appraisedValueUSD</code> is recorded but the sale price does not derive from
@@ -1333,10 +1344,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-tag-bad ct-gap-b1">Code</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-tag--bad pt-gap-b1">Code</span>
                 <h3>Smart contracts can be buggy</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   This is a reference implementation written for study. No third-party audit of this
                   codebase is included in the repository; the published audit of the project this one
                   takes inspiration from covers <em>their</em> contracts, not these. The unit
@@ -1347,10 +1358,10 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
-                <span class="ct-tag ct-gap-b1">Chain</span>
+              <div class="pt-sheet">
+                <span class="pt-tag pt-gap-b1">Chain</span>
                 <h3>Wallets, RPC and approvals</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   Solana liveness, RPC availability, gas spikes and reorganisations all
                   apply; this UI reads through a public RPC and shows whatever it returns, including
                   stale data if the endpoint lags. Any approval you grant to the vault, the router or
@@ -1360,7 +1371,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               </div>
             </div>
 
-            <div class="ct-callout ct-callout-info ct-gap-t3">
+            <div class="pt-callout pt-callout--info pt-gap-t3">
               <span>
                 This page documents a reference implementation of a fee-funded fractional-art
                 protocol. It is not investment advice, not a solicitation, and not a valuation of any
@@ -1372,7 +1383,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
           </section>
 
           <!-- ── 9 · Contract reference ─────────────────────────────────── -->
-          <section id="contracts" class="ct-chapter" aria-label="Contract reference" style="scroll-margin-top: 80px">
+          <section id="contracts" class="pt-chapter" aria-label="Contract reference" style="scroll-margin-top: 80px">
             <h2>9 · Contract reference</h2>
 
             <p>
@@ -1382,7 +1393,8 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               instead of a zero address.
             </p>
 
-            <table class="ct-table">
+            <div class="pt-table-frame">
+              <table class="pt-table">
               <thead>
                 <tr>
                   <th>Contract</th>
@@ -1393,7 +1405,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
               </thead>
               <tbody>
                 <tr v-for="row in contracts" :key="row.name">
-                  <td><strong class="ct-mono">{{ row.name }}</strong></td>
+                  <td><strong class="pt-mono">{{ row.name }}</strong></td>
                   <td>
                     <template v-if="isConfigured(row.address)">
                       <a
@@ -1401,27 +1413,28 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                         :href="`${explorerLink(row.address)}`"
                         target="_blank"
                         rel="noreferrer"
-                        class="ct-mono ct-micro"
+                        class="pt-mono pt-note"
                         style="word-break: break-all"
                       >
                         {{ row.address }}
                       </a>
-                      <span v-else class="ct-mono ct-micro" style="word-break: break-all">
+                      <span v-else class="pt-mono pt-note" style="word-break: break-all">
                         {{ row.address }}
                       </span>
                     </template>
-                    <span v-else class="ct-tag ct-tag-warn">not configured</span>
+                    <span v-else class="pt-tag pt-tag--warn">not configured</span>
                   </td>
-                  <td class="ct-copy">{{ row.role }}</td>
-                  <td class="ct-micro ct-mono">{{ row.abi }}</td>
+                  <td class="pt-copy">{{ row.role }}</td>
+                  <td class="pt-note pt-mono">{{ row.abi }}</td>
                 </tr>
               </tbody>
             </table>
+            </div>
 
-            <div class="ct-grid ct-split ct-gap-t3">
-              <div class="ct-slab">
+            <div class="pt-grid-2 pt-split pt-gap-t3">
+              <div class="pt-sheet">
                 <h3>How these addresses get here</h3>
-                <p class="ct-copy ct-gap-b0">
+                <p class="pt-copy pt-gap-b0">
                   <code>contracts/scripts/deploy.js</code> writes
                   <code>deployments/&lt;network&gt;.json</code> with the deployed addresses, the
                   parameters captured at deploy time and the pool list.
@@ -1434,20 +1447,20 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
                 </p>
               </div>
 
-              <div class="ct-slab">
+              <div class="pt-sheet">
                 <h3>Configuration facts worth knowing</h3>
-                <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                  <li class="ct-gap-b1">
+                <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                  <li class="pt-gap-b1">
                     Target chain: {{ TARGET_CHAIN.name }} (chain id {{ TARGET_CHAIN.chainId }}),
-                    explorer <span class="ct-mono">{{ TARGET_CHAIN.explorer || "none configured" }}</span>.
+                    explorer <span class="pt-mono">{{ TARGET_CHAIN.explorer || "none configured" }}</span>.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     Reward asset: the fee token, {{ protocol.rewardSymbol }}, at
                     {{ protocol.rewardDecimals }} decimals — paid to miners as-is.
                   </li>
-                  <li class="ct-gap-b1">
+                  <li class="pt-gap-b1">
                     <code>MiningPool</code> was constructed with
-                    <span class="ct-mono">miningToken = address(0)</span> in the reference deployment,
+                    <span class="pt-mono">miningToken = address(0)</span> in the reference deployment,
                     so the protocol's own $MINE token is deployed but not used as the reward asset.
                     Verify against <code>miningToken()</code> before drawing conclusions.
                   </li>
@@ -1461,7 +1474,7 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
           </section>
 
           <!-- ── 10 · Integrator quickstart ─────────────────────────────── -->
-          <section id="integrators" class="ct-chapter" aria-label="Integrator quickstart" style="scroll-margin-top: 80px">
+          <section id="integrators" class="pt-chapter" aria-label="Integrator quickstart" style="scroll-margin-top: 80px">
             <h2>10 · Integrator quickstart</h2>
 
             <p>
@@ -1471,8 +1484,8 @@ pendingRewardOf(poolId, account) recomputes the accrual so it matches what harve
             </p>
 
             <h3>Mine fees</h3>
-            <div class="ct-slab ct-slab-tight ct-gap-b2">
-              <pre class="ct-mono ct-gap-b0" style="line-height: 1.6; overflow-x: auto">// Views (no gas, no wallet)
+            <div class="pt-sheet pt-sheet--tight pt-gap-b2">
+              <pre class="pt-mono pt-gap-b0" style="line-height: 1.6; overflow-x: auto">// Views (no gas, no wallet)
 const pending = await pool.pendingRewardOf(poolId, account);     // (poolId, account)
 const all     = await pool.pendingRewardAll(account);            // every pool in one call
 const stats   = await pool.reserveStats();                       // reserve, released, unspent,
@@ -1494,8 +1507,8 @@ await pool.depositFor(poolId, amount, beneficiary, referrer);     // (poolId, am
             </div>
 
             <h3>Pay and preview a fee</h3>
-            <div class="ct-slab ct-slab-tight ct-gap-b2">
-              <pre class="ct-mono ct-gap-b0" style="line-height: 1.6; overflow-x: auto">// The three legs always sum to `amount`; the treasury leg absorbs rounding dust.
+            <div class="pt-sheet pt-sheet--tight pt-gap-b2">
+              <pre class="pt-mono pt-gap-b0" style="line-height: 1.6; overflow-x: auto">// The three legs always sum to `amount`; the treasury leg absorbs rounding dust.
 const [miningShare, referralShare, treasuryShare] =
   await router.previewSplit(amount, hasReferrer);                // (amount, hasReferrer)
 
@@ -1506,8 +1519,8 @@ await router.payNativeFee(referrer, { value });                   // (referrer) 
             </div>
 
             <h3>Buy and quote artwork fractions</h3>
-            <div class="ct-slab ct-slab-tight ct-gap-b2">
-              <pre class="ct-mono ct-gap-b0" style="line-height: 1.6; overflow-x: auto">// Quote before approving anything. shareAmount is 18-decimal share units (1e18 = one share).
+            <div class="pt-sheet pt-sheet--tight pt-gap-b2">
+              <pre class="pt-mono pt-gap-b0" style="line-height: 1.6; overflow-x: auto">// Quote before approving anything. shareAmount is 18-decimal share units (1e18 = one share).
 const cost = await vault.quoteBuy(artworkId, shareAmount);       // (artworkId, shareAmount)
 
 // maxCost is a hard ceiling; the call reverts (FeeTooHigh) rather than filling above it.
@@ -1519,30 +1532,30 @@ const snap = await vault.artworkSnapshot(artworkId);
 // → sharesSold, sharesRemaining, marginalPrice, nextShareCost, volume, active, settled</pre>
             </div>
 
-            <div class="ct-slab">
-              <h3 class="ct-gap-b1">Gotchas that cost real transactions</h3>
-              <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                <li class="ct-gap-b1">
+            <div class="pt-sheet">
+              <h3 class="pt-gap-b1">Gotchas that cost real transactions</h3>
+              <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                <li class="pt-gap-b1">
                   <strong>Argument order is not uniform.</strong>
                   <code>deposit(poolId, amount, referrer)</code> leads with the pool id;
                   <code>buyShares(artworkId, shareAmount, maxCost, referrer)</code> leads with the
                   artwork id and has four arguments. Both are easy to transpose and neither will
                   complain about a plausible-looking wrong order.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>Units differ per call.</strong> <code>amount</code> is in the stake token's
                   smallest units, <code>shareAmount</code> is always 18-decimal share units, and
                   <code>cost</code>/<code>maxCost</code> are in the artwork's
                   <code>paymentToken</code> units.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>Approvals.</strong> Stake token → pool for staking, fee token → router for
                   fee payment, payment token → vault for a purchase.
                   <code>harvestAndRestake</code> needs no new approval because nothing leaves the
                   pool, and it reverts with <code>Unauthorized</code> unless the pool's stake token
                   is its reward asset.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>Whitelisted fee assets only.</strong> The router rejects tokens that were
                   never accepted, so a purchase in an artwork whose <code>paymentToken</code> is not
                   whitelisted reverts with <code>NotAccepted</code> inside <code>buyShares</code>.
@@ -1557,11 +1570,11 @@ const snap = await vault.artworkSnapshot(artworkId);
           </section>
 
           <!-- ── Sources ────────────────────────────────────────────────── -->
-          <section class="ct-chapter" aria-label="How to verify every number on this page" style="padding-top: 0">
-            <div class="ct-slab">
-              <h3 class="ct-gap-b1">How to verify every number on this page</h3>
-              <ul class="ct-copy" style="margin: 0; padding-left: 20px">
-                <li class="ct-gap-b1">
+          <section class="pt-chapter" aria-label="How to verify every number on this page" style="padding-top: 0">
+            <div class="pt-sheet">
+              <h3 class="pt-gap-b1">How to verify every number on this page</h3>
+              <ul class="pt-copy" style="margin: 0; padding-left: 20px">
+                <li class="pt-gap-b1">
                   <strong>Live columns</strong> come from <code>src/stores/protocol.ts</code>, which
                   batches <code>reserveStats()</code>, the fee getters,
                   <code>emissionHalvingPeriod()</code>, <code>tailEmissionBps()</code>,
@@ -1569,12 +1582,12 @@ const snap = await vault.artworkSnapshot(artworkId);
                   <code>recycledFees()</code>, <code>poolInfo()</code> and
                   <code>poolCount()</code> from a single RPC provider.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>Documented defaults</strong> come from <code>DEFAULT_PARAMS</code> in
                   <code>src/config/chain.ts</code> — the values the UI falls back to when a read has
                   not succeeded yet.
                 </li>
-                <li class="ct-gap-b1">
+                <li class="pt-gap-b1">
                   <strong>Ceilings, ranges and behaviour</strong> come from the Solidity in
                   <code>contracts/contracts/core/</code>: constants such as
                   <code>MAX_DEPOSIT_FEE_BPS</code>, the emission maths in <code>_creditReserve</code>
@@ -1590,7 +1603,6 @@ const snap = await vault.artworkSnapshot(artworkId);
               </ul>
             </div>
           </section>
-        </div>
     </div>
   </div>
 </template>

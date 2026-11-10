@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-21T17:25:13.094Z",
+  "generatedAt": "2026-11-09T18:09:31.073Z",
   "project": {
     "root": "E:/workspace/chuangye/solana/zero/website",
-    "name": "@fractio/website",
-    "baseUrl": "http://127.0.0.1:5391/"
+    "name": "@cimela/website",
+    "baseUrl": "http://127.0.0.1:4317/"
   },
-  "passed": true,
+  "passed": false,
   "thresholds": {
     "maxStructureSimilarity": 0.5,
     "maxLandmarkSimilarity": 0.68,
@@ -20,32 +20,11 @@
       "passed": true,
       "issues": [],
       "warnings": [],
-      "hash": "ebe0707becf28d063a0894f558fdb8f617fc98ed410a7bb4e9afe6a8ed466853"
+      "hash": "fd3681cef91aaf4c5c35c8c6dc2f45c47746cb37fcc2e62346f4631573dbc941"
     },
     "skeleton": {
       "passed": true,
       "original": {
-        "id": "gallery-scroll",
-        "family": "spatial",
-        "traits": {
-          "sidebar": false,
-          "topbar": false,
-          "cards": false,
-          "hero": false,
-          "table": true,
-          "grid": true,
-          "tabs": true,
-          "modal": true,
-          "charts": true,
-          "sticky": true,
-          "orbital": false,
-          "terminal": false,
-          "bento": false,
-          "ticker": false,
-          "gallery": true
-        }
-      },
-      "current": {
         "id": "topnav-marketing",
         "family": "editorial",
         "traits": {
@@ -66,22 +45,48 @@
           "gallery": true
         }
       },
+      "current": {
+        "id": "gallery-scroll",
+        "family": "spatial",
+        "traits": {
+          "sidebar": false,
+          "topbar": false,
+          "cards": true,
+          "hero": false,
+          "table": true,
+          "grid": true,
+          "tabs": true,
+          "modal": true,
+          "charts": true,
+          "sticky": true,
+          "orbital": false,
+          "terminal": false,
+          "bento": false,
+          "ticker": false,
+          "gallery": true
+        }
+      },
       "accent": {
-        "original": "#c40018",
-        "current": "#40b3ff",
-        "deltaE": 121.67,
+        "original": "#40b3ff",
+        "current": "#ff0421",
+        "deltaE": 136.56,
         "min": 30
       }
     },
     "pages": [
       {
         "route": "/",
-        "passed": true,
+        "passed": false,
         "skipped": false,
-        "failures": [],
-        "warnings": [],
+        "failures": [
+          "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        ],
+        "warnings": [
+          "aria attribute added: aria-label=The loop steps",
+          "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+        ],
         "structure": {
-          "fingerprintSimilarity": 0.366,
+          "fingerprintSimilarity": 0.359,
           "landmarkSimilarity": 0.5,
           "classOverlap": 0
         },
@@ -100,9 +105,13 @@
           }
         },
         "usability": {
-          "passed": true,
-          "failures": [],
-          "warnings": [],
+          "passed": false,
+          "failures": [
+            "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+          ],
+          "warnings": [
+            "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+          ],
           "axe": {
             "serious": [],
             "moderate": []
@@ -115,33 +124,42 @@
       },
       {
         "route": "/art",
-        "passed": true,
+        "passed": false,
         "skipped": false,
-        "failures": [],
-        "warnings": [],
+        "failures": [
+          "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        ],
+        "warnings": [
+          "aria attribute added: aria-label=The loop steps",
+          "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+        ],
         "structure": {
-          "fingerprintSimilarity": 0.369,
+          "fingerprintSimilarity": 0.359,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.017
+          "classOverlap": 0
         },
         "content": {
           "missing": [],
           "extra": [],
           "numeric": {
             "baseline": {
-              "tokens": 6,
-              "total": 7
+              "tokens": 10,
+              "total": 12
             },
             "current": {
-              "tokens": 6,
-              "total": 7
+              "tokens": 10,
+              "total": 12
             }
           }
         },
         "usability": {
-          "passed": true,
-          "failures": [],
-          "warnings": [],
+          "passed": false,
+          "failures": [
+            "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+          ],
+          "warnings": [
+            "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+          ],
           "axe": {
             "serious": [],
             "moderate": []
@@ -168,33 +186,42 @@
       },
       {
         "route": "/dashboard",
-        "passed": true,
+        "passed": false,
         "skipped": false,
-        "failures": [],
-        "warnings": [],
+        "failures": [
+          "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        ],
+        "warnings": [
+          "aria attribute added: aria-label=The loop steps",
+          "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+        ],
         "structure": {
-          "fingerprintSimilarity": 0.427,
+          "fingerprintSimilarity": 0.359,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.017
+          "classOverlap": 0
         },
         "content": {
           "missing": [],
           "extra": [],
           "numeric": {
             "baseline": {
-              "tokens": 5,
-              "total": 7
+              "tokens": 10,
+              "total": 12
             },
             "current": {
-              "tokens": 5,
-              "total": 7
+              "tokens": 10,
+              "total": 12
             }
           }
         },
         "usability": {
-          "passed": true,
-          "failures": [],
-          "warnings": [],
+          "passed": false,
+          "failures": [
+            "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+          ],
+          "warnings": [
+            "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+          ],
           "axe": {
             "serious": [],
             "moderate": []
@@ -207,33 +234,42 @@
       },
       {
         "route": "/docs",
-        "passed": true,
+        "passed": false,
         "skipped": false,
-        "failures": [],
-        "warnings": [],
+        "failures": [
+          "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        ],
+        "warnings": [
+          "aria attribute added: aria-label=The loop steps",
+          "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+        ],
         "structure": {
-          "fingerprintSimilarity": 0.315,
+          "fingerprintSimilarity": 0.359,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.013
+          "classOverlap": 0
         },
         "content": {
           "missing": [],
           "extra": [],
           "numeric": {
             "baseline": {
-              "tokens": 73,
-              "total": 214
+              "tokens": 10,
+              "total": 12
             },
             "current": {
-              "tokens": 73,
-              "total": 214
+              "tokens": 10,
+              "total": 12
             }
           }
         },
         "usability": {
-          "passed": true,
-          "failures": [],
-          "warnings": [],
+          "passed": false,
+          "failures": [
+            "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+          ],
+          "warnings": [
+            "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+          ],
           "axe": {
             "serious": [],
             "moderate": []
@@ -246,33 +282,42 @@
       },
       {
         "route": "/mine",
-        "passed": true,
+        "passed": false,
         "skipped": false,
-        "failures": [],
-        "warnings": [],
+        "failures": [
+          "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+        ],
+        "warnings": [
+          "aria attribute added: aria-label=The loop steps",
+          "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+        ],
         "structure": {
-          "fingerprintSimilarity": 0.424,
+          "fingerprintSimilarity": 0.359,
           "landmarkSimilarity": 0.5,
-          "classOverlap": 0.015
+          "classOverlap": 0
         },
         "content": {
           "missing": [],
           "extra": [],
           "numeric": {
             "baseline": {
-              "tokens": 4,
-              "total": 5
+              "tokens": 10,
+              "total": 12
             },
             "current": {
-              "tokens": 4,
-              "total": 5
+              "tokens": 10,
+              "total": 12
             }
           }
         },
         "usability": {
-          "passed": true,
-          "failures": [],
-          "warnings": [],
+          "passed": false,
+          "failures": [
+            "console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+          ],
+          "warnings": [
+            "request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+          ],
           "axe": {
             "serious": [],
             "moderate": []
@@ -285,10 +330,27 @@
       }
     ]
   },
-  "failures": [],
-  "warnings": [],
+  "failures": [
+    "/: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+    "/art: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+    "/dashboard: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+    "/docs: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED",
+    "/mine: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED"
+  ],
+  "warnings": [
+    "/: aria attribute added: aria-label=The loop steps",
+    "/: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED",
+    "/art: aria attribute added: aria-label=The loop steps",
+    "/art: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED",
+    "/dashboard: aria attribute added: aria-label=The loop steps",
+    "/dashboard: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED",
+    "/docs: aria attribute added: aria-label=The loop steps",
+    "/docs: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED",
+    "/mine: aria attribute added: aria-label=The loop steps",
+    "/mine: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED"
+  ],
   "baseline": {
-    "generatedAt": "2026-10-21T17:07:26.555Z",
+    "generatedAt": "2026-11-09T16:47:59.582Z",
     "routes": [
       "/",
       "/art",

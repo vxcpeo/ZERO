@@ -32,39 +32,39 @@ async function pick(id: string): Promise<void> {
 </script>
 
 <template>
-  <div class="ct-veil" @click.self="emit('close')">
+  <div class="pt-veil" @click.self="emit('close')">
     <div
       ref="dialog"
-      class="ct-dialog"
+      class="pt-dialog"
       role="dialog"
-      aria-labelledby="ct-wallet-title"
+      aria-labelledby="pt-wallet-title"
       tabindex="-1"
     >
-      <div class="ct-band-head">
-        <h3 id="ct-wallet-title" class="ct-gap-b0">Connect a wallet</h3>
-        <button class="ct-btn ct-btn-quiet ct-btn-small" @click="emit('close')">Close</button>
+      <div class="pt-sheet-head">
+        <h3 id="pt-wallet-title" class="pt-gap-b0">Connect a wallet</h3>
+        <button class="pt-btn pt-btn--quiet pt-btn--small" @click="emit('close')">Close</button>
       </div>
 
-      <p class="ct-copy">
+      <p class="pt-copy">
         Your wallet signs the transactions. Nothing is custodial — the contracts hold the funds,
         not this website.
       </p>
 
-      <div class="ct-stack ct-stack-tight ct-gap-t2">
+      <div class="pt-stack pt-stack--tight pt-gap-t2">
         <button
           v-for="option in wallets"
           :key="option.id"
-          class="ct-wallet-choice"
+          class="pt-wallet-choice"
           :disabled="wallet.connecting"
           @click="pick(option.id)"
         >
-          <span class="ct-wallet-glyph">{{ option.icon }}</span>
-          <span class="ct-fill">{{ option.name }}</span>
-          <span v-if="wallet.walletId === option.id" class="ct-tag ct-tag-accent">Last used</span>
+          <span class="pt-wallet-glyph">{{ option.icon }}</span>
+          <span class="pt-fill">{{ option.name }}</span>
+          <span v-if="wallet.walletId === option.id" class="pt-tag pt-tag--accent">Last used</span>
         </button>
       </div>
 
-      <div v-if="noneInstalled" class="ct-callout ct-callout-caution ct-gap-t2">
+      <div v-if="noneInstalled" class="pt-callout pt-callout--caution pt-gap-t2">
         <span>
           No Solana wallet detected. Install
           <a href="https://metamask.io/download/" target="_blank" rel="noreferrer noopener">MetaMask</a>
@@ -75,7 +75,7 @@ async function pick(id: string): Promise<void> {
         </span>
       </div>
 
-      <div v-if="wallet.error" class="ct-callout ct-callout-bad ct-gap-t2">{{ wallet.error }}</div>
+      <div v-if="wallet.error" class="pt-callout pt-callout--bad pt-gap-t2">{{ wallet.error }}</div>
     </div>
   </div>
 </template>

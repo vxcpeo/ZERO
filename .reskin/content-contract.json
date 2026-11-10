@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "meta": {
-    "projectName": "@fractio/website",
-    "title": "@fractio/website",
+    "projectName": "@cimela/website",
+    "title": "@cimela/website",
     "lang": "en"
   },
   "routes": [
@@ -1043,6 +1043,10 @@
       "count": 1
     },
     {
+      "value": "C",
+      "count": 2
+    },
+    {
       "value": "CannotRecoverStakeToken",
       "count": 1
     },
@@ -1080,6 +1084,22 @@
     },
     {
       "value": "Check again",
+      "count": 1
+    },
+    {
+      "value": "Cimela",
+      "count": 2
+    },
+    {
+      "value": "Cimela vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
+      "count": 1
+    },
+    {
+      "value": "Cimela vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
+      "count": 1
+    },
+    {
+      "value": "Cimela. Open-source reference implementation.",
       "count": 1
     },
     {
@@ -1475,10 +1495,6 @@
       "count": 1
     },
     {
-      "value": "F",
-      "count": 2
-    },
-    {
       "value": "Fee",
       "count": 1
     },
@@ -1540,22 +1556,6 @@
     },
     {
       "value": "Four steps, all enforced by code rather than by a treasury promise.",
-      "count": 1
-    },
-    {
-      "value": "Fractio",
-      "count": 2
-    },
-    {
-      "value": "Fractio vaults physical artworks and sells fractional ownership of them on Solana. Governance registers an artwork with a custodian, an artist payout address and an appraisal; registration deploys a dedicated SPL share token for that artwork and mints an ERC-721 provenance certificate to the custodian. The custody agreement and appraisal documents live at the artwork's",
-      "count": 1
-    },
-    {
-      "value": "Fractio vaults physical artworks on Solana and sells them as one million ERC-20 fractions each. Every purchase pays a platform fee — and that fee is not pocketed. It is streamed back to the people who stake, block by block, from the contract that collected it.",
-      "count": 1
-    },
-    {
-      "value": "Fractio. Open-source reference implementation.",
       "count": 1
     },
     {
@@ -2815,7 +2815,7 @@
       "count": 1
     },
     {
-      "value": "Stake into a pool and you earn a pro-rata share of the fees Fractio collects — paid in",
+      "value": "Stake into a pool and you earn a pro-rata share of the fees Cimela collects — paid in",
       "count": 1
     },
     {

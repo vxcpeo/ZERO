@@ -19,36 +19,36 @@ async function claimAll(): Promise<void> {
 </script>
 
 <template>
-  <div class="ct-wallet">
-    <div v-if="wallet.isWrongChain" class="ct-inline">
-      <span class="ct-tag ct-tag-warn">Wrong network</span>
-      <button class="ct-btn ct-btn-small ct-btn-primary" @click="wallet.switchToTargetChain()">
+  <div class="pt-wallet">
+    <div v-if="wallet.isWrongChain" class="pt-inline">
+      <span class="pt-tag pt-tag--warn">Wrong network</span>
+      <button class="pt-btn pt-btn--small pt-btn--solid" @click="wallet.switchToTargetChain()">
         Switch
       </button>
     </div>
 
     <template v-else-if="wallet.isConnected">
-      <div v-if="protocol.totalPending > 0n" class="ct-claim">
-        <span class="ct-micro ct-quiet">Claimable</span>
-        <strong class="ct-num ct-good">
+      <div v-if="protocol.totalPending > 0n" class="pt-claim">
+        <span class="pt-note pt-quiet">Claimable</span>
+        <strong class="pt-num pt-good">
           {{ Number(protocol.totalPending) / 10 ** protocol.rewardDecimals < 1
             ? "<1"
             : (Number(protocol.totalPending) / 10 ** protocol.rewardDecimals).toFixed(2) }}
           {{ protocol.rewardSymbol }}
         </strong>
-        <button class="ct-btn ct-btn-small ct-btn-good" :disabled="protocol.loading" @click="claimAll">
+        <button class="pt-btn pt-btn--small pt-btn--good" :disabled="protocol.loading" @click="claimAll">
           Claim all
         </button>
       </div>
 
-      <button class="ct-btn ct-btn-small ct-mono" :title="wallet.address" @click="wallet.disconnect()">
+      <button class="pt-btn pt-btn--small pt-mono" :title="wallet.address" @click="wallet.disconnect()">
         {{ wallet.shortAddress }}
-        <span class="ct-quiet">{{ wallet.solBalanceFormatted }} SOL</span>
+        <span class="pt-quiet">{{ wallet.solBalanceFormatted }} SOL</span>
       </button>
     </template>
 
-    <button v-else class="ct-btn ct-btn-primary" :disabled="wallet.connecting" @click="showModal = true">
-      <span v-if="wallet.connecting" class="ct-pulse" />
+    <button v-else class="pt-btn pt-btn--solid" :disabled="wallet.connecting" @click="showModal = true">
+      <span v-if="wallet.connecting" class="pt-pulse" />
       Connect wallet
     </button>
 

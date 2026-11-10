@@ -1,0 +1,234 @@
+{
+  "home": {
+    "route": "/",
+    "desktop": {
+      "title": "Cimela — own art, mine the fees",
+      "h1": [
+        "Own a share of the art. Mine the fees it earns."
+      ],
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "landmarks": [
+        "main",
+        "nav",
+        "footer"
+      ],
+      "words": 376
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "visibleLinks": [
+        "#/mine",
+        "#/art",
+        "#/docs",
+        "/",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "axe": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    ]
+  },
+  "mine": {
+    "route": "/mine",
+    "desktop": {
+      "title": "Mine fees",
+      "h1": [
+        "Mine the protocol's fees"
+      ],
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "landmarks": [
+        "main",
+        "nav",
+        "footer"
+      ],
+      "words": 248
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "visibleLinks": [
+        "/",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "axe": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    ]
+  },
+  "art": {
+    "route": "/art",
+    "desktop": {
+      "title": "Artworks",
+      "h1": [
+        "Buy the art. Fund the mining."
+      ],
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "landmarks": [
+        "main",
+        "nav",
+        "footer"
+      ],
+      "words": 317
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "visibleLinks": [
+        "#/mine",
+        "#/docs",
+        "#/docs",
+        "/",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "axe": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    ]
+  },
+  "dashboard": {
+    "route": "/dashboard",
+    "desktop": {
+      "title": "Dashboard",
+      "h1": [
+        "Dashboard"
+      ],
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "landmarks": [
+        "main",
+        "nav",
+        "footer"
+      ],
+      "words": 190
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "visibleLinks": [
+        "",
+        "",
+        "",
+        "/",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "axe": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    ]
+  },
+  "docs": {
+    "route": "/docs",
+    "desktop": {
+      "title": "How it works",
+      "h1": [
+        "How this protocol actually works."
+      ],
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "landmarks": [
+        "main",
+        "nav",
+        "footer"
+      ],
+      "words": 5410
+    },
+    "mobile": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "visibleLinks": [
+        "#/mine",
+        "#/art",
+        "#risks",
+        "#live",
+        "#overview",
+        "#loop",
+        "#emission",
+        "#precision",
+        "#fees",
+        "#example",
+        "#governance",
+        "#risks",
+        "#contracts",
+        "#integrators",
+        "/",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "#/mine",
+        "#/art",
+        "#/dashboard",
+        "#/docs",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    "axe": [],
+    "consoleErrors": [
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED",
+      "Failed to load resource: net::ERR_CONNECTION_REFUSED"
+    ]
+  }
+}

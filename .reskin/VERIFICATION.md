@@ -1,30 +1,43 @@
-# Reskin verification — PASS
+# Reskin verification — FAIL
 
-Generated: 2026-10-21T17:25:13.094Z
+Generated: 2026-11-09T18:09:31.073Z
 
-- Project: **@fractio/website**
-- URL: http://127.0.0.1:5391/
-- Original skeleton: `gallery-scroll` (spatial)
-- New skeleton: `topnav-marketing` (editorial)
-- Accent: #c40018 -> #40b3ff (121.67 ΔE; min 30)
-- Source contract: intact (`ebe0707becf2`)
+- Project: **@cimela/website**
+- URL: http://127.0.0.1:4317/
+- Original skeleton: `topnav-marketing` (editorial)
+- New skeleton: `gallery-scroll` (spatial)
+- Accent: #40b3ff -> #ff0421 (136.56 ΔE; min 30)
+- Source contract: intact (`fd3681cef91a`)
 
 | Route | Result | DOM similarity | Landmark similarity | Axe serious | Screenshot |
 |---|---|---:|---:|---:|---|
-| `/` | PASS | 0.366 | 0.5 | 0 | [desktop](current/home-desktop.png) |
-| `/art` | PASS | 0.369 | 0.5 | 0 | [desktop](current/art-desktop.png) |
+| `/` | FAIL | 0.359 | 0.5 | 0 | [desktop](current/home-desktop.png) |
+| `/art` | FAIL | 0.359 | 0.5 | 0 | [desktop](current/art-desktop.png) |
 | `/art/:id` | PASS | — | — | — | — |
-| `/dashboard` | PASS | 0.427 | 0.5 | 0 | [desktop](current/dashboard-desktop.png) |
-| `/docs` | PASS | 0.315 | 0.5 | 0 | [desktop](current/docs-desktop.png) |
-| `/mine` | PASS | 0.424 | 0.5 | 0 | [desktop](current/mine-desktop.png) |
+| `/dashboard` | FAIL | 0.359 | 0.5 | 0 | [desktop](current/dashboard-desktop.png) |
+| `/docs` | FAIL | 0.359 | 0.5 | 0 | [desktop](current/docs-desktop.png) |
+| `/mine` | FAIL | 0.359 | 0.5 | 0 | [desktop](current/mine-desktop.png) |
 
 ## Blocking issues
 
-- None.
+- /: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED
+- /art: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED
+- /dashboard: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED
+- /docs: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED
+- /mine: console/page error: Failed to load resource: net::ERR_CONNECTION_REFUSED
 
 ## Warnings
 
-- None.
+- /: aria attribute added: aria-label=The loop steps
+- /: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED
+- /art: aria attribute added: aria-label=The loop steps
+- /art: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED
+- /dashboard: aria attribute added: aria-label=The loop steps
+- /dashboard: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED
+- /docs: aria attribute added: aria-label=The loop steps
+- /docs: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED
+- /mine: aria attribute added: aria-label=The loop steps
+- /mine: request failed: POST http://127.0.0.1:8545/ — net::ERR_CONNECTION_REFUSED
 
 ## Thresholds
 

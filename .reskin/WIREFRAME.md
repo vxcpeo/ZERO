@@ -1,52 +1,50 @@
-# Wiring plan — Cosmos Orbit / Documentary Ledger
+# Wiring plan — Poster Optimism / Gallery Scroll
 
-Committed before implementation. `style.json` is the source of truth for tokens and layout
-grammar; this file records how each region is wired, which components are replaced, and the
-breakpoints. Every route keeps the frozen content contract.
+Selected by `choose-style.mjs`: style `optimism-poster` (performance-brutalist),
+skeleton `gallery-scroll` (spatial). Original: `topnav-marketing` (editorial),
+accent `#40b3ff` on `#05060b`.
 
-## Shell
+## New shell
 
-| Region | Element | Content |
-|---|---|---|
-| Masthead | `header.ct-masthead.ct-topbar` | wordmark link (mark + `Fractio`), `TARGET_CHAIN.shortName` chip, `WalletButton` |
-| Index line | `nav.ct-index[aria-label="Protocol routes"]` | four route links (`Mine`, `Artworks`, `Dashboard`, `How it works`) with a mono dot and an active rule |
-| Notice | `ConnectBanner` | unchanged branches (unconfigured / RPC error / wrong chain), restyled as a hairline strip |
-| Stage | `main.ct-stage` | `RouterView` |
-| Colophon | `footer.ct-colophon` (`Colophon.vue`) | brand note, `Navigate` links, `Deployed contracts`, legal line |
+`pt-frame` in `src/App.vue`, in this DOM order:
 
-The old shell — `.po-wall`, the alarm-red `.po-cover`, the fixed `.po-dock` and the tear-off
-`.po-tear` — is removed from the render path and deleted, together with `poster.css`.
+1. `<main class="pt-stage">` — every route renders as a sequence of full-bleed
+   `pt-scene` bands (paper / wash / ink grounds) inside a `pt-spread` measure.
+2. `<nav class="pt-dock" aria-label="Protocol routes">` — a fixed bottom dock:
+   brand mark + wordmark, the four existing route labels, the chain tag and the
+   wallet cluster. This replaces the masthead + index line entirely.
+3. `<footer class="pt-colophon">` — the colophon, rebuilt as a closing poster.
 
-## Routes
+Landmark order is `main → nav → footer`; the old `header → nav → main → footer`
+order is gone. No `<header>`, no `<aside>`, no vertical rail, no top bar.
 
-| Route | Composition | Content regions |
-|---|---|---|
-| `/` | hero lede (7/3 split) → tally → loop → pools → position | `HomeView`; `LedgerFact` replaces `PosterFigure`; loop becomes a ruled list of four entries; pools become ledger rows |
-| `/art` | billboard (statement + actions) → registry | `ArtView`; snap rail replaced by a ruled catalogue list; status chips retained |
-| `/dashboard` | billboard → wallet figures → positions table → fee questionnaire → protocol ledger + activity | `DashboardView`; stats become `ct-ledger` rows; forms keep every field |
-| `/docs` | document lede → sticky marginal `On this page` rail + ledger chapters | `DocsView`; contents rail moves from a horizontal strip to the right margin; chapters get ruled headings |
-| `/mine` | statement → budget figures → emission schedule → pools → referral + activity | `MineView`; each pool is one ruled entry with a questionnaire-style form |
-| `/art/:id` | record plaque → curve figures → buy panel → position/settlement | `ArtworkDetailView`; same content kept, class layer rewired |
+## Route → scene mapping
+
+| Route | Scenes |
+|---|---|
+| `/` | opening poster (h1 + standfirst + actions) → figures band (snap rail of 4 facts + budget meter) → the loop (snap rail of 4 step posters) → pools (stacked pool posters) → position (activity + position sheet) |
+| `/mine` | mining poster → connect prompt → budget facts rail + emission poster → pool posters (stats grid, claim strip, stake form, cost preview, advanced reveal) → referral + activity → empty state |
+| `/art` | collection poster → fee callout → registry as a horizontal snap rail of lot posters → empty state |
+| `/art/:id` | record poster → curve facts rail → curve meter poster → two-up spread: buy form sheet / fee-split sheet → position + settlement sheets → contracts sheet |
+| `/dashboard` | dashboard poster → connect prompt → wallet facts rail → positions as ruled position sheets (table replaced on the reading path) → fee payment sheet with disclosure → protocol stats + activity |
+| `/docs` | prologue poster → horizontal contents rail → ten chapter scenes, each with an oversized chapter heading, one reading measure, poster sheets and framed scrollable tables → closing ink statement |
 
 ## Components
 
-| Old | New | Notes |
-|---|---|---|
-| `components/poster/DockNav.vue` | index line in `App.vue` | same four labels and `:to` bindings |
-| `components/poster/PosterFigure.vue` | `components/ledger/LedgerFact.vue` | same `label`/`value`/`unit`/`sub`/`accent`/`loading` contract |
-| `components/poster/TearFooter.vue` | `components/ledger/Colophon.vue` | same copy, links, contract list and legal line |
-| `styles/poster.css` | `styles/ct.css` | new token layer (`--ct-*`) and component layer; zero `po-*` selectors |
-
-`ConnectBanner`, `ConnectPrompt`, `TxFeed`, `WalletButton` and `WalletModal` are rewritten in
-place: templates and classes change, data access, props, emits and handlers do not.
+- `src/components/gallery/FigureSlab.vue` — replaces `components/ledger/LedgerFact.vue`
+  (same props: `label`, `value`, `unit`, `sub`, `accent`, `loading`).
+- `src/components/gallery/Colophon.vue` — replaces `components/ledger/Colophon.vue`.
+- `TxFeed`, `ConnectBanner`, `ConnectPrompt`, `WalletButton`, `WalletModal` — same
+  files, same scripts, new markup and class names.
+- `components/ledger/` is deleted; `styles/ct.css` is deleted and replaced by
+  `styles/poster.css`, imported from `main.ts`.
 
 ## Tokens and breakpoints
 
-- Ground `#05060b`, panel `#0d0e16`, ink `#f2f3f8`, muted `#a3a1b5`, accent `#40b3ff`,
-  accent-hi `#7cc9ff`, violet `#a78bfa`, good `#5ce1a0`, warn `#f2c94c`, bad `#ff8a8a`.
-- Display `"Century Gothic", "Futura", "Segoe UI"`; body Segoe UI; mono Cascadia Mono/Consolas.
-- Breakpoints: 1024 px (colophon 2 columns, figure grid 2), 900 px (every 7/3 split becomes one
-  column, marginalia moves below the body, index line scrolls horizontally), 620 px
-  (single-column ledgers, stacked tables, single-column figures).
-- Focus ring: 2 px `--ct-accent` with 2 px offset on every interactive element.
-- `prefers-reduced-motion: reduce` disables the ring rotation, pulses and smooth scrolling.
+`src/styles/poster.css` holds the token layer (`--pt-paper`, `--pt-ink`,
+`--pt-accent`…), reset, base typography, shell, rail, sheet, form, table and
+dialog primitives. Breakpoints: `1100px` (dock/2-up collapse), `820px` (single
+measure, rail items at 86vw), `560px` (one-column grids, dock rows).
+
+No copy is rewritten: every text node, binding, handler, attribute and link
+target is moved verbatim into the new markup.
